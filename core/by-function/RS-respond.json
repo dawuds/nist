@@ -1,0 +1,233 @@
+{
+  "function": {
+    "id": "RS",
+    "name": "RESPOND",
+    "description": "Actions regarding a detected cybersecurity incident are taken"
+  },
+  "categories": [
+    {
+      "id": "RS.MA",
+      "functionId": "RS",
+      "name": "Incident Management",
+      "description": "Responses to detected cybersecurity incidents are managed"
+    },
+    {
+      "id": "RS.AN",
+      "functionId": "RS",
+      "name": "Incident Analysis",
+      "description": "Investigations are conducted to ensure effective response and support forensics and recovery activities"
+    },
+    {
+      "id": "RS.CO",
+      "functionId": "RS",
+      "name": "Incident Response Reporting and Communication",
+      "description": "Response activities are coordinated with internal and external stakeholders as required by laws, regulations, or policies"
+    },
+    {
+      "id": "RS.MI",
+      "functionId": "RS",
+      "name": "Incident Mitigation",
+      "description": "Activities are performed to prevent expansion of an event and mitigate its effects"
+    }
+  ],
+  "subcategories": [
+    {
+      "id": "RS.MA-01",
+      "categoryId": "RS.MA",
+      "functionId": "RS",
+      "description": "The incident response plan is executed in coordination with relevant third parties once an incident is declared",
+      "implementationExamples": [
+        "Detection technologies automatically report confirmed incidents",
+        "Request incident response assistance from the organization's incident response outsourcer",
+        "Designate an incident lead for each incident",
+        "Initiate execution of additional cybersecurity plans as needed to support incident response (for example, business continuity and disaster recovery)"
+      ]
+    },
+    {
+      "id": "RS.MA-02",
+      "categoryId": "RS.MA",
+      "functionId": "RS",
+      "description": "Incident reports are triaged and validated",
+      "implementationExamples": [
+        "Preliminarily review incident reports to confirm that they are cybersecurity-related and necessitate incident response activities",
+        "Apply criteria to estimate the severity of an incident"
+      ]
+    },
+    {
+      "id": "RS.MA-03",
+      "categoryId": "RS.MA",
+      "functionId": "RS",
+      "description": "Incidents are categorized and prioritized",
+      "implementationExamples": [
+        "Further review and categorize incidents based on the type of incident (e.g., data breach, ransomware, DDoS, account compromise)",
+        "Prioritize incidents based on their scope, likely impact, and time-critical nature",
+        "Select incident response strategies for active incidents by balancing the need to quickly recover from an incident with the need to observe the attacker or conduct a more thorough investigation"
+      ]
+    },
+    {
+      "id": "RS.MA-04",
+      "categoryId": "RS.MA",
+      "functionId": "RS",
+      "description": "Incidents are escalated or elevated as needed",
+      "implementationExamples": [
+        "Track and validate the status of all ongoing incidents",
+        "Coordinate incident escalation or elevation with designated internal and external stakeholders"
+      ]
+    },
+    {
+      "id": "RS.MA-05",
+      "categoryId": "RS.MA",
+      "functionId": "RS",
+      "description": "The criteria for initiating incident recovery are applied",
+      "implementationExamples": [
+        "Apply incident recovery criteria to known and assumed characteristics of the incident to determine whether incident recovery processes should be initiated",
+        "Take the possible operational disruption of incident recovery activities into account"
+      ]
+    },
+    {
+      "id": "RS.AN-01",
+      "categoryId": "RS.AN",
+      "functionId": "RS",
+      "description": "[Withdrawn: Incorporated into RS.MA-02]",
+      "implementationExamples": []
+    },
+    {
+      "id": "RS.AN-02",
+      "categoryId": "RS.AN",
+      "functionId": "RS",
+      "description": "[Withdrawn: Incorporated into RS.MA-02, RS.MA-03, RS.MA-04]",
+      "implementationExamples": []
+    },
+    {
+      "id": "RS.AN-03",
+      "categoryId": "RS.AN",
+      "functionId": "RS",
+      "description": "Analysis is performed to establish what has taken place during an incident and the root cause of the incident",
+      "implementationExamples": [
+        "Determine the sequence of events that occurred during the incident and which assets and resources were involved in each event",
+        "Attempt to determine what vulnerabilities, threats, and threat actors were directly or indirectly involved in the incident",
+        "Analyze the incident to find the underlying, systemic root causes",
+        "Check any cyber deception technology for additional information on attacker behavior"
+      ]
+    },
+    {
+      "id": "RS.AN-04",
+      "categoryId": "RS.AN",
+      "functionId": "RS",
+      "description": "[Withdrawn: Moved to RS.MA-03]",
+      "implementationExamples": []
+    },
+    {
+      "id": "RS.AN-05",
+      "categoryId": "RS.AN",
+      "functionId": "RS",
+      "description": "[Withdrawn: Moved to ID.RA-08]",
+      "implementationExamples": []
+    },
+    {
+      "id": "RS.AN-06",
+      "categoryId": "RS.AN",
+      "functionId": "RS",
+      "description": "Actions performed during an investigation are recorded, and the records' integrity and provenance are preserved",
+      "implementationExamples": [
+        "Require each incident responder and others (e.g., system administrators, cybersecurity engineers) who perform incident response tasks to record their actions and make the record immutable",
+        "Require the incident lead to document the incident in detail and be responsible for preserving the integrity of the documentation and the sources of all information being reported"
+      ]
+    },
+    {
+      "id": "RS.AN-07",
+      "categoryId": "RS.AN",
+      "functionId": "RS",
+      "description": "Incident data and metadata are collected, and their integrity and provenance are preserved",
+      "implementationExamples": [
+        "Collect, preserve, and safeguard the integrity of all pertinent incident data and metadata (e.g., data source, date/time of collection) based on evidence preservation and chain-of-custody procedures"
+      ]
+    },
+    {
+      "id": "RS.AN-08",
+      "categoryId": "RS.AN",
+      "functionId": "RS",
+      "description": "An incident's magnitude is estimated and validated",
+      "implementationExamples": [
+        "Review other potential targets of the incident to search for indicators of compromise and evidence of persistence",
+        "Automatically run tools on targets to look for indicators of compromise and evidence of persistence"
+      ]
+    },
+    {
+      "id": "RS.CO-01",
+      "categoryId": "RS.CO",
+      "functionId": "RS",
+      "description": "[Withdrawn: Incorporated into PR.AT-01]",
+      "implementationExamples": []
+    },
+    {
+      "id": "RS.CO-02",
+      "categoryId": "RS.CO",
+      "functionId": "RS",
+      "description": "Internal and external stakeholders are notified of incidents",
+      "implementationExamples": [
+        "Follow the organization's breach notification procedures after discovering a data breach incident, including notifying affected customers",
+        "Notify business partners and customers of incidents in accordance with contractual requirements",
+        "Notify law enforcement agencies and regulatory bodies of incidents based on criteria in the incident response plan and management approval"
+      ]
+    },
+    {
+      "id": "RS.CO-03",
+      "categoryId": "RS.CO",
+      "functionId": "RS",
+      "description": "Information is shared with designated internal and external stakeholders",
+      "implementationExamples": [
+        "Securely share information consistent with response plans and information sharing agreements",
+        "Voluntarily share information about an attacker's observed TTPs, with all sensitive data removed, with an Information Sharing and Analysis Center (ISAC)",
+        "Notify HR when malicious insider activity occurs",
+        "Regularly update senior leadership on the status of major incidents",
+        "Follow the rules and protocols defined in contracts for incident information sharing between the organization and its suppliers",
+        "Coordinate crisis communication methods between the organization and its critical suppliers"
+      ]
+    },
+    {
+      "id": "RS.CO-04",
+      "categoryId": "RS.CO",
+      "functionId": "RS",
+      "description": "[Withdrawn: Incorporated into RS.MA-01, RS.MA-04]",
+      "implementationExamples": []
+    },
+    {
+      "id": "RS.CO-05",
+      "categoryId": "RS.CO",
+      "functionId": "RS",
+      "description": "[Withdrawn: Incorporated into RS.CO-03]",
+      "implementationExamples": []
+    },
+    {
+      "id": "RS.MI-01",
+      "categoryId": "RS.MI",
+      "functionId": "RS",
+      "description": "Incidents are contained",
+      "implementationExamples": [
+        "Cybersecurity technologies (e.g., antivirus software) and cybersecurity features of other technologies (e.g., operating systems, network infrastructure devices) automatically perform containment actions",
+        "Allow incident responders to manually select and perform containment actions",
+        "Allow a third party (e.g., internet service provider, managed security service provider) to perform containment actions on behalf of the organization",
+        "Automatically transfer compromised endpoints to a remediation virtual local area network (VLAN)"
+      ]
+    },
+    {
+      "id": "RS.MI-02",
+      "categoryId": "RS.MI",
+      "functionId": "RS",
+      "description": "Incidents are eradicated",
+      "implementationExamples": [
+        "Cybersecurity technologies and cybersecurity features of other technologies (e.g., operating systems, network infrastructure devices) automatically perform eradication actions",
+        "Allow incident responders to manually select and perform eradication actions",
+        "Allow a third party (e.g., managed security service provider) to perform eradication actions on behalf of the organization"
+      ]
+    },
+    {
+      "id": "RS.MI-03",
+      "categoryId": "RS.MI",
+      "functionId": "RS",
+      "description": "[Withdrawn: Incorporated into ID.RA-06]",
+      "implementationExamples": []
+    }
+  ]
+}

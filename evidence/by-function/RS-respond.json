@@ -1,0 +1,1546 @@
+{
+  "RS.MA-01": {
+    "subcategoryId": "RS.MA-01",
+    "categoryId": "RS.MA",
+    "functionId": "RS",
+    "title": "Incident Response Plan Execution",
+    "assessorFocus": "The assessor examines whether the organization executes its incident response plan in a coordinated manner with relevant third parties once an incident is declared, including evidence of designated incident leads and integration with business continuity and disaster recovery plans.",
+    "evidenceItems": [
+      {
+        "id": "RS.MA-01-E1",
+        "name": "Incident Response Plan (IRP)",
+        "description": "Demonstrates the existence of a formally approved, current incident response plan that defines roles, responsibilities, escalation paths, and coordination with third parties.",
+        "whatGoodLooksLike": [
+          "Plan is version-controlled with review dates within the last 12 months",
+          "Named incident lead roles with alternates are clearly defined",
+          "Third-party coordination procedures (MSSP, legal counsel, law enforcement) are explicitly documented",
+          "Integration points with BCP and DR plans are cross-referenced"
+        ],
+        "commonGaps": [
+          "Plan has not been reviewed or updated in over 12 months",
+          "Third-party contact information is outdated or missing",
+          "No designated incident lead role or succession plan",
+          "Plan exists in draft form only without formal approval signatures"
+        ],
+        "suggestedSources": [
+          "Document management system (SharePoint, Confluence)",
+          "GRC platform (ServiceNow GRC, Archer)",
+          "CISO or IR team document repository"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MA-01-E2",
+        "name": "Incident Declaration and Activation Records",
+        "description": "Shows that incidents are formally declared and the IRP is activated with documented timestamps and responsible parties.",
+        "whatGoodLooksLike": [
+          "Each incident has a formal declaration record with timestamp and declaring authority",
+          "Incident lead assignment is documented for every declared incident",
+          "Activation of supporting plans (BCP/DR) is recorded when triggered",
+          "Automated detection-to-declaration workflows are evidenced in SOAR platform"
+        ],
+        "commonGaps": [
+          "Incidents are handled informally without formal declaration",
+          "No consistent record of who declared the incident or when",
+          "Supporting plan activations are not tracked alongside the IR case",
+          "Gap between detection and declaration is not measured or tracked"
+        ],
+        "suggestedSources": [
+          "SOAR platform (Splunk SOAR, Palo Alto XSOAR, Tines)",
+          "Ticketing system (ServiceNow, Jira Service Management)",
+          "IR case management tool (TheHive, IBM Resilient)"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MA-01-E3",
+        "name": "Third-Party Coordination Logs",
+        "description": "Demonstrates that the organization coordinates with external parties such as MSSPs, legal counsel, law enforcement, or ISACs during incident response.",
+        "whatGoodLooksLike": [
+          "Communication logs with third-party responders are timestamped and preserved",
+          "Retainer agreements with IR service providers are current and accessible",
+          "Evidence of tabletop exercises involving third-party participants",
+          "Clear handoff procedures between internal and external responders"
+        ],
+        "commonGaps": [
+          "No documented evidence of third-party engagement during incidents",
+          "IR retainer agreements are expired or nonexistent",
+          "Third parties are engaged ad hoc without following documented procedures",
+          "No after-action record of third-party contributions to incident response"
+        ],
+        "suggestedSources": [
+          "IR case management tool (TheHive, IBM Resilient)",
+          "Email and secure messaging archives",
+          "Procurement or vendor management system"
+        ],
+        "format": "System export | Email archive",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MA-01-E4",
+        "name": "Tabletop and Simulation Exercise Reports",
+        "description": "Demonstrates that the IRP is tested through exercises to validate coordination procedures and readiness.",
+        "whatGoodLooksLike": [
+          "At least one tabletop exercise conducted per year with documented results",
+          "Exercise scenarios reflect realistic and current threat landscape",
+          "Findings and corrective actions are tracked to closure",
+          "Third-party responders participate in exercises"
+        ],
+        "commonGaps": [
+          "No exercises conducted in the past 12 months",
+          "Exercises are superficial and do not test coordination with third parties",
+          "Findings from exercises are not tracked or remediated",
+          "Exercise scenarios are outdated or do not reflect current threats"
+        ],
+        "suggestedSources": [
+          "GRC platform (ServiceNow GRC, Archer)",
+          "IR team shared drive or document repository",
+          "Third-party exercise facilitation reports"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request the last three incident declaration records to verify the IRP was formally activated each time",
+      "Verify third-party contact lists in the IRP are current by cross-referencing with active contracts",
+      "Ask for evidence of the most recent tabletop exercise and confirm findings were remediated",
+      "Check that automated detection-to-declaration workflows exist in the SOAR platform",
+      "Confirm that BCP/DR plan activation criteria are cross-referenced in the IRP"
+    ]
+  },
+  "RS.MA-02": {
+    "subcategoryId": "RS.MA-02",
+    "categoryId": "RS.MA",
+    "functionId": "RS",
+    "title": "Incident Triage and Validation",
+    "assessorFocus": "The assessor verifies that reported incidents undergo a structured triage process to confirm they are cybersecurity-related, validate their legitimacy, and estimate initial severity before committing response resources.",
+    "evidenceItems": [
+      {
+        "id": "RS.MA-02-E1",
+        "name": "Triage Procedures and Severity Classification Matrix",
+        "description": "Documents the criteria and workflow used to triage incoming incident reports and assign initial severity ratings.",
+        "whatGoodLooksLike": [
+          "Severity classification matrix with clearly defined levels (e.g., P1-P4) and quantifiable criteria",
+          "Decision tree or flowchart for triage analysts to follow",
+          "Integration of threat intelligence feeds into triage decision-making",
+          "Defined SLAs for triage completion based on initial severity indicators"
+        ],
+        "commonGaps": [
+          "Severity levels are subjective with no defined criteria",
+          "No documented triage procedure exists; analysts rely on experience alone",
+          "Triage SLAs are undefined or not measured",
+          "No distinction between cybersecurity incidents and IT operational issues"
+        ],
+        "suggestedSources": [
+          "IR playbook repository (Confluence, wiki, or SOAR platform)",
+          "SOC standard operating procedures",
+          "GRC platform (ServiceNow GRC, Archer)"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MA-02-E2",
+        "name": "Triage Activity Logs from SIEM/SOAR",
+        "description": "Shows actual triage decisions made on incoming alerts and incident reports, including analyst notes, validation outcomes, and severity assignments.",
+        "whatGoodLooksLike": [
+          "Each alert or report has a documented triage decision with analyst justification",
+          "False positives are tracked and used to tune detection rules",
+          "Triage timestamps show compliance with defined SLAs",
+          "Validation steps are recorded including evidence reviewed"
+        ],
+        "commonGaps": [
+          "Alerts are closed without documented triage rationale",
+          "No tracking of false positive rates to improve detection fidelity",
+          "Triage decisions lack timestamps making SLA compliance unmeasurable",
+          "Bulk closure of alerts without individual review"
+        ],
+        "suggestedSources": [
+          "SIEM platform (Splunk, Microsoft Sentinel, Elastic Security)",
+          "SOAR platform (Splunk SOAR, Palo Alto XSOAR)",
+          "Ticketing system (ServiceNow, Jira Service Management)"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "RS.MA-02-E3",
+        "name": "Incident Validation Checklists",
+        "description": "Demonstrates that analysts follow a structured checklist to validate whether a reported event constitutes a genuine cybersecurity incident.",
+        "whatGoodLooksLike": [
+          "Standardized checklist used consistently across all triage activities",
+          "Checklist includes verification of IOCs, affected assets, and data exposure",
+          "Completed checklists are attached to incident records",
+          "Checklists are reviewed and updated based on lessons learned"
+        ],
+        "commonGaps": [
+          "No standardized validation checklist exists",
+          "Checklists exist but are not consistently used or attached to incident records",
+          "Validation steps vary significantly between analysts",
+          "Checklists have not been updated to reflect current threat landscape"
+        ],
+        "suggestedSources": [
+          "SOAR platform playbook steps",
+          "SOC runbook repository",
+          "IR case management tool (TheHive, IBM Resilient)"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Sample 5-10 recent incident records and verify each has a documented triage decision with severity assignment",
+      "Ask triage analysts to walk through their process for a recent alert to validate adherence to documented procedures",
+      "Review false positive tracking metrics to assess detection tuning maturity",
+      "Verify that triage SLAs are defined, measured, and reported to management",
+      "Check that the severity classification matrix aligns with the organization's risk appetite and BIA"
+    ]
+  },
+  "RS.MA-03": {
+    "subcategoryId": "RS.MA-03",
+    "categoryId": "RS.MA",
+    "functionId": "RS",
+    "title": "Incident Categorization and Prioritization",
+    "assessorFocus": "The assessor evaluates whether the organization categorizes incidents by type and prioritizes them based on scope, likely impact, and urgency, including balancing rapid recovery needs against investigative requirements.",
+    "evidenceItems": [
+      {
+        "id": "RS.MA-03-E1",
+        "name": "Incident Categorization Taxonomy",
+        "description": "Defines the organization's incident classification scheme including categories such as data breach, ransomware, DDoS, insider threat, and account compromise.",
+        "whatGoodLooksLike": [
+          "Taxonomy aligns with industry standards (e.g., VERIS, US-CERT categories)",
+          "Each category has defined response strategies and playbooks",
+          "Taxonomy is integrated into ticketing and SOAR systems as mandatory fields",
+          "Regular reviews ensure new threat types are added to the taxonomy"
+        ],
+        "commonGaps": [
+          "No formal taxonomy; analysts use free-text categorization",
+          "Taxonomy exists but is not enforced in incident tracking tools",
+          "Categories are too broad to drive differentiated response strategies",
+          "Taxonomy has not been updated to include emerging threat types"
+        ],
+        "suggestedSources": [
+          "IR playbook repository",
+          "SOAR platform configuration",
+          "GRC platform (ServiceNow GRC, Archer)"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MA-03-E2",
+        "name": "Prioritization Criteria and Decision Records",
+        "description": "Shows that incidents are prioritized using defined criteria including business impact, scope of compromise, and time sensitivity.",
+        "whatGoodLooksLike": [
+          "Prioritization matrix maps incident characteristics to response urgency levels",
+          "Business impact analysis (BIA) data is referenced in prioritization decisions",
+          "Documented justification for priority assignments in incident records",
+          "Re-prioritization events are logged when incident scope changes"
+        ],
+        "commonGaps": [
+          "Prioritization is based on analyst judgment without documented criteria",
+          "BIA data is not integrated into incident prioritization",
+          "No documentation of why a particular priority was assigned",
+          "Priority levels do not change even as incident scope evolves"
+        ],
+        "suggestedSources": [
+          "Ticketing system (ServiceNow, Jira Service Management)",
+          "SOAR platform (Splunk SOAR, Palo Alto XSOAR)",
+          "IR case management tool (TheHive, IBM Resilient)"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "RS.MA-03-E3",
+        "name": "Response Strategy Selection Records",
+        "description": "Demonstrates that for each incident, the team selects an appropriate response strategy balancing rapid recovery against investigative thoroughness.",
+        "whatGoodLooksLike": [
+          "Decision records document the chosen strategy (contain-and-recover vs. monitor-and-investigate)",
+          "Strategy selection considers legal, regulatory, and evidence preservation requirements",
+          "Incident commander approval is documented for strategy decisions",
+          "Strategy changes during an incident are logged with justification"
+        ],
+        "commonGaps": [
+          "No documented strategy selection; response is reactive and unstructured",
+          "Legal and evidence preservation considerations are not factored in",
+          "No approval workflow for response strategy decisions",
+          "Strategy pivots during incidents are not recorded"
+        ],
+        "suggestedSources": [
+          "IR case management tool (TheHive, IBM Resilient)",
+          "SOAR platform workflow logs",
+          "Incident commander decision logs"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review 5-10 recent incidents to verify categorization taxonomy was applied consistently",
+      "Ask how prioritization changes when an incident scope expands during investigation",
+      "Verify that the categorization taxonomy is enforced as a mandatory field in the ticketing system",
+      "Check that response strategy selection considers legal hold and evidence preservation",
+      "Confirm that BIA data informs prioritization decisions for incidents affecting critical systems"
+    ]
+  },
+  "RS.MA-04": {
+    "subcategoryId": "RS.MA-04",
+    "categoryId": "RS.MA",
+    "functionId": "RS",
+    "title": "Incident Escalation and Elevation",
+    "assessorFocus": "The assessor verifies that the organization has defined escalation criteria and procedures, tracks incident status in real time, and coordinates elevation to appropriate internal and external stakeholders when thresholds are met.",
+    "evidenceItems": [
+      {
+        "id": "RS.MA-04-E1",
+        "name": "Escalation Matrix and Criteria",
+        "description": "Defines the thresholds, timelines, and stakeholder notification requirements for escalating or elevating incidents.",
+        "whatGoodLooksLike": [
+          "Escalation matrix maps severity levels to specific notification recipients and timelines",
+          "Criteria for elevation to executive leadership and board are clearly defined",
+          "Regulatory notification thresholds are embedded in the escalation matrix",
+          "Matrix is reviewed and updated at least annually"
+        ],
+        "commonGaps": [
+          "No formal escalation matrix; escalation decisions are ad hoc",
+          "Escalation timelines are undefined or unrealistic",
+          "Regulatory notification requirements are not integrated into escalation criteria",
+          "Matrix references roles that no longer exist or contact details that are outdated"
+        ],
+        "suggestedSources": [
+          "IR plan appendices",
+          "GRC platform (ServiceNow GRC, Archer)",
+          "SOC standard operating procedures"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MA-04-E2",
+        "name": "Incident Status Tracking Dashboard or Reports",
+        "description": "Shows that ongoing incidents are tracked in real time with status updates visible to relevant stakeholders.",
+        "whatGoodLooksLike": [
+          "Real-time incident dashboard accessible to authorized stakeholders",
+          "Status updates are logged at regular intervals during active incidents",
+          "Dashboard includes escalation status and stakeholder notification timestamps",
+          "Historical incident status data is preserved for post-incident review"
+        ],
+        "commonGaps": [
+          "No centralized tracking of active incidents",
+          "Status updates are communicated informally via email or chat without preservation",
+          "Stakeholders lack visibility into incident progress",
+          "Historical status data is not retained after incident closure"
+        ],
+        "suggestedSources": [
+          "SOAR platform dashboards",
+          "Ticketing system (ServiceNow, Jira Service Management)",
+          "SIEM platform (Splunk, Microsoft Sentinel)"
+        ],
+        "format": "Screenshot | System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "RS.MA-04-E3",
+        "name": "Escalation and Notification Logs",
+        "description": "Provides an audit trail of escalation actions taken during incidents, including timestamps and recipients.",
+        "whatGoodLooksLike": [
+          "Every escalation event is timestamped and logged in the incident record",
+          "Notification receipts or acknowledgments from escalation recipients are captured",
+          "Automated escalation workflows trigger when SLA thresholds are breached",
+          "Escalation logs are part of the permanent incident record"
+        ],
+        "commonGaps": [
+          "Escalation actions are not logged or timestamped",
+          "No confirmation that stakeholders received and acknowledged escalation notifications",
+          "Automated escalation workflows do not exist; all escalation is manual",
+          "Escalation records are stored separately from incident records"
+        ],
+        "suggestedSources": [
+          "SOAR platform (Splunk SOAR, Palo Alto XSOAR)",
+          "Ticketing system escalation audit trail",
+          "PagerDuty, Opsgenie, or equivalent on-call management system"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Select a recent high-severity incident and trace the escalation path against the documented matrix",
+      "Verify that automated escalation triggers exist in the SOAR or ticketing platform for SLA breaches",
+      "Confirm that executive and board notification criteria are defined and have been tested",
+      "Review escalation logs for evidence that regulatory notification timelines were met",
+      "Ask how the organization handles escalation when the primary contact is unavailable"
+    ]
+  },
+  "RS.MA-05": {
+    "subcategoryId": "RS.MA-05",
+    "categoryId": "RS.MA",
+    "functionId": "RS",
+    "title": "Incident Recovery Initiation Criteria",
+    "assessorFocus": "The assessor checks whether the organization has defined criteria for transitioning from incident response to recovery, considering both the incident characteristics and the potential operational disruption of recovery activities.",
+    "evidenceItems": [
+      {
+        "id": "RS.MA-05-E1",
+        "name": "Recovery Initiation Criteria Documentation",
+        "description": "Defines the conditions under which incident recovery processes should be initiated, including readiness checks and risk considerations.",
+        "whatGoodLooksLike": [
+          "Explicit criteria specify when containment is sufficiently complete to begin recovery",
+          "Criteria address both technical readiness and business impact considerations",
+          "Decision authority for initiating recovery is clearly assigned",
+          "Criteria are integrated into the IRP and referenced during incident handling"
+        ],
+        "commonGaps": [
+          "No documented criteria; recovery initiation is ad hoc",
+          "Criteria focus only on technical factors and ignore business impact",
+          "Decision authority for recovery initiation is unclear",
+          "Criteria exist in the plan but are not referenced during actual incidents"
+        ],
+        "suggestedSources": [
+          "Incident response plan recovery section",
+          "Business continuity plan",
+          "GRC platform (ServiceNow GRC, Archer)"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MA-05-E2",
+        "name": "Recovery Initiation Decision Records",
+        "description": "Shows that for actual incidents, the decision to initiate recovery was made using the defined criteria with documented approval.",
+        "whatGoodLooksLike": [
+          "Decision records reference specific criteria that were evaluated",
+          "Approval from designated authority is documented with timestamp",
+          "Potential operational disruption of recovery actions was considered and documented",
+          "Decision records are linked to the parent incident record"
+        ],
+        "commonGaps": [
+          "No documented decision to transition from response to recovery",
+          "Recovery begins without formal evaluation of readiness criteria",
+          "Operational disruption risk of recovery actions is not assessed",
+          "Decision records are not preserved as part of the incident documentation"
+        ],
+        "suggestedSources": [
+          "IR case management tool (TheHive, IBM Resilient)",
+          "Ticketing system (ServiceNow, Jira Service Management)",
+          "Incident commander decision logs"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MA-05-E3",
+        "name": "Recovery Impact Assessment Records",
+        "description": "Demonstrates that the potential operational disruption of recovery activities is evaluated before initiating recovery.",
+        "whatGoodLooksLike": [
+          "Impact assessments consider downtime required for restoration activities",
+          "Scheduling of recovery actions accounts for business-critical windows",
+          "Stakeholder input on acceptable recovery windows is documented",
+          "Contingency plans exist for recovery actions that may cause additional disruption"
+        ],
+        "commonGaps": [
+          "Recovery actions are initiated without assessing secondary disruption",
+          "Business-critical time windows are not considered in recovery scheduling",
+          "No stakeholder consultation before initiating recovery actions",
+          "Contingency plans for failed recovery attempts do not exist"
+        ],
+        "suggestedSources": [
+          "Business impact analysis (BIA) records",
+          "Change management system (ServiceNow Change)",
+          "IR case management tool"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask the IR team to describe how they decide when to transition from response to recovery",
+      "Review a recent incident to verify the recovery initiation decision was documented against criteria",
+      "Confirm that operational disruption assessments are performed before recovery actions begin",
+      "Verify that recovery initiation criteria account for evidence preservation requirements",
+      "Check that business stakeholders are consulted on recovery timing for incidents affecting critical systems"
+    ]
+  },
+  "RS.AN-01": {
+    "subcategoryId": "RS.AN-01",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Withdrawn - Incorporated into RS.MA-02",
+    "assessorFocus": "This subcategory has been withdrawn in NIST CSF 2.0 and incorporated into RS.MA-02. Assessors should evaluate the relevant controls under RS.MA-02 (Incident Triage and Validation).",
+    "evidenceItems": [
+      {
+        "id": "RS.AN-01-E1",
+        "name": "Refer to RS.MA-02 Evidence",
+        "description": "All evidence requirements for this withdrawn subcategory are now addressed under RS.MA-02.",
+        "whatGoodLooksLike": [
+          "Organization maps legacy RS.AN-01 controls to RS.MA-02",
+          "Triage and validation procedures cover original RS.AN-01 scope",
+          "No orphaned controls from the withdrawal"
+        ],
+        "commonGaps": [
+          "Organization still references RS.AN-01 in its control framework without mapping to RS.MA-02",
+          "Legacy procedures tied to RS.AN-01 have not been migrated",
+          "Control mapping documentation is incomplete"
+        ],
+        "suggestedSources": [
+          "GRC platform control mapping records",
+          "NIST CSF 2.0 migration documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that controls previously mapped to RS.AN-01 have been remapped to RS.MA-02",
+      "Ensure no evidence gaps exist from the subcategory withdrawal",
+      "Review the organization's CSF version migration documentation"
+    ]
+  },
+  "RS.AN-02": {
+    "subcategoryId": "RS.AN-02",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Withdrawn - Incorporated into RS.MA-02, RS.MA-03, RS.MA-04",
+    "assessorFocus": "This subcategory has been withdrawn in NIST CSF 2.0 and its scope distributed across RS.MA-02, RS.MA-03, and RS.MA-04. Assessors should evaluate relevant controls under those subcategories.",
+    "evidenceItems": [
+      {
+        "id": "RS.AN-02-E1",
+        "name": "Refer to RS.MA-02, RS.MA-03, RS.MA-04 Evidence",
+        "description": "All evidence requirements for this withdrawn subcategory are now addressed under RS.MA-02 (Triage), RS.MA-03 (Categorization), and RS.MA-04 (Escalation).",
+        "whatGoodLooksLike": [
+          "Organization maps legacy RS.AN-02 controls across RS.MA-02, RS.MA-03, and RS.MA-04",
+          "No control coverage gaps from the redistribution",
+          "Migration mapping is formally documented and approved"
+        ],
+        "commonGaps": [
+          "Organization still references RS.AN-02 without mapping to successor subcategories",
+          "Partial migration leaves control gaps",
+          "No documentation of how RS.AN-02 scope was redistributed"
+        ],
+        "suggestedSources": [
+          "GRC platform control mapping records",
+          "NIST CSF 2.0 migration documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify controls previously mapped to RS.AN-02 are redistributed across RS.MA-02, RS.MA-03, and RS.MA-04",
+      "Check that no evidence gaps exist from the subcategory withdrawal",
+      "Confirm the organization's CSF mapping reflects the 2.0 structure"
+    ]
+  },
+  "RS.AN-03": {
+    "subcategoryId": "RS.AN-03",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Incident Root Cause Analysis",
+    "assessorFocus": "The assessor examines whether the organization performs thorough analysis during incidents to establish the sequence of events, identify involved assets, determine vulnerabilities exploited, and identify systemic root causes.",
+    "evidenceItems": [
+      {
+        "id": "RS.AN-03-E1",
+        "name": "Root Cause Analysis Reports",
+        "description": "Demonstrates that completed incidents include a formal root cause analysis identifying the underlying systemic causes, not just proximate triggers.",
+        "whatGoodLooksLike": [
+          "RCA reports use structured methodologies (5 Whys, Ishikawa, fault tree analysis)",
+          "Reports identify both technical vulnerabilities and process failures",
+          "Root causes are linked to remediation actions with owners and deadlines",
+          "RCA findings feed into the organization's risk register"
+        ],
+        "commonGaps": [
+          "Root cause analysis is superficial, stopping at the proximate cause",
+          "No structured RCA methodology is applied consistently",
+          "RCA findings do not result in tracked remediation actions",
+          "RCA is only performed for high-severity incidents, missing patterns in lower-severity events"
+        ],
+        "suggestedSources": [
+          "IR case management tool (TheHive, IBM Resilient)",
+          "Post-incident review documentation",
+          "GRC platform risk register"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RS.AN-03-E2",
+        "name": "Incident Timeline and Event Sequence Reconstruction",
+        "description": "Shows that the organization reconstructs the full sequence of events during an incident, including initial compromise, lateral movement, and data exfiltration stages.",
+        "whatGoodLooksLike": [
+          "Detailed timelines with timestamps correlating events across multiple data sources",
+          "Timeline includes attacker TTPs mapped to MITRE ATT&CK framework",
+          "Timelines identify gaps in visibility that hindered analysis",
+          "Automated timeline reconstruction tools are used (e.g., log correlation in SIEM)"
+        ],
+        "commonGaps": [
+          "Timelines are incomplete due to insufficient logging",
+          "Events are not correlated across multiple data sources",
+          "No mapping to MITRE ATT&CK or equivalent framework",
+          "Timeline reconstruction is manual and inconsistent across incidents"
+        ],
+        "suggestedSources": [
+          "SIEM platform (Splunk, Microsoft Sentinel, Elastic Security)",
+          "EDR platform (CrowdStrike Falcon, Microsoft Defender for Endpoint)",
+          "Digital forensics tools (Velociraptor, AXIOM)"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RS.AN-03-E3",
+        "name": "Vulnerability and Threat Actor Attribution Analysis",
+        "description": "Documents the vulnerabilities exploited and the threat actors or threat types involved in the incident.",
+        "whatGoodLooksLike": [
+          "Exploited vulnerabilities are identified with CVE references where applicable",
+          "Threat actor attribution is attempted using available threat intelligence",
+          "Analysis correlates findings with threat intelligence feeds and ISAC advisories",
+          "Findings inform vulnerability management prioritization"
+        ],
+        "commonGaps": [
+          "Exploited vulnerabilities are not identified or documented",
+          "No attempt at threat actor attribution or TTP identification",
+          "Threat intelligence is not leveraged during incident analysis",
+          "Findings are not shared with vulnerability management for prioritization"
+        ],
+        "suggestedSources": [
+          "Threat intelligence platform (MISP, Recorded Future, Mandiant Advantage)",
+          "Vulnerability management system (Tenable, Qualys, Rapid7)",
+          "ISAC advisories and reports"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RS.AN-03-E4",
+        "name": "Deception Technology Analysis Reports",
+        "description": "Shows that deception technologies (honeypots, honeytokens, decoy systems) are checked for additional intelligence on attacker behavior during incidents.",
+        "whatGoodLooksLike": [
+          "Deception technology alerts are correlated with active incidents",
+          "Attacker interactions with decoys provide additional TTP intelligence",
+          "Deception findings are integrated into incident analysis reports",
+          "Deception coverage is mapped to critical assets and likely attack paths"
+        ],
+        "commonGaps": [
+          "No deception technology is deployed",
+          "Deception technology exists but is not checked during incident analysis",
+          "Deception alerts are not correlated with incident records",
+          "Deception coverage is limited and does not align with high-value targets"
+        ],
+        "suggestedSources": [
+          "Deception platform (Attivo, TrapX, Thinkst Canary)",
+          "SIEM platform correlation rules",
+          "IR case management tool"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request RCA reports from the last three significant incidents and verify structured methodologies were applied",
+      "Check that incident timelines correlate events across SIEM, EDR, and network data sources",
+      "Verify that root causes are tracked to remediation with assigned owners and completion dates",
+      "Ask whether MITRE ATT&CK mapping is performed during incident analysis",
+      "Confirm that deception technology outputs are reviewed as part of incident investigation"
+    ]
+  },
+  "RS.AN-04": {
+    "subcategoryId": "RS.AN-04",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Withdrawn - Moved to RS.MA-03",
+    "assessorFocus": "This subcategory has been withdrawn in NIST CSF 2.0 and moved to RS.MA-03. Assessors should evaluate the relevant controls under RS.MA-03 (Incident Categorization and Prioritization).",
+    "evidenceItems": [
+      {
+        "id": "RS.AN-04-E1",
+        "name": "Refer to RS.MA-03 Evidence",
+        "description": "All evidence requirements for this withdrawn subcategory are now addressed under RS.MA-03.",
+        "whatGoodLooksLike": [
+          "Organization maps legacy RS.AN-04 controls to RS.MA-03",
+          "Categorization and prioritization procedures cover original RS.AN-04 scope",
+          "No orphaned controls from the withdrawal"
+        ],
+        "commonGaps": [
+          "Organization still references RS.AN-04 in its control framework without mapping to RS.MA-03",
+          "Legacy procedures tied to RS.AN-04 have not been migrated",
+          "Control mapping documentation is incomplete"
+        ],
+        "suggestedSources": [
+          "GRC platform control mapping records",
+          "NIST CSF 2.0 migration documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that controls previously mapped to RS.AN-04 have been remapped to RS.MA-03",
+      "Ensure no evidence gaps exist from the subcategory withdrawal",
+      "Review the organization's CSF version migration documentation"
+    ]
+  },
+  "RS.AN-05": {
+    "subcategoryId": "RS.AN-05",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Withdrawn - Moved to ID.RA-08",
+    "assessorFocus": "This subcategory has been withdrawn in NIST CSF 2.0 and moved to ID.RA-08 under the Identify function. Assessors should evaluate the relevant controls under ID.RA-08.",
+    "evidenceItems": [
+      {
+        "id": "RS.AN-05-E1",
+        "name": "Refer to ID.RA-08 Evidence",
+        "description": "All evidence requirements for this withdrawn subcategory are now addressed under ID.RA-08.",
+        "whatGoodLooksLike": [
+          "Organization maps legacy RS.AN-05 controls to ID.RA-08",
+          "Risk assessment procedures cover the original RS.AN-05 scope",
+          "No orphaned controls from the withdrawal"
+        ],
+        "commonGaps": [
+          "Organization still references RS.AN-05 without mapping to ID.RA-08",
+          "Legacy procedures tied to RS.AN-05 have not been migrated to the Identify function",
+          "Cross-function control mapping is incomplete"
+        ],
+        "suggestedSources": [
+          "GRC platform control mapping records",
+          "NIST CSF 2.0 migration documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that controls previously mapped to RS.AN-05 have been remapped to ID.RA-08",
+      "Ensure no evidence gaps exist from the subcategory withdrawal and cross-function move",
+      "Review the organization's CSF version migration documentation"
+    ]
+  },
+  "RS.AN-06": {
+    "subcategoryId": "RS.AN-06",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Investigation Action Recording and Integrity",
+    "assessorFocus": "The assessor verifies that all actions performed during an incident investigation are recorded with maintained integrity and provenance, including immutable audit trails of responder activities.",
+    "evidenceItems": [
+      {
+        "id": "RS.AN-06-E1",
+        "name": "Incident Responder Activity Logs",
+        "description": "Demonstrates that each incident responder records their actions during investigation and response, creating an immutable audit trail.",
+        "whatGoodLooksLike": [
+          "Every responder action is timestamped and attributed to a named individual",
+          "Activity logs are immutable once recorded (write-once storage or cryptographic integrity)",
+          "Logs capture both automated and manual actions taken during response",
+          "Activity logging is mandatory per SOC/IR operating procedures"
+        ],
+        "commonGaps": [
+          "Responder actions are not systematically recorded",
+          "Activity logs can be edited or deleted after the fact",
+          "Only senior responders log their actions; junior analyst activities are undocumented",
+          "Automated actions by SOAR playbooks are not logged alongside manual actions"
+        ],
+        "suggestedSources": [
+          "SOAR platform audit logs",
+          "IR case management tool (TheHive, IBM Resilient)",
+          "Ticketing system work log entries"
+        ],
+        "format": "System export",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RS.AN-06-E2",
+        "name": "Incident Documentation with Integrity Controls",
+        "description": "Shows that the incident lead maintains comprehensive documentation with integrity protections throughout the investigation.",
+        "whatGoodLooksLike": [
+          "Incident documentation is stored in a system with version control and audit trails",
+          "Document integrity is verifiable through checksums or digital signatures",
+          "Information sources cited in reports are traceable and preserved",
+          "Documentation templates ensure consistent and complete recording"
+        ],
+        "commonGaps": [
+          "Incident documentation is stored in shared drives without version control",
+          "No integrity verification mechanisms for incident records",
+          "Sources of information in reports are not cited or preserved",
+          "Documentation quality varies significantly between incident leads"
+        ],
+        "suggestedSources": [
+          "Document management system with version control (SharePoint, Confluence)",
+          "IR case management tool (TheHive, IBM Resilient)",
+          "Digital forensics case management platform"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RS.AN-06-E3",
+        "name": "Investigation Action Recording Policy and Procedures",
+        "description": "Documents the policy requiring all investigation actions to be recorded and the procedures for maintaining record integrity.",
+        "whatGoodLooksLike": [
+          "Policy explicitly requires immutable recording of all responder actions",
+          "Procedures specify the tools and methods for recording and preserving actions",
+          "Training records confirm responders are trained on documentation requirements",
+          "Compliance with recording requirements is periodically audited"
+        ],
+        "commonGaps": [
+          "No policy requiring documentation of investigation actions",
+          "Policy exists but procedures for ensuring immutability are not defined",
+          "Responders are not trained on documentation requirements",
+          "No periodic audit of compliance with recording requirements"
+        ],
+        "suggestedSources": [
+          "Security policy repository",
+          "SOC operating procedures",
+          "Training management system (LMS)"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Select a recent incident and verify that all responder actions are recorded with timestamps and attribution",
+      "Test whether activity logs are truly immutable by checking for edit or delete capabilities",
+      "Verify that automated SOAR actions are logged alongside manual responder actions",
+      "Check that incident documentation includes integrity controls such as version history or checksums",
+      "Confirm that investigation recording requirements are included in IR team training"
+    ]
+  },
+  "RS.AN-07": {
+    "subcategoryId": "RS.AN-07",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Incident Data and Metadata Collection and Integrity",
+    "assessorFocus": "The assessor examines whether the organization collects, preserves, and safeguards the integrity of all pertinent incident data and metadata following evidence preservation and chain-of-custody procedures.",
+    "evidenceItems": [
+      {
+        "id": "RS.AN-07-E1",
+        "name": "Evidence Collection and Chain-of-Custody Procedures",
+        "description": "Documents the procedures for collecting, preserving, and maintaining chain of custody for incident data and metadata.",
+        "whatGoodLooksLike": [
+          "Chain-of-custody procedures define collection, handling, transfer, and storage requirements",
+          "Procedures address both digital and physical evidence preservation",
+          "Evidence handling aligns with legal admissibility requirements",
+          "Procedures specify metadata to be captured (source, date/time, collector, hash values)"
+        ],
+        "commonGaps": [
+          "No formal chain-of-custody procedures exist",
+          "Procedures do not address digital evidence preservation adequately",
+          "Legal admissibility requirements are not considered",
+          "Metadata requirements are not defined, leading to incomplete evidence records"
+        ],
+        "suggestedSources": [
+          "IR plan evidence handling section",
+          "Digital forensics standard operating procedures",
+          "Legal department evidence preservation guidelines"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RS.AN-07-E2",
+        "name": "Evidence Collection Logs and Chain-of-Custody Records",
+        "description": "Shows actual evidence collection activities with maintained chain of custody for specific incidents.",
+        "whatGoodLooksLike": [
+          "Each evidence item has a chain-of-custody log with timestamps and custodian signatures",
+          "Cryptographic hashes are computed and recorded at collection time",
+          "Evidence storage locations are secure and access-controlled",
+          "Transfer of evidence between custodians is formally documented"
+        ],
+        "commonGaps": [
+          "No chain-of-custody documentation for collected evidence",
+          "Cryptographic hashes are not computed, making integrity unverifiable",
+          "Evidence is stored in unsecured or shared locations",
+          "Evidence transfers between parties are not documented"
+        ],
+        "suggestedSources": [
+          "Digital forensics platform (Velociraptor, EnCase, FTK)",
+          "IR case management tool evidence module",
+          "Secure evidence storage system"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RS.AN-07-E3",
+        "name": "Forensic Data Preservation and Storage Records",
+        "description": "Demonstrates that forensic images, log captures, memory dumps, and other incident artifacts are securely preserved with integrity verification.",
+        "whatGoodLooksLike": [
+          "Forensic images are stored on write-once or integrity-protected media",
+          "Preservation actions are performed using validated forensic tools",
+          "Storage media and locations are inventoried and access-controlled",
+          "Retention periods align with legal hold requirements and organizational policy"
+        ],
+        "commonGaps": [
+          "Forensic images are stored without integrity protection",
+          "Non-forensic tools are used for evidence collection, risking data modification",
+          "No inventory of preserved evidence or its storage locations",
+          "Evidence is deleted prematurely without considering legal hold obligations"
+        ],
+        "suggestedSources": [
+          "Digital forensics platform (Velociraptor, EnCase, FTK)",
+          "Secure evidence storage inventory",
+          "Legal hold management system"
+        ],
+        "format": "System export",
+        "retentionPeriod": "7 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request chain-of-custody records from a recent incident and verify completeness",
+      "Verify that cryptographic hashes are computed at evidence collection time and verified periodically",
+      "Check that forensic tools used for evidence collection are validated and documented",
+      "Confirm that evidence storage locations are access-controlled with audit logging",
+      "Review legal hold procedures to ensure evidence is not destroyed prematurely"
+    ]
+  },
+  "RS.AN-08": {
+    "subcategoryId": "RS.AN-08",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Incident Magnitude Estimation and Validation",
+    "assessorFocus": "The assessor verifies that the organization systematically estimates and validates the magnitude of incidents by searching for indicators of compromise and evidence of persistence across potentially affected targets.",
+    "evidenceItems": [
+      {
+        "id": "RS.AN-08-E1",
+        "name": "Scope Assessment and IOC Sweep Reports",
+        "description": "Demonstrates that during incidents the organization actively searches other potential targets for indicators of compromise to determine the true scope.",
+        "whatGoodLooksLike": [
+          "IOC sweeps are performed across the entire environment, not just known-affected systems",
+          "Automated IOC scanning tools are deployed to accelerate scope assessment",
+          "Sweep results are documented with timestamps and coverage metrics",
+          "Newly discovered compromised systems are added to the incident scope"
+        ],
+        "commonGaps": [
+          "Scope assessment is limited to initially reported systems",
+          "No systematic IOC sweep across the broader environment",
+          "Automated scanning tools are not available or not used during incidents",
+          "Sweep coverage is not measured, leaving potential blind spots"
+        ],
+        "suggestedSources": [
+          "EDR platform (CrowdStrike Falcon, Microsoft Defender for Endpoint, SentinelOne)",
+          "SIEM platform threat hunting queries",
+          "Threat intelligence platform IOC feeds"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.AN-08-E2",
+        "name": "Persistence Mechanism Detection Records",
+        "description": "Shows that the organization checks for persistence mechanisms established by threat actors to validate whether the adversary has maintained ongoing access.",
+        "whatGoodLooksLike": [
+          "Checks for common persistence techniques (scheduled tasks, registry keys, web shells, backdoors)",
+          "Persistence detection is mapped to MITRE ATT&CK Persistence tactics",
+          "Both automated and manual persistence checks are performed",
+          "Findings are documented and drive eradication activities"
+        ],
+        "commonGaps": [
+          "No systematic check for persistence mechanisms",
+          "Only basic persistence checks are performed, missing advanced techniques",
+          "Persistence detection is not mapped to a framework like MITRE ATT&CK",
+          "Findings are not documented or linked to eradication actions"
+        ],
+        "suggestedSources": [
+          "EDR platform hunt results",
+          "Digital forensics analysis reports",
+          "SIEM platform correlation alerts"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.AN-08-E3",
+        "name": "Incident Magnitude Validation and Reassessment Records",
+        "description": "Demonstrates that the estimated magnitude of an incident is validated through analysis and reassessed as new information emerges.",
+        "whatGoodLooksLike": [
+          "Initial magnitude estimates are documented with supporting evidence",
+          "Magnitude is reassessed at defined intervals or when new information emerges",
+          "Reassessments trigger updates to response strategy and resource allocation",
+          "Final validated magnitude is documented in the incident closure report"
+        ],
+        "commonGaps": [
+          "Initial magnitude estimates are not formally documented",
+          "No process for reassessing magnitude as the investigation progresses",
+          "Magnitude changes do not trigger response strategy adjustments",
+          "Final incident reports do not include validated magnitude assessment"
+        ],
+        "suggestedSources": [
+          "IR case management tool (TheHive, IBM Resilient)",
+          "Ticketing system incident records",
+          "Post-incident review reports"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask how the organization determines whether additional systems are compromised beyond the initially identified targets",
+      "Review IOC sweep coverage to verify it extends beyond the immediately affected network segment",
+      "Check that persistence detection procedures reference MITRE ATT&CK Persistence tactics",
+      "Verify that magnitude reassessments are documented when new compromised systems are discovered",
+      "Confirm that automated IOC scanning capabilities exist and were used in recent incidents"
+    ]
+  },
+  "RS.CO-01": {
+    "subcategoryId": "RS.CO-01",
+    "categoryId": "RS.CO",
+    "functionId": "RS",
+    "title": "Withdrawn - Incorporated into PR.AT-01",
+    "assessorFocus": "This subcategory has been withdrawn in NIST CSF 2.0 and incorporated into PR.AT-01 under the Protect function. Assessors should evaluate the relevant controls under PR.AT-01 (Awareness and Training).",
+    "evidenceItems": [
+      {
+        "id": "RS.CO-01-E1",
+        "name": "Refer to PR.AT-01 Evidence",
+        "description": "All evidence requirements for this withdrawn subcategory are now addressed under PR.AT-01.",
+        "whatGoodLooksLike": [
+          "Organization maps legacy RS.CO-01 controls to PR.AT-01",
+          "Awareness and training procedures cover original RS.CO-01 scope",
+          "No orphaned controls from the withdrawal"
+        ],
+        "commonGaps": [
+          "Organization still references RS.CO-01 without mapping to PR.AT-01",
+          "Legacy procedures tied to RS.CO-01 have not been migrated to the Protect function",
+          "Cross-function control mapping is incomplete"
+        ],
+        "suggestedSources": [
+          "GRC platform control mapping records",
+          "NIST CSF 2.0 migration documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that controls previously mapped to RS.CO-01 have been remapped to PR.AT-01",
+      "Ensure no evidence gaps exist from the subcategory withdrawal and cross-function move",
+      "Review the organization's CSF version migration documentation"
+    ]
+  },
+  "RS.CO-02": {
+    "subcategoryId": "RS.CO-02",
+    "categoryId": "RS.CO",
+    "functionId": "RS",
+    "title": "Stakeholder Incident Notification",
+    "assessorFocus": "The assessor examines whether the organization has defined procedures for notifying internal and external stakeholders of incidents, including breach notification to affected customers, business partners, law enforcement, and regulatory bodies.",
+    "evidenceItems": [
+      {
+        "id": "RS.CO-02-E1",
+        "name": "Breach Notification Procedures",
+        "description": "Documents the organization's procedures for notifying affected parties after a data breach, including regulatory timelines and notification content requirements.",
+        "whatGoodLooksLike": [
+          "Procedures address all applicable breach notification laws and regulations (GDPR, CCPA, HIPAA, state laws)",
+          "Notification timelines are clearly defined and align with regulatory requirements",
+          "Template notification letters are pre-approved by legal counsel",
+          "Procedures specify who authorizes the notification decision"
+        ],
+        "commonGaps": [
+          "Breach notification procedures do not cover all applicable jurisdictions",
+          "Notification timelines are not aligned with regulatory requirements",
+          "No pre-approved notification templates exist, causing delays during actual breaches",
+          "Authorization authority for breach notifications is unclear"
+        ],
+        "suggestedSources": [
+          "Legal department policy repository",
+          "IR plan breach notification appendix",
+          "GRC platform (ServiceNow GRC, Archer)"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RS.CO-02-E2",
+        "name": "Stakeholder Notification Records",
+        "description": "Shows that during actual incidents, stakeholders were notified in accordance with documented procedures and within required timelines.",
+        "whatGoodLooksLike": [
+          "Notification records include recipient, method, timestamp, and content",
+          "Notifications were sent within regulatory timelines where applicable",
+          "Customer, partner, and regulatory notifications are tracked separately",
+          "Acknowledgment of receipt is captured where feasible"
+        ],
+        "commonGaps": [
+          "No records of stakeholder notifications exist for past incidents",
+          "Notifications were sent late, exceeding regulatory timelines",
+          "Notification content was not pre-approved by legal counsel",
+          "No tracking of notification delivery or acknowledgment"
+        ],
+        "suggestedSources": [
+          "IR case management tool (TheHive, IBM Resilient)",
+          "Email delivery logs and certified mail records",
+          "Regulatory filing confirmations"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RS.CO-02-E3",
+        "name": "Law Enforcement and Regulatory Body Notification Records",
+        "description": "Demonstrates that the organization notifies law enforcement and regulatory bodies when incident criteria are met, with documented approval from management.",
+        "whatGoodLooksLike": [
+          "Criteria for law enforcement notification are defined in the IRP",
+          "Management approval for law enforcement engagement is documented",
+          "Regulatory body notifications include required data elements and are filed within deadlines",
+          "Follow-up communications with law enforcement are tracked"
+        ],
+        "commonGaps": [
+          "No criteria defined for when to notify law enforcement",
+          "Law enforcement notifications occur without management approval",
+          "Regulatory notifications are incomplete or filed late",
+          "No tracking of law enforcement engagement or case numbers"
+        ],
+        "suggestedSources": [
+          "IR case management tool",
+          "Legal department records",
+          "Regulatory filing system"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RS.CO-02-E4",
+        "name": "Contractual Notification Obligations Register",
+        "description": "Documents contractual obligations with business partners and customers for incident notification, including timelines and required information.",
+        "whatGoodLooksLike": [
+          "Register of all contracts with incident notification clauses is maintained",
+          "Notification timelines per contract are mapped and accessible during incidents",
+          "Contractual obligations are integrated into the incident notification workflow",
+          "Register is reviewed and updated when contracts are renewed or modified"
+        ],
+        "commonGaps": [
+          "No centralized register of contractual notification obligations",
+          "Contractual notification timelines are not known by the IR team",
+          "Obligations are not integrated into incident response workflows",
+          "Register is outdated and does not reflect current contracts"
+        ],
+        "suggestedSources": [
+          "Contract management system",
+          "Legal department contract repository",
+          "Vendor management platform"
+        ],
+        "format": "Spreadsheet | System export",
+        "retentionPeriod": "Contract term + 3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request evidence of stakeholder notifications from the most recent data breach incident",
+      "Verify that breach notification procedures cover all applicable regulatory jurisdictions",
+      "Check that pre-approved notification templates exist and were used during actual incidents",
+      "Confirm that contractual notification obligations are known and accessible to the IR team",
+      "Review whether regulatory notification deadlines were met for past incidents"
+    ]
+  },
+  "RS.CO-03": {
+    "subcategoryId": "RS.CO-03",
+    "categoryId": "RS.CO",
+    "functionId": "RS",
+    "title": "Incident Information Sharing",
+    "assessorFocus": "The assessor examines whether the organization shares incident information with designated internal and external stakeholders in a secure, consistent manner aligned with response plans, information sharing agreements, and need-to-know principles.",
+    "evidenceItems": [
+      {
+        "id": "RS.CO-03-E1",
+        "name": "Information Sharing Agreements and Protocols",
+        "description": "Documents the agreements and protocols governing how incident information is shared with external parties such as ISACs, suppliers, and government agencies.",
+        "whatGoodLooksLike": [
+          "Current information sharing agreements are in place with relevant ISACs and sector partners",
+          "Protocols define what information can be shared, with whom, and through what channels",
+          "Data sanitization procedures ensure sensitive organizational data is removed before sharing",
+          "TLP (Traffic Light Protocol) or equivalent classification is applied to shared information"
+        ],
+        "commonGaps": [
+          "No information sharing agreements are in place",
+          "Sharing protocols do not define data sanitization requirements",
+          "No classification scheme (TLP) is applied to shared incident information",
+          "Information sharing is ad hoc without formal agreements"
+        ],
+        "suggestedSources": [
+          "ISAC membership records and sharing agreements",
+          "Legal department information sharing agreements",
+          "Threat intelligence platform sharing configurations"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.CO-03-E2",
+        "name": "Internal Stakeholder Communication Records",
+        "description": "Shows that incident information is shared with appropriate internal stakeholders including senior leadership, HR, and business unit heads.",
+        "whatGoodLooksLike": [
+          "Regular status updates to senior leadership are documented during major incidents",
+          "HR is notified when insider threat activity is detected",
+          "Business unit heads are informed of incidents affecting their operations",
+          "Communication follows defined channels and frequency in the IRP"
+        ],
+        "commonGaps": [
+          "Senior leadership receives inconsistent or delayed incident updates",
+          "HR notification for insider incidents is informal or delayed",
+          "Business units are not informed of incidents affecting their systems",
+          "No defined communication cadence during active incidents"
+        ],
+        "suggestedSources": [
+          "IR case management tool communication logs",
+          "Incident bridge call recordings or minutes",
+          "Executive briefing presentations"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.CO-03-E3",
+        "name": "External Threat Intelligence Sharing Records",
+        "description": "Demonstrates that the organization voluntarily shares threat intelligence (TTPs, IOCs) with sector partners and ISACs after sanitizing sensitive data.",
+        "whatGoodLooksLike": [
+          "IOCs and TTPs are shared with ISACs in standardized formats (STIX/TAXII)",
+          "Shared intelligence has organizational identifiers and sensitive data removed",
+          "Sharing contributions are tracked and receipts maintained",
+          "Organization both contributes to and consumes from sharing communities"
+        ],
+        "commonGaps": [
+          "Organization consumes threat intelligence but does not contribute back",
+          "No standardized format for sharing (STIX/TAXII)",
+          "Sensitive organizational data is inadvertently included in shared intelligence",
+          "No tracking of what intelligence was shared and with whom"
+        ],
+        "suggestedSources": [
+          "Threat intelligence platform (MISP, Recorded Future, Anomali)",
+          "ISAC portal submission records",
+          "STIX/TAXII feed contribution logs"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "RS.CO-03-E4",
+        "name": "Supplier Incident Communication Protocols",
+        "description": "Documents the rules and protocols for sharing incident information with critical suppliers and receiving incident reports from them.",
+        "whatGoodLooksLike": [
+          "Contractual protocols for incident information exchange with suppliers are defined",
+          "Communication channels and escalation procedures with key suppliers are tested",
+          "Crisis communication methods with critical suppliers are documented",
+          "Supplier incident reports are integrated into the organization's incident tracking"
+        ],
+        "commonGaps": [
+          "No defined protocols for incident information exchange with suppliers",
+          "Communication channels with suppliers are not tested until an actual incident",
+          "Supplier-reported incidents are not integrated into organizational tracking",
+          "Crisis communication with suppliers relies on informal channels"
+        ],
+        "suggestedSources": [
+          "Vendor management platform",
+          "Contract management system",
+          "IR plan supplier communication appendix"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request evidence of ISAC membership and recent intelligence sharing contributions",
+      "Verify that TLP or equivalent classification is applied to all shared incident information",
+      "Check that internal communication records show regular updates to leadership during major incidents",
+      "Confirm that data sanitization procedures are applied before sharing intelligence externally",
+      "Review supplier communication protocols and evidence they have been tested"
+    ]
+  },
+  "RS.CO-04": {
+    "subcategoryId": "RS.CO-04",
+    "categoryId": "RS.CO",
+    "functionId": "RS",
+    "title": "Withdrawn - Incorporated into RS.MA-01, RS.MA-04",
+    "assessorFocus": "This subcategory has been withdrawn in NIST CSF 2.0 and its scope distributed between RS.MA-01 (IRP Execution) and RS.MA-04 (Escalation). Assessors should evaluate relevant controls under those subcategories.",
+    "evidenceItems": [
+      {
+        "id": "RS.CO-04-E1",
+        "name": "Refer to RS.MA-01 and RS.MA-04 Evidence",
+        "description": "All evidence requirements for this withdrawn subcategory are now addressed under RS.MA-01 and RS.MA-04.",
+        "whatGoodLooksLike": [
+          "Organization maps legacy RS.CO-04 controls to RS.MA-01 and RS.MA-04",
+          "Coordination procedures cover original RS.CO-04 scope",
+          "No orphaned controls from the withdrawal"
+        ],
+        "commonGaps": [
+          "Organization still references RS.CO-04 without mapping to successor subcategories",
+          "Partial migration leaves control gaps between RS.MA-01 and RS.MA-04",
+          "No documentation of how RS.CO-04 scope was redistributed"
+        ],
+        "suggestedSources": [
+          "GRC platform control mapping records",
+          "NIST CSF 2.0 migration documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify controls previously mapped to RS.CO-04 are redistributed between RS.MA-01 and RS.MA-04",
+      "Ensure no evidence gaps exist from the subcategory withdrawal",
+      "Confirm the organization's CSF mapping reflects the 2.0 structure"
+    ]
+  },
+  "RS.CO-05": {
+    "subcategoryId": "RS.CO-05",
+    "categoryId": "RS.CO",
+    "functionId": "RS",
+    "title": "Withdrawn - Incorporated into RS.CO-03",
+    "assessorFocus": "This subcategory has been withdrawn in NIST CSF 2.0 and incorporated into RS.CO-03. Assessors should evaluate the relevant controls under RS.CO-03 (Incident Information Sharing).",
+    "evidenceItems": [
+      {
+        "id": "RS.CO-05-E1",
+        "name": "Refer to RS.CO-03 Evidence",
+        "description": "All evidence requirements for this withdrawn subcategory are now addressed under RS.CO-03.",
+        "whatGoodLooksLike": [
+          "Organization maps legacy RS.CO-05 controls to RS.CO-03",
+          "Information sharing procedures cover original RS.CO-05 scope",
+          "No orphaned controls from the withdrawal"
+        ],
+        "commonGaps": [
+          "Organization still references RS.CO-05 without mapping to RS.CO-03",
+          "Legacy procedures tied to RS.CO-05 have not been migrated",
+          "Control mapping documentation is incomplete"
+        ],
+        "suggestedSources": [
+          "GRC platform control mapping records",
+          "NIST CSF 2.0 migration documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that controls previously mapped to RS.CO-05 have been remapped to RS.CO-03",
+      "Ensure no evidence gaps exist from the subcategory withdrawal",
+      "Review the organization's CSF version migration documentation"
+    ]
+  },
+  "RS.MI-01": {
+    "subcategoryId": "RS.MI-01",
+    "categoryId": "RS.MI",
+    "functionId": "RS",
+    "title": "Incident Containment",
+    "assessorFocus": "The assessor verifies that the organization has both automated and manual capabilities to contain incidents, including network isolation, endpoint quarantine, and account disablement, and that containment actions are executed promptly and documented.",
+    "evidenceItems": [
+      {
+        "id": "RS.MI-01-E1",
+        "name": "Containment Playbooks and Procedures",
+        "description": "Documents the predefined containment strategies and playbooks for different incident types, including automated and manual containment actions.",
+        "whatGoodLooksLike": [
+          "Containment playbooks exist for each incident category (ransomware, data breach, DDoS, etc.)",
+          "Playbooks specify both automated responses and manual fallback procedures",
+          "Containment actions include network isolation, endpoint quarantine, and account lockout",
+          "Playbooks define authorization requirements for disruptive containment actions"
+        ],
+        "commonGaps": [
+          "No predefined containment playbooks; containment is improvised during incidents",
+          "Playbooks only cover a limited set of incident types",
+          "Automated containment capabilities are not configured or tested",
+          "Authorization requirements for containment actions are unclear"
+        ],
+        "suggestedSources": [
+          "SOAR platform playbook library",
+          "SOC standard operating procedures",
+          "IR plan containment strategy section"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MI-01-E2",
+        "name": "Automated Containment Action Logs",
+        "description": "Shows that automated containment actions were triggered by security technologies during actual incidents, including the specific actions taken and their outcomes.",
+        "whatGoodLooksLike": [
+          "EDR, firewall, and SOAR logs show automated containment actions with timestamps",
+          "Automated actions include endpoint isolation, malicious process termination, and network block rules",
+          "Outcomes of automated containment are logged (success/failure)",
+          "Automated actions trigger notifications to the IR team for review"
+        ],
+        "commonGaps": [
+          "No automated containment capabilities are deployed",
+          "Automated actions are not logged or logged without sufficient detail",
+          "Automated containment is configured but never tested",
+          "No notification to IR team when automated containment occurs"
+        ],
+        "suggestedSources": [
+          "EDR platform (CrowdStrike Falcon, Microsoft Defender for Endpoint, SentinelOne)",
+          "SOAR platform (Splunk SOAR, Palo Alto XSOAR)",
+          "Firewall and network security appliance logs"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "RS.MI-01-E3",
+        "name": "Manual Containment Action Records",
+        "description": "Demonstrates that incident responders select and perform manual containment actions when automated responses are insufficient or inappropriate.",
+        "whatGoodLooksLike": [
+          "Manual containment actions are documented in the incident record with justification",
+          "Responders record the rationale for choosing specific containment strategies",
+          "Containment actions are authorized by the incident commander before execution",
+          "Impact of containment actions on business operations is assessed and documented"
+        ],
+        "commonGaps": [
+          "Manual containment actions are not documented in incident records",
+          "No authorization workflow for manual containment decisions",
+          "Impact of containment on business operations is not assessed before execution",
+          "Containment actions are taken without coordination among responders"
+        ],
+        "suggestedSources": [
+          "IR case management tool (TheHive, IBM Resilient)",
+          "Ticketing system work log entries",
+          "SOAR platform manual action logs"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MI-01-E4",
+        "name": "Third-Party Containment Coordination Records",
+        "description": "Shows that third parties (ISPs, MSSPs) perform containment actions on behalf of the organization when needed.",
+        "whatGoodLooksLike": [
+          "Service agreements with MSSPs define containment capabilities and authorization procedures",
+          "ISP takedown requests are documented with timestamps and outcomes",
+          "Third-party containment actions are integrated into the incident record",
+          "Coordination procedures with third-party responders are tested periodically"
+        ],
+        "commonGaps": [
+          "No agreements with third parties for containment support",
+          "Third-party containment actions are not tracked in the incident record",
+          "ISP takedown request procedures are not documented",
+          "Third-party containment capabilities have not been tested"
+        ],
+        "suggestedSources": [
+          "MSSP service delivery reports",
+          "ISP abuse desk communication records",
+          "Vendor management platform"
+        ],
+        "format": "System export | Email records",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request containment playbooks for the top three incident types and verify they include both automated and manual actions",
+      "Review EDR and SOAR logs from a recent incident to verify automated containment was triggered",
+      "Confirm that remediation VLAN or network isolation capabilities are tested and functional",
+      "Check that containment actions require incident commander authorization for high-impact actions",
+      "Verify that third-party containment capabilities are defined in MSSP agreements and tested"
+    ]
+  },
+  "RS.MI-02": {
+    "subcategoryId": "RS.MI-02",
+    "categoryId": "RS.MI",
+    "functionId": "RS",
+    "title": "Incident Eradication",
+    "assessorFocus": "The assessor examines whether the organization has capabilities and procedures to eradicate threats from the environment, including removal of malware, closure of unauthorized access, and elimination of persistence mechanisms.",
+    "evidenceItems": [
+      {
+        "id": "RS.MI-02-E1",
+        "name": "Eradication Procedures and Playbooks",
+        "description": "Documents the procedures for eradicating threats including malware removal, backdoor elimination, credential reset, and vulnerability remediation.",
+        "whatGoodLooksLike": [
+          "Eradication playbooks address common threat types (malware, ransomware, unauthorized access)",
+          "Procedures include verification steps to confirm successful eradication",
+          "Credential reset and access revocation procedures are defined for compromised accounts",
+          "Eradication procedures address underlying vulnerabilities, not just symptoms"
+        ],
+        "commonGaps": [
+          "No formal eradication procedures; actions are improvised",
+          "Eradication focuses on symptoms without addressing root vulnerabilities",
+          "No verification steps to confirm threats are fully eradicated",
+          "Credential reset procedures are not comprehensive (e.g., service accounts missed)"
+        ],
+        "suggestedSources": [
+          "SOAR platform playbook library",
+          "SOC standard operating procedures",
+          "IR plan eradication section"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MI-02-E2",
+        "name": "Eradication Action Logs",
+        "description": "Shows the specific eradication actions taken during actual incidents, including automated and manual remediation steps and their outcomes.",
+        "whatGoodLooksLike": [
+          "Each eradication action is timestamped, attributed, and documented in the incident record",
+          "Automated eradication actions from EDR and antivirus are logged",
+          "Manual actions such as system reimaging and credential resets are documented",
+          "Verification scans confirm successful eradication"
+        ],
+        "commonGaps": [
+          "Eradication actions are performed but not documented",
+          "No verification that eradication was successful before returning systems to production",
+          "Automated and manual eradication actions are not consolidated in the incident record",
+          "Partial eradication occurs, leaving some persistence mechanisms intact"
+        ],
+        "suggestedSources": [
+          "EDR platform (CrowdStrike Falcon, Microsoft Defender for Endpoint)",
+          "SOAR platform action logs",
+          "System administration change logs"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RS.MI-02-E3",
+        "name": "Post-Eradication Verification Reports",
+        "description": "Demonstrates that the organization verifies the completeness of eradication before transitioning to recovery.",
+        "whatGoodLooksLike": [
+          "Post-eradication scans are performed using updated signatures and IOC lists",
+          "Verification includes checking for all known persistence mechanisms",
+          "Clean state is confirmed before systems are cleared for recovery",
+          "Verification results are documented and signed off by the incident lead"
+        ],
+        "commonGaps": [
+          "No post-eradication verification is performed",
+          "Verification scans use outdated signatures or incomplete IOC lists",
+          "Systems are returned to production without confirming clean state",
+          "Verification results are not documented or reviewed"
+        ],
+        "suggestedSources": [
+          "EDR platform scan reports",
+          "Vulnerability scanner post-remediation reports",
+          "Digital forensics verification analysis"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review eradication records from a recent incident to verify all threat components were removed",
+      "Confirm that post-eradication verification scans are performed before recovery begins",
+      "Check that credential reset procedures cover all affected account types including service accounts",
+      "Verify that eradication addresses root cause vulnerabilities, not just malware artifacts",
+      "Ask about third-party MSSP eradication capabilities and how they are coordinated"
+    ]
+  },
+  "RS.MI-03": {
+    "subcategoryId": "RS.MI-03",
+    "categoryId": "RS.MI",
+    "functionId": "RS",
+    "title": "Withdrawn - Incorporated into ID.RA-06",
+    "assessorFocus": "This subcategory has been withdrawn in NIST CSF 2.0 and incorporated into ID.RA-06 under the Identify function. Assessors should evaluate the relevant controls under ID.RA-06.",
+    "evidenceItems": [
+      {
+        "id": "RS.MI-03-E1",
+        "name": "Refer to ID.RA-06 Evidence",
+        "description": "All evidence requirements for this withdrawn subcategory are now addressed under ID.RA-06.",
+        "whatGoodLooksLike": [
+          "Organization maps legacy RS.MI-03 controls to ID.RA-06",
+          "Vulnerability management procedures cover original RS.MI-03 scope",
+          "No orphaned controls from the withdrawal"
+        ],
+        "commonGaps": [
+          "Organization still references RS.MI-03 without mapping to ID.RA-06",
+          "Legacy procedures tied to RS.MI-03 have not been migrated to the Identify function",
+          "Cross-function control mapping is incomplete"
+        ],
+        "suggestedSources": [
+          "GRC platform control mapping records",
+          "NIST CSF 2.0 migration documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that controls previously mapped to RS.MI-03 have been remapped to ID.RA-06",
+      "Ensure no evidence gaps exist from the subcategory withdrawal and cross-function move",
+      "Review the organization's CSF version migration documentation"
+    ]
+  }
+}

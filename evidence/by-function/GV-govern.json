@@ -1,0 +1,2390 @@
+{
+  "GV.OC-01": {
+    "subcategoryId": "GV.OC-01",
+    "categoryId": "GV.OC",
+    "functionId": "GV",
+    "title": "Mission-Informed Cybersecurity Risk Management",
+    "assessorFocus": "Verify that the organization has documented its mission and that cybersecurity risk management decisions are explicitly linked to mission objectives.",
+    "evidenceItems": [
+      {
+        "id": "GV.OC-01-E1",
+        "name": "Mission and Vision Statement with Cybersecurity Linkage",
+        "description": "Demonstrates that organizational mission is formally documented and referenced in cybersecurity planning",
+        "whatGoodLooksLike": [
+          "Mission statement explicitly references protection of critical assets and services",
+          "Cybersecurity strategy document traces objectives back to mission priorities",
+          "Risk assessment criteria incorporate mission impact as a scoring factor"
+        ],
+        "commonGaps": [
+          "Mission statement exists but cybersecurity strategy makes no reference to it",
+          "Cybersecurity risk decisions are made in isolation from business objectives",
+          "No documented linkage between mission-critical functions and security controls"
+        ],
+        "suggestedSources": [
+          "Strategic planning office or executive leadership",
+          "CISO or cybersecurity governance team"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.OC-01-E2",
+        "name": "Cybersecurity Risk Management Strategy Document",
+        "description": "Shows that risk management strategy is derived from and aligned with organizational mission",
+        "whatGoodLooksLike": [
+          "Strategy document includes a section explicitly mapping mission objectives to cybersecurity goals",
+          "Annual review cycle ensures continued mission alignment",
+          "Strategy is approved by senior leadership with mission oversight authority"
+        ],
+        "commonGaps": [
+          "Strategy document is purely technical with no business context",
+          "No evidence of leadership review or approval",
+          "Strategy has not been updated to reflect mission changes"
+        ],
+        "suggestedSources": [
+          "Cybersecurity governance documentation repository",
+          "Board or executive committee meeting minutes"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.OC-01-E3",
+        "name": "Risk Assessment with Mission Impact Analysis",
+        "description": "Demonstrates that risk assessments consider impact to organizational mission",
+        "whatGoodLooksLike": [
+          "Risk register entries include mission impact ratings",
+          "Risk scoring methodology weights mission criticality",
+          "Risk treatment decisions reference mission priorities"
+        ],
+        "commonGaps": [
+          "Risk assessments focus solely on technical severity without mission context",
+          "No standardized method for scoring mission impact",
+          "Mission-critical systems are not identified or prioritized in risk assessments"
+        ],
+        "suggestedSources": [
+          "Enterprise risk management team",
+          "Cybersecurity risk assessment reports"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask leadership to articulate how cybersecurity priorities reflect the organization's mission",
+      "Trace a recent risk decision back to mission objectives to verify alignment",
+      "Check whether mission changes (e.g., new service lines) triggered cybersecurity strategy updates",
+      "Review whether mission-critical systems receive proportionally higher security investment"
+    ]
+  },
+  "GV.OC-02": {
+    "subcategoryId": "GV.OC-02",
+    "categoryId": "GV.OC",
+    "functionId": "GV",
+    "title": "Stakeholder Identification and Expectations",
+    "assessorFocus": "Confirm that the organization has identified both internal and external stakeholders and that their cybersecurity expectations are documented, considered, and addressed in risk management activities.",
+    "evidenceItems": [
+      {
+        "id": "GV.OC-02-E1",
+        "name": "Stakeholder Register",
+        "description": "Documents internal and external stakeholders with their cybersecurity-related needs and expectations",
+        "whatGoodLooksLike": [
+          "Comprehensive list of internal stakeholders (board, executives, employees) with documented expectations",
+          "External stakeholders (customers, regulators, partners) identified with specific cybersecurity requirements",
+          "Register is reviewed and updated at least annually"
+        ],
+        "commonGaps": [
+          "Stakeholder identification is informal or undocumented",
+          "External stakeholders such as supply chain partners are omitted",
+          "Stakeholder expectations are not linked to cybersecurity controls or policies"
+        ],
+        "suggestedSources": [
+          "Governance, risk, and compliance (GRC) team",
+          "Legal and compliance department"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.OC-02-E2",
+        "name": "Stakeholder Communication Plan",
+        "description": "Demonstrates how stakeholder expectations are communicated and integrated into cybersecurity risk management",
+        "whatGoodLooksLike": [
+          "Defined communication channels and frequencies for different stakeholder groups",
+          "Evidence of feedback mechanisms for stakeholders to express cybersecurity concerns",
+          "Communication plan is aligned with risk reporting cadence"
+        ],
+        "commonGaps": [
+          "No formal communication plan exists for cybersecurity topics",
+          "Communication is ad hoc and reactive rather than planned",
+          "Key stakeholder groups are excluded from cybersecurity communications"
+        ],
+        "suggestedSources": [
+          "CISO office or cybersecurity governance function",
+          "Corporate communications or stakeholder relations team"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.OC-02-E3",
+        "name": "Stakeholder Requirements Traceability Matrix",
+        "description": "Shows how stakeholder expectations map to cybersecurity controls and risk treatment decisions",
+        "whatGoodLooksLike": [
+          "Clear traceability from stakeholder needs to specific controls or policies",
+          "Conflicting stakeholder expectations are identified and resolved",
+          "Matrix is maintained as a living document with version control"
+        ],
+        "commonGaps": [
+          "No formal mapping between stakeholder expectations and cybersecurity measures",
+          "Matrix exists but is outdated or incomplete",
+          "Stakeholder expectations are acknowledged but not operationalized"
+        ],
+        "suggestedSources": [
+          "GRC platform or documentation repository",
+          "Risk management team"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Interview representatives from different stakeholder groups to validate that their expectations are accurately captured",
+      "Verify that stakeholder expectations influenced at least one recent risk decision",
+      "Check for evidence that customer and regulatory expectations are tracked separately and addressed"
+    ]
+  },
+  "GV.OC-03": {
+    "subcategoryId": "GV.OC-03",
+    "categoryId": "GV.OC",
+    "functionId": "GV",
+    "title": "Legal, Regulatory, and Contractual Requirements",
+    "assessorFocus": "Assess whether the organization maintains a current inventory of applicable legal, regulatory, and contractual cybersecurity obligations, and whether compliance is systematically tracked and managed.",
+    "evidenceItems": [
+      {
+        "id": "GV.OC-03-E1",
+        "name": "Regulatory and Legal Requirements Register",
+        "description": "Comprehensive inventory of applicable laws, regulations, and standards with cybersecurity implications",
+        "whatGoodLooksLike": [
+          "Register covers all jurisdictions where the organization operates",
+          "Each requirement is mapped to responsible owners and applicable controls",
+          "Register is updated when new regulations are enacted or existing ones change"
+        ],
+        "commonGaps": [
+          "Register is incomplete, missing recently enacted regulations",
+          "No assigned ownership for tracking regulatory changes",
+          "Privacy regulations (GDPR, CCPA) are tracked by legal but not integrated with cybersecurity"
+        ],
+        "suggestedSources": [
+          "Legal and compliance department",
+          "GRC platform or compliance tracking system"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "GV.OC-03-E2",
+        "name": "Contractual Cybersecurity Obligations Tracker",
+        "description": "Documents cybersecurity requirements from contracts with customers, partners, and suppliers",
+        "whatGoodLooksLike": [
+          "All active contracts with cybersecurity clauses are cataloged",
+          "Contractual obligations are mapped to implementing controls",
+          "Compliance with contractual requirements is periodically verified"
+        ],
+        "commonGaps": [
+          "Contractual cybersecurity obligations are not centrally tracked",
+          "No process to extract and operationalize cybersecurity clauses from new contracts",
+          "Contract renewals do not trigger security requirement reviews"
+        ],
+        "suggestedSources": [
+          "Procurement or vendor management office",
+          "Legal department contract repository"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "Contract term + 3 years"
+      },
+      {
+        "id": "GV.OC-03-E3",
+        "name": "Compliance Assessment Reports",
+        "description": "Evidence of periodic assessments against legal, regulatory, and contractual requirements",
+        "whatGoodLooksLike": [
+          "Regular compliance assessments are conducted and documented",
+          "Gaps are identified with remediation plans and timelines",
+          "Assessment results are reported to senior leadership"
+        ],
+        "commonGaps": [
+          "Compliance assessments are performed only when audited externally",
+          "No remediation tracking for identified compliance gaps",
+          "Assessments cover only a subset of applicable requirements"
+        ],
+        "suggestedSources": [
+          "Internal audit team",
+          "External audit or assessment reports"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "7 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request the complete regulatory register and verify it includes recent legislative changes in all operating jurisdictions",
+      "Sample several contracts to confirm cybersecurity clauses are extracted and tracked",
+      "Ask how the organization learns about new regulatory requirements and how quickly they are incorporated"
+    ]
+  },
+  "GV.OC-04": {
+    "subcategoryId": "GV.OC-04",
+    "categoryId": "GV.OC",
+    "functionId": "GV",
+    "title": "Critical Objectives and Services for Stakeholders",
+    "assessorFocus": "Verify that the organization has identified its critical capabilities and services that external stakeholders depend on, established criticality criteria, and communicated resilience objectives.",
+    "evidenceItems": [
+      {
+        "id": "GV.OC-04-E1",
+        "name": "Business Impact Analysis (BIA)",
+        "description": "Documents critical business functions, their dependencies, and the impact of disruption",
+        "whatGoodLooksLike": [
+          "BIA covers all business functions with defined criticality tiers",
+          "Recovery time objectives (RTOs) and recovery point objectives (RPOs) are established for critical services",
+          "BIA is reviewed and updated at least annually or after significant organizational changes"
+        ],
+        "commonGaps": [
+          "BIA is outdated and does not reflect current business operations",
+          "RTOs and RPOs are aspirational rather than tested and validated",
+          "BIA does not account for dependencies on external stakeholders or services"
+        ],
+        "suggestedSources": [
+          "Business continuity planning team",
+          "Operations or service delivery management"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.OC-04-E2",
+        "name": "Critical Services Catalog",
+        "description": "Inventory of services and capabilities that external stakeholders depend on, with criticality ratings",
+        "whatGoodLooksLike": [
+          "All externally facing services are cataloged with criticality classifications",
+          "Stakeholder dependencies are explicitly documented for each service",
+          "Catalog is cross-referenced with BIA and risk assessments"
+        ],
+        "commonGaps": [
+          "No formal catalog of externally dependent services exists",
+          "Criticality is informally understood but not documented",
+          "Internal and external service dependencies are conflated"
+        ],
+        "suggestedSources": [
+          "Service management or IT operations team",
+          "Product or service delivery leadership"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.OC-04-E3",
+        "name": "Resilience Objectives Communication Records",
+        "description": "Evidence that resilience objectives for critical services are communicated to relevant stakeholders",
+        "whatGoodLooksLike": [
+          "Resilience objectives are published in SLAs or service descriptions",
+          "Internal teams are aware of RTOs and RPOs for services they support",
+          "Communication records show periodic updates to stakeholders on resilience posture"
+        ],
+        "commonGaps": [
+          "Resilience objectives exist on paper but are not communicated to operational teams",
+          "SLAs do not include cybersecurity resilience commitments",
+          "No evidence that stakeholders are informed of changes to resilience objectives"
+        ],
+        "suggestedSources": [
+          "Service level management documentation",
+          "Stakeholder communications archive"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask operational staff to name the organization's most critical services and compare with the documented catalog",
+      "Verify that BIA findings directly inform cybersecurity resource allocation decisions",
+      "Check whether resilience objectives are tested through exercises or tabletop scenarios"
+    ]
+  },
+  "GV.OC-05": {
+    "subcategoryId": "GV.OC-05",
+    "categoryId": "GV.OC",
+    "functionId": "GV",
+    "title": "External Dependencies and Services",
+    "assessorFocus": "Confirm that the organization has identified external outcomes, capabilities, and services it depends on, documented potential failure points, and communicated this information to appropriate personnel.",
+    "evidenceItems": [
+      {
+        "id": "GV.OC-05-E1",
+        "name": "External Dependency Inventory",
+        "description": "Catalog of external resources, services, and providers the organization depends on",
+        "whatGoodLooksLike": [
+          "Comprehensive inventory including cloud providers, utilities, ISPs, and key suppliers",
+          "Each dependency is mapped to the organizational assets and functions it supports",
+          "Dependencies are classified by criticality and single-point-of-failure risk"
+        ],
+        "commonGaps": [
+          "Inventory is incomplete, missing shadow IT or informal external services",
+          "Dependencies are tracked in siloed departmental lists rather than centrally",
+          "No classification of dependencies by criticality or failure impact"
+        ],
+        "suggestedSources": [
+          "IT asset management or service catalog",
+          "Procurement and vendor management records"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.OC-05-E2",
+        "name": "Dependency Risk and Failure Analysis",
+        "description": "Analysis of external dependencies as potential points of failure for critical capabilities",
+        "whatGoodLooksLike": [
+          "Each critical dependency has a documented failure scenario and impact assessment",
+          "Alternative or redundant options are identified for single points of failure",
+          "Analysis is updated when new dependencies are introduced or existing ones change"
+        ],
+        "commonGaps": [
+          "No formal analysis of dependency failure scenarios exists",
+          "Single points of failure are known informally but not documented or mitigated",
+          "Analysis does not consider cascading failures across dependent services"
+        ],
+        "suggestedSources": [
+          "Risk management or business continuity team",
+          "IT architecture or infrastructure team"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.OC-05-E3",
+        "name": "Dependency Communication and Sharing Records",
+        "description": "Evidence that dependency information is shared with appropriate personnel for operational awareness",
+        "whatGoodLooksLike": [
+          "Dependency maps are accessible to incident response and continuity teams",
+          "Periodic briefings include updates on changes to critical external dependencies",
+          "Dependency information is integrated into incident response runbooks"
+        ],
+        "commonGaps": [
+          "Dependency information is maintained by one team but not shared broadly",
+          "Incident responders are unaware of critical external dependencies",
+          "No process to update teams when external dependencies change"
+        ],
+        "suggestedSources": [
+          "Incident response team documentation",
+          "Internal communication or briefing records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask the incident response team to describe key external dependencies and compare with the documented inventory",
+      "Verify that dependency analysis includes cloud and SaaS services adopted by business units",
+      "Check whether dependency failures have been simulated in continuity exercises"
+    ]
+  },
+  "GV.RM-01": {
+    "subcategoryId": "GV.RM-01",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Risk Management Objectives",
+    "assessorFocus": "Verify that cybersecurity risk management objectives are formally established, measurable, agreed upon by organizational stakeholders, and used to guide risk decisions.",
+    "evidenceItems": [
+      {
+        "id": "GV.RM-01-E1",
+        "name": "Cybersecurity Risk Management Objectives Document",
+        "description": "Formal documentation of near-term and long-term cybersecurity risk management objectives",
+        "whatGoodLooksLike": [
+          "Objectives are specific, measurable, and time-bound",
+          "Objectives are updated annually and after major organizational changes",
+          "Clear linkage between objectives and enterprise risk appetite"
+        ],
+        "commonGaps": [
+          "Objectives are vague or generic (e.g., 'improve security posture') without measurable targets",
+          "Objectives have not been updated in over two years",
+          "No formal agreement or sign-off from senior stakeholders"
+        ],
+        "suggestedSources": [
+          "CISO office or cybersecurity governance team",
+          "Strategic planning documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RM-01-E2",
+        "name": "Stakeholder Agreement Records",
+        "description": "Evidence that senior leaders and stakeholders have reviewed and agreed to risk management objectives",
+        "whatGoodLooksLike": [
+          "Meeting minutes showing leadership discussion and endorsement of objectives",
+          "Formal sign-off or approval records from board or executive committee",
+          "Stakeholder feedback is documented and incorporated"
+        ],
+        "commonGaps": [
+          "Objectives are set by cybersecurity team without executive input or approval",
+          "No documented evidence of stakeholder review or agreement",
+          "Leadership engagement is limited to annual compliance sign-off without substantive discussion"
+        ],
+        "suggestedSources": [
+          "Board or executive committee meeting minutes",
+          "Governance records or approval workflows"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RM-01-E3",
+        "name": "Risk Management Performance Metrics",
+        "description": "Metrics and KPIs used to measure progress toward cybersecurity risk management objectives",
+        "whatGoodLooksLike": [
+          "Defined KPIs aligned to each risk management objective",
+          "Regular reporting cadence with trend analysis",
+          "Metrics inform decision-making on resource allocation and strategy adjustments"
+        ],
+        "commonGaps": [
+          "No metrics are defined for risk management objectives",
+          "Metrics are collected but not reported to leadership",
+          "Metrics are activity-based (e.g., patches applied) rather than outcome-based (e.g., risk reduction)"
+        ],
+        "suggestedSources": [
+          "Cybersecurity dashboard or reporting platform",
+          "GRC system reports"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask leadership to articulate the organization's cybersecurity risk management objectives in their own words",
+      "Verify that objectives are referenced in risk treatment decisions and resource allocation",
+      "Check whether objectives were updated after significant incidents or organizational changes"
+    ]
+  },
+  "GV.RM-02": {
+    "subcategoryId": "GV.RM-02",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Risk Appetite and Tolerance Statements",
+    "assessorFocus": "Confirm that the organization has established, documented, communicated, and periodically reviewed risk appetite and risk tolerance statements that guide cybersecurity decision-making.",
+    "evidenceItems": [
+      {
+        "id": "GV.RM-02-E1",
+        "name": "Risk Appetite Statement",
+        "description": "Board-approved statement defining the organization's overall willingness to accept cybersecurity risk",
+        "whatGoodLooksLike": [
+          "Clear, qualitative statement approved by the board or senior leadership",
+          "Statement addresses different risk categories (operational, reputational, financial, compliance)",
+          "Statement is periodically reviewed and updated based on risk exposure changes"
+        ],
+        "commonGaps": [
+          "No formal risk appetite statement exists",
+          "Statement is too vague to guide operational decisions",
+          "Statement was created once and never revisited"
+        ],
+        "suggestedSources": [
+          "Board governance documentation",
+          "Enterprise risk management framework"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RM-02-E2",
+        "name": "Risk Tolerance Thresholds and Criteria",
+        "description": "Specific, measurable thresholds that translate risk appetite into operational decision criteria",
+        "whatGoodLooksLike": [
+          "Quantitative thresholds defined for key risk indicators (e.g., maximum acceptable downtime, data loss limits)",
+          "Tolerance levels are defined per risk category or asset classification",
+          "Escalation triggers are defined when tolerance thresholds are approached or exceeded"
+        ],
+        "commonGaps": [
+          "Risk appetite exists but is not translated into measurable tolerance levels",
+          "Tolerance thresholds are inconsistent across business units",
+          "No defined escalation process when tolerances are exceeded"
+        ],
+        "suggestedSources": [
+          "CISO office risk management documentation",
+          "Enterprise risk management team"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RM-02-E3",
+        "name": "Risk Appetite Communication and Acknowledgment Records",
+        "description": "Evidence that risk appetite and tolerance statements are communicated to and understood by relevant personnel",
+        "whatGoodLooksLike": [
+          "Communication records showing distribution to risk owners and decision-makers",
+          "Training or briefing materials that explain risk appetite in practical terms",
+          "Evidence that risk appetite statements are referenced in risk acceptance decisions"
+        ],
+        "commonGaps": [
+          "Risk appetite statements are confined to governance documents and not operationalized",
+          "Risk owners are unaware of organizational risk tolerance levels",
+          "Risk acceptance decisions do not reference established tolerance criteria"
+        ],
+        "suggestedSources": [
+          "Internal communications or training records",
+          "Risk acceptance decision documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask risk owners at different levels to describe the organization's risk appetite and compare with the formal statement",
+      "Review recent risk acceptance decisions to verify they reference tolerance criteria",
+      "Check whether risk appetite has been recalibrated after significant incidents or business changes"
+    ]
+  },
+  "GV.RM-03": {
+    "subcategoryId": "GV.RM-03",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Integration with Enterprise Risk Management",
+    "assessorFocus": "Assess whether cybersecurity risks are aggregated with and managed alongside other enterprise risks, and whether cybersecurity risk managers participate in enterprise risk management processes.",
+    "evidenceItems": [
+      {
+        "id": "GV.RM-03-E1",
+        "name": "Enterprise Risk Register with Cybersecurity Risks",
+        "description": "Demonstrates that cybersecurity risks are included in the enterprise-wide risk register alongside other risk categories",
+        "whatGoodLooksLike": [
+          "Cybersecurity risks appear in the enterprise risk register with consistent scoring methodology",
+          "Risk register enables comparison and prioritization across risk domains",
+          "Cybersecurity risks are escalated to enterprise level when they meet escalation criteria"
+        ],
+        "commonGaps": [
+          "Cybersecurity maintains a separate risk register that is not integrated with enterprise risk",
+          "Risk scoring methodologies differ between cybersecurity and enterprise risk management",
+          "Cybersecurity risks are underrepresented in enterprise risk discussions"
+        ],
+        "suggestedSources": [
+          "Enterprise risk management team",
+          "GRC platform or risk register system"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RM-03-E2",
+        "name": "ERM Committee Participation Records",
+        "description": "Evidence that cybersecurity risk managers participate in enterprise risk management planning and governance",
+        "whatGoodLooksLike": [
+          "CISO or cybersecurity risk representative is a standing member of the ERM committee",
+          "Meeting minutes show active cybersecurity risk discussion at the enterprise level",
+          "Cybersecurity risk input is solicited for enterprise-level risk assessments"
+        ],
+        "commonGaps": [
+          "Cybersecurity team is not represented in enterprise risk governance forums",
+          "Participation is ad hoc rather than formalized",
+          "Cybersecurity provides reports but does not actively participate in risk discussions"
+        ],
+        "suggestedSources": [
+          "ERM committee charter and meeting minutes",
+          "Organizational governance structure documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RM-03-E3",
+        "name": "Cybersecurity Risk Escalation Procedures",
+        "description": "Documented criteria and process for escalating cybersecurity risks to enterprise risk management",
+        "whatGoodLooksLike": [
+          "Clear escalation criteria based on risk severity, business impact, or tolerance threshold breach",
+          "Defined escalation paths with timelines and responsible parties",
+          "Evidence of escalation procedures being exercised"
+        ],
+        "commonGaps": [
+          "No formal escalation criteria or process exists",
+          "Escalation relies on informal relationships rather than defined procedures",
+          "Escalation procedures exist but have never been tested or used"
+        ],
+        "suggestedSources": [
+          "Risk management procedures documentation",
+          "Incident and escalation records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review the enterprise risk register to confirm cybersecurity risks are present and scored consistently with other risk domains",
+      "Interview the ERM committee chair to understand the level of cybersecurity integration",
+      "Ask for examples of cybersecurity risks that were escalated to enterprise level and how they were handled"
+    ]
+  },
+  "GV.RM-04": {
+    "subcategoryId": "GV.RM-04",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Risk Response Strategy and Direction",
+    "assessorFocus": "Verify that the organization has established and communicated strategic direction for risk response options (accept, avoid, mitigate, transfer) with clear criteria for each.",
+    "evidenceItems": [
+      {
+        "id": "GV.RM-04-E1",
+        "name": "Risk Response Framework and Criteria",
+        "description": "Documented framework defining criteria for selecting risk response options across different scenarios",
+        "whatGoodLooksLike": [
+          "Clear criteria for when to accept, avoid, mitigate, or transfer cybersecurity risks",
+          "Criteria are differentiated by data classification, asset criticality, or risk severity",
+          "Framework is approved by senior leadership and communicated to risk owners"
+        ],
+        "commonGaps": [
+          "Risk response decisions are made ad hoc without standardized criteria",
+          "Framework exists but is not applied consistently across the organization",
+          "No differentiation of response criteria based on asset or data sensitivity"
+        ],
+        "suggestedSources": [
+          "Cybersecurity risk management policy and procedures",
+          "Enterprise risk management framework"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RM-04-E2",
+        "name": "Risk Transfer and Insurance Documentation",
+        "description": "Records of risk transfer decisions including cybersecurity insurance policies and shared responsibility agreements",
+        "whatGoodLooksLike": [
+          "Active cybersecurity insurance policy with coverage aligned to identified risk exposure",
+          "Shared responsibility models are documented for cloud and third-party services",
+          "Risk transfer decisions are formally approved and documented"
+        ],
+        "commonGaps": [
+          "No cybersecurity insurance or coverage is inadequate relative to risk exposure",
+          "Shared responsibility models are not documented or understood",
+          "Risk transfer decisions are not formally tracked or reviewed"
+        ],
+        "suggestedSources": [
+          "Finance or insurance management team",
+          "Cloud and vendor management documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "Policy term + 3 years"
+      },
+      {
+        "id": "GV.RM-04-E3",
+        "name": "Risk Acceptance Records",
+        "description": "Formal documentation of risks accepted by authorized personnel with supporting rationale",
+        "whatGoodLooksLike": [
+          "Each risk acceptance is documented with rationale, approver, conditions, and expiration date",
+          "Risk acceptances are reviewed periodically to confirm conditions still hold",
+          "Acceptance authority is defined and limited to appropriate management levels"
+        ],
+        "commonGaps": [
+          "Risks are accepted informally without documentation",
+          "No expiration or review dates on risk acceptances",
+          "Acceptance authority is not defined, allowing inappropriate risk acceptance at lower levels"
+        ],
+        "suggestedSources": [
+          "Risk register or GRC platform",
+          "Risk acceptance approval records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review a sample of recent risk treatment decisions to verify they align with the documented response framework",
+      "Confirm that risk acceptance decisions were made at the appropriate authority level",
+      "Ask whether cybersecurity insurance coverage has been reviewed against current threat landscape and exposure"
+    ]
+  },
+  "GV.RM-05": {
+    "subcategoryId": "GV.RM-05",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Cross-Organizational Risk Communication",
+    "assessorFocus": "Assess whether formal communication lines are established across the organization for cybersecurity risks, including mechanisms for reporting to leadership and coordinating with all relevant departments.",
+    "evidenceItems": [
+      {
+        "id": "GV.RM-05-E1",
+        "name": "Cybersecurity Risk Communication Plan",
+        "description": "Documented plan defining communication channels, frequencies, audiences, and content for cybersecurity risk reporting",
+        "whatGoodLooksLike": [
+          "Plan covers upward reporting to executives, lateral communication across departments, and downward to operational teams",
+          "Communication frequencies are defined (e.g., monthly dashboards to executives, quarterly board briefings)",
+          "Plan includes supplier and third-party risk communication channels"
+        ],
+        "commonGaps": [
+          "No formal communication plan exists; reporting is ad hoc",
+          "Communication is limited to IT and security teams without cross-departmental reach",
+          "Supplier and third-party risk communication is absent from the plan"
+        ],
+        "suggestedSources": [
+          "CISO office governance documentation",
+          "Corporate communications or governance team"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.RM-05-E2",
+        "name": "Executive and Board Cybersecurity Briefing Records",
+        "description": "Evidence of regular cybersecurity risk briefings to senior executives and the board",
+        "whatGoodLooksLike": [
+          "Regular briefing cadence (at least quarterly) with documented agendas and minutes",
+          "Briefings include risk posture, key risk indicators, incidents, and strategic recommendations",
+          "Evidence of leadership questions, decisions, and action items resulting from briefings"
+        ],
+        "commonGaps": [
+          "Board briefings on cybersecurity are infrequent or superficial",
+          "Briefings focus on operational metrics without strategic risk context",
+          "No documentation of leadership decisions or actions taken based on briefings"
+        ],
+        "suggestedSources": [
+          "Board secretary or corporate governance office",
+          "CISO presentation archives"
+        ],
+        "format": "PDF/PPTX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RM-05-E3",
+        "name": "Cross-Departmental Coordination Records",
+        "description": "Evidence of cybersecurity risk communication and coordination across organizational departments",
+        "whatGoodLooksLike": [
+          "Regular cross-functional meetings include cybersecurity risk as a standing agenda item",
+          "Departments such as HR, legal, operations, and physical security actively participate",
+          "Communication records show two-way information flow between cybersecurity and other functions"
+        ],
+        "commonGaps": [
+          "Cybersecurity risk discussions are siloed within IT or security teams",
+          "Cross-departmental meetings exist but cybersecurity is not a regular topic",
+          "No mechanism for non-technical departments to report cybersecurity concerns"
+        ],
+        "suggestedSources": [
+          "Cross-functional committee meeting minutes",
+          "Internal collaboration platform records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Interview heads of non-IT departments to assess their awareness of cybersecurity risk communication channels",
+      "Review the last four board briefings to evaluate depth and quality of cybersecurity risk reporting",
+      "Verify that risk communication includes third-party and supply chain risks"
+    ]
+  },
+  "GV.RM-06": {
+    "subcategoryId": "GV.RM-06",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Standardized Risk Calculation and Categorization",
+    "assessorFocus": "Verify that the organization uses a standardized, documented methodology for calculating, documenting, categorizing, and prioritizing cybersecurity risks, and that it is consistently applied.",
+    "evidenceItems": [
+      {
+        "id": "GV.RM-06-E1",
+        "name": "Risk Assessment Methodology Document",
+        "description": "Formal documentation of the organization's approach to calculating and scoring cybersecurity risks",
+        "whatGoodLooksLike": [
+          "Methodology includes defined probability and impact scales with clear criteria for each level",
+          "Quantitative and/or qualitative approaches are specified with formulas or scoring rubrics",
+          "Methodology is consistently applied across the organization and reviewed periodically"
+        ],
+        "commonGaps": [
+          "No standardized methodology exists; risk scoring varies by team or assessor",
+          "Methodology exists but is not consistently applied across assessments",
+          "Probability and impact scales are undefined or subjective"
+        ],
+        "suggestedSources": [
+          "Risk management framework documentation",
+          "GRC platform configuration and methodology guides"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RM-06-E2",
+        "name": "Risk Register with Standardized Entries",
+        "description": "Active risk register demonstrating consistent application of the standardized methodology",
+        "whatGoodLooksLike": [
+          "All entries use the same scoring methodology with complete fields (description, likelihood, impact, rating, owner)",
+          "Risk categories are consistently applied from a predefined taxonomy",
+          "Register supports aggregation and comparison across organizational units"
+        ],
+        "commonGaps": [
+          "Risk register entries are inconsistent in format, scoring, or completeness",
+          "Multiple risk registers exist with incompatible formats",
+          "Risk categories are applied inconsistently or are undefined"
+        ],
+        "suggestedSources": [
+          "GRC platform or risk register system",
+          "Cybersecurity risk management team"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RM-06-E3",
+        "name": "Risk Prioritization and Categorization Criteria",
+        "description": "Documented criteria for categorizing and prioritizing risks at appropriate enterprise levels",
+        "whatGoodLooksLike": [
+          "Risk categories are defined in a taxonomy aligned with enterprise risk management",
+          "Prioritization criteria consider business impact, likelihood, and strategic relevance",
+          "Criteria support risk aggregation and reporting at different organizational levels"
+        ],
+        "commonGaps": [
+          "No formal risk taxonomy or categorization scheme exists",
+          "Prioritization is based solely on technical severity without business context",
+          "Criteria do not enable meaningful comparison across risk domains"
+        ],
+        "suggestedSources": [
+          "Risk management policy and procedures",
+          "Enterprise risk taxonomy documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Compare risk entries from different assessments to verify consistent application of the methodology",
+      "Ask assessors to walk through how they score a risk to confirm understanding of the methodology",
+      "Verify that the risk register supports aggregation and enterprise-level reporting"
+    ]
+  },
+  "GV.RM-07": {
+    "subcategoryId": "GV.RM-07",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Strategic Opportunities (Positive Risks)",
+    "assessorFocus": "Assess whether the organization identifies and characterizes strategic opportunities (positive risks) in cybersecurity and includes them in risk management discussions alongside threats.",
+    "evidenceItems": [
+      {
+        "id": "GV.RM-07-E1",
+        "name": "Opportunity Identification and Analysis Records",
+        "description": "Documentation of strategic opportunities identified through cybersecurity risk management activities",
+        "whatGoodLooksLike": [
+          "SWOT analyses or similar frameworks are used to identify cybersecurity-related opportunities",
+          "Positive risks are documented with potential benefits, likelihood, and required investment",
+          "Opportunities are categorized (e.g., competitive advantage, efficiency gain, trust building)"
+        ],
+        "commonGaps": [
+          "Risk management focuses exclusively on threats with no consideration of opportunities",
+          "No formal method for identifying or documenting positive risks",
+          "Cybersecurity is viewed solely as a cost center rather than a strategic enabler"
+        ],
+        "suggestedSources": [
+          "Strategic planning documentation",
+          "CISO or cybersecurity leadership reports"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.RM-07-E2",
+        "name": "Risk Discussion Records Including Positive Risks",
+        "description": "Meeting minutes or reports showing that positive risks are discussed alongside negative risks",
+        "whatGoodLooksLike": [
+          "Risk committee agendas explicitly include opportunity assessment as a standing item",
+          "Positive risks are presented to leadership with the same rigor as threats",
+          "Decision records show opportunities being pursued based on risk-informed analysis"
+        ],
+        "commonGaps": [
+          "Risk committee discussions focus exclusively on threats and vulnerabilities",
+          "Opportunities are discussed informally but not captured in governance records",
+          "No examples of opportunities being pursued as a result of risk analysis"
+        ],
+        "suggestedSources": [
+          "Risk committee meeting minutes",
+          "Strategy review documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.RM-07-E3",
+        "name": "Stretch Goals and Innovation Roadmap",
+        "description": "Documentation of cybersecurity stretch goals and innovation initiatives that leverage security as a differentiator",
+        "whatGoodLooksLike": [
+          "Stretch goals are documented with timelines, resource requirements, and expected benefits",
+          "Innovation roadmap includes cybersecurity capabilities that enable business growth",
+          "Progress toward stretch goals is tracked and reported"
+        ],
+        "commonGaps": [
+          "No cybersecurity stretch goals or innovation objectives exist",
+          "Goals focus solely on compliance and threat reduction",
+          "No tracking or accountability for pursuing strategic opportunities"
+        ],
+        "suggestedSources": [
+          "CISO strategic plan or roadmap",
+          "Innovation or digital transformation program documentation"
+        ],
+        "format": "PDF/PPTX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask leadership to provide examples of cybersecurity capabilities that have created business value or competitive advantage",
+      "Review risk committee minutes for evidence that positive risks are regularly discussed",
+      "Determine whether the organization has pursued any cybersecurity-driven innovation in the past year"
+    ]
+  },
+  "GV.RR-01": {
+    "subcategoryId": "GV.RR-01",
+    "categoryId": "GV.RR",
+    "functionId": "GV",
+    "title": "Leadership Accountability and Culture",
+    "assessorFocus": "Verify that organizational leadership is responsible and accountable for cybersecurity risk, actively fosters a risk-aware and ethical culture, and directs the cybersecurity strategy.",
+    "evidenceItems": [
+      {
+        "id": "GV.RR-01-E1",
+        "name": "Leadership Cybersecurity Roles and Accountability Charter",
+        "description": "Formal documentation of leadership roles, responsibilities, and accountability for cybersecurity risk management",
+        "whatGoodLooksLike": [
+          "Board and executive roles in cybersecurity governance are explicitly defined in a charter or policy",
+          "CISO reporting line provides direct access to senior leadership",
+          "Annual leadership review of cybersecurity strategy is mandated and documented"
+        ],
+        "commonGaps": [
+          "No formal assignment of cybersecurity accountability at the board or executive level",
+          "CISO reports deep within IT without direct leadership access",
+          "Leadership engagement is limited to incident response rather than proactive governance"
+        ],
+        "suggestedSources": [
+          "Board or governance committee charter",
+          "Organizational governance and reporting structure documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RR-01-E2",
+        "name": "Culture and Awareness Leadership Communications",
+        "description": "Evidence of leadership actively promoting a risk-aware and ethical cybersecurity culture",
+        "whatGoodLooksLike": [
+          "Executive communications on cybersecurity expectations (e.g., all-hands messages, policy endorsements)",
+          "Leaders use real-world examples to reinforce positive or negative cybersecurity behaviors",
+          "Leadership participates visibly in security awareness activities"
+        ],
+        "commonGaps": [
+          "No evidence of leadership communicating cybersecurity expectations to the broader organization",
+          "Culture-building is delegated entirely to the security team without executive sponsorship",
+          "Communications are generic and infrequent"
+        ],
+        "suggestedSources": [
+          "Internal communications archive (emails, intranet posts)",
+          "Security awareness program documentation"
+        ],
+        "format": "PDF/HTML",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.RR-01-E3",
+        "name": "Authority and Coordination Review Records",
+        "description": "Evidence of periodic reviews ensuring adequate authority and coordination among cybersecurity risk management leaders",
+        "whatGoodLooksLike": [
+          "Annual reviews assess whether cybersecurity leaders have sufficient authority and resources",
+          "Coordination gaps between security functions are identified and remediated",
+          "Review findings result in documented action items with follow-through"
+        ],
+        "commonGaps": [
+          "No periodic review of cybersecurity authority and coordination effectiveness",
+          "Authority gaps are known but not formally addressed",
+          "Reviews are conducted but findings are not acted upon"
+        ],
+        "suggestedSources": [
+          "Governance review reports",
+          "Internal audit findings related to cybersecurity governance"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Interview board members or executives to gauge their understanding of their cybersecurity accountability",
+      "Ask employees outside the security team about leadership tone-setting on cybersecurity",
+      "Review the CISO reporting structure and assess whether it enables effective escalation"
+    ]
+  },
+  "GV.RR-02": {
+    "subcategoryId": "GV.RR-02",
+    "categoryId": "GV.RR",
+    "functionId": "GV",
+    "title": "Cybersecurity Roles and Responsibilities",
+    "assessorFocus": "Confirm that cybersecurity risk management roles, responsibilities, and authorities are formally defined, communicated across the organization, understood by incumbents, and enforced through performance management.",
+    "evidenceItems": [
+      {
+        "id": "GV.RR-02-E1",
+        "name": "Cybersecurity RACI Matrix",
+        "description": "Responsibility assignment matrix defining who is Responsible, Accountable, Consulted, and Informed for cybersecurity activities",
+        "whatGoodLooksLike": [
+          "RACI covers all key cybersecurity functions (risk management, incident response, compliance, architecture)",
+          "Matrix clearly distinguishes between operational, risk, and audit functions",
+          "Matrix is maintained as a living document and updated when organizational changes occur"
+        ],
+        "commonGaps": [
+          "No formal RACI or equivalent exists for cybersecurity functions",
+          "Roles overlap significantly without clear accountability delineation",
+          "Matrix is outdated and does not reflect current organizational structure"
+        ],
+        "suggestedSources": [
+          "CISO office governance documentation",
+          "HR or organizational design team"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.RR-02-E2",
+        "name": "Position Descriptions with Cybersecurity Responsibilities",
+        "description": "Job descriptions and role profiles that include cybersecurity responsibilities and performance requirements",
+        "whatGoodLooksLike": [
+          "Cybersecurity responsibilities are explicitly stated in relevant position descriptions",
+          "Performance requirements include measurable cybersecurity objectives",
+          "Both dedicated security roles and roles with security-adjacent duties are covered"
+        ],
+        "commonGaps": [
+          "Position descriptions are generic and do not mention cybersecurity responsibilities",
+          "Cybersecurity duties are informal and not reflected in job documentation",
+          "Only dedicated security roles have cybersecurity in their descriptions; IT operations and business roles do not"
+        ],
+        "suggestedSources": [
+          "HR department position description repository",
+          "Cybersecurity team role documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "Current + 1 year"
+      },
+      {
+        "id": "GV.RR-02-E3",
+        "name": "Cybersecurity Performance Assessment Records",
+        "description": "Evidence of performance measurement for personnel with cybersecurity responsibilities",
+        "whatGoodLooksLike": [
+          "Annual performance reviews include evaluation of cybersecurity objectives",
+          "Performance metrics are specific and measurable for cybersecurity roles",
+          "Areas for improvement are identified with development plans"
+        ],
+        "commonGaps": [
+          "Cybersecurity performance is not evaluated in performance reviews",
+          "Performance goals exist but are not measured or tracked",
+          "No consequences or incentives tied to cybersecurity performance"
+        ],
+        "suggestedSources": [
+          "HR performance management system (anonymized/aggregated)",
+          "CISO team performance records"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Sample position descriptions across IT, security, and business units to verify cybersecurity responsibilities are included",
+      "Ask personnel in cybersecurity-adjacent roles to describe their security responsibilities and compare with documentation",
+      "Verify that the RACI matrix is actively used in decision-making, not just a shelf document"
+    ]
+  },
+  "GV.RR-03": {
+    "subcategoryId": "GV.RR-03",
+    "categoryId": "GV.RR",
+    "functionId": "GV",
+    "title": "Adequate Resource Allocation",
+    "assessorFocus": "Assess whether adequate resources (people, process, technology, and budget) are allocated to cybersecurity commensurate with the organization's risk strategy, responsibilities, and policies.",
+    "evidenceItems": [
+      {
+        "id": "GV.RR-03-E1",
+        "name": "Cybersecurity Budget and Resource Allocation Records",
+        "description": "Documentation of budget and resource allocation for cybersecurity risk management activities",
+        "whatGoodLooksLike": [
+          "Dedicated cybersecurity budget is defined and aligned with risk strategy and identified needs",
+          "Budget allocation is traceable to risk priorities and strategic objectives",
+          "Resource allocation is reviewed and adjusted based on changing risk landscape"
+        ],
+        "commonGaps": [
+          "Cybersecurity budget is embedded within general IT budget without clear delineation",
+          "Resource allocation is not linked to risk assessment findings or strategy",
+          "Budget has remained flat despite increasing risk exposure or expanded responsibilities"
+        ],
+        "suggestedSources": [
+          "Finance or budget management team",
+          "CISO budget requests and approval records"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RR-03-E2",
+        "name": "Staffing and Capability Assessment",
+        "description": "Assessment of cybersecurity staffing levels and skill capabilities against requirements",
+        "whatGoodLooksLike": [
+          "Workforce planning analysis compares current staffing to required capabilities",
+          "Skill gaps are identified with corresponding hiring or training plans",
+          "Staffing levels are benchmarked against industry standards or peer organizations"
+        ],
+        "commonGaps": [
+          "No formal assessment of cybersecurity staffing adequacy exists",
+          "Known staffing gaps persist without remediation plans",
+          "Staffing decisions are reactive rather than based on strategic workforce planning"
+        ],
+        "suggestedSources": [
+          "CISO workforce planning documentation",
+          "HR talent management records"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.RR-03-E3",
+        "name": "Management Authority Review Records",
+        "description": "Evidence of periodic reviews confirming that cybersecurity personnel have necessary authority to fulfill their responsibilities",
+        "whatGoodLooksLike": [
+          "Management reviews assess whether cybersecurity roles have sufficient decision-making authority",
+          "Authority gaps are identified and escalated for resolution",
+          "Reviews are conducted at least annually with documented outcomes"
+        ],
+        "commonGaps": [
+          "No formal review of whether cybersecurity staff have adequate authority",
+          "Authority limitations are known but not formally addressed",
+          "Reviews are conducted but do not result in meaningful changes"
+        ],
+        "suggestedSources": [
+          "Governance review or management review records",
+          "Internal audit reports on cybersecurity function effectiveness"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Compare cybersecurity budget trends against the growth in assets, threats, and regulatory requirements",
+      "Ask the CISO whether resource requests have been denied and how gaps are managed",
+      "Verify that resource allocation decisions are documented and linked to risk priorities"
+    ]
+  },
+  "GV.RR-04": {
+    "subcategoryId": "GV.RR-04",
+    "categoryId": "GV.RR",
+    "functionId": "GV",
+    "title": "Cybersecurity in Human Resources Practices",
+    "assessorFocus": "Verify that cybersecurity considerations are integrated into human resources lifecycle processes including screening, onboarding, role changes, training, and offboarding.",
+    "evidenceItems": [
+      {
+        "id": "GV.RR-04-E1",
+        "name": "HR-Security Integration Procedures",
+        "description": "Documented procedures for integrating cybersecurity into HR lifecycle processes",
+        "whatGoodLooksLike": [
+          "Procedures cover screening, onboarding, role changes, and offboarding with cybersecurity checkpoints",
+          "Background check requirements are defined for sensitive roles with periodic re-screening",
+          "Automated workflows ensure timely access provisioning and deprovisioning"
+        ],
+        "commonGaps": [
+          "No formal integration between HR processes and cybersecurity requirements",
+          "Background checks are limited to initial hire without periodic re-screening",
+          "Offboarding process does not include timely access revocation or asset recovery"
+        ],
+        "suggestedSources": [
+          "HR department policies and procedures",
+          "Identity and access management team documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.RR-04-E2",
+        "name": "Security Policy Acknowledgment Records",
+        "description": "Evidence that personnel acknowledge and agree to uphold cybersecurity policies",
+        "whatGoodLooksLike": [
+          "All employees sign security policy acknowledgments at hire and annually thereafter",
+          "Acknowledgments are updated when policies change significantly",
+          "Non-compliance with acknowledgment requirements is tracked and escalated"
+        ],
+        "commonGaps": [
+          "No formal acknowledgment process exists for cybersecurity policies",
+          "Acknowledgments are collected at hire but not renewed annually",
+          "Contractors and temporary staff are not included in the acknowledgment process"
+        ],
+        "suggestedSources": [
+          "HR onboarding records",
+          "Learning management system or policy management platform"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "Employment term + 3 years"
+      },
+      {
+        "id": "GV.RR-04-E3",
+        "name": "Cybersecurity Training and Competency Records",
+        "description": "Records demonstrating that cybersecurity knowledge is developed and valued in hiring, training, and retention",
+        "whatGoodLooksLike": [
+          "Role-based cybersecurity training is mandatory and completion is tracked",
+          "Cybersecurity competencies are included in hiring criteria for relevant roles",
+          "Training content is updated to reflect current threats and organizational policies"
+        ],
+        "commonGaps": [
+          "Training is generic and not tailored to role-specific cybersecurity responsibilities",
+          "Training completion rates are low with no enforcement mechanism",
+          "Cybersecurity knowledge is not a factor in hiring or promotion decisions"
+        ],
+        "suggestedSources": [
+          "Learning management system records",
+          "HR training and development documentation"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review a sample of recent onboarding and offboarding cases to verify cybersecurity steps were executed",
+      "Check access revocation timeliness for recently departed employees",
+      "Verify that background check requirements scale with the sensitivity of the role"
+    ]
+  },
+  "GV.PO-01": {
+    "subcategoryId": "GV.PO-01",
+    "categoryId": "GV.PO",
+    "functionId": "GV",
+    "title": "Cybersecurity Risk Management Policy",
+    "assessorFocus": "Verify that a comprehensive cybersecurity risk management policy exists, is based on organizational context and strategy, has been approved by senior management, and is effectively communicated and enforced across the organization.",
+    "evidenceItems": [
+      {
+        "id": "GV.PO-01-E1",
+        "name": "Cybersecurity Risk Management Policy Document",
+        "description": "The master policy document establishing management intent, expectations, and direction for cybersecurity risk management",
+        "whatGoodLooksLike": [
+          "Policy includes clear statements of management intent, scope, applicability, and enforcement",
+          "Policy is aligned with organizational context, risk strategy, and regulatory requirements",
+          "Policy is approved by senior management with documented approval date and signatures"
+        ],
+        "commonGaps": [
+          "Policy is outdated and does not reflect current organizational context or risk strategy",
+          "Policy lacks senior management approval or is approved only by IT leadership",
+          "Policy is overly technical and not understandable by non-technical stakeholders"
+        ],
+        "suggestedSources": [
+          "CISO office or cybersecurity governance team",
+          "Policy management system or document repository"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "Current + all prior versions for 5 years"
+      },
+      {
+        "id": "GV.PO-01-E2",
+        "name": "Policy Communication and Dissemination Records",
+        "description": "Evidence that the cybersecurity policy has been communicated to and acknowledged by all personnel",
+        "whatGoodLooksLike": [
+          "Distribution records confirm policy was shared with all applicable personnel",
+          "Policy is accessible through the organization's intranet or policy portal",
+          "New hires receive and acknowledge the policy during onboarding"
+        ],
+        "commonGaps": [
+          "Policy exists but has not been formally communicated beyond the security team",
+          "No mechanism to confirm personnel have received and read the policy",
+          "Policy is not easily accessible to all employees"
+        ],
+        "suggestedSources": [
+          "Policy management platform or intranet",
+          "HR onboarding process documentation"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.PO-01-E3",
+        "name": "Policy Enforcement and Compliance Records",
+        "description": "Evidence that the cybersecurity policy is enforced through monitoring, compliance checks, and corrective actions",
+        "whatGoodLooksLike": [
+          "Regular compliance checks or audits verify adherence to policy requirements",
+          "Non-compliance incidents are documented with corrective actions",
+          "Enforcement mechanisms include escalation procedures and consequences for violations"
+        ],
+        "commonGaps": [
+          "Policy exists but there is no monitoring or enforcement mechanism",
+          "Non-compliance is identified but not formally addressed or tracked",
+          "Enforcement is inconsistent, with different standards for different personnel"
+        ],
+        "suggestedSources": [
+          "Internal audit or compliance team reports",
+          "Incident and corrective action records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify the policy approval chain reaches senior management and not just IT leadership",
+      "Sample personnel acknowledgment records to confirm broad communication",
+      "Ask for examples of policy enforcement actions to confirm the policy is not just aspirational"
+    ]
+  },
+  "GV.PO-02": {
+    "subcategoryId": "GV.PO-02",
+    "categoryId": "GV.PO",
+    "functionId": "GV",
+    "title": "Policy Review and Update Process",
+    "assessorFocus": "Confirm that the cybersecurity risk management policy is subject to a defined review cycle and is updated to reflect changes in requirements, threats, technology, and organizational mission.",
+    "evidenceItems": [
+      {
+        "id": "GV.PO-02-E1",
+        "name": "Policy Review Schedule and Records",
+        "description": "Documentation of the policy review cycle, including scheduled reviews and evidence of execution",
+        "whatGoodLooksLike": [
+          "Defined review cadence (at least annually) with documented review dates and outcomes",
+          "Review process involves relevant stakeholders including legal, compliance, and business leaders",
+          "Reviews are triggered both by schedule and by significant environmental changes"
+        ],
+        "commonGaps": [
+          "No defined review schedule exists; policy is updated only when problems arise",
+          "Reviews are scheduled but frequently deferred or skipped",
+          "Review process does not include input from non-technical stakeholders"
+        ],
+        "suggestedSources": [
+          "Policy management system or governance calendar",
+          "CISO office or governance team records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.PO-02-E2",
+        "name": "Policy Change Log and Version History",
+        "description": "Record of all policy changes, the rationale for changes, and the triggers that prompted them",
+        "whatGoodLooksLike": [
+          "Comprehensive change log with dates, authors, change descriptions, and rationale",
+          "Changes are traceable to specific triggers (regulatory changes, incidents, technology adoption)",
+          "Version history is maintained with all prior versions accessible"
+        ],
+        "commonGaps": [
+          "No change log or version history is maintained",
+          "Changes are made without documenting the rationale or trigger",
+          "Only the current version is retained without access to prior versions"
+        ],
+        "suggestedSources": [
+          "Document management system or policy repository",
+          "Change management records"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.PO-02-E3",
+        "name": "Policy Update Communication Records",
+        "description": "Evidence that policy updates are communicated to all affected personnel in a timely manner",
+        "whatGoodLooksLike": [
+          "Communication records show all affected personnel were notified of policy changes",
+          "Updated acknowledgments are collected following significant policy changes",
+          "Communication includes a summary of changes and their implications"
+        ],
+        "commonGaps": [
+          "Policy updates are published but not proactively communicated to personnel",
+          "No re-acknowledgment process exists for policy updates",
+          "Personnel are unaware of recent policy changes"
+        ],
+        "suggestedSources": [
+          "Internal communications archive",
+          "Policy management platform notification records"
+        ],
+        "format": "PDF/HTML",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Check the policy version history to confirm reviews occurred on schedule",
+      "Verify that recent regulatory changes or significant incidents triggered policy reviews",
+      "Ask personnel whether they are aware of the most recent policy changes and how they were notified"
+    ]
+  },
+  "GV.OV-01": {
+    "subcategoryId": "GV.OV-01",
+    "categoryId": "GV.OV",
+    "functionId": "GV",
+    "title": "Strategy Outcome Review",
+    "assessorFocus": "Verify that cybersecurity risk management strategy outcomes are periodically reviewed, and that findings are used to inform adjustments to strategy and organizational direction.",
+    "evidenceItems": [
+      {
+        "id": "GV.OV-01-E1",
+        "name": "Strategy Performance Review Reports",
+        "description": "Reports documenting periodic assessment of how well the cybersecurity risk management strategy achieves its objectives",
+        "whatGoodLooksLike": [
+          "Regular reviews (at least annually) evaluate strategy effectiveness against defined objectives",
+          "Reviews measure how risk management outcomes supported leadership decision-making",
+          "Reports include recommendations for strategy adjustments"
+        ],
+        "commonGaps": [
+          "No formal strategy performance review process exists",
+          "Reviews focus on operational metrics without evaluating strategic effectiveness",
+          "Review findings are not translated into actionable strategy adjustments"
+        ],
+        "suggestedSources": [
+          "CISO office strategic review documentation",
+          "Governance committee review records"
+        ],
+        "format": "PDF/PPTX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.OV-01-E2",
+        "name": "Strategy Adjustment Decision Records",
+        "description": "Evidence that strategy reviews result in documented decisions to adjust or reaffirm the cybersecurity strategy",
+        "whatGoodLooksLike": [
+          "Decision records show specific strategy adjustments made based on review findings",
+          "Adjustments are approved by appropriate leadership and communicated to stakeholders",
+          "Rationale for adjustments (or for maintaining current strategy) is documented"
+        ],
+        "commonGaps": [
+          "Reviews are conducted but do not result in documented decisions or changes",
+          "Strategy changes are made without formal review or approval process",
+          "No feedback loop exists between strategy outcomes and future planning"
+        ],
+        "suggestedSources": [
+          "Executive or governance committee meeting minutes",
+          "Strategy planning documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.OV-01-E3",
+        "name": "Operational Impact Assessment of Strategy",
+        "description": "Assessment of whether cybersecurity risk strategies impede operations or innovation, with remediation where needed",
+        "whatGoodLooksLike": [
+          "Feedback from operational teams is collected on the impact of security policies and controls",
+          "Overly restrictive controls that impede business objectives are identified and reviewed",
+          "Balance between security and operational efficiency is actively managed"
+        ],
+        "commonGaps": [
+          "No mechanism for operational teams to provide feedback on security strategy impacts",
+          "Security controls are implemented without considering operational impact",
+          "Known friction points between security and operations are not addressed"
+        ],
+        "suggestedSources": [
+          "Operations and business unit feedback records",
+          "Security exception or waiver request data"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask leadership what strategy adjustments were made in the past year based on performance reviews",
+      "Review exception and waiver requests as indicators of strategy-operations friction",
+      "Verify that strategy reviews incorporate feedback from across the organization, not just the security team"
+    ]
+  },
+  "GV.OV-02": {
+    "subcategoryId": "GV.OV-02",
+    "categoryId": "GV.OV",
+    "functionId": "GV",
+    "title": "Strategy Coverage and Adjustment Review",
+    "assessorFocus": "Assess whether the cybersecurity risk management strategy is periodically reviewed to ensure it adequately covers organizational requirements and emerging risks, with adjustments made as needed.",
+    "evidenceItems": [
+      {
+        "id": "GV.OV-02-E1",
+        "name": "Audit and Compliance Review Findings",
+        "description": "Audit findings that assess whether the cybersecurity strategy ensures compliance with internal and external requirements",
+        "whatGoodLooksLike": [
+          "Internal and external audits assess strategy coverage against requirements",
+          "Audit findings are mapped to specific strategy gaps with remediation plans",
+          "Audit results inform strategic planning and resource allocation"
+        ],
+        "commonGaps": [
+          "Audits focus on control compliance without evaluating strategy adequacy",
+          "Audit findings are addressed tactically without informing strategic adjustments",
+          "No process to aggregate audit findings into strategic insights"
+        ],
+        "suggestedSources": [
+          "Internal audit department reports",
+          "External audit or assessment findings"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "GV.OV-02-E2",
+        "name": "Post-Incident Strategy Review Records",
+        "description": "Evidence that cybersecurity incidents trigger review and potential adjustment of the risk management strategy",
+        "whatGoodLooksLike": [
+          "Significant incidents include a lessons-learned phase that evaluates strategy adequacy",
+          "Strategy adjustments resulting from incident reviews are documented and implemented",
+          "Incident patterns are analyzed for systemic strategy weaknesses"
+        ],
+        "commonGaps": [
+          "Incident response focuses on tactical recovery without strategic review",
+          "Lessons learned are documented but do not feed into strategy adjustments",
+          "No process to evaluate whether incidents indicate strategy-level gaps"
+        ],
+        "suggestedSources": [
+          "Incident response post-mortem reports",
+          "Lessons learned documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.OV-02-E3",
+        "name": "Personnel Performance and Role Oversight Records",
+        "description": "Evidence that performance of cybersecurity-related roles is reviewed to determine if policy changes are necessary",
+        "whatGoodLooksLike": [
+          "Performance reviews of cybersecurity roles identify systemic issues requiring policy changes",
+          "Role effectiveness is assessed against strategy objectives",
+          "Identified gaps in role performance lead to documented policy or process improvements"
+        ],
+        "commonGaps": [
+          "Performance oversight of cybersecurity roles does not inform policy decisions",
+          "No mechanism to link individual or team performance gaps to strategy adjustments",
+          "Role performance is assessed only on operational metrics without strategic alignment"
+        ],
+        "suggestedSources": [
+          "HR performance management records (aggregated)",
+          "CISO management review documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Trace a recent audit finding to determine whether it informed a strategy adjustment",
+      "Ask how the most recent significant cybersecurity incident influenced strategy review",
+      "Verify that strategy reviews consider emerging threats and changes in the organizational risk environment"
+    ]
+  },
+  "GV.OV-03": {
+    "subcategoryId": "GV.OV-03",
+    "categoryId": "GV.OV",
+    "functionId": "GV",
+    "title": "Risk Management Performance Evaluation",
+    "assessorFocus": "Verify that cybersecurity risk management performance is systematically evaluated using key performance indicators (KPIs) and key risk indicators (KRIs), and that results are communicated to leadership and used to drive adjustments.",
+    "evidenceItems": [
+      {
+        "id": "GV.OV-03-E1",
+        "name": "KPI and KRI Framework Documentation",
+        "description": "Formal documentation of key performance indicators and key risk indicators used to evaluate cybersecurity risk management",
+        "whatGoodLooksLike": [
+          "KPIs measure policy and procedure effectiveness against defined objectives",
+          "KRIs identify emerging risks with defined thresholds for escalation",
+          "Indicators are reviewed and refined periodically to maintain relevance"
+        ],
+        "commonGaps": [
+          "No formal KPI or KRI framework exists for cybersecurity risk management",
+          "Indicators are purely operational (e.g., patch counts) without strategic risk context",
+          "KRIs lack defined thresholds or escalation triggers"
+        ],
+        "suggestedSources": [
+          "Cybersecurity metrics and measurement documentation",
+          "GRC platform or security dashboard configuration"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.OV-03-E2",
+        "name": "Cybersecurity Risk Management Performance Reports",
+        "description": "Periodic reports presenting KPI and KRI data to senior leadership with analysis and recommendations",
+        "whatGoodLooksLike": [
+          "Regular reporting cadence (at least quarterly) with trend analysis",
+          "Reports include both current state and trajectory toward objectives",
+          "Leadership receives actionable recommendations based on performance data"
+        ],
+        "commonGaps": [
+          "Performance data is collected but not regularly reported to leadership",
+          "Reports present raw data without analysis, context, or recommendations",
+          "Reporting is inconsistent in format, frequency, or content"
+        ],
+        "suggestedSources": [
+          "CISO reporting archives",
+          "Executive briefing presentation materials"
+        ],
+        "format": "PDF/PPTX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.OV-03-E3",
+        "name": "Performance-Driven Adjustment Records",
+        "description": "Evidence that performance evaluation results drive specific adjustments to cybersecurity risk management",
+        "whatGoodLooksLike": [
+          "Documented decisions showing performance data was used to justify resource, strategy, or control changes",
+          "Action items from performance reviews are tracked to completion",
+          "Continuous improvement cycle is evident with measurable outcomes"
+        ],
+        "commonGaps": [
+          "Performance evaluations are conducted but do not result in changes",
+          "No tracking mechanism for actions resulting from performance reviews",
+          "Improvement initiatives are initiated but not measured for effectiveness"
+        ],
+        "suggestedSources": [
+          "Governance committee action item trackers",
+          "Continuous improvement or management review records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request the last four quarterly performance reports and assess whether they show improvement trends",
+      "Verify that KRIs have defined thresholds and ask for examples of threshold-triggered escalations",
+      "Ask leadership how they use cybersecurity performance data in their decision-making"
+    ]
+  },
+  "GV.SC-01": {
+    "subcategoryId": "GV.SC-01",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supply Chain Risk Management Program",
+    "assessorFocus": "Verify that a formal cybersecurity supply chain risk management (C-SCRM) program exists with a defined strategy, objectives, policies, processes, and stakeholder agreement.",
+    "evidenceItems": [
+      {
+        "id": "GV.SC-01-E1",
+        "name": "C-SCRM Program Charter and Strategy",
+        "description": "Formal documentation establishing the supply chain risk management program, its objectives, and strategic direction",
+        "whatGoodLooksLike": [
+          "Program charter defines scope, objectives, governance structure, and stakeholder responsibilities",
+          "Strategy includes milestones, maturity targets, and alignment with enterprise risk management",
+          "Stakeholders from cybersecurity, IT, procurement, legal, and operations have agreed to the program"
+        ],
+        "commonGaps": [
+          "No formal C-SCRM program exists; supply chain risk is managed ad hoc",
+          "Program exists on paper but lacks stakeholder buy-in or resources for implementation",
+          "Strategy does not include measurable objectives or milestones"
+        ],
+        "suggestedSources": [
+          "CISO office or supply chain risk management team",
+          "Procurement and vendor management leadership"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.SC-01-E2",
+        "name": "C-SCRM Policies and Procedures",
+        "description": "Policies and procedures that guide the implementation of supply chain risk management activities",
+        "whatGoodLooksLike": [
+          "Policies cover supplier assessment, contracting, monitoring, and offboarding",
+          "Procedures are practical and actionable with clear responsibilities",
+          "Policies are aligned with the overall cybersecurity and enterprise risk management frameworks"
+        ],
+        "commonGaps": [
+          "Policies are generic and do not address supply chain-specific cybersecurity risks",
+          "Procedures exist but are not followed consistently across the organization",
+          "No cross-functional alignment between cybersecurity, procurement, and legal policies"
+        ],
+        "suggestedSources": [
+          "Policy management system",
+          "Procurement policy documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.SC-01-E3",
+        "name": "Cross-Functional Alignment and Coordination Records",
+        "description": "Evidence that supply chain risk management is coordinated across relevant organizational functions",
+        "whatGoodLooksLike": [
+          "Cross-functional committee or working group addresses C-SCRM with regular meetings",
+          "Roles and responsibilities are clearly defined across cybersecurity, procurement, legal, and operations",
+          "Meeting records show active collaboration and decision-making"
+        ],
+        "commonGaps": [
+          "C-SCRM is siloed within procurement without cybersecurity involvement",
+          "No formal cross-functional coordination mechanism exists",
+          "Coordination is ad hoc and triggered only by incidents"
+        ],
+        "suggestedSources": [
+          "C-SCRM working group charter and meeting minutes",
+          "Organizational governance documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask stakeholders from different functions to describe their role in the C-SCRM program",
+      "Verify the program has dedicated resources and is not just a policy without implementation",
+      "Check whether the program strategy has been reviewed and updated since its initial creation"
+    ]
+  },
+  "GV.SC-02": {
+    "subcategoryId": "GV.SC-02",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supply Chain Roles and Responsibilities",
+    "assessorFocus": "Confirm that cybersecurity roles and responsibilities for suppliers, customers, and partners are formally defined, communicated both internally and externally, and coordinated across the organization.",
+    "evidenceItems": [
+      {
+        "id": "GV.SC-02-E1",
+        "name": "Supply Chain RACI Matrix",
+        "description": "Responsibility matrix defining cybersecurity roles for supply chain risk management across internal and external parties",
+        "whatGoodLooksLike": [
+          "RACI covers internal teams (security, procurement, legal) and external parties (suppliers, partners)",
+          "Shared cybersecurity responsibilities are explicitly documented and agreed upon",
+          "Matrix is integrated into vendor management and procurement processes"
+        ],
+        "commonGaps": [
+          "No formal RACI exists for supply chain cybersecurity responsibilities",
+          "Internal roles are defined but supplier responsibilities are vague",
+          "Responsibility matrix is not communicated to suppliers or partners"
+        ],
+        "suggestedSources": [
+          "C-SCRM program documentation",
+          "Procurement or vendor management team"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.SC-02-E2",
+        "name": "Third-Party Cybersecurity Responsibility Agreements",
+        "description": "Documented agreements with suppliers and partners defining their cybersecurity responsibilities",
+        "whatGoodLooksLike": [
+          "Supplier agreements include specific cybersecurity obligations and accountability provisions",
+          "Information sharing rules and reporting protocols are defined in agreements",
+          "Agreements are standardized across supplier relationships with criticality-based customization"
+        ],
+        "commonGaps": [
+          "Supplier contracts do not include cybersecurity responsibility provisions",
+          "Cybersecurity obligations are vague or unenforceable in agreements",
+          "No standardized approach to defining supplier cybersecurity responsibilities"
+        ],
+        "suggestedSources": [
+          "Legal department contract templates",
+          "Vendor management agreement repository"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "Contract term + 3 years"
+      },
+      {
+        "id": "GV.SC-02-E3",
+        "name": "Internal Communication of Third-Party Roles",
+        "description": "Evidence that supply chain cybersecurity roles and responsibilities are communicated internally to relevant teams",
+        "whatGoodLooksLike": [
+          "Internal teams understand their responsibilities for managing supplier cybersecurity risks",
+          "Communication records show distribution of role definitions to procurement, IT, and business units",
+          "Performance goals for C-SCRM roles are documented and tracked"
+        ],
+        "commonGaps": [
+          "Supply chain roles are defined but not communicated to operational teams",
+          "Business units engage suppliers without awareness of cybersecurity responsibility requirements",
+          "No performance goals or accountability for C-SCRM responsibilities"
+        ],
+        "suggestedSources": [
+          "Internal communications and training records",
+          "C-SCRM program awareness materials"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Interview procurement staff to assess their understanding of cybersecurity responsibilities in supplier management",
+      "Review sample supplier agreements to verify cybersecurity obligations are present and enforceable",
+      "Ask how information sharing between the organization and suppliers is governed and monitored"
+    ]
+  },
+  "GV.SC-03": {
+    "subcategoryId": "GV.SC-03",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supply Chain Risk Integration",
+    "assessorFocus": "Assess whether cybersecurity supply chain risk management is integrated into the broader cybersecurity and enterprise risk management programs, including risk assessment and continuous improvement processes.",
+    "evidenceItems": [
+      {
+        "id": "GV.SC-03-E1",
+        "name": "Integrated Risk Management Framework Documentation",
+        "description": "Evidence that supply chain cybersecurity risks are managed within the enterprise risk management framework",
+        "whatGoodLooksLike": [
+          "C-SCRM risks are assessed using the same methodology and appear in the enterprise risk register",
+          "Integrated control sets address both general cybersecurity and supply chain risks",
+          "Risk assessment processes explicitly include supply chain scenarios"
+        ],
+        "commonGaps": [
+          "Supply chain risks are managed separately from enterprise risk management",
+          "Risk assessment methodology does not include supply chain risk scenarios",
+          "No integration between cybersecurity controls and supply chain-specific controls"
+        ],
+        "suggestedSources": [
+          "Enterprise risk management framework documentation",
+          "Risk assessment templates and completed assessments"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.SC-03-E2",
+        "name": "Supply Chain Risk Escalation Records",
+        "description": "Evidence that material supply chain cybersecurity risks are escalated to senior management and enterprise risk forums",
+        "whatGoodLooksLike": [
+          "Escalation criteria for supply chain risks are defined and documented",
+          "Records show supply chain risks being escalated to enterprise risk management when material",
+          "Senior management reviews and acts on escalated supply chain risks"
+        ],
+        "commonGaps": [
+          "No escalation criteria exist for supply chain cybersecurity risks",
+          "Supply chain risks are managed at the operational level without senior management visibility",
+          "Escalation occurs only during incidents rather than proactively"
+        ],
+        "suggestedSources": [
+          "Risk escalation records and governance meeting minutes",
+          "Enterprise risk committee documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.SC-03-E3",
+        "name": "C-SCRM Continuous Improvement Records",
+        "description": "Evidence that supply chain risk management processes are subject to continuous improvement",
+        "whatGoodLooksLike": [
+          "Improvement initiatives are identified through risk assessments, audits, and incident reviews",
+          "Improvement actions are tracked with measurable outcomes",
+          "Lessons learned from supply chain incidents are incorporated into program improvements"
+        ],
+        "commonGaps": [
+          "No continuous improvement process exists for C-SCRM",
+          "Improvements are reactive and driven only by incidents",
+          "Improvement actions are identified but not tracked or measured"
+        ],
+        "suggestedSources": [
+          "C-SCRM program review documentation",
+          "Continuous improvement or corrective action trackers"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review the enterprise risk register for the presence and scoring of supply chain cybersecurity risks",
+      "Ask for an example of a supply chain risk that was escalated to enterprise risk management",
+      "Verify that C-SCRM improvements are tracked as part of the broader cybersecurity improvement program"
+    ]
+  },
+  "GV.SC-04": {
+    "subcategoryId": "GV.SC-04",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supplier Criticality Assessment",
+    "assessorFocus": "Verify that the organization maintains a comprehensive inventory of suppliers, has established criticality criteria, and prioritizes suppliers based on their assessed criticality.",
+    "evidenceItems": [
+      {
+        "id": "GV.SC-04-E1",
+        "name": "Supplier Inventory and Criticality Register",
+        "description": "Comprehensive register of all suppliers with criticality classifications based on defined criteria",
+        "whatGoodLooksLike": [
+          "All suppliers are inventoried with basic information (services provided, data access, system connectivity)",
+          "Criticality ratings are assigned based on documented criteria",
+          "Register is maintained as a living document updated when supplier relationships change"
+        ],
+        "commonGaps": [
+          "Supplier inventory is incomplete, missing informal or shadow vendor relationships",
+          "Criticality ratings are not applied or are applied inconsistently",
+          "Register is static and not updated as supplier relationships evolve"
+        ],
+        "suggestedSources": [
+          "Vendor management system or procurement records",
+          "CISO or C-SCRM team documentation"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "Current + 3 years"
+      },
+      {
+        "id": "GV.SC-04-E2",
+        "name": "Supplier Criticality Assessment Criteria",
+        "description": "Documented criteria used to determine the criticality of each supplier relationship",
+        "whatGoodLooksLike": [
+          "Criteria include data sensitivity, system access level, service importance to mission, and replaceability",
+          "Criteria are approved by appropriate stakeholders and consistently applied",
+          "Criteria are reviewed and updated periodically to reflect organizational changes"
+        ],
+        "commonGaps": [
+          "No formal criticality criteria exist; prioritization is based on contract value alone",
+          "Criteria do not consider cybersecurity-specific factors like data access or system connectivity",
+          "Criteria have not been updated to reflect changes in the organization's risk profile"
+        ],
+        "suggestedSources": [
+          "C-SCRM program documentation",
+          "Vendor risk assessment procedures"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.SC-04-E3",
+        "name": "Supplier Prioritization and Tiering Records",
+        "description": "Evidence that suppliers are prioritized into tiers with differentiated risk management activities per tier",
+        "whatGoodLooksLike": [
+          "Suppliers are organized into tiers (e.g., critical, high, medium, low) with defined management expectations",
+          "Higher-tier suppliers receive more rigorous assessment, monitoring, and contractual requirements",
+          "Tiering decisions are documented with supporting rationale"
+        ],
+        "commonGaps": [
+          "All suppliers receive the same level of oversight regardless of criticality",
+          "Tiering exists but does not drive differentiated risk management activities",
+          "Prioritization is informal and not documented"
+        ],
+        "suggestedSources": [
+          "Vendor management program documentation",
+          "Procurement or C-SCRM team records"
+        ],
+        "format": "XLSX/PDF",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Cross-reference the supplier inventory with accounts payable data to identify unlisted suppliers",
+      "Verify that criticality criteria include cybersecurity factors, not just financial or operational ones",
+      "Ask how a new supplier is assessed and classified to confirm the process is operational"
+    ]
+  },
+  "GV.SC-05": {
+    "subcategoryId": "GV.SC-05",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Contractual Cybersecurity Requirements",
+    "assessorFocus": "Confirm that cybersecurity risk requirements are established, prioritized, and systematically integrated into contracts and agreements with suppliers and third parties based on their criticality.",
+    "evidenceItems": [
+      {
+        "id": "GV.SC-05-E1",
+        "name": "Standard Contractual Cybersecurity Clauses",
+        "description": "Template contract language that includes cybersecurity requirements for suppliers and third parties",
+        "whatGoodLooksLike": [
+          "Standard clauses address security controls, incident notification, audit rights, and data protection",
+          "Clauses are tiered based on supplier criticality and data sensitivity",
+          "Legal and cybersecurity teams jointly develop and maintain contract language"
+        ],
+        "commonGaps": [
+          "No standard cybersecurity clauses exist in supplier contracts",
+          "Clauses are generic and not tailored to the risk level of the supplier relationship",
+          "Cybersecurity requirements are added inconsistently depending on who manages the contract"
+        ],
+        "suggestedSources": [
+          "Legal department contract templates",
+          "Procurement standard terms and conditions"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "Current + all prior versions"
+      },
+      {
+        "id": "GV.SC-05-E2",
+        "name": "Supplier Compliance Verification Requirements",
+        "description": "Documentation of how supplier compliance with contractual cybersecurity requirements is verified",
+        "whatGoodLooksLike": [
+          "Contracts specify compliance verification methods (self-attestation, certifications, audits, inspections)",
+          "Verification frequency is proportionate to supplier criticality",
+          "SBOM or component inventory requirements are included for critical product suppliers"
+        ],
+        "commonGaps": [
+          "Contracts require cybersecurity compliance but specify no verification mechanism",
+          "Verification relies solely on self-attestation without independent validation",
+          "No requirements for software or hardware bill of materials from product suppliers"
+        ],
+        "suggestedSources": [
+          "Contract management system",
+          "Vendor risk assessment program documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "Contract term + 3 years"
+      },
+      {
+        "id": "GV.SC-05-E3",
+        "name": "SLA Cybersecurity Performance Requirements",
+        "description": "Service level agreements that include cybersecurity performance metrics and monitoring requirements",
+        "whatGoodLooksLike": [
+          "SLAs define measurable cybersecurity performance targets (e.g., incident response times, uptime)",
+          "Consequences for non-compliance with cybersecurity SLAs are specified",
+          "SLA performance is monitored throughout the supplier relationship lifecycle"
+        ],
+        "commonGaps": [
+          "SLAs focus on availability and performance without cybersecurity-specific metrics",
+          "No consequences are defined for cybersecurity SLA breaches",
+          "SLA monitoring does not include cybersecurity performance indicators"
+        ],
+        "suggestedSources": [
+          "Service level agreement documentation",
+          "Vendor performance management records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "Contract term + 3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Sample contracts across different supplier tiers to verify cybersecurity clauses are present and proportionate",
+      "Ask how compliance with contractual cybersecurity requirements is actually monitored and enforced",
+      "Verify that SBOM requirements are included for suppliers of critical software or hardware products"
+    ]
+  },
+  "GV.SC-06": {
+    "subcategoryId": "GV.SC-06",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supplier Due Diligence",
+    "assessorFocus": "Assess whether the organization performs thorough cybersecurity due diligence on prospective suppliers before entering formal relationships, with rigor proportionate to the criticality and risk of the relationship.",
+    "evidenceItems": [
+      {
+        "id": "GV.SC-06-E1",
+        "name": "Supplier Due Diligence Procedures and Checklists",
+        "description": "Documented procedures for conducting cybersecurity due diligence on prospective suppliers",
+        "whatGoodLooksLike": [
+          "Procedures define due diligence steps scaled to the risk level and criticality of the supplier relationship",
+          "Checklists cover cybersecurity capabilities, certifications, incident history, and risk management practices",
+          "Due diligence is a required gate before contract execution"
+        ],
+        "commonGaps": [
+          "No formal due diligence procedure exists for cybersecurity assessment of suppliers",
+          "Due diligence is limited to financial viability without cybersecurity evaluation",
+          "Due diligence is optional or can be bypassed for urgent procurements"
+        ],
+        "suggestedSources": [
+          "Procurement procedures documentation",
+          "C-SCRM program operational guides"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.SC-06-E2",
+        "name": "Completed Supplier Risk Assessments",
+        "description": "Completed cybersecurity risk assessments for prospective and current suppliers",
+        "whatGoodLooksLike": [
+          "Risk assessments are completed before contract execution and cover cybersecurity-specific criteria",
+          "Assessment depth is proportionate to supplier criticality and risk exposure",
+          "Assessment findings include risk ratings and recommended mitigations or contract conditions"
+        ],
+        "commonGaps": [
+          "Risk assessments are conducted after contracts are signed, limiting remediation options",
+          "All suppliers receive the same assessment regardless of criticality",
+          "Assessment findings do not influence contract terms or decision to engage"
+        ],
+        "suggestedSources": [
+          "Vendor risk assessment repository",
+          "GRC platform supplier assessment records"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "Contract term + 3 years"
+      },
+      {
+        "id": "GV.SC-06-E3",
+        "name": "Product Authenticity and Integrity Verification Records",
+        "description": "Evidence that the authenticity and security of critical products are assessed prior to acquisition and deployment",
+        "whatGoodLooksLike": [
+          "Critical products are verified for authenticity through supply chain provenance checks",
+          "Security testing or evaluation is performed on critical products before deployment",
+          "Verification results are documented and inform procurement decisions"
+        ],
+        "commonGaps": [
+          "No product authenticity or integrity verification process exists",
+          "Verification is limited to commercial off-the-shelf products without assessing custom or integrated solutions",
+          "Products are deployed without security evaluation"
+        ],
+        "suggestedSources": [
+          "IT security or engineering team evaluation records",
+          "Procurement acceptance testing documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "Product lifecycle + 2 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review the procurement workflow to confirm cybersecurity due diligence is a mandatory gate",
+      "Sample completed supplier assessments across criticality tiers to verify proportionate rigor",
+      "Ask what happens when a prospective supplier fails the cybersecurity due diligence assessment"
+    ]
+  },
+  "GV.SC-07": {
+    "subcategoryId": "GV.SC-07",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Ongoing Supplier Risk Monitoring",
+    "assessorFocus": "Verify that supplier risks are continuously understood, recorded, assessed, and monitored throughout the relationship lifecycle, with appropriate risk response actions taken.",
+    "evidenceItems": [
+      {
+        "id": "GV.SC-07-E1",
+        "name": "Supplier Ongoing Assessment and Monitoring Records",
+        "description": "Evidence of periodic cybersecurity assessments and continuous monitoring of suppliers during the relationship",
+        "whatGoodLooksLike": [
+          "Assessment frequency is proportionate to supplier criticality (e.g., annual for critical, biennial for others)",
+          "Multiple monitoring methods are used (audits, self-attestations, certifications, continuous monitoring feeds)",
+          "Changes in supplier risk profile trigger reassessment"
+        ],
+        "commonGaps": [
+          "Assessments are performed only at onboarding with no ongoing monitoring",
+          "Monitoring relies solely on supplier self-attestation without independent verification",
+          "Changes in supplier risk profile go undetected until an incident occurs"
+        ],
+        "suggestedSources": [
+          "Vendor risk management system",
+          "Supplier audit and assessment reports"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "Contract term + 3 years"
+      },
+      {
+        "id": "GV.SC-07-E2",
+        "name": "Supplier Compliance Evidence Repository",
+        "description": "Repository of third-party evidence of compliance with contractual cybersecurity requirements",
+        "whatGoodLooksLike": [
+          "Suppliers provide regular compliance evidence (SOC 2 reports, ISO certifications, penetration test results)",
+          "Evidence is reviewed and evaluated by qualified personnel",
+          "Non-compliance findings are tracked with required remediation timelines"
+        ],
+        "commonGaps": [
+          "Compliance evidence is collected but not reviewed or evaluated",
+          "Only a subset of suppliers provide compliance evidence",
+          "No tracking of non-compliance findings or remediation progress"
+        ],
+        "suggestedSources": [
+          "Vendor management compliance repository",
+          "GRC platform third-party risk module"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "Contract term + 3 years"
+      },
+      {
+        "id": "GV.SC-07-E3",
+        "name": "Supply Chain Business Continuity Plans",
+        "description": "Plans addressing unexpected supplier interruptions to ensure business continuity",
+        "whatGoodLooksLike": [
+          "Contingency plans exist for critical supplier failures including alternative suppliers or workarounds",
+          "Plans are tested periodically through exercises or simulations",
+          "Recovery time objectives account for supplier dependency timelines"
+        ],
+        "commonGaps": [
+          "No contingency plans exist for critical supplier failures",
+          "Plans exist but have never been tested",
+          "Single points of failure in the supply chain are not identified or mitigated"
+        ],
+        "suggestedSources": [
+          "Business continuity planning documentation",
+          "C-SCRM program contingency plans"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review supplier assessment schedules and verify assessments are conducted on time",
+      "Sample compliance evidence from critical suppliers and confirm it was reviewed by qualified personnel",
+      "Ask how the organization would respond if a critical supplier experienced a major breach"
+    ]
+  },
+  "GV.SC-08": {
+    "subcategoryId": "GV.SC-08",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supplier Incident Planning and Response",
+    "assessorFocus": "Confirm that relevant suppliers and third parties are included in the organization's incident planning, response, and recovery activities, with defined roles, communication protocols, and exercise participation.",
+    "evidenceItems": [
+      {
+        "id": "GV.SC-08-E1",
+        "name": "Supplier Incident Response Roles and Procedures",
+        "description": "Documentation defining supplier roles and responsibilities in incident response and recovery activities",
+        "whatGoodLooksLike": [
+          "Incident response plans include supplier roles, escalation paths, and communication protocols",
+          "Supplier notification requirements and timelines are defined",
+          "Crisis communication methods are established and tested with critical suppliers"
+        ],
+        "commonGaps": [
+          "Incident response plans do not address supplier involvement",
+          "Supplier notification requirements are undefined or vague",
+          "No established communication protocols between the organization and suppliers during incidents"
+        ],
+        "suggestedSources": [
+          "Incident response plan documentation",
+          "Supplier agreements with incident response provisions"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.SC-08-E2",
+        "name": "Supplier Incident Exercise Participation Records",
+        "description": "Evidence that critical suppliers participate in incident response exercises and simulations",
+        "whatGoodLooksLike": [
+          "Critical suppliers are included in at least annual tabletop or functional exercises",
+          "Exercise scenarios include supply chain disruption and third-party breach scenarios",
+          "After-action reports capture supplier performance and improvement areas"
+        ],
+        "commonGaps": [
+          "Suppliers are never included in incident response exercises",
+          "Exercises do not include supply chain-specific scenarios",
+          "Exercise results are not shared with supplier participants for mutual improvement"
+        ],
+        "suggestedSources": [
+          "Incident response exercise records and after-action reports",
+          "C-SCRM program exercise documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "GV.SC-08-E3",
+        "name": "Supplier Lessons Learned and Improvement Records",
+        "description": "Documentation of collaborative lessons learned sessions with suppliers following incidents or exercises",
+        "whatGoodLooksLike": [
+          "Lessons learned sessions are conducted with critical suppliers after incidents and exercises",
+          "Improvement actions are jointly identified and tracked",
+          "Improvements are incorporated into updated procedures and agreements"
+        ],
+        "commonGaps": [
+          "No lessons learned sessions are conducted with suppliers",
+          "Lessons are captured internally but not shared with supplier partners",
+          "Improvement actions are identified but not tracked to completion"
+        ],
+        "suggestedSources": [
+          "Lessons learned session documentation",
+          "Supplier relationship management records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review the most recent incident response exercise to verify supplier participation",
+      "Ask critical suppliers to describe their incident communication obligations with the organization",
+      "Verify that lessons from actual supplier-related incidents have been incorporated into updated plans"
+    ]
+  },
+  "GV.SC-09": {
+    "subcategoryId": "GV.SC-09",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supply Chain Security Lifecycle Practices",
+    "assessorFocus": "Assess whether supply chain security practices are integrated into cybersecurity and enterprise risk management programs and performance is monitored throughout the technology product and service lifecycle.",
+    "evidenceItems": [
+      {
+        "id": "GV.SC-09-E1",
+        "name": "Technology Provenance and Integrity Policies",
+        "description": "Policies requiring provenance records and integrity verification for acquired technology products and services",
+        "whatGoodLooksLike": [
+          "Policies mandate provenance documentation for all acquired technology products",
+          "Integrity verification procedures exist for critical hardware and software acquisitions",
+          "Policies require that patches and updates are obtained only from authenticated sources"
+        ],
+        "commonGaps": [
+          "No provenance tracking requirements exist for acquired technology",
+          "Integrity verification is limited to initial acquisition without lifecycle monitoring",
+          "Patches and updates are obtained without verifying source authenticity"
+        ],
+        "suggestedSources": [
+          "IT procurement and asset management policies",
+          "Cybersecurity configuration management procedures"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.SC-09-E2",
+        "name": "Lifecycle Monitoring and Risk Reporting Records",
+        "description": "Evidence that supply chain security is monitored throughout the technology product and service lifecycle",
+        "whatGoodLooksLike": [
+          "Regular risk reporting to leadership covers supply chain component authenticity and tampering risks",
+          "Monitoring covers acquisition, deployment, operation, and retirement phases",
+          "Security events related to supply chain components are tracked and reported"
+        ],
+        "commonGaps": [
+          "Supply chain security monitoring ends after initial acquisition",
+          "No regular risk reporting on supply chain component integrity",
+          "Retirement and disposal of supply chain components lacks security oversight"
+        ],
+        "suggestedSources": [
+          "CISO risk reporting archives",
+          "IT asset lifecycle management records"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.SC-09-E3",
+        "name": "Supplier Maintenance and Update Authorization Records",
+        "description": "Evidence that supplier maintenance activities and product updates are authorized and controlled",
+        "whatGoodLooksLike": [
+          "Policies require that only approved supplier personnel perform maintenance on supplier products",
+          "Hardware upgrades are inspected for unauthorized modifications before deployment",
+          "Maintenance activities are logged and reviewed"
+        ],
+        "commonGaps": [
+          "No authorization process exists for supplier maintenance activities",
+          "Hardware upgrades are deployed without inspection for tampering",
+          "Maintenance logs are incomplete or not reviewed"
+        ],
+        "suggestedSources": [
+          "IT operations maintenance records",
+          "Change management and authorization logs"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask how the organization verifies that software updates come from authenticated sources",
+      "Review maintenance authorization records for critical supplier-maintained systems",
+      "Verify that lifecycle monitoring covers the full spectrum from acquisition through retirement"
+    ]
+  },
+  "GV.SC-10": {
+    "subcategoryId": "GV.SC-10",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supplier Relationship Termination Planning",
+    "assessorFocus": "Verify that supply chain risk management plans include provisions for activities that occur after the conclusion of a partnership or service agreement, including data return, access revocation, and transition management.",
+    "evidenceItems": [
+      {
+        "id": "GV.SC-10-E1",
+        "name": "Supplier Offboarding and Termination Procedures",
+        "description": "Documented procedures for securely terminating supplier relationships under both normal and adverse circumstances",
+        "whatGoodLooksLike": [
+          "Procedures cover access revocation, data return or destruction, and asset recovery",
+          "Different procedures exist for planned terminations and emergency terminations",
+          "Procedures include data leakage prevention and confidentiality enforcement"
+        ],
+        "commonGaps": [
+          "No formal offboarding procedures exist for supplier relationships",
+          "Procedures exist for normal termination but not for adverse or emergency scenarios",
+          "Data return and destruction requirements are undefined"
+        ],
+        "suggestedSources": [
+          "Vendor management program documentation",
+          "IT security offboarding procedures"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "GV.SC-10-E2",
+        "name": "Supplier Transition and Exit Plans",
+        "description": "Plans for transitioning away from suppliers that consider supply chain security, data protection, and continuity",
+        "whatGoodLooksLike": [
+          "Exit plans are developed for critical suppliers before or at contract inception",
+          "Plans include timelines, resource requirements, and fallback arrangements",
+          "Transition plans address component end-of-life support and obsolescence management"
+        ],
+        "commonGaps": [
+          "No exit plans exist for critical supplier relationships",
+          "Exit plans are developed only when termination is imminent, limiting options",
+          "End-of-life and obsolescence scenarios are not addressed"
+        ],
+        "suggestedSources": [
+          "Contract and vendor management documentation",
+          "Business continuity planning records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "Contract term + 3 years"
+      },
+      {
+        "id": "GV.SC-10-E3",
+        "name": "Post-Termination Verification Records",
+        "description": "Evidence that post-termination security activities (access revocation, data disposal, asset recovery) are verified",
+        "whatGoodLooksLike": [
+          "Access revocation is verified promptly after relationship termination",
+          "Data return or secure disposal is confirmed with documentation from the supplier",
+          "Post-termination checklist is completed and retained for audit purposes"
+        ],
+        "commonGaps": [
+          "Access revocation after supplier termination is delayed or incomplete",
+          "No verification that supplier has returned or destroyed organizational data",
+          "Post-termination activities are not tracked or documented"
+        ],
+        "suggestedSources": [
+          "IT access management deprovisioning records",
+          "Vendor management termination checklists"
+        ],
+        "format": "PDF/XLSX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review a recent supplier termination case to verify all offboarding steps were completed",
+      "Ask how quickly supplier access is revoked after contract termination and verify with access logs",
+      "Check whether exit plans exist for the organization's most critical suppliers"
+    ]
+  }
+}

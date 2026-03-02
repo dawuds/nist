@@ -1,0 +1,230 @@
+{
+  "RMF Prepare Step (Organization & Mission/Business Levels): TASK P-2 Risk Management Strategy": [
+    "GV.OC-01",
+    "GV.OC-03",
+    "GV.OC-04",
+    "GV.OV-01",
+    "GV.OV-02",
+    "GV.OV-03",
+    "GV.PO-01",
+    "GV.PO-02",
+    "GV.RM-01",
+    "GV.RM-02",
+    "GV.RM-03",
+    "GV.RM-04",
+    "GV.RM-05",
+    "GV.RM-06",
+    "GV.RM-07",
+    "GV.RR-03",
+    "GV.RR-04",
+    "GV.SC-01",
+    "GV.SC-03",
+    "GV.SC-05",
+    "GV.SC-06",
+    "GV.SC-07",
+    "GV.SC-09",
+    "ID.IM-01",
+    "ID.IM-02",
+    "ID.IM-03",
+    "ID.RA-06",
+    "ID.RA-08"
+  ],
+  "RMF Prepare Step (Organization & Mission/Business Levels): TASK P-3 Risk Assessment—Organization": [
+    "GV.OC-01",
+    "GV.OV-01",
+    "GV.OV-03",
+    "GV.RM-06",
+    "GV.SC-04",
+    "GV.SC-06",
+    "GV.SC-07",
+    "ID.AM-05",
+    "ID.IM-01",
+    "ID.IM-02",
+    "ID.IM-03",
+    "ID.RA-01",
+    "ID.RA-02",
+    "ID.RA-03",
+    "ID.RA-04",
+    "ID.RA-05",
+    "ID.RA-10"
+  ],
+  "RMF Prepare Step (System Level): TASK P-8 Mission or Business Focus": [
+    "GV.OC-01",
+    "GV.OC-04",
+    "GV.OC-05",
+    "ID.AM-05"
+  ],
+  "RMF Prepare Step - Organization and Mission/Business  Level -  Task P-1: Risk Management Roles": [
+    "GV.OC-02"
+  ],
+  "RMF Prepare Step - Organization and Mission/Business  Level -  Task P-3: Risk Assessment - Organizat": [
+    "GV.OC-02"
+  ],
+  "RMF Prepare Step (System Level): TASK P-9 System Stakeholders": [
+    "GV.OC-02",
+    "GV.OC-04",
+    "GV.RM-05",
+    "GV.SC-01",
+    "GV.SC-08"
+  ],
+  "RMF Prepare Step (System Level): TASK P-15 Requirements Definition": [
+    "GV.OC-02",
+    "GV.OC-03",
+    "GV.SC-10",
+    "ID.RA-08"
+  ],
+  "RMF Prepare Step (System Level): TASK P-17 Requirements Allocation": [
+    "GV.OC-03"
+  ],
+  "RMF Prepare Step (System Level): TASK P-10 Asset Identification": [
+    "GV.OC-05",
+    "GV.SC-04",
+    "ID.AM-01",
+    "ID.AM-02",
+    "ID.AM-04",
+    "ID.AM-05",
+    "ID.AM-08",
+    "ID.RA-09",
+    "ID.RA-10"
+  ],
+  "RMF Prepare Step (Organization & Mission/Business Levels): TASK P-7 Continuous Monitoring Strategy—O": [
+    "GV.OV-01",
+    "GV.OV-03",
+    "GV.RM-04",
+    "GV.RM-05",
+    "GV.RM-06",
+    "GV.SC-01",
+    "GV.SC-07",
+    "GV.SC-09",
+    "ID.IM-01",
+    "ID.IM-02",
+    "ID.IM-03"
+  ],
+  "RMF Prepare Step (Organization & Mission/Business Levels): TASK P-1 Risk Management Roles": [
+    "GV.RM-05",
+    "GV.RR-01",
+    "GV.RR-02",
+    "GV.RR-03",
+    "GV.RR-04",
+    "GV.SC-01",
+    "GV.SC-02"
+  ],
+  "RMF Prepare Step (System Level): TASK P-14 Risk Assessment—System": [
+    "GV.OV-01",
+    "GV.OV-03",
+    "GV.SC-04",
+    "GV.SC-06",
+    "GV.SC-07",
+    "ID.AM-05",
+    "ID.IM-01",
+    "ID.IM-02",
+    "ID.IM-03",
+    "ID.RA-01",
+    "ID.RA-02",
+    "ID.RA-03",
+    "ID.RA-04",
+    "ID.RA-05",
+    "ID.RA-10"
+  ],
+  "RMF Select Step: TASK S-5 Continuous Monitoring Strategy— System": [
+    "GV.OV-01",
+    "GV.SC-07"
+  ],
+  "RMF Authorize Step: TASK R-3 Risk Response": [
+    "GV.OV-01",
+    "GV.OV-03",
+    "GV.SC-07",
+    "ID.RA-05",
+    "ID.RA-06",
+    "ID.RA-08"
+  ],
+  "RMF Monitor Step: TASK M-2 Ongoing Assessments": [
+    "GV.OV-01",
+    "GV.OV-03",
+    "GV.SC-07",
+    "ID.IM-01",
+    "ID.IM-02",
+    "ID.IM-03",
+    "ID.RA-01",
+    "ID.RA-03",
+    "ID.RA-08"
+  ],
+  "RMF Monitor Step: TASK M-3 Ongoing Risk Response": [
+    "GV.OV-01",
+    "GV.OV-03",
+    "GV.SC-07",
+    "GV.SC-08",
+    "ID.RA-06",
+    "ID.RA-08"
+  ],
+  "RMF Assess Step: TASK A-3 Control Assessments": [
+    "GV.SC-07",
+    "ID.IM-01",
+    "ID.IM-02",
+    "ID.IM-03",
+    "ID.RA-01",
+    "ID.RA-03",
+    "ID.RA-09"
+  ],
+  "RMF Assess Step: TASK A-5 Remediation Actions": [
+    "GV.SC-07",
+    "ID.IM-01",
+    "ID.IM-02",
+    "ID.IM-03",
+    "ID.RA-06"
+  ],
+  "RMF Assess Step: TASK A-6 Plan of Action and Milestones": [
+    "GV.SC-07",
+    "ID.IM-01",
+    "ID.IM-02",
+    "ID.IM-03",
+    "ID.RA-06",
+    "ID.RA-07"
+  ],
+  "RMF Authorize Step: TASK R-2 Risk Analysis and Determination": [
+    "GV.SC-07",
+    "ID.RA-05"
+  ],
+  "RMF Monitor Step: TASK M-1 System and Environment Changes": [
+    "GV.SC-07",
+    "GV.SC-08",
+    "ID.RA-01",
+    "ID.RA-03"
+  ],
+  "RMF Monitor Step: TASK M-7 System Disposal": [
+    "GV.SC-10",
+    "ID.AM-08"
+  ],
+  "RMF Prepare Step (System Level): TASK P-11 Authorization Boundary": [
+    "ID.AM-03"
+  ],
+  "RMF Prepare Step (System Level): TASK P-13 Information Life Cycle": [
+    "ID.AM-03",
+    "ID.AM-07",
+    "ID.AM-08"
+  ],
+  "RMF Prepare Step (System Level): TASK P-16 Enterprise Architecture": [
+    "ID.AM-03"
+  ],
+  "RMF Prepare Step (Organization & Mission/Business Levels): TASK P-6 Impact-Level Prioritization (Opt": [
+    "ID.AM-05"
+  ],
+  "RMF Prepare Step (System Level): TASK P-12 Information Types": [
+    "ID.AM-07",
+    "ID.AM-08"
+  ],
+  "RMF Monitor Step: TASK M-6 Ongoing Authorization": [
+    "ID.RA-06"
+  ],
+  "RMF Select Step: TASK S-4 Documentation of Planned Control Implementations": [
+    "ID.RA-07"
+  ],
+  "RMF Implement Step: TASK I-2 Update Control Implementation Information": [
+    "ID.RA-07"
+  ],
+  "RMF Assess Step: TASK A-4 Assessment Reports": [
+    "ID.IM-01",
+    "ID.IM-02",
+    "ID.IM-03"
+  ]
+}

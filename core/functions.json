@@ -1,0 +1,32 @@
+[
+  {
+    "id": "GV",
+    "name": "GOVERN",
+    "description": "The organization's cybersecurity risk management strategy, expectations, and policy are established, communicated, and monitored"
+  },
+  {
+    "id": "ID",
+    "name": "IDENTIFY",
+    "description": "The organization's current cybersecurity risks are understood"
+  },
+  {
+    "id": "PR",
+    "name": "PROTECT",
+    "description": "Safeguards to manage the organization's cybersecurity risks are used"
+  },
+  {
+    "id": "DE",
+    "name": "DETECT",
+    "description": "Possible cybersecurity attacks and compromises are found and analyzed"
+  },
+  {
+    "id": "RS",
+    "name": "RESPOND",
+    "description": "Actions regarding a detected cybersecurity incident are taken"
+  },
+  {
+    "id": "RC",
+    "name": "RECOVER",
+    "description": "Assets and operations affected by a cybersecurity incident are restored"
+  }
+]

@@ -1,0 +1,1039 @@
+{
+  "PR.AA-01": {
+    "subcategoryId": "PR.AA-01",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Identity and Credential Lifecycle Management",
+    "objective": "Ensure all identities and credentials for authorized users, services, and hardware are systematically provisioned, managed, and deprovisioned throughout their lifecycle. This reduces the risk of unauthorized access through orphaned accounts, shared credentials, or unmanaged service identities.",
+    "keyActivities": [
+      {
+        "activity": "Implement a centralized Identity Governance and Administration (IGA) platform (e.g., SailPoint, Saviynt, Microsoft Entra ID Governance) to automate identity lifecycle workflows including joiner, mover, and leaver processes",
+        "owner": "IAM Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Establish and enforce a formal access request and approval workflow with system and data owner authorization, tracked through the IGA or ITSM ticketing system",
+        "owner": "IAM Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Manage cryptographic certificates, tokens, API keys, and SSH keys through a dedicated secrets management platform (e.g., HashiCorp Vault, CyberArk) with automated rotation and expiration enforcement",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Maintain a hardware identity registry that uniquely identifies each authorized device using immutable characteristics (MAC, TPM, serial number) or securely provisioned certificates, integrated with the asset management database",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct quarterly reconciliation of active accounts against HR records and contractor registries to identify and remediate orphaned, dormant, or unauthorized accounts",
+        "owner": "IAM Manager",
+        "frequency": "Quarterly",
+        "priority": "Critical"
+      }
+    ],
+    "maturity": {
+      "basic": "Identities are created manually via ad-hoc requests (email or verbal). Account deprovisioning is inconsistent, orphaned accounts persist, and service accounts use shared or static credentials with no rotation schedule.",
+      "mature": "A centralized IGA platform automates joiner/mover/leaver workflows. Credentials are rotated on defined schedules, secrets management is in place for service accounts, and quarterly access reconciliation is performed with documented remediation.",
+      "advanced": "Identity lifecycle is fully automated with real-time HR integration triggering provisioning and deprovisioning. Machine learning detects anomalous identity patterns, all credentials (including machine identities) have automated rotation, and continuous compliance dashboards track identity hygiene metrics."
+    }
+  },
+  "PR.AA-02": {
+    "subcategoryId": "PR.AA-02",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Identity Proofing and Credential Binding",
+    "objective": "Verify the claimed identity of individuals before issuing credentials, and bind each credential uniquely to a single verified identity. This prevents impersonation, credential sharing, and unauthorized account creation.",
+    "keyActivities": [
+      {
+        "activity": "Define and enforce an identity proofing policy that specifies acceptable verification methods (government-issued ID, biometric verification, notarized documents) aligned with NIST SP 800-63A identity assurance levels",
+        "owner": "IAM Manager",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement identity verification procedures during employee onboarding, contractor enrollment, and partner federation that include in-person or video-based document verification",
+        "owner": "HR Security Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Enforce a strict one-credential-per-person policy across all systems, prohibiting credential sharing and implementing technical controls (concurrent session limits, device binding) to detect sharing",
+        "owner": "IAM Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Maintain auditable records of all identity proofing events including verification method, documents reviewed, verifier identity, and timestamp for a minimum retention period aligned with regulatory requirements",
+        "owner": "IAM Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Identity proofing relies on self-attestation or basic HR verification. Credential sharing is prohibited by policy but not technically enforced, and proofing records are incomplete or not centrally stored.",
+      "mature": "A formal identity proofing process aligned with NIST SP 800-63A is documented and followed. Government-issued ID verification is mandatory, one-credential-per-person is technically enforced, and proofing audit trails are complete and retained.",
+      "advanced": "Automated identity proofing using biometrics, document authentication AI, and real-time database verification is integrated into enrollment workflows. Risk-adaptive proofing levels are applied based on access sensitivity, and continuous identity confidence scoring supplements initial proofing."
+    }
+  },
+  "PR.AA-03": {
+    "subcategoryId": "PR.AA-03",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Authentication Mechanism Enforcement",
+    "objective": "Ensure that users, services, and hardware are reliably authenticated before accessing organizational resources, using mechanisms commensurate with the sensitivity of the assets being accessed. This prevents unauthorized access through credential compromise or replay attacks.",
+    "keyActivities": [
+      {
+        "activity": "Deploy and enforce multi-factor authentication (MFA) across all user-facing applications, VPN, privileged access, cloud services, and remote access, using phishing-resistant methods (FIDO2/WebAuthn, hardware tokens) for privileged and high-risk access",
+        "owner": "IAM Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Define and enforce password policies that meet or exceed current NIST SP 800-63B guidelines (minimum 15 characters, blocklists of compromised passwords, no periodic forced rotation unless compromise is suspected)",
+        "owner": "IAM Manager",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement certificate-based or token-based machine authentication (802.1X, mutual TLS) for all network-connected devices and services, integrated with the device identity registry",
+        "owner": "Network Security Engineer",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Configure session management controls including idle timeouts, maximum session duration, re-authentication for sensitive operations, and step-up authentication for privilege escalation",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish and test emergency access (break-glass) procedures that allow authorized personnel to access critical systems during outages or authentication system failures, with full audit logging and post-use review",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Password-based authentication is predominant with MFA deployed only for VPN or limited applications. Password policies allow weak passwords, and service-to-service authentication relies on static API keys or shared secrets.",
+      "mature": "MFA is universally enforced for all human access, phishing-resistant methods are required for privileged users, and machine authentication uses certificates. Session management and re-authentication policies are defined and enforced consistently.",
+      "advanced": "Continuous adaptive authentication evaluates risk signals (device posture, location, behavior patterns) in real-time to dynamically adjust authentication requirements. Zero trust architectures require per-request authentication, and passwordless authentication is the default for all human users."
+    }
+  },
+  "PR.AA-04": {
+    "subcategoryId": "PR.AA-04",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Identity Assertion Protection and Verification",
+    "objective": "Ensure identity assertions (such as SAML tokens, OAuth tokens, OIDC claims, and Kerberos tickets) are cryptographically protected, securely transmitted, and properly verified at every trust boundary. This prevents token theft, replay attacks, and federation abuse.",
+    "keyActivities": [
+      {
+        "activity": "Implement standards-based SSO (SAML 2.0, OIDC) with all identity assertions digitally signed and encrypted, using current cryptographic algorithms and key lengths, with signature validation enforced at every relying party",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Configure token lifetime limits, audience restrictions, and replay prevention (nonce, jti claims) for all federation and SSO protocols, and enforce strict validation of issuer, audience, expiration, and not-before claims",
+        "owner": "IAM Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Conduct annual security assessments of all federated identity trust relationships, reviewing trust configurations, metadata exchange processes, certificate rotation schedules, and authorization scope mappings",
+        "owner": "IAM Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement token binding or proof-of-possession mechanisms for high-sensitivity applications to prevent token theft and session hijacking, and deploy monitoring for anomalous token usage patterns",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "SSO is partially deployed with some applications still using local authentication. Token signing is implemented but token encryption is inconsistent, lifetime limits are overly generous, and audience validation is not universally enforced.",
+      "mature": "All applications use standards-based federation with tokens that are signed, encrypted, audience-restricted, and time-limited. Certificate rotation is automated, and federation trust relationships are reviewed annually with documented risk acceptance for any deviations.",
+      "advanced": "Token binding and proof-of-possession are enforced for sensitive applications. Real-time anomaly detection identifies token theft or misuse, automated federation trust scoring continuously evaluates partner security posture, and dynamic authorization adjusts token scopes based on contextual risk signals."
+    }
+  },
+  "PR.AA-05": {
+    "subcategoryId": "PR.AA-05",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Access Privilege Management and Review",
+    "objective": "Define, enforce, and continuously review access permissions, entitlements, and authorizations using least privilege and separation of duties principles. This minimizes the blast radius of compromised accounts and prevents privilege accumulation.",
+    "keyActivities": [
+      {
+        "activity": "Implement role-based access control (RBAC) or attribute-based access control (ABAC) models with formally defined roles, entitlement catalogs, and documented approval chains for each application and data classification level",
+        "owner": "IAM Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Conduct quarterly user access reviews (UARs) for critical systems and annual reviews for standard systems, with system and data owners certifying each user's continued need for access and privilege level",
+        "owner": "IAM Manager",
+        "frequency": "Quarterly",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Enforce separation of duties through technical controls (e.g., mutually exclusive roles, dual-approval workflows) for critical business functions including financial transactions, code deployment, and privileged infrastructure changes",
+        "owner": "CISO",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement just-in-time (JIT) and just-enough-access (JEA) privileged access management for all administrative and elevated-privilege access, with automatic privilege revocation after defined time windows",
+        "owner": "IAM Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Deploy context-aware authorization that evaluates requester attributes (geolocation, device posture, time of day, risk score) alongside role membership when making access decisions, supporting zero trust principles",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Access permissions are granted on request without formal role definitions. Reviews are infrequent or reactive (triggered by audit findings). Privilege accumulation is common as users change roles, and separation of duties relies on managerial awareness rather than technical enforcement.",
+      "mature": "RBAC is implemented with documented role definitions and entitlement catalogs. Quarterly access reviews are completed for critical systems with documented remediation of excess privileges. JIT privileged access is operational, and separation of duties is technically enforced for critical functions.",
+      "advanced": "ABAC policies dynamically evaluate multiple contextual attributes for every access decision. Continuous access certification replaces periodic reviews, machine learning identifies privilege anomalies and recommends right-sizing, and access analytics dashboards provide real-time visibility into effective permissions across the enterprise."
+    }
+  },
+  "PR.AA-06": {
+    "subcategoryId": "PR.AA-06",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Physical Access Control Management",
+    "objective": "Manage, monitor, and enforce physical access to facilities and assets commensurate with risk, preventing unauthorized physical access that could lead to data theft, equipment tampering, or environmental damage.",
+    "keyActivities": [
+      {
+        "activity": "Deploy layered physical access controls (badge readers, biometric scanners, mantraps, security cameras) at facility perimeters, building entrances, and sensitive areas (data centers, network closets, executive offices) with centralized access control management",
+        "owner": "Physical Security Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement a formal visitor management program with pre-registration, government-issued ID verification, badge issuance, escort requirements for sensitive areas, and comprehensive visitor logging",
+        "owner": "Physical Security Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct quarterly reviews of physical access lists for sensitive areas (data centers, secure labs, executive floors), removing access for individuals who no longer require it and validating business justification for continued access",
+        "owner": "Physical Security Manager",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Integrate physical access control system (PACS) logs with the SIEM for correlation with logical access events, enabling detection of tailgating, cloned badges, and access outside normal business hours",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct annual physical security assessments including penetration testing of physical controls (tailgating tests, social engineering, lock bypass) with documented findings and remediation tracking",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Physical access relies primarily on key locks and a basic badge system. Visitor management is informal, access lists are rarely reviewed, and physical access logs are not integrated with cybersecurity monitoring.",
+      "mature": "Multi-layered physical access controls are deployed with badge readers and cameras at all entry points. A formal visitor management program is in place, access lists are reviewed quarterly, and PACS logs are forwarded to the SIEM for correlation.",
+      "advanced": "Converged physical-logical security operations correlate badge events, video analytics, and cyber alerts in real-time. AI-powered video surveillance detects anomalous behavior (tailgating, loitering), and physical access decisions dynamically adjust based on threat intelligence and current security posture."
+    }
+  },
+  "PR.AT-01": {
+    "subcategoryId": "PR.AT-01",
+    "categoryId": "PR.AT",
+    "functionId": "PR",
+    "title": "General Cybersecurity Awareness Training",
+    "objective": "Provide all personnel with cybersecurity awareness and training so they can recognize threats, follow security policies, and perform their duties with cybersecurity risks in mind. This creates a human firewall that reduces the success rate of social engineering and user-initiated security incidents.",
+    "keyActivities": [
+      {
+        "activity": "Deploy an enterprise security awareness platform (e.g., KnowBe4, Proofpoint Security Awareness, SANS Security Awareness) with mandatory annual training modules covering phishing, social engineering, password hygiene, data handling, acceptable use, and incident reporting",
+        "owner": "Security Awareness Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct monthly simulated phishing campaigns across all user populations, with progressive difficulty, immediate remediation training for failures, and trend reporting to leadership",
+        "owner": "Security Awareness Manager",
+        "frequency": "Monthly",
+        "priority": "High"
+      },
+      {
+        "activity": "Require completion of cybersecurity awareness training within 30 days of onboarding for all employees, contractors, and third-party users with access to organizational resources, with access suspended for non-completion",
+        "owner": "HR Security Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Deliver targeted awareness communications (newsletters, intranet alerts, digital signage) aligned with current threat landscape, seasonal risks (tax season, holiday shopping), and recent organizational incidents",
+        "owner": "Security Awareness Manager",
+        "frequency": "Monthly",
+        "priority": "Medium"
+      },
+      {
+        "activity": "Measure training effectiveness through phishing simulation click rates, training completion rates, incident reporting rates, and knowledge assessment scores, reporting metrics to executive leadership quarterly",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Annual compliance-focused training is delivered as a checkbox exercise. No phishing simulations are conducted, training content is generic and outdated, and completion is tracked informally with no consequences for non-completion.",
+      "mature": "A comprehensive awareness program includes annual training, monthly phishing simulations, onboarding training, and regular communications. Metrics are tracked (completion rates, click rates), and non-compliance has defined consequences.",
+      "advanced": "Adaptive training automatically adjusts content difficulty and frequency based on individual risk scores and performance history. Gamification drives engagement, behavioral analytics identify persistent high-risk users for targeted intervention, and the program demonstrably reduces security incident rates year-over-year."
+    }
+  },
+  "PR.AT-02": {
+    "subcategoryId": "PR.AT-02",
+    "categoryId": "PR.AT",
+    "functionId": "PR",
+    "title": "Role-Based Cybersecurity Training",
+    "objective": "Provide individuals in specialized roles with targeted cybersecurity training so they possess the knowledge and skills to manage security risks specific to their responsibilities. This ensures that personnel in high-impact roles (IT, security, finance, leadership) are equipped beyond general awareness.",
+    "keyActivities": [
+      {
+        "activity": "Identify and maintain a registry of specialized roles requiring additional cybersecurity training (security operations, system administrators, developers, finance staff, executives, data custodians, incident responders) with defined competency requirements for each",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Deliver role-specific training curricula: secure coding (OWASP Top 10, SANS) for developers, incident response procedures for SOC staff, cloud security for platform engineers, BEC/wire fraud awareness for finance, and risk-based decision making for executives",
+        "owner": "Security Awareness Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct hands-on exercises and simulations for technical roles, including tabletop exercises for incident responders, capture-the-flag events for security engineers, and red team/purple team exercises for SOC analysts",
+        "owner": "SOC Manager",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Assess competency of personnel in specialized roles through practical tests, certification tracking, and scenario-based evaluations, with results informing individual development plans",
+        "owner": "Security Awareness Manager",
+        "frequency": "Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Role-based training is limited to vendor-provided training during tool deployment. No formal competency requirements exist for specialized roles, and training is not tailored to role-specific risks or responsibilities.",
+      "mature": "A formal training matrix maps specialized roles to required competencies and training curricula. Annual role-based training is delivered with competency assessments, and hands-on exercises supplement classroom learning for technical roles.",
+      "advanced": "Continuous competency development programs integrate real-world threat simulations, personalized learning paths based on skill gap analysis, industry certification requirements, and cross-functional exercises. Training effectiveness is measured through operational metrics (detection rates, secure code defect density, response times)."
+    }
+  },
+  "PR.AT-03": {
+    "subcategoryId": "PR.AT-03",
+    "categoryId": "PR.AT",
+    "functionId": "PR",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into PR.AT-01 and PR.AT-02.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See PR.AT-01 and PR.AT-02.",
+      "mature": "Withdrawn: See PR.AT-01 and PR.AT-02.",
+      "advanced": "Withdrawn: See PR.AT-01 and PR.AT-02."
+    }
+  },
+  "PR.AT-04": {
+    "subcategoryId": "PR.AT-04",
+    "categoryId": "PR.AT",
+    "functionId": "PR",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into PR.AT-02.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See PR.AT-02.",
+      "mature": "Withdrawn: See PR.AT-02.",
+      "advanced": "Withdrawn: See PR.AT-02."
+    }
+  },
+  "PR.AT-05": {
+    "subcategoryId": "PR.AT-05",
+    "categoryId": "PR.AT",
+    "functionId": "PR",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into PR.AT-02.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See PR.AT-02.",
+      "mature": "Withdrawn: See PR.AT-02.",
+      "advanced": "Withdrawn: See PR.AT-02."
+    }
+  },
+  "PR.DS-01": {
+    "subcategoryId": "PR.DS-01",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "Data-at-Rest Protection",
+    "objective": "Protect the confidentiality, integrity, and availability of data stored across all organizational systems, databases, endpoints, and media. This prevents unauthorized disclosure or modification of sensitive data through storage compromise, device theft, or insider access.",
+    "keyActivities": [
+      {
+        "activity": "Implement full-disk encryption (BitLocker, FileVault, LUKS) on all endpoints and laptops, and enable transparent data encryption (TDE) or application-level encryption for databases containing sensitive or regulated data",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Deploy a data classification scheme and enforce classification-appropriate encryption standards: AES-256 for confidential and restricted data at rest, with key management through a dedicated HSM or cloud KMS with separation of duties for key custodians",
+        "owner": "Data Protection Officer",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement Data Loss Prevention (DLP) controls on endpoints and storage systems to detect, alert on, and block unauthorized storage of sensitive data in unapproved locations (e.g., personal cloud storage, removable media, unapproved file shares)",
+        "owner": "Data Protection Officer",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Validate software and firmware integrity at boot and during runtime using cryptographic signatures, secure boot configurations, and file integrity monitoring (FIM) on critical system files and configuration directories",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Enforce removable media policies through endpoint management tools, restricting USB storage to approved encrypted devices only, and implementing port control policies that block unauthorized mass storage devices",
+        "owner": "Endpoint Security Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Full-disk encryption is deployed on some endpoints but not universally enforced. Database encryption is inconsistent, key management is manual, and removable media restrictions are policy-based without technical enforcement.",
+      "mature": "All endpoints and databases have encryption enforced through centralized management. A formal data classification scheme drives encryption requirements, key management uses HSM/KMS with defined custodian roles, and DLP controls monitor for policy violations.",
+      "advanced": "Encryption is automatically applied based on real-time data classification by AI-powered DLP. Cryptographic agility allows rapid algorithm migration, confidential computing protects data in secure enclaves, and continuous integrity monitoring detects unauthorized modifications within seconds."
+    }
+  },
+  "PR.DS-02": {
+    "subcategoryId": "PR.DS-02",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "Data-in-Transit Protection",
+    "objective": "Protect the confidentiality, integrity, and availability of data traversing networks through encryption and integrity controls. This prevents eavesdropping, man-in-the-middle attacks, and data interception across all communication channels.",
+    "keyActivities": [
+      {
+        "activity": "Enforce TLS 1.2+ (preferring TLS 1.3) for all external and internal network communications, disable legacy protocols (SSLv3, TLS 1.0/1.1), and configure strong cipher suites with forward secrecy across all web servers, APIs, and services",
+        "owner": "Network Security Engineer",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Deploy email security controls including mandatory TLS for email transport (STARTTLS with enforcement), S/MIME or PGP encryption for sensitive communications, and DLP rules that auto-encrypt or block outbound emails containing classified data",
+        "owner": "Data Protection Officer",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement network segmentation with encrypted tunnels (IPsec VPN, WireGuard) between security zones, and enforce mutual TLS (mTLS) for all service-to-service communications within microservice architectures and zero trust environments",
+        "owner": "Network Security Engineer",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Block or restrict access to personal email services, unauthorized file-sharing platforms, and unapproved SaaS applications from corporate networks using web proxies, CASB, and DNS filtering",
+        "owner": "Network Security Engineer",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement data masking and tokenization for production data used in non-production environments, ensuring sensitive customer records and PII are not exposed in development, testing, or analytics workloads",
+        "owner": "Data Protection Officer",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "TLS is enabled for external-facing services but internal communications are often unencrypted. Legacy TLS versions may still be accepted, email encryption is optional, and data masking for non-production environments is inconsistent.",
+      "mature": "TLS 1.2+ is enforced universally with strong cipher suites. Email DLP auto-encrypts sensitive content, mTLS is deployed for internal service communication, personal cloud services are blocked, and production data is masked before use in non-production environments.",
+      "advanced": "Network-wide encryption is the default with automated certificate lifecycle management. Certificate transparency monitoring detects unauthorized certificates, quantum-resistant algorithms are being piloted, and real-time traffic analysis verifies encryption compliance across all network segments."
+    }
+  },
+  "PR.DS-03": {
+    "subcategoryId": "PR.DS-03",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into ID.AM-08 and PR.PS-03.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See ID.AM-08 and PR.PS-03.",
+      "mature": "Withdrawn: See ID.AM-08 and PR.PS-03.",
+      "advanced": "Withdrawn: See ID.AM-08 and PR.PS-03."
+    }
+  },
+  "PR.DS-04": {
+    "subcategoryId": "PR.DS-04",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and moved to PR.IR-04.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See PR.IR-04.",
+      "mature": "Withdrawn: See PR.IR-04.",
+      "advanced": "Withdrawn: See PR.IR-04."
+    }
+  },
+  "PR.DS-05": {
+    "subcategoryId": "PR.DS-05",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into PR.DS-01, PR.DS-02, and PR.DS-10.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See PR.DS-01, PR.DS-02, and PR.DS-10.",
+      "mature": "Withdrawn: See PR.DS-01, PR.DS-02, and PR.DS-10.",
+      "advanced": "Withdrawn: See PR.DS-01, PR.DS-02, and PR.DS-10."
+    }
+  },
+  "PR.DS-06": {
+    "subcategoryId": "PR.DS-06",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into PR.DS-01 and DE.CM-09.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See PR.DS-01 and DE.CM-09.",
+      "mature": "Withdrawn: See PR.DS-01 and DE.CM-09.",
+      "advanced": "Withdrawn: See PR.DS-01 and DE.CM-09."
+    }
+  },
+  "PR.DS-07": {
+    "subcategoryId": "PR.DS-07",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into PR.IR-01.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See PR.IR-01.",
+      "mature": "Withdrawn: See PR.IR-01.",
+      "advanced": "Withdrawn: See PR.IR-01."
+    }
+  },
+  "PR.DS-08": {
+    "subcategoryId": "PR.DS-08",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into ID.RA-09 and DE.CM-09.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See ID.RA-09 and DE.CM-09.",
+      "mature": "Withdrawn: See ID.RA-09 and DE.CM-09.",
+      "advanced": "Withdrawn: See ID.RA-09 and DE.CM-09."
+    }
+  },
+  "PR.DS-10": {
+    "subcategoryId": "PR.DS-10",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "Data-in-Use Protection",
+    "objective": "Protect the confidentiality, integrity, and availability of data while it is being actively processed in memory, CPU, or application runtime. This prevents data exposure through memory scraping, side-channel attacks, process injection, or unauthorized inter-process access.",
+    "keyActivities": [
+      {
+        "activity": "Implement secure memory management practices including clearing sensitive data (cryptographic keys, credentials, PII) from memory immediately after use, using secure string libraries, and disabling core dumps on production systems",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Deploy process isolation controls including mandatory access control (SELinux, AppArmor), container isolation (namespace separation, seccomp profiles, read-only root filesystems), and hypervisor-level memory isolation for multi-tenant environments",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Evaluate and deploy confidential computing technologies (Intel SGX, AMD SEV, ARM TrustZone) for workloads processing highly sensitive data, ensuring data remains encrypted even during processing",
+        "owner": "Security Architect",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement application-level input validation, parameterized queries, output encoding, and memory-safe coding practices to prevent injection attacks, buffer overflows, and other vulnerabilities that could expose data in use",
+        "owner": "Application Security Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Basic process isolation is provided by the operating system. Sensitive data may persist in memory longer than necessary, container security relies on default configurations, and application-level memory protections are inconsistent.",
+      "mature": "Mandatory access controls and hardened container runtimes enforce process isolation. Secure coding standards mandate memory clearing after use, application security testing validates data-in-use protections, and production systems disable memory dumps.",
+      "advanced": "Confidential computing enclaves protect the most sensitive workloads. Runtime application self-protection (RASP) monitors for memory-based attacks, hardware-backed memory encryption is deployed, and continuous fuzz testing validates data-in-use integrity across the application portfolio."
+    }
+  },
+  "PR.DS-11": {
+    "subcategoryId": "PR.DS-11",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "Backup Management and Testing",
+    "objective": "Ensure that backups of critical data and systems are created, protected, maintained, and regularly tested to support recovery from incidents, disasters, and ransomware attacks. This guarantees recoverability within defined recovery time and recovery point objectives.",
+    "keyActivities": [
+      {
+        "activity": "Implement automated backup schedules aligned with data criticality: continuous or near-real-time replication for tier-1 systems (databases, financial systems), daily incremental for tier-2, and weekly full backups for tier-3, with defined RPO/RTO targets",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Maintain immutable, air-gapped backup copies stored in a geographically separate location using the 3-2-1-1-0 rule (3 copies, 2 media types, 1 offsite, 1 immutable, 0 errors), specifically designed to resist ransomware encryption",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Encrypt all backup data at rest and in transit using AES-256, with backup encryption keys managed separately from the production key management system to prevent simultaneous compromise",
+        "owner": "Data Protection Officer",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Test backup restoration quarterly for critical systems and annually for all systems, including full bare-metal recovery tests, individual file/database restoration, and cross-site failover validation, documenting results and remediation of failures",
+        "owner": "Disaster Recovery Manager",
+        "frequency": "Quarterly",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Monitor backup job success/failure rates daily, investigate and remediate failures within 24 hours, and report backup health metrics (completion rate, data growth, storage utilization, restoration test results) to leadership monthly",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Daily",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Backups are configured for some systems but schedules are inconsistent. Restoration testing is rare or undocumented, backup monitoring is reactive, and there are no immutable or air-gapped copies to protect against ransomware.",
+      "mature": "Automated backups run on defined schedules aligned with data tiering. Immutable offsite copies exist, encryption is enforced, quarterly restoration tests are completed and documented, and backup health is monitored and reported.",
+      "advanced": "Continuous data protection provides near-zero RPO for critical systems. Automated restoration testing runs continuously in isolated environments with success validation, backup integrity is cryptographically verified, and predictive analytics forecast storage needs and identify backup anomalies that could indicate compromise."
+    }
+  },
+  "PR.PS-01": {
+    "subcategoryId": "PR.PS-01",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Configuration Management Practices",
+    "objective": "Establish and enforce configuration management practices that ensure all technology platforms operate in a secure, known, and approved state. This prevents security drift, unauthorized changes, and exploitation of misconfigurations.",
+    "keyActivities": [
+      {
+        "activity": "Develop and maintain hardened baseline configurations for all platform types (servers, workstations, network devices, cloud resources, containers) based on CIS Benchmarks, DISA STIGs, or vendor security guides, enforcing the principle of least functionality",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Quarterly",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Deploy configuration management and infrastructure-as-code tools (Ansible, Terraform, Puppet, Chef) to automate baseline deployment, prevent configuration drift, and enable rapid remediation of deviations",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement a formal change management process requiring security impact assessment, testing, approval, and rollback planning for all configuration changes, with emergency change procedures for urgent security updates",
+        "owner": "Change Advisory Board",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct continuous configuration compliance monitoring using tools (Qualys Policy Compliance, Tenable, AWS Config, Azure Policy) that compare running configurations against approved baselines and alert on deviations",
+        "owner": "Security Operations Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Review and update default configuration settings during all software installations and upgrades, documenting deviations from vendor defaults with security justification and approval",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Baseline configurations exist for some platforms but are informally maintained. Configuration changes are made ad-hoc without consistent change management, and compliance monitoring is periodic (manual audits) rather than continuous.",
+      "mature": "Hardened baselines based on CIS/STIG are defined for all platforms and deployed via infrastructure-as-code. A formal change management process is followed, continuous compliance monitoring detects drift, and remediation is tracked to completion.",
+      "advanced": "Immutable infrastructure patterns (golden images, containerized workloads) prevent drift by design. Self-healing automation remediates detected deviations within minutes, configuration compliance is a real-time metric on security dashboards, and ML identifies high-risk configuration combinations."
+    }
+  },
+  "PR.PS-02": {
+    "subcategoryId": "PR.PS-02",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Software Maintenance and Patching",
+    "objective": "Ensure that all software is maintained, patched, replaced, or removed in a timely manner commensurate with risk, minimizing the window of exposure to known vulnerabilities. This includes routine patching, emergency remediation, end-of-life management, and removal of unauthorized software.",
+    "keyActivities": [
+      {
+        "activity": "Implement a risk-based vulnerability management program with defined SLAs for patching: critical vulnerabilities within 72 hours, high within 14 days, medium within 30 days, and low within 90 days, with exceptions requiring documented risk acceptance from the system owner",
+        "owner": "Vulnerability Management Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Deploy automated patch management tools (WSUS, SCCM, Intune, Ivanti, Automox) for operating systems and applications, with centralized reporting on patch compliance rates across all environments",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Maintain a software lifecycle inventory that tracks all installed software versions, end-of-life dates, and support status, with proactive planning (12+ months in advance) for migration off end-of-life products",
+        "owner": "IT Asset Manager",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "For containerized workloads, rebuild and redeploy container images with updated base images and dependencies rather than patching running containers, integrated into the CI/CD pipeline with automated vulnerability scanning",
+        "owner": "DevSecOps Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct quarterly scans for unauthorized, unsupported, and unnecessary software (including OS utilities that could be abused by attackers), and enforce removal with documented justification for any exceptions",
+        "owner": "Vulnerability Management Lead",
+        "frequency": "Quarterly",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Patching occurs on an ad-hoc or monthly cycle without risk-based prioritization. End-of-life software remains in use, unauthorized software removal is reactive, and patch compliance is not consistently measured across all environments.",
+      "mature": "Risk-based patch SLAs are defined and enforced, automated patch management covers all managed endpoints, end-of-life software has documented migration plans, and monthly reporting tracks patch compliance by criticality and business unit.",
+      "advanced": "Predictive vulnerability prioritization (EPSS, exploit intelligence) dynamically adjusts patch urgency. Virtual patching provides immediate protection while permanent patches are tested, automated pipelines rebuild and redeploy containerized workloads within hours of vulnerability disclosure, and patch compliance exceeds 98% across all environments."
+    }
+  },
+  "PR.PS-03": {
+    "subcategoryId": "PR.PS-03",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Hardware Maintenance and Lifecycle",
+    "objective": "Ensure that hardware is maintained, replaced, and disposed of commensurate with risk, preventing security gaps from outdated hardware that cannot support current security controls and ensuring sensitive data is not exposed through improper disposal.",
+    "keyActivities": [
+      {
+        "activity": "Maintain a comprehensive hardware asset inventory with lifecycle tracking (acquisition date, warranty status, firmware version, security capability assessment, projected end-of-life) for all servers, network equipment, endpoints, and IoT devices",
+        "owner": "IT Asset Manager",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish hardware replacement criteria based on security capability requirements (e.g., TPM 2.0 support, Secure Boot, firmware update availability) and proactively plan replacement 12 months before hardware can no longer support required security controls",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement certified data sanitization procedures (NIST SP 800-88 guidelines) for all hardware being decommissioned, including cryptographic erasure for self-encrypting drives, degaussing for magnetic media, and physical destruction for highest-classification devices",
+        "owner": "IT Asset Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Maintain auditable chain-of-custody records for all hardware disposal, including sanitization method, verification, responsible personnel, and certificates of destruction from third-party disposal vendors",
+        "owner": "IT Asset Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Hardware inventory is maintained in spreadsheets and updated irregularly. Disposal is handled informally without consistent data sanitization procedures, and hardware is replaced reactively when it fails rather than proactively based on security capability gaps.",
+      "mature": "A formal hardware lifecycle management program tracks all assets from procurement through disposal. Replacement plans are budgeted based on security capability requirements, NIST SP 800-88 sanitization is followed with certificates of destruction, and chain-of-custody is maintained.",
+      "advanced": "Automated asset discovery continuously validates the hardware inventory. Firmware integrity verification detects tampering, supply chain security controls validate hardware authenticity at procurement, and environmental sustainability metrics are integrated into lifecycle decisions alongside security requirements."
+    }
+  },
+  "PR.PS-04": {
+    "subcategoryId": "PR.PS-04",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Log Generation and Availability",
+    "objective": "Ensure that all systems, applications, and services generate comprehensive log records and make them available to centralized monitoring infrastructure for continuous analysis. This provides the evidentiary foundation for threat detection, incident investigation, and compliance.",
+    "keyActivities": [
+      {
+        "activity": "Define an enterprise logging standard specifying required log sources (OS events, application logs, authentication logs, network flows, cloud audit trails), minimum data fields (timestamp, source, user, action, outcome, resource), and retention periods aligned with regulatory requirements",
+        "owner": "Security Architect",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Configure all operating systems, applications, network devices, cloud services, and SaaS platforms to generate security-relevant logs and forward them to the centralized SIEM/log management platform using secure transport (TLS-encrypted syslog, agent-based collection)",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement log integrity controls including write-once storage, cryptographic hashing, tamper-evident logging, and access controls that prevent log modification or deletion by administrators of the source systems",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Monitor log pipeline health (ingestion rates, parsing errors, latency, source connectivity) continuously, with automated alerting when log sources stop sending data or ingestion anomalies are detected",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Ensure logs capture the data elements required for zero trust architectures including device identity, posture assessment results, resource access decisions, and policy evaluation outcomes",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Logging is enabled on some systems with default configurations. Log forwarding to a central platform is incomplete, retention is inconsistent, and log pipeline health is not monitored, resulting in gaps during incident investigations.",
+      "mature": "An enterprise logging standard is defined and enforced. All critical systems forward logs to the SIEM with secure transport, retention meets regulatory requirements, log integrity controls are in place, and pipeline health is continuously monitored.",
+      "advanced": "Universal log coverage across all environments (on-premises, cloud, SaaS, OT) with real-time ingestion. Adaptive log enrichment automatically adds context (threat intel, asset criticality, user risk scores), and log analytics platforms process petabytes of data with sub-second query performance for investigation."
+    }
+  },
+  "PR.PS-05": {
+    "subcategoryId": "PR.PS-05",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Unauthorized Software Prevention",
+    "objective": "Prevent the installation and execution of unauthorized, unapproved, or malicious software on organizational systems. This reduces the attack surface by ensuring only known, vetted, and approved software can run.",
+    "keyActivities": [
+      {
+        "activity": "Implement application whitelisting (allowlisting) on high-risk systems (servers, privileged workstations, POS systems, OT endpoints) using tools such as Windows Defender Application Control, AppLocker, or Carbon Black App Control",
+        "owner": "Endpoint Security Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Maintain a curated software catalog of approved applications with version requirements, and configure endpoint management tools (Intune, JAMF, SCCM) to allow installation only from the approved catalog or managed app stores",
+        "owner": "IT Asset Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Verify the integrity and provenance of all software before deployment by validating publisher digital signatures, checking package hashes against vendor-published values, and scanning with anti-malware tools",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Configure DNS filtering (e.g., Cisco Umbrella, Cloudflare Gateway) to block access to known malicious domains, command-and-control infrastructure, and unauthorized software download sites across all network segments",
+        "owner": "Network Security Engineer",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Anti-malware software is deployed but software installation is not restricted. Users can install arbitrary applications, and DNS filtering is basic or nonexistent. Unauthorized software is discovered reactively during audits.",
+      "mature": "Application whitelisting is enforced on high-risk systems, a managed software catalog restricts installations on standard endpoints, DNS filtering blocks known malicious domains, and regular scans identify unauthorized software for removal.",
+      "advanced": "Application whitelisting is universally enforced with automated catalog updates. Zero-trust application verification validates software integrity and behavior at runtime, AI-powered threat detection identifies novel malicious software that bypasses signature-based controls, and software supply chain verification is automated."
+    }
+  },
+  "PR.PS-06": {
+    "subcategoryId": "PR.PS-06",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Secure Software Development Lifecycle",
+    "objective": "Integrate security practices throughout the software development lifecycle (SDLC) to produce software with minimal vulnerabilities and protect it from tampering. This ensures that internally developed software meets security requirements before deployment to production.",
+    "keyActivities": [
+      {
+        "activity": "Implement a secure SDLC framework (NIST SSDF, Microsoft SDL, OWASP SAMM) with defined security gates at each phase: threat modeling during design, static analysis during development, dynamic testing during QA, and security sign-off before release",
+        "owner": "Application Security Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Integrate automated security testing into CI/CD pipelines: SAST (static analysis), SCA (software composition analysis for open-source dependencies), DAST (dynamic testing), container image scanning, and IaC security scanning, with quality gates that block deployment of high-severity findings",
+        "owner": "DevSecOps Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Protect source code repositories and build systems with strict access controls, branch protection rules, signed commits, and build provenance attestation (SLSA framework) to prevent unauthorized code injection and supply chain attacks",
+        "owner": "DevSecOps Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct periodic manual security assessments (code review, penetration testing) for high-risk applications, supplementing automated testing with expert analysis of business logic flaws, authentication bypasses, and authorization vulnerabilities",
+        "owner": "Application Security Lead",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Track and remediate security findings from all testing activities through a centralized vulnerability management system with defined SLAs, and maintain secure disposal procedures for applications being decommissioned",
+        "owner": "Application Security Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Security testing is limited to periodic penetration tests before major releases. Developers have minimal secure coding training, SAST/DAST tools are not integrated into the build pipeline, and open-source dependency risks are not systematically managed.",
+      "mature": "A formal secure SDLC is adopted with threat modeling, automated SAST/SCA/DAST in CI/CD, quality gates that block vulnerable releases, and repository security controls. Security findings are tracked with defined SLAs and reported to development leadership.",
+      "advanced": "Security is fully embedded in the developer workflow with real-time IDE-integrated security feedback, automated fix suggestions, SLSA Level 3+ build provenance, and continuous fuzz testing. Security champions are embedded in each team, vulnerability escape rates are tracked, and the secure SDLC maturity is benchmarked against OWASP SAMM."
+    }
+  },
+  "PR.IR-01": {
+    "subcategoryId": "PR.IR-01",
+    "categoryId": "PR.IR",
+    "functionId": "PR",
+    "title": "Network Access Protection and Segmentation",
+    "objective": "Protect networks and environments from unauthorized logical access through segmentation, access controls, and zero trust principles. This limits lateral movement, reduces blast radius from compromises, and enforces trust boundaries between network zones.",
+    "keyActivities": [
+      {
+        "activity": "Design and implement network segmentation architecture with defined trust zones (corporate IT, DMZ, production, development, IoT/OT, guest) using VLANs, firewalls, and software-defined networking, with documented traffic flow policies between zones",
+        "owner": "Network Security Engineer",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Deploy next-generation firewalls (NGFW) at all trust boundaries with application-aware policies, intrusion prevention (IPS), TLS inspection for non-sensitive traffic categories, and deny-by-default rules permitting only documented and approved traffic flows",
+        "owner": "Network Security Engineer",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement microsegmentation for critical workloads (databases, PCI environment, crown jewel applications) using host-based firewalls, cloud security groups, or dedicated microsegmentation platforms (Illumio, Guardicore) to limit lateral movement",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Deploy network access control (NAC) to verify endpoint identity and security posture (OS patch level, anti-malware status, disk encryption) before granting network access, quarantining non-compliant devices for remediation",
+        "owner": "Network Security Engineer",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement zero trust network access (ZTNA) for remote and third-party access, replacing traditional VPN with per-application access based on identity, device posture, and contextual risk signals",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Basic network segmentation exists (corporate vs. DMZ) with flat internal networks. Firewall rules are permissive and poorly documented, VPN provides broad network access to remote users, and endpoint posture is not verified before network admission.",
+      "mature": "Multi-tier segmentation is implemented with documented trust zones and traffic flow policies. NGFW with IPS protects all boundaries, NAC verifies endpoint posture, microsegmentation protects critical workloads, and firewall rules are reviewed semi-annually.",
+      "advanced": "Zero trust architecture with ZTNA provides per-application access. Software-defined microsegmentation dynamically adjusts based on threat intelligence and behavioral analytics, encrypted traffic inspection covers all non-exempt flows, and network access decisions are continuously re-evaluated based on real-time risk signals."
+    }
+  },
+  "PR.IR-02": {
+    "subcategoryId": "PR.IR-02",
+    "categoryId": "PR.IR",
+    "functionId": "PR",
+    "title": "Environmental Threat Protection",
+    "objective": "Protect organizational technology assets from environmental threats including fire, flood, extreme temperatures, humidity, and power disruptions. This ensures physical infrastructure resilience and prevents environmental conditions from causing data loss or service outages.",
+    "keyActivities": [
+      {
+        "activity": "Deploy environmental monitoring systems (temperature, humidity, water leak detection, smoke/fire detection) in all data centers, server rooms, and network closets with automated alerting to facilities and IT operations teams",
+        "owner": "Facilities Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement fire suppression systems (clean agent, pre-action sprinkler) in data centers and server rooms, with regular inspection and testing per local fire codes and insurance requirements",
+        "owner": "Facilities Manager",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Ensure adequate power infrastructure including uninterruptible power supplies (UPS), backup generators with automatic transfer switches, and power distribution units (PDU) with monitoring, tested under load annually",
+        "owner": "Facilities Manager",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Include environmental protection requirements and SLA commitments in contracts with colocation providers, cloud service providers, and managed hosting vendors, with annual review of provider compliance certifications (SOC 2, ISO 27001)",
+        "owner": "Vendor Risk Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Basic fire suppression and UPS exist in the primary data center. Environmental monitoring is limited, backup generators may not be regularly tested, and service provider environmental controls are not formally assessed.",
+      "mature": "Comprehensive environmental protection is deployed across all facilities with redundant controls. Environmental monitoring provides real-time alerting, generators are tested under load annually, and service provider environmental SLAs are contractually defined and verified.",
+      "advanced": "Predictive environmental monitoring uses sensor data and weather forecasting to proactively adjust cooling, power, and protection measures. Automated facility management optimizes energy efficiency while maintaining environmental controls, and digital twin simulations model failure scenarios for continuous resilience improvement."
+    }
+  },
+  "PR.IR-03": {
+    "subcategoryId": "PR.IR-03",
+    "categoryId": "PR.IR",
+    "functionId": "PR",
+    "title": "Resilience and High Availability",
+    "objective": "Implement mechanisms that achieve resilience requirements in both normal and adverse situations, ensuring critical services continue to operate through component failures, attacks, and disasters. This includes eliminating single points of failure and providing graceful degradation.",
+    "keyActivities": [
+      {
+        "activity": "Conduct a business impact analysis (BIA) to identify critical services and their resilience requirements (RTO, RPO, MTPD), and design architectures that meet these requirements through redundancy, failover, and geographic distribution",
+        "owner": "Disaster Recovery Manager",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement redundancy at all infrastructure layers: redundant power supplies, RAID storage, multi-path networking, clustered databases, load-balanced application tiers, and multi-region cloud deployments for tier-1 services",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Deploy load balancing and auto-scaling across application and infrastructure tiers to distribute traffic, absorb demand spikes, and automatically replace failed instances, with health checks triggering automatic failover",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct regular resilience testing including failover drills, disaster recovery exercises, chaos engineering experiments, and load testing to validate that resilience mechanisms work as designed under realistic failure conditions",
+        "owner": "Disaster Recovery Manager",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Design and implement graceful degradation patterns so that when components fail, services continue to operate with reduced functionality rather than complete outage, and users are transparently notified of degraded service",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Some redundancy exists at the infrastructure level (RAID, dual power supplies) but single points of failure persist in application and network layers. Failover is manual, and disaster recovery testing is infrequent.",
+      "mature": "Redundancy is implemented at all layers for critical systems. Load balancing and auto-scaling are operational, automated failover is configured and tested quarterly, disaster recovery exercises validate RTO/RPO targets, and BIA is updated annually.",
+      "advanced": "Chaos engineering is practiced regularly to discover hidden failure modes. Multi-region active-active architectures provide continuous availability, automated runbooks handle failure scenarios without human intervention, and resilience metrics (availability, failover time, recovery success rate) are continuously tracked against SLOs."
+    }
+  },
+  "PR.IR-04": {
+    "subcategoryId": "PR.IR-04",
+    "categoryId": "PR.IR",
+    "functionId": "PR",
+    "title": "Resource Capacity Management",
+    "objective": "Monitor and manage resource capacity (compute, storage, network, power) to ensure adequate availability for current operations and anticipated future demands. This prevents service degradation or outages caused by resource exhaustion.",
+    "keyActivities": [
+      {
+        "activity": "Implement comprehensive capacity monitoring across all infrastructure: CPU, memory, disk IOPS, storage utilization, network bandwidth, connection pools, and power consumption, with dashboards and automated alerting at defined thresholds (warning at 70%, critical at 85%)",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct quarterly capacity planning reviews analyzing growth trends, upcoming projects, seasonal patterns, and business forecasts to project resource needs 6-12 months ahead, with budget requests for capacity additions",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement auto-scaling policies for cloud and virtualized workloads that dynamically add and remove resources based on demand, with cost guardrails to prevent runaway scaling from anomalous traffic or DDoS attacks",
+        "owner": "Cloud Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Maintain capacity reserves (hot standby, burst capacity, cloud burst options) for critical systems sufficient to handle expected peak loads plus a defined margin (typically 20-30%) to accommodate unexpected demand surges or DDoS mitigation",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Capacity monitoring is limited to basic system metrics on individual hosts. Capacity planning is reactive, responding to outages or performance complaints rather than forecasting needs, and there is no systematic approach to resource scaling.",
+      "mature": "Centralized capacity monitoring with defined thresholds and alerting covers all critical infrastructure. Quarterly capacity reviews drive proactive procurement and scaling decisions, auto-scaling is configured for cloud workloads, and capacity metrics are included in operational dashboards.",
+      "advanced": "AI-driven capacity forecasting predicts resource needs based on historical patterns, business growth models, and real-time demand signals. Autonomous scaling optimizes cost and performance simultaneously, capacity risk is modeled as part of enterprise risk management, and FinOps practices ensure efficient resource utilization."
+    }
+  }
+}

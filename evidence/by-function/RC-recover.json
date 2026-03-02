@@ -1,0 +1,848 @@
+{
+  "RC.RP-01": {
+    "subcategoryId": "RC.RP-01",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Recovery Plan Execution",
+    "assessorFocus": "The assessor verifies that the organization executes the recovery portion of its incident response plan once initiated, including that all individuals with recovery responsibilities are aware of plans and authorizations required.",
+    "evidenceItems": [
+      {
+        "id": "RC.RP-01-E1",
+        "name": "Incident Recovery Plan",
+        "description": "Documents the recovery plan that defines restoration procedures, roles, responsibilities, and authorization requirements for recovery activities.",
+        "whatGoodLooksLike": [
+          "Recovery plan is integrated with or cross-referenced from the incident response plan",
+          "Roles and responsibilities for recovery activities are clearly defined with named individuals",
+          "Authorization requirements for each recovery action are specified",
+          "Plan includes prioritized recovery sequences aligned with the BIA"
+        ],
+        "commonGaps": [
+          "No formal recovery plan exists; recovery is improvised",
+          "Recovery roles and responsibilities are undefined or assigned to unavailable personnel",
+          "Authorization requirements for recovery actions are not specified",
+          "Recovery sequencing does not align with business impact analysis"
+        ],
+        "suggestedSources": [
+          "Business continuity plan / disaster recovery plan",
+          "IR plan recovery section",
+          "GRC platform (ServiceNow GRC, Archer)"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-01-E2",
+        "name": "Recovery Activation and Execution Records",
+        "description": "Shows that recovery plans were activated and executed during actual incidents with documented actions, timelines, and responsible parties.",
+        "whatGoodLooksLike": [
+          "Recovery activation is formally documented with timestamp and authorizing party",
+          "Execution steps are logged with responsible individuals and completion status",
+          "Recovery timelines are tracked against RTO/RPO objectives",
+          "Deviations from the plan are documented with justification"
+        ],
+        "commonGaps": [
+          "No formal activation record for recovery activities",
+          "Recovery steps are not logged or tracked against the plan",
+          "RTO/RPO performance is not measured during recovery",
+          "Plan deviations are not documented or justified"
+        ],
+        "suggestedSources": [
+          "IR case management tool (TheHive, IBM Resilient)",
+          "DR orchestration tool (Zerto, Veeam DR Orchestrator)",
+          "Ticketing system (ServiceNow, Jira Service Management)"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-01-E3",
+        "name": "Recovery Personnel Notification and Acknowledgment Records",
+        "description": "Demonstrates that all individuals with recovery responsibilities are notified of recovery plan activation and acknowledge their assignments.",
+        "whatGoodLooksLike": [
+          "Notification records show all recovery team members were contacted",
+          "Acknowledgment of recovery assignments is documented",
+          "Backup personnel are notified when primary assignees are unavailable",
+          "Notification is automated through mass communication or on-call systems"
+        ],
+        "commonGaps": [
+          "Recovery personnel are not formally notified; they learn informally",
+          "No acknowledgment tracking for recovery assignments",
+          "Contact lists for recovery personnel are outdated",
+          "No backup personnel identified for critical recovery roles"
+        ],
+        "suggestedSources": [
+          "Mass notification system (Everbridge, PagerDuty, Opsgenie)",
+          "Email and messaging records",
+          "On-call management system"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request recovery activation records from the most recent incident requiring recovery",
+      "Verify that recovery team contact lists are current and tested periodically",
+      "Check that RTO/RPO objectives are defined and that recovery execution is measured against them",
+      "Confirm that authorization requirements for recovery actions are followed during actual incidents",
+      "Review whether recovery plan deviations are documented and feed into plan improvements"
+    ]
+  },
+  "RC.RP-02": {
+    "subcategoryId": "RC.RP-02",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Recovery Action Selection and Prioritization",
+    "assessorFocus": "The assessor examines whether recovery actions are selected, scoped, and prioritized based on defined criteria and available resources, and whether plans are adapted when organizational needs or resource availability changes.",
+    "evidenceItems": [
+      {
+        "id": "RC.RP-02-E1",
+        "name": "Recovery Action Selection Criteria and Framework",
+        "description": "Documents the criteria used to select and prioritize recovery actions based on business impact, available resources, and incident characteristics.",
+        "whatGoodLooksLike": [
+          "Selection criteria reference BIA-derived recovery priorities (RTO, RPO, MTPD)",
+          "Framework accounts for resource constraints and dependencies",
+          "Criteria enable dynamic re-prioritization as conditions change",
+          "Framework is tested during DR exercises"
+        ],
+        "commonGaps": [
+          "No defined criteria for selecting recovery actions",
+          "Recovery prioritization does not reference BIA data",
+          "Framework is rigid and does not account for resource constraints",
+          "Criteria have not been validated through exercises"
+        ],
+        "suggestedSources": [
+          "Business continuity plan / disaster recovery plan",
+          "Business impact analysis (BIA)",
+          "GRC platform (ServiceNow GRC, Archer)"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-02-E2",
+        "name": "Recovery Action Execution and Reprioritization Logs",
+        "description": "Shows that recovery actions were selected, prioritized, and adapted during actual incidents based on evolving conditions.",
+        "whatGoodLooksLike": [
+          "Recovery action logs show prioritization aligned with BIA and available resources",
+          "Re-prioritization events are documented with justification",
+          "Resource allocation decisions are logged",
+          "Recovery progress is tracked against prioritized action plans"
+        ],
+        "commonGaps": [
+          "Recovery actions are not prioritized; all actions attempted simultaneously",
+          "Re-prioritization decisions are not documented",
+          "Resource constraints are not considered in recovery sequencing",
+          "No tracking of recovery progress against the prioritized plan"
+        ],
+        "suggestedSources": [
+          "DR orchestration tool (Zerto, Veeam DR Orchestrator)",
+          "Ticketing system (ServiceNow, Jira Service Management)",
+          "IR case management tool"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-02-E3",
+        "name": "DR Exercise Recovery Prioritization Test Results",
+        "description": "Demonstrates that recovery action selection and prioritization procedures are validated through disaster recovery exercises.",
+        "whatGoodLooksLike": [
+          "DR exercises test recovery prioritization under resource-constrained scenarios",
+          "Exercise results validate that BIA-driven priorities are achievable",
+          "Lessons learned from exercises drive updates to prioritization criteria",
+          "Exercises include scenarios requiring dynamic re-prioritization"
+        ],
+        "commonGaps": [
+          "DR exercises do not test recovery prioritization",
+          "Exercises assume unlimited resources and do not test constraints",
+          "Exercise findings do not lead to updates in recovery criteria",
+          "No scenarios test the need to re-prioritize during recovery"
+        ],
+        "suggestedSources": [
+          "DR exercise reports",
+          "Business continuity program records",
+          "GRC platform exercise tracking"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that recovery prioritization criteria reference BIA-derived RTO and RPO values",
+      "Ask for an example of when recovery priorities were changed during an incident and review the documentation",
+      "Check that DR exercises include scenarios with resource constraints requiring prioritization trade-offs",
+      "Confirm that recovery action selection considers dependencies between systems",
+      "Review whether recovery progress tracking tools provide real-time visibility to incident commanders"
+    ]
+  },
+  "RC.RP-03": {
+    "subcategoryId": "RC.RP-03",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Backup and Restoration Asset Integrity Verification",
+    "assessorFocus": "The assessor verifies that the organization checks the integrity of backups and other restoration assets for indicators of compromise, file corruption, and other integrity issues before using them for restoration.",
+    "evidenceItems": [
+      {
+        "id": "RC.RP-03-E1",
+        "name": "Backup Integrity Verification Procedures",
+        "description": "Documents the procedures for verifying backup integrity before using backups for incident recovery, including checks for compromise and corruption.",
+        "whatGoodLooksLike": [
+          "Procedures mandate IOC scanning of backup data before restoration",
+          "File integrity checks (checksums, hash verification) are required before use",
+          "Procedures address verification of different backup types (full, incremental, snapshot)",
+          "Clean backup identification procedures account for the incident timeline"
+        ],
+        "commonGaps": [
+          "No procedures for verifying backup integrity before restoration",
+          "Backups are restored without checking for IOCs from the incident",
+          "File integrity checks are not performed or not documented",
+          "No consideration of whether backups predate the compromise"
+        ],
+        "suggestedSources": [
+          "Backup and recovery procedures documentation",
+          "DR plan backup verification section",
+          "Backup console (Veeam, Commvault, Cohesity, Rubrik)"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-03-E2",
+        "name": "Backup Integrity Verification Logs",
+        "description": "Shows that backup integrity was verified during actual recovery operations, including IOC scans and integrity checks.",
+        "whatGoodLooksLike": [
+          "Verification logs show IOC scans were run against backup data before restoration",
+          "Hash verification confirms backup file integrity",
+          "Verification results are documented and approved before restoration proceeds",
+          "Failed verifications are investigated before alternative backups are used"
+        ],
+        "commonGaps": [
+          "No verification logs exist for backup integrity during recovery",
+          "IOC scanning of backups is skipped due to time pressure",
+          "Failed integrity checks are ignored rather than investigated",
+          "Verification is performed inconsistently across different recovery operations"
+        ],
+        "suggestedSources": [
+          "Backup console (Veeam, Commvault, Cohesity, Rubrik)",
+          "EDR platform scan results on restored data",
+          "DR orchestration tool verification reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-03-E3",
+        "name": "Routine Backup Verification Test Results",
+        "description": "Demonstrates that backups are regularly tested for recoverability and integrity as part of ongoing operations, not just during incidents.",
+        "whatGoodLooksLike": [
+          "Regular backup restoration tests are performed (at least quarterly)",
+          "Test results document successful data recovery and integrity confirmation",
+          "Failed backup tests are tracked as incidents with remediation",
+          "Test coverage includes all critical systems identified in the BIA"
+        ],
+        "commonGaps": [
+          "Backup restoration tests are not performed regularly",
+          "Tests only cover a small subset of backed-up systems",
+          "Failed tests are not tracked or remediated",
+          "Test results are not documented or reported to management"
+        ],
+        "suggestedSources": [
+          "Backup console test/verification reports",
+          "IT operations testing schedules and results",
+          "GRC platform control testing records"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "RC.RP-03-E4",
+        "name": "Immutable Backup Configuration Evidence",
+        "description": "Shows that backup infrastructure includes immutability features to protect against ransomware and insider threats compromising backup data.",
+        "whatGoodLooksLike": [
+          "Immutable backup storage is configured with retention locks",
+          "Air-gapped or offline backup copies exist for critical systems",
+          "Backup infrastructure access is restricted and monitored",
+          "Immutability settings are audited regularly"
+        ],
+        "commonGaps": [
+          "No immutable backup capabilities are configured",
+          "Air-gapped backups do not exist for critical systems",
+          "Backup infrastructure has excessive administrative access",
+          "Immutability settings have not been validated or audited"
+        ],
+        "suggestedSources": [
+          "Backup console configuration (Veeam, Commvault, Cohesity, Rubrik)",
+          "Cloud storage immutability settings (AWS S3 Object Lock, Azure Immutable Blob)",
+          "Backup infrastructure access control reports"
+        ],
+        "format": "Screenshot | System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request backup restoration test results from the last quarter and verify coverage of critical systems",
+      "Verify that IOC scanning of backups is documented in recent recovery operations",
+      "Check that immutable backup storage is configured and that immutability cannot be overridden by a single administrator",
+      "Confirm that backup integrity verification procedures account for the incident compromise timeline",
+      "Ask how the organization determines which backup is the most recent clean copy during a ransomware incident"
+    ]
+  },
+  "RC.RP-04": {
+    "subcategoryId": "RC.RP-04",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Post-Incident Operational Norms",
+    "assessorFocus": "The assessor verifies that the organization considers critical mission functions and cybersecurity risk management when establishing post-incident operational norms, ensuring essential services are restored in the correct order and validated by system owners.",
+    "evidenceItems": [
+      {
+        "id": "RC.RP-04-E1",
+        "name": "Service Restoration Priority and Sequencing Documentation",
+        "description": "Defines the order in which services and systems are restored based on BIA data and service delivery objectives.",
+        "whatGoodLooksLike": [
+          "Restoration sequence aligns with BIA-defined RTOs and critical mission functions",
+          "Dependencies between systems are mapped and considered in sequencing",
+          "Service delivery objectives (SDOs) define acceptable post-recovery performance levels",
+          "Restoration priorities are reviewed and updated when BIA is refreshed"
+        ],
+        "commonGaps": [
+          "No defined restoration sequence; systems are restored ad hoc",
+          "BIA data does not inform restoration priorities",
+          "System dependencies are not mapped, causing restoration failures",
+          "Restoration priorities are outdated and do not reflect current business needs"
+        ],
+        "suggestedSources": [
+          "Business impact analysis (BIA)",
+          "DR plan restoration sequencing section",
+          "CMDB (ServiceNow, BMC Helix) dependency maps"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-04-E2",
+        "name": "System Owner Restoration Confirmation Records",
+        "description": "Shows that system owners confirm successful restoration and return to normal operations for their systems.",
+        "whatGoodLooksLike": [
+          "System owners sign off on restoration completion for each recovered system",
+          "Confirmation includes validation of data integrity, functionality, and performance",
+          "Confirmation records are linked to the incident and recovery records",
+          "Unresolved issues identified during confirmation are tracked to resolution"
+        ],
+        "commonGaps": [
+          "No system owner sign-off on restoration completion",
+          "Restoration is declared complete by IT without business validation",
+          "Post-restoration issues are not tracked or linked to the incident",
+          "System owners are not involved in verifying restoration adequacy"
+        ],
+        "suggestedSources": [
+          "Ticketing system (ServiceNow, Jira Service Management)",
+          "IR case management tool",
+          "Change management system approval records"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-04-E3",
+        "name": "Post-Recovery Performance Monitoring Reports",
+        "description": "Demonstrates that restored systems are monitored after recovery to verify they meet performance baselines and operate normally.",
+        "whatGoodLooksLike": [
+          "Enhanced monitoring is applied to restored systems for a defined post-recovery period",
+          "Performance baselines are compared against pre-incident and post-recovery metrics",
+          "Anomalies detected during post-recovery monitoring are investigated",
+          "Post-recovery monitoring period and criteria are defined in the recovery plan"
+        ],
+        "commonGaps": [
+          "No enhanced monitoring of restored systems post-recovery",
+          "Performance baselines are not available for comparison",
+          "Post-recovery monitoring period is not defined",
+          "Anomalies during post-recovery are not investigated as potential re-compromise"
+        ],
+        "suggestedSources": [
+          "Infrastructure monitoring platform (Datadog, Dynatrace, Zabbix, Nagios)",
+          "SIEM platform post-recovery alerts",
+          "Application performance monitoring (APM) tools"
+        ],
+        "format": "System export | Screenshot",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that restoration sequencing aligns with BIA-defined RTOs and critical mission functions",
+      "Request system owner sign-off records from the most recent recovery operation",
+      "Check that post-recovery monitoring is enhanced for a defined period after restoration",
+      "Confirm that system dependencies are mapped and considered in the restoration sequence",
+      "Ask how the organization determines when post-incident operations return to normal baseline"
+    ]
+  },
+  "RC.RP-05": {
+    "subcategoryId": "RC.RP-05",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Restored Asset Integrity Verification and Service Restoration",
+    "assessorFocus": "The assessor examines whether the organization verifies the integrity of restored assets, confirms root cause remediation, and validates that systems and services operate correctly before returning them to production.",
+    "evidenceItems": [
+      {
+        "id": "RC.RP-05-E1",
+        "name": "Post-Restoration IOC and Integrity Verification Reports",
+        "description": "Demonstrates that restored assets are scanned for indicators of compromise and verified for integrity before being returned to production.",
+        "whatGoodLooksLike": [
+          "IOC scans are performed on all restored systems before production use",
+          "Root cause remediation is verified (e.g., vulnerability patched, access closed)",
+          "Integrity checks confirm system configurations match approved baselines",
+          "Verification results are approved by the incident commander before go-live"
+        ],
+        "commonGaps": [
+          "Restored systems are returned to production without IOC scanning",
+          "Root cause remediation is not verified before restoration",
+          "Configuration integrity is not checked against baselines",
+          "No approval gate between verification and production deployment"
+        ],
+        "suggestedSources": [
+          "EDR platform (CrowdStrike Falcon, Microsoft Defender for Endpoint)",
+          "Vulnerability scanner (Tenable, Qualys, Rapid7)",
+          "Configuration management and compliance tools"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-05-E2",
+        "name": "Service Restoration Validation Records",
+        "description": "Shows that restored services are tested for correct functionality before full production use is resumed.",
+        "whatGoodLooksLike": [
+          "Functional testing is performed on restored services before production cutover",
+          "Test results document that all critical functions operate correctly",
+          "Data integrity verification confirms no data loss or corruption",
+          "User acceptance testing (UAT) is performed for customer-facing services"
+        ],
+        "commonGaps": [
+          "No functional testing of restored services before production use",
+          "Data integrity is not verified after restoration",
+          "Testing is limited to basic connectivity checks",
+          "No user acceptance testing for restored customer-facing services"
+        ],
+        "suggestedSources": [
+          "Change management system test records",
+          "Application testing and QA reports",
+          "DR orchestration tool validation results"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-05-E3",
+        "name": "Normal Operating Status Confirmation Records",
+        "description": "Demonstrates that normal operating status is formally confirmed for each restored system and service.",
+        "whatGoodLooksLike": [
+          "Formal go/no-go decision is documented for each system return to production",
+          "Normal operating status criteria are predefined and evaluated",
+          "Confirmation involves both IT and business stakeholders",
+          "Confirmation records are linked to the incident and recovery records"
+        ],
+        "commonGaps": [
+          "No formal confirmation of normal operating status",
+          "Normal operating status criteria are not predefined",
+          "IT declares systems restored without business stakeholder confirmation",
+          "No linkage between restoration confirmation and incident records"
+        ],
+        "suggestedSources": [
+          "Ticketing system (ServiceNow, Jira Service Management)",
+          "IR case management tool",
+          "Change management system"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review post-restoration verification reports from a recent incident to confirm IOC scanning was performed",
+      "Verify that root cause remediation is confirmed before systems return to production",
+      "Check that functional testing goes beyond basic connectivity to verify critical service operations",
+      "Confirm that a formal go/no-go decision process exists for returning restored systems to production",
+      "Ask whether configuration baselines are used to verify restored systems match approved states"
+    ]
+  },
+  "RC.RP-06": {
+    "subcategoryId": "RC.RP-06",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Recovery Closure and Lessons Learned",
+    "assessorFocus": "The assessor verifies that incident recovery is formally closed based on defined criteria, and that comprehensive after-action reports documenting the incident, response/recovery actions, and lessons learned are prepared and retained.",
+    "evidenceItems": [
+      {
+        "id": "RC.RP-06-E1",
+        "name": "Recovery Closure Criteria and Declaration Records",
+        "description": "Demonstrates that recovery closure criteria are defined and formally applied to declare the end of incident recovery.",
+        "whatGoodLooksLike": [
+          "Closure criteria include system restoration confirmation, monitoring results, and stakeholder sign-off",
+          "Formal closure declaration is documented with timestamp and authorizing party",
+          "Closure is not declared until all recovery actions are verified complete",
+          "Outstanding items from recovery are transitioned to normal operations tracking"
+        ],
+        "commonGaps": [
+          "No defined criteria for declaring recovery complete",
+          "Recovery ends informally without formal closure declaration",
+          "Closure is declared while recovery actions remain incomplete",
+          "Outstanding items are not transitioned to operational tracking"
+        ],
+        "suggestedSources": [
+          "IR case management tool (TheHive, IBM Resilient)",
+          "Ticketing system (ServiceNow, Jira Service Management)",
+          "DR plan closure section"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-06-E2",
+        "name": "After-Action Reports (AARs)",
+        "description": "Documents the comprehensive after-action report prepared for each significant incident, covering the incident itself, response and recovery actions, and lessons learned.",
+        "whatGoodLooksLike": [
+          "AAR covers incident timeline, root cause, response actions, recovery actions, and outcomes",
+          "Lessons learned are specific, actionable, and assigned to owners with deadlines",
+          "AAR is reviewed by all participating teams and approved by incident commander",
+          "AAR completion SLA is defined and tracked (e.g., within 2 weeks of closure)"
+        ],
+        "commonGaps": [
+          "After-action reports are not prepared for most incidents",
+          "AARs are superficial and do not include actionable lessons learned",
+          "Lessons learned are documented but not assigned owners or tracked to completion",
+          "AARs are delayed significantly or never completed after incidents"
+        ],
+        "suggestedSources": [
+          "IR case management tool post-incident module",
+          "Document management system (SharePoint, Confluence)",
+          "GRC platform corrective action tracking"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RC.RP-06-E3",
+        "name": "Lessons Learned Tracking and Implementation Records",
+        "description": "Shows that lessons learned from incidents are tracked as corrective actions through to implementation and that they drive improvements to policies, procedures, and controls.",
+        "whatGoodLooksLike": [
+          "Lessons learned are logged as corrective actions in a tracking system",
+          "Each action has an owner, deadline, and status",
+          "Completed actions are verified for effectiveness",
+          "Patterns across multiple incidents are identified and addressed systemically"
+        ],
+        "commonGaps": [
+          "Lessons learned are documented but never acted upon",
+          "No tracking system for corrective actions from incidents",
+          "Actions lack owners or deadlines and languish indefinitely",
+          "Same lessons appear repeatedly because prior actions were not effective"
+        ],
+        "suggestedSources": [
+          "GRC platform corrective action module",
+          "Ticketing system (ServiceNow, Jira)",
+          "Risk register updates from lessons learned"
+        ],
+        "format": "System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.RP-06-E4",
+        "name": "Post-Incident Review Meeting Records",
+        "description": "Demonstrates that structured post-incident review meetings are held to discuss the incident, evaluate the response and recovery, and identify improvements.",
+        "whatGoodLooksLike": [
+          "Post-incident reviews are conducted within a defined timeframe after closure",
+          "Meetings include representatives from all teams involved in the response and recovery",
+          "Meeting minutes capture discussion points, decisions, and assigned actions",
+          "Reviews use a blameless retrospective approach to encourage candid participation"
+        ],
+        "commonGaps": [
+          "Post-incident reviews are not conducted",
+          "Reviews only include the security team, excluding IT and business stakeholders",
+          "Meeting minutes are not captured or retained",
+          "Reviews are blame-focused, discouraging honest feedback"
+        ],
+        "suggestedSources": [
+          "Meeting minutes and attendance records",
+          "Post-incident review templates and outputs",
+          "Calendar invitations and participant lists"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request after-action reports from the last three significant incidents and verify completeness",
+      "Trace lessons learned from a specific incident to verify they were tracked to implementation",
+      "Check that post-incident reviews include cross-functional participation beyond the security team",
+      "Verify that recovery closure criteria exist and were formally applied in recent incidents",
+      "Ask whether the organization identifies patterns across multiple incident AARs for systemic improvement"
+    ]
+  },
+  "RC.CO-01": {
+    "subcategoryId": "RC.CO-01",
+    "categoryId": "RC.CO",
+    "functionId": "RC",
+    "title": "Withdrawn - Incorporated into RC.CO-04",
+    "assessorFocus": "This subcategory has been withdrawn in NIST CSF 2.0 and incorporated into RC.CO-04. Assessors should evaluate the relevant controls under RC.CO-04 (Public Updates on Incident Recovery).",
+    "evidenceItems": [
+      {
+        "id": "RC.CO-01-E1",
+        "name": "Refer to RC.CO-04 Evidence",
+        "description": "All evidence requirements for this withdrawn subcategory are now addressed under RC.CO-04.",
+        "whatGoodLooksLike": [
+          "Organization maps legacy RC.CO-01 controls to RC.CO-04",
+          "Public communication procedures cover original RC.CO-01 scope",
+          "No orphaned controls from the withdrawal"
+        ],
+        "commonGaps": [
+          "Organization still references RC.CO-01 without mapping to RC.CO-04",
+          "Legacy procedures tied to RC.CO-01 have not been migrated",
+          "Control mapping documentation is incomplete"
+        ],
+        "suggestedSources": [
+          "GRC platform control mapping records",
+          "NIST CSF 2.0 migration documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that controls previously mapped to RC.CO-01 have been remapped to RC.CO-04",
+      "Ensure no evidence gaps exist from the subcategory withdrawal",
+      "Review the organization's CSF version migration documentation"
+    ]
+  },
+  "RC.CO-02": {
+    "subcategoryId": "RC.CO-02",
+    "categoryId": "RC.CO",
+    "functionId": "RC",
+    "title": "Withdrawn - Incorporated into RC.CO-04",
+    "assessorFocus": "This subcategory has been withdrawn in NIST CSF 2.0 and incorporated into RC.CO-04. Assessors should evaluate the relevant controls under RC.CO-04 (Public Updates on Incident Recovery).",
+    "evidenceItems": [
+      {
+        "id": "RC.CO-02-E1",
+        "name": "Refer to RC.CO-04 Evidence",
+        "description": "All evidence requirements for this withdrawn subcategory are now addressed under RC.CO-04.",
+        "whatGoodLooksLike": [
+          "Organization maps legacy RC.CO-02 controls to RC.CO-04",
+          "Reputation recovery procedures cover original RC.CO-02 scope",
+          "No orphaned controls from the withdrawal"
+        ],
+        "commonGaps": [
+          "Organization still references RC.CO-02 without mapping to RC.CO-04",
+          "Legacy procedures tied to RC.CO-02 have not been migrated",
+          "Control mapping documentation is incomplete"
+        ],
+        "suggestedSources": [
+          "GRC platform control mapping records",
+          "NIST CSF 2.0 migration documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that controls previously mapped to RC.CO-02 have been remapped to RC.CO-04",
+      "Ensure no evidence gaps exist from the subcategory withdrawal",
+      "Review the organization's CSF version migration documentation"
+    ]
+  },
+  "RC.CO-03": {
+    "subcategoryId": "RC.CO-03",
+    "categoryId": "RC.CO",
+    "functionId": "RC",
+    "title": "Internal and External Recovery Communication",
+    "assessorFocus": "The assessor examines whether the organization communicates recovery activities and progress to designated internal and external stakeholders in a secure, consistent manner aligned with response plans and contractual obligations.",
+    "evidenceItems": [
+      {
+        "id": "RC.CO-03-E1",
+        "name": "Recovery Communication Plan and Templates",
+        "description": "Documents the communication plan for recovery activities including stakeholder lists, communication channels, frequency, and pre-approved message templates.",
+        "whatGoodLooksLike": [
+          "Communication plan defines stakeholder groups, channels, and update frequencies",
+          "Pre-approved message templates exist for common recovery scenarios",
+          "Secure communication channels are specified for sensitive recovery information",
+          "Communication responsibilities are assigned to named individuals"
+        ],
+        "commonGaps": [
+          "No formal communication plan for recovery activities",
+          "No pre-approved templates; messages are drafted ad hoc during recovery",
+          "Communication channels are not secure or appropriate for sensitive content",
+          "Communication responsibilities are undefined"
+        ],
+        "suggestedSources": [
+          "IR plan recovery communication section",
+          "Crisis communication plan",
+          "Public relations / corporate communications procedures"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.CO-03-E2",
+        "name": "Recovery Status Update Records",
+        "description": "Shows that recovery progress updates were provided to designated stakeholders at defined intervals during actual incidents.",
+        "whatGoodLooksLike": [
+          "Regular status updates to senior leadership are documented with timestamps",
+          "Updates include recovery progress, estimated completion, and outstanding risks",
+          "Stakeholder acknowledgment of status updates is captured",
+          "Update frequency increases for high-severity incidents"
+        ],
+        "commonGaps": [
+          "Recovery status updates are informal and not documented",
+          "Senior leadership receives inconsistent or infrequent updates",
+          "Updates lack estimated completion times or outstanding risk information",
+          "No escalation when recovery falls behind schedule"
+        ],
+        "suggestedSources": [
+          "IR case management tool communication logs",
+          "Executive briefing records",
+          "Incident bridge call notes or recordings"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.CO-03-E3",
+        "name": "Supplier and Partner Recovery Communication Records",
+        "description": "Demonstrates that recovery information is shared with critical suppliers and partners in accordance with contractual obligations.",
+        "whatGoodLooksLike": [
+          "Communication with suppliers follows contractually defined protocols",
+          "Recovery progress affecting shared services or supply chain is communicated promptly",
+          "Crisis communication with critical suppliers uses pre-established channels",
+          "Supplier input on recovery priorities is solicited when their services are affected"
+        ],
+        "commonGaps": [
+          "Suppliers are not informed of recovery activities that affect shared services",
+          "Contractual communication obligations are not followed during recovery",
+          "No pre-established communication channels with critical suppliers",
+          "Supplier impact is not considered in recovery communication planning"
+        ],
+        "suggestedSources": [
+          "Vendor management platform",
+          "Contract management system",
+          "Email and secure messaging archives with suppliers"
+        ],
+        "format": "System export | Email records",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request recovery communication records from the most recent significant incident",
+      "Verify that senior leadership received regular, documented updates during recovery",
+      "Check that communication templates exist and were used during actual recovery events",
+      "Confirm that supplier communication follows contractual obligations",
+      "Review whether secure communication channels are specified and used for sensitive recovery information"
+    ]
+  },
+  "RC.CO-04": {
+    "subcategoryId": "RC.CO-04",
+    "categoryId": "RC.CO",
+    "functionId": "RC",
+    "title": "Public Incident Recovery Updates",
+    "assessorFocus": "The assessor examines whether the organization has approved methods and messaging for public communications about incident recovery, including compliance with breach notification requirements and communication of preventive measures.",
+    "evidenceItems": [
+      {
+        "id": "RC.CO-04-E1",
+        "name": "Public Communication Procedures and Approval Workflows",
+        "description": "Documents the procedures for issuing public statements about incident recovery, including approval chains and authorized spokespersons.",
+        "whatGoodLooksLike": [
+          "Procedures define who can authorize and deliver public communications",
+          "Approval workflow includes legal, executive, and communications team review",
+          "Messaging guidelines ensure consistency and accuracy",
+          "Procedures address social media, press releases, and website notifications"
+        ],
+        "commonGaps": [
+          "No formal approval process for public incident communications",
+          "Authorized spokespersons are not designated",
+          "Legal review is not required before public statements",
+          "Social media communications are not included in the procedures"
+        ],
+        "suggestedSources": [
+          "Crisis communication plan",
+          "Corporate communications procedures",
+          "Legal department communication guidelines"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "RC.CO-04-E2",
+        "name": "Public Communication Records and Notifications",
+        "description": "Shows actual public communications issued during incident recovery, including breach notifications, press statements, and customer communications.",
+        "whatGoodLooksLike": [
+          "All public communications are archived with approval records",
+          "Breach notification letters comply with regulatory requirements",
+          "Communications explain recovery steps and preventive measures being taken",
+          "Customer-facing FAQ documents address common concerns"
+        ],
+        "commonGaps": [
+          "Public communications are not archived",
+          "Breach notifications do not comply with all applicable regulatory requirements",
+          "Communications do not explain what the organization is doing to prevent recurrence",
+          "No proactive communication; organization only responds to media inquiries"
+        ],
+        "suggestedSources": [
+          "Corporate communications archive",
+          "Breach notification filing records",
+          "Customer communication platform records"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RC.CO-04-E3",
+        "name": "Regulatory Breach Notification Compliance Records",
+        "description": "Demonstrates compliance with mandatory breach notification requirements including filing confirmations and timeline adherence.",
+        "whatGoodLooksLike": [
+          "Filing confirmations from regulatory bodies are retained",
+          "Notification timelines demonstrate compliance with jurisdictional requirements",
+          "Notification content meets regulatory data element requirements",
+          "Legal counsel review of notifications is documented"
+        ],
+        "commonGaps": [
+          "No filing confirmations are retained",
+          "Notification timelines exceed regulatory deadlines",
+          "Notification content is incomplete per regulatory requirements",
+          "Legal counsel was not involved in notification preparation"
+        ],
+        "suggestedSources": [
+          "Legal department regulatory filing records",
+          "State attorney general filing confirmations",
+          "Data protection authority submission receipts"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "7 years"
+      },
+      {
+        "id": "RC.CO-04-E4",
+        "name": "Crisis Communication Exercise and Preparedness Records",
+        "description": "Shows that the organization tests its public communication procedures through exercises to ensure readiness.",
+        "whatGoodLooksLike": [
+          "Crisis communication is included in tabletop exercises",
+          "Mock press conferences or media responses are practiced",
+          "Pre-approved holding statements are prepared and accessible",
+          "Spokesperson media training is documented"
+        ],
+        "commonGaps": [
+          "Public communication is not tested during incident exercises",
+          "No pre-approved holding statements exist",
+          "Designated spokespersons have not received media training",
+          "Crisis communication preparedness is not assessed"
+        ],
+        "suggestedSources": [
+          "Tabletop exercise reports including communication scenarios",
+          "Media training records for designated spokespersons",
+          "Crisis communication preparedness assessments"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request copies of public communications issued during the most recent publicly disclosed incident",
+      "Verify that approval workflows for public communications include legal review",
+      "Check that pre-approved holding statements exist and are accessible during incidents",
+      "Confirm that designated spokespersons have received media training",
+      "Review regulatory breach notification filings for timeline compliance and completeness"
+    ]
+  }
+}

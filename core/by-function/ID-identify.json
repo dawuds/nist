@@ -1,0 +1,278 @@
+{
+  "function": {
+    "id": "ID",
+    "name": "IDENTIFY",
+    "description": "The organization's current cybersecurity risks are understood"
+  },
+  "categories": [
+    {
+      "id": "ID.AM",
+      "functionId": "ID",
+      "name": "Asset Management",
+      "description": "Assets (e.g., data, hardware, software, systems, facilities, services, people) that enable the organization to achieve business purposes are identified and managed consistent with their relative importance to organizational objectives and the organization's risk strategy"
+    },
+    {
+      "id": "ID.RA",
+      "functionId": "ID",
+      "name": "Risk Assessment",
+      "description": "The cybersecurity risk to the organization, assets, and individuals is understood by the organization"
+    },
+    {
+      "id": "ID.IM",
+      "functionId": "ID",
+      "name": "Improvement",
+      "description": "Improvements to organizational cybersecurity risk management processes, procedures and activities are identified across all CSF Functions"
+    }
+  ],
+  "subcategories": [
+    {
+      "id": "ID.AM-01",
+      "categoryId": "ID.AM",
+      "functionId": "ID",
+      "description": "Inventories of hardware managed by the organization are maintained",
+      "implementationExamples": [
+        "Maintain inventories for all types of hardware, including IT, IoT, OT, and mobile devices",
+        "Constantly monitor networks to detect new hardware and automatically update inventories"
+      ]
+    },
+    {
+      "id": "ID.AM-02",
+      "categoryId": "ID.AM",
+      "functionId": "ID",
+      "description": "Inventories of software, services, and systems managed by the organization are maintained",
+      "implementationExamples": [
+        "Maintain inventories for all types of software and services, including commercial-off-the-shelf, open-source, custom applications, API services, and cloud-based applications and services",
+        "Constantly monitor all platforms, including containers and virtual machines, for software and service inventory changes",
+        "Maintain an inventory of the organization's systems"
+      ]
+    },
+    {
+      "id": "ID.AM-03",
+      "categoryId": "ID.AM",
+      "functionId": "ID",
+      "description": "Representations of the organization's authorized network communication and internal and external network data flows are maintained",
+      "implementationExamples": [
+        "Maintain baselines of communication and data flows within the organization's wired and wireless networks",
+        "Maintain baselines of communication and data flows between the organization and third parties",
+        "Maintain baselines of communication and data flows for the organization's infrastructure-as-a-service (IaaS) usage",
+        "Maintain documentation of expected network ports, protocols, and services that are typically used among authorized systems"
+      ]
+    },
+    {
+      "id": "ID.AM-04",
+      "categoryId": "ID.AM",
+      "functionId": "ID",
+      "description": "Inventories of services provided by suppliers are maintained",
+      "implementationExamples": [
+        "Inventory all external services used by the organization, including third-party infrastructure-as-a-service (IaaS), platform-as-a-service (PaaS), and software-as-a-service (SaaS) offerings; APIs; and other externally hosted application services",
+        "Update the inventory when a new external service is going to be utilized to ensure adequate cybersecurity risk management monitoring of the organization's use of that service"
+      ]
+    },
+    {
+      "id": "ID.AM-05",
+      "categoryId": "ID.AM",
+      "functionId": "ID",
+      "description": "Assets are prioritized based on classification, criticality, resources, and impact on the mission",
+      "implementationExamples": [
+        "Define criteria for prioritizing each class of assets",
+        "Apply the prioritization criteria to assets",
+        "Track the asset priorities and update them periodically or when significant changes to the organization occur"
+      ]
+    },
+    {
+      "id": "ID.AM-06",
+      "categoryId": "ID.AM",
+      "functionId": "ID",
+      "description": "[Withdrawn: Incorporated into GV.RR-02, GV.SC-02]",
+      "implementationExamples": []
+    },
+    {
+      "id": "ID.AM-07",
+      "categoryId": "ID.AM",
+      "functionId": "ID",
+      "description": "Inventories of data and corresponding metadata for designated data types are maintained",
+      "implementationExamples": [
+        "Maintain a list of the designated data types of interest (e.g., personally identifiable information, protected health information, financial account numbers, organization intellectual property, operational technology data)",
+        "Continuously discover and analyze ad hoc data to identify new instances of designated data types",
+        "Assign data classifications to designated data types through tags or labels",
+        "Track the provenance, data owner, and geolocation of each instance of designated data types"
+      ]
+    },
+    {
+      "id": "ID.AM-08",
+      "categoryId": "ID.AM",
+      "functionId": "ID",
+      "description": "Systems, hardware, software, services, and data are managed throughout their life cycles",
+      "implementationExamples": [
+        "Integrate cybersecurity considerations throughout the life cycles of systems, hardware, software, and services",
+        "Integrate cybersecurity considerations into product life cycles",
+        "Identify unofficial uses of technology to meet mission objectives (i.e., shadow IT)",
+        "Periodically identify redundant systems, hardware, software, and services that unnecessarily increase the organization's attack surface",
+        "Properly configure and secure systems, hardware, software, and services prior to their deployment in production",
+        "Update inventories when systems, hardware, software, and services are moved or transferred within the organization",
+        "Securely destroy stored data based on the organization's data retention policy using the prescribed destruction method, and keep and manage a record of the destructions",
+        "Securely sanitize data storage when hardware is being retired, decommissioned, reassigned, or sent for repairs or replacement",
+        "Offer methods for destroying paper, storage media, and other physical forms of data storage"
+      ]
+    },
+    {
+      "id": "ID.RA-01",
+      "categoryId": "ID.RA",
+      "functionId": "ID",
+      "description": "Vulnerabilities in assets are identified, validated, and recorded",
+      "implementationExamples": [
+        "Use vulnerability management technologies to identify unpatched and misconfigured software",
+        "Assess network and system architectures for design and implementation weaknesses that affect cybersecurity",
+        "Review, analyze, or test organization-developed software to identify design, coding, and default configuration vulnerabilities",
+        "Assess facilities that house critical computing assets for physical vulnerabilities and resilience issues",
+        "Monitor sources of cyber threat intelligence for information on new vulnerabilities in products and services",
+        "Review processes and procedures for weaknesses that could be exploited to affect cybersecurity"
+      ]
+    },
+    {
+      "id": "ID.RA-02",
+      "categoryId": "ID.RA",
+      "functionId": "ID",
+      "description": "Cyber threat intelligence is received from information sharing forums and sources",
+      "implementationExamples": [
+        "Configure cybersecurity tools and technologies with detection or response capabilities to securely ingest cyber threat intelligence feeds",
+        "Receive and review advisories from reputable third parties on current threat actors and their tactics, techniques, and procedures (TTPs)",
+        "Monitor sources of cyber threat intelligence for information on the types of vulnerabilities that emerging technologies may have"
+      ]
+    },
+    {
+      "id": "ID.RA-03",
+      "categoryId": "ID.RA",
+      "functionId": "ID",
+      "description": "Internal and external threats to the organization are identified and recorded",
+      "implementationExamples": [
+        "Use cyber threat intelligence to maintain awareness of the types of threat actors likely to target the organization and the TTPs they are likely to use",
+        "Perform threat hunting to look for signs of threat actors within the environment",
+        "Implement processes for identifying internal threat actors"
+      ]
+    },
+    {
+      "id": "ID.RA-04",
+      "categoryId": "ID.RA",
+      "functionId": "ID",
+      "description": "Potential impacts and likelihoods of threats exploiting vulnerabilities are identified and recorded",
+      "implementationExamples": [
+        "Business leaders and cybersecurity risk management practitioners work together to estimate the likelihood and impact of risk scenarios and record them in risk registers",
+        "Enumerate the potential business impacts of unauthorized access to the organization's communications, systems, and data processed in or by those systems",
+        "Account for the potential impacts of cascading failures for systems of systems"
+      ]
+    },
+    {
+      "id": "ID.RA-05",
+      "categoryId": "ID.RA",
+      "functionId": "ID",
+      "description": "Threats, vulnerabilities, likelihoods, and impacts are used to understand inherent risk and inform risk response prioritization",
+      "implementationExamples": [
+        "Develop threat models to better understand risks to the data and identify appropriate risk responses",
+        "Prioritize cybersecurity resource allocations and investments based on estimated likelihoods and impacts"
+      ]
+    },
+    {
+      "id": "ID.RA-06",
+      "categoryId": "ID.RA",
+      "functionId": "ID",
+      "description": "Risk responses are chosen, prioritized, planned, tracked, and communicated",
+      "implementationExamples": [
+        "Apply the vulnerability management plan's criteria for deciding whether to accept, transfer, mitigate, or avoid risk",
+        "Apply the vulnerability management plan's criteria for selecting compensating controls to mitigate risk",
+        "Track the progress of risk response implementation (e.g., plan of action and milestones [POA&M], risk register, risk detail report)",
+        "Use risk assessment findings to inform risk response decisions and actions",
+        "Communicate planned risk responses to affected stakeholders in priority order"
+      ]
+    },
+    {
+      "id": "ID.RA-07",
+      "categoryId": "ID.RA",
+      "functionId": "ID",
+      "description": "Changes and exceptions are managed, assessed for risk impact, recorded, and tracked",
+      "implementationExamples": [
+        "Implement and follow procedures for the formal documentation, review, testing, and approval of proposed changes and requested exceptions",
+        "Document the possible risks of making or not making each proposed change, and provide guidance on rolling back changes",
+        "Document the risks related to each requested exception and the plan for responding to those risks",
+        "Periodically review risks that were accepted based upon planned future actions or milestones"
+      ]
+    },
+    {
+      "id": "ID.RA-08",
+      "categoryId": "ID.RA",
+      "functionId": "ID",
+      "description": "Processes for receiving, analyzing, and responding to vulnerability disclosures are established",
+      "implementationExamples": [
+        "Conduct vulnerability information sharing between the organization and its suppliers following the rules and protocols defined in contracts",
+        "Assign responsibilities and verify the execution of procedures for processing, analyzing the impact of, and responding to cybersecurity threat, vulnerability, or incident disclosures by suppliers, customers, partners, and government cybersecurity organizations"
+      ]
+    },
+    {
+      "id": "ID.RA-09",
+      "categoryId": "ID.RA",
+      "functionId": "ID",
+      "description": "The authenticity and integrity of hardware and software are assessed prior to acquisition and use",
+      "implementationExamples": [
+        "Assess the authenticity and cybersecurity of critical technology products and services prior to acquisition and use"
+      ]
+    },
+    {
+      "id": "ID.RA-10",
+      "categoryId": "ID.RA",
+      "functionId": "ID",
+      "description": "Critical suppliers are assessed prior to acquisition",
+      "implementationExamples": [
+        "Conduct supplier risk assessments against business and applicable cybersecurity requirements, including the supply chain"
+      ]
+    },
+    {
+      "id": "ID.IM-01",
+      "categoryId": "ID.IM",
+      "functionId": "ID",
+      "description": "Improvements are identified from evaluations",
+      "implementationExamples": [
+        "Perform self-assessments of critical services that take current threats and TTPs into consideration",
+        "Invest in third-party assessments or independent audits of the effectiveness of the organization's cybersecurity program to identify areas that need improvement",
+        "Constantly evaluate compliance with selected cybersecurity requirements through automated means"
+      ]
+    },
+    {
+      "id": "ID.IM-02",
+      "categoryId": "ID.IM",
+      "functionId": "ID",
+      "description": "Improvements are identified from security tests and exercises, including those done in coordination with suppliers and relevant third parties",
+      "implementationExamples": [
+        "Identify improvements for future incident response activities based on findings from incident response assessments (e.g., tabletop exercises and simulations, tests, internal reviews, independent audits)",
+        "Identify improvements for future business continuity, disaster recovery, and incident response activities based on exercises performed in coordination with critical service providers and product suppliers",
+        "Involve internal stakeholders (e.g., senior executives, legal department, HR) in security tests and exercises as appropriate",
+        "Perform penetration testing to identify opportunities to improve the security posture of selected high-risk systems as approved by leadership",
+        "Exercise contingency plans for responding to and recovering from the discovery that products or services did not originate with the contracted supplier or partner or were altered before receipt",
+        "Collect and analyze performance metrics using security tools and services to inform improvements to the cybersecurity program"
+      ]
+    },
+    {
+      "id": "ID.IM-03",
+      "categoryId": "ID.IM",
+      "functionId": "ID",
+      "description": "Improvements are identified from execution of operational processes, procedures, and activities",
+      "implementationExamples": [
+        "Conduct collaborative lessons learned sessions with suppliers",
+        "Annually review cybersecurity policies, processes, and procedures to take lessons learned into account",
+        "Use metrics to assess operational cybersecurity performance over time"
+      ]
+    },
+    {
+      "id": "ID.IM-04",
+      "categoryId": "ID.IM",
+      "functionId": "ID",
+      "description": "Incident response plans and other cybersecurity plans that affect operations are established, communicated, maintained, and improved",
+      "implementationExamples": [
+        "Establish contingency plans (e.g., incident response, business continuity, disaster recovery) for responding to and recovering from adverse events that can interfere with operations, expose confidential information, or otherwise endanger the organization's mission and viability",
+        "Include contact and communication information, processes for handling common scenarios, and criteria for prioritization, escalation, and elevation in all contingency plans",
+        "Create a vulnerability management plan to identify and assess all types of vulnerabilities and to prioritize, test, and implement risk responses",
+        "Communicate cybersecurity plans (including updates) to those responsible for carrying them out and to affected parties",
+        "Review and update all cybersecurity plans annually or when a need for significant improvements is identified"
+      ]
+    }
+  ]
+}

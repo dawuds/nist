@@ -1,0 +1,357 @@
+{
+  "function": {
+    "id": "PR",
+    "name": "PROTECT",
+    "description": "Safeguards to manage the organization's cybersecurity risks are used"
+  },
+  "categories": [
+    {
+      "id": "PR.AA",
+      "functionId": "PR",
+      "name": "Identity Management, Authentication, and Access Control",
+      "description": "Access to physical and logical assets is limited to authorized users, services, and hardware and  managed commensurate with the assessed risk of unauthorized access"
+    },
+    {
+      "id": "PR.AT",
+      "functionId": "PR",
+      "name": "Awareness and Training",
+      "description": "The organization's personnel are provided with cybersecurity awareness and training so that they can perform their cybersecurity-related tasks"
+    },
+    {
+      "id": "PR.DS",
+      "functionId": "PR",
+      "name": "Data Security",
+      "description": "Data are managed consistent with the organization's risk strategy to protect the confidentiality, integrity, and availability of information"
+    },
+    {
+      "id": "PR.PS",
+      "functionId": "PR",
+      "name": "Platform Security",
+      "description": "The hardware, software (e.g., firmware, operating systems, applications), and services of physical and virtual platforms are managed consistent with the organization's risk strategy to protect their confidentiality, integrity, and availability"
+    },
+    {
+      "id": "PR.IR",
+      "functionId": "PR",
+      "name": "Technology Infrastructure Resilience",
+      "description": "Security architectures are managed with the organization's risk strategy to protect asset confidentiality, integrity, and availability, and organizational resilience"
+    }
+  ],
+  "subcategories": [
+    {
+      "id": "PR.AA-01",
+      "categoryId": "PR.AA",
+      "functionId": "PR",
+      "description": "Identities and credentials for authorized users, services, and hardware are managed by the organization",
+      "implementationExamples": [
+        "Initiate requests for new access or additional access for employees, contractors, and others, and track, review, and fulfill the requests, with permission from system or data owners when needed",
+        "Issue, manage, and revoke cryptographic certificates and identity tokens, cryptographic keys (i.e., key management), and other credentials",
+        "Select a unique identifier for each device from immutable hardware characteristics or an identifier securely provisioned to the device",
+        "Physically label authorized hardware with an identifier for inventory and servicing purposes"
+      ]
+    },
+    {
+      "id": "PR.AA-02",
+      "categoryId": "PR.AA",
+      "functionId": "PR",
+      "description": "Identities are proofed and bound to credentials based on the context of interactions",
+      "implementationExamples": [
+        "Verify a person's claimed identity at enrollment time using government-issued identity credentials (e.g., passport, visa, driver's license)",
+        "Issue a different credential for each person (i.e., no credential sharing)"
+      ]
+    },
+    {
+      "id": "PR.AA-03",
+      "categoryId": "PR.AA",
+      "functionId": "PR",
+      "description": "Users, services, and hardware are authenticated",
+      "implementationExamples": [
+        "Require multifactor authentication",
+        "Enforce policies for the minimum strength of passwords, PINs, and similar authenticators",
+        "Periodically reauthenticate users, services, and hardware based on risk (e.g., in zero trust architectures)",
+        "Ensure that authorized personnel can access accounts essential for protecting safety under emergency conditions"
+      ]
+    },
+    {
+      "id": "PR.AA-04",
+      "categoryId": "PR.AA",
+      "functionId": "PR",
+      "description": "Identity assertions are protected, conveyed, and verified",
+      "implementationExamples": [
+        "Protect identity assertions that are used to convey authentication and user information through single sign-on systems",
+        "Protect identity assertions that are used to convey authentication and user information between federated systems",
+        "Implement standards-based approaches for identity assertions in all contexts, and follow all guidance for the generation (e.g., data models, metadata), protection (e.g., digital signing, encryption), and verification (e.g., signature validation) of identity assertions"
+      ]
+    },
+    {
+      "id": "PR.AA-05",
+      "categoryId": "PR.AA",
+      "functionId": "PR",
+      "description": "Access permissions, entitlements, and authorizations are defined in a policy, managed, enforced, and reviewed, and incorporate the principles of least privilege and separation of duties",
+      "implementationExamples": [
+        "Review logical and physical access privileges periodically and whenever someone changes roles or leaves the organization, and promptly rescind privileges that are no longer needed",
+        "Take attributes of the requester and the requested resource into account for authorization decisions (e.g., geolocation, day/time, requester endpoint's cyber health)",
+        "Restrict access and privileges to the minimum necessary (e.g., zero trust architecture)",
+        "Periodically review the privileges associated with critical business functions to confirm proper separation of duties"
+      ]
+    },
+    {
+      "id": "PR.AA-06",
+      "categoryId": "PR.AA",
+      "functionId": "PR",
+      "description": "Physical access to assets is managed, monitored, and enforced commensurate with risk",
+      "implementationExamples": [
+        "Use security guards, security cameras, locked entrances, alarm systems, and other physical controls to monitor facilities and restrict access",
+        "Employ additional physical security controls for areas that contain high-risk assets",
+        "Escort guests, vendors, and other third parties within areas that contain business-critical assets"
+      ]
+    },
+    {
+      "id": "PR.AT-01",
+      "categoryId": "PR.AT",
+      "functionId": "PR",
+      "description": "Personnel are provided with awareness and training so that they possess the knowledge and skills to perform general tasks with cybersecurity risks in mind",
+      "implementationExamples": [
+        "Provide basic cybersecurity awareness and training to employees, contractors, partners, suppliers, and all other users of the organization's non-public resources",
+        "Train personnel to recognize social engineering attempts and other common attacks, report attacks and suspicious activity, comply with acceptable use policies, and perform basic cyber hygiene tasks (e.g., patching software, choosing passwords, protecting credentials)",
+        "Explain the consequences of cybersecurity policy violations, both to individual users and the organization as a whole",
+        "Periodically assess or test users on their understanding of basic cybersecurity practices",
+        "Require annual refreshers to reinforce existing practices and introduce new practices"
+      ]
+    },
+    {
+      "id": "PR.AT-02",
+      "categoryId": "PR.AT",
+      "functionId": "PR",
+      "description": "Individuals in specialized roles are provided with awareness and training so that they possess the knowledge and skills to perform relevant tasks with cybersecurity risks in mind",
+      "implementationExamples": [
+        "Identify the specialized roles within the organization that require additional cybersecurity training, such as physical and cybersecurity personnel, finance personnel, senior leadership, and anyone with access to business-critical data",
+        "Provide role-based cybersecurity awareness and training to all those in specialized roles, including contractors, partners, suppliers, and other third parties",
+        "Periodically assess or test users on their understanding of cybersecurity practices for their specialized roles",
+        "Require annual refreshers to reinforce existing practices and introduce new practices"
+      ]
+    },
+    {
+      "id": "PR.AT-03",
+      "categoryId": "PR.AT",
+      "functionId": "PR",
+      "description": "[Withdrawn: Incorporated into PR.AT-01, PR.AT-02]",
+      "implementationExamples": []
+    },
+    {
+      "id": "PR.AT-04",
+      "categoryId": "PR.AT",
+      "functionId": "PR",
+      "description": "[Withdrawn: Incorporated into PR.AT-02]",
+      "implementationExamples": []
+    },
+    {
+      "id": "PR.AT-05",
+      "categoryId": "PR.AT",
+      "functionId": "PR",
+      "description": "[Withdrawn: Incorporated into PR.AT-02]",
+      "implementationExamples": []
+    },
+    {
+      "id": "PR.DS-01",
+      "categoryId": "PR.DS",
+      "functionId": "PR",
+      "description": "The confidentiality, integrity, and availability of data-at-rest are protected",
+      "implementationExamples": [
+        "Use encryption, digital signatures, and cryptographic hashes to protect the confidentiality and integrity of stored data in files, databases, virtual machine disk images, container images, and other resources",
+        "Use full disk encryption to protect data stored on user endpoints",
+        "Confirm the integrity of software by validating signatures",
+        "Restrict the use of removable media to prevent data exfiltration",
+        "Physically secure removable media containing unencrypted sensitive information, such as within locked offices or file cabinets"
+      ]
+    },
+    {
+      "id": "PR.DS-02",
+      "categoryId": "PR.DS",
+      "functionId": "PR",
+      "description": "The confidentiality, integrity, and availability of data-in-transit are protected",
+      "implementationExamples": [
+        "Use encryption, digital signatures, and cryptographic hashes to protect the confidentiality and integrity of network communications",
+        "Automatically encrypt or block outbound emails and other communications that contain sensitive data, depending on the data classification",
+        "Block access to personal email, file sharing, file storage services, and other personal communications applications and services from organizational systems and networks",
+        "Prevent reuse of sensitive data from production environments (e.g., customer records) in development, testing, and other non-production environments"
+      ]
+    },
+    {
+      "id": "PR.DS-03",
+      "categoryId": "PR.DS",
+      "functionId": "PR",
+      "description": "[Withdrawn: Incorporated into ID.AM-08, PR.PS-03]",
+      "implementationExamples": []
+    },
+    {
+      "id": "PR.DS-04",
+      "categoryId": "PR.DS",
+      "functionId": "PR",
+      "description": "[Withdrawn: Moved to PR.IR-04]",
+      "implementationExamples": []
+    },
+    {
+      "id": "PR.DS-05",
+      "categoryId": "PR.DS",
+      "functionId": "PR",
+      "description": "[Withdrawn: Incorporated into PR.DS-01, PR.DS-02, PR.DS-10]",
+      "implementationExamples": []
+    },
+    {
+      "id": "PR.DS-06",
+      "categoryId": "PR.DS",
+      "functionId": "PR",
+      "description": "[Withdrawn: Incorporated into PR.DS-01, DE.CM-09]",
+      "implementationExamples": []
+    },
+    {
+      "id": "PR.DS-07",
+      "categoryId": "PR.DS",
+      "functionId": "PR",
+      "description": "[Withdrawn: Incorporated into PR.IR-01]",
+      "implementationExamples": []
+    },
+    {
+      "id": "PR.DS-08",
+      "categoryId": "PR.DS",
+      "functionId": "PR",
+      "description": "[Withdrawn: Incorporated into ID.RA-09, DE.CM-09]",
+      "implementationExamples": []
+    },
+    {
+      "id": "PR.DS-10",
+      "categoryId": "PR.DS",
+      "functionId": "PR",
+      "description": "The confidentiality, integrity, and availability of data-in-use are protected",
+      "implementationExamples": [
+        "Remove data that must remain confidential (e.g., from processors and memory) as soon as it is no longer needed",
+        "Protect data in use from access by other users and processes of the same platform"
+      ]
+    },
+    {
+      "id": "PR.DS-11",
+      "categoryId": "PR.DS",
+      "functionId": "PR",
+      "description": "Backups of data are created, protected, maintained, and tested",
+      "implementationExamples": [
+        "Continuously back up critical data in near-real-time, and back up other data frequently at agreed-upon schedules",
+        "Test backups and restores for all types of data sources at least annually",
+        "Securely store some backups offline and offsite so that an incident or disaster will not damage them",
+        "Enforce geographic separation and geolocation restrictions for data backup storage"
+      ]
+    },
+    {
+      "id": "PR.PS-01",
+      "categoryId": "PR.PS",
+      "functionId": "PR",
+      "description": "Configuration management practices are established and applied",
+      "implementationExamples": [
+        "Establish, test, deploy, and maintain hardened baselines that enforce the organization's cybersecurity policies and provide only essential capabilities (i.e., principle of least functionality)",
+        "Review all default configuration settings that may potentially impact cybersecurity when installing or upgrading software",
+        "Monitor implemented software for deviations from approved baselines"
+      ]
+    },
+    {
+      "id": "PR.PS-02",
+      "categoryId": "PR.PS",
+      "functionId": "PR",
+      "description": "Software is maintained, replaced, and removed commensurate with risk",
+      "implementationExamples": [
+        "Perform routine and emergency patching within the timeframes specified in the vulnerability management plan",
+        "Update container images, and deploy new container instances to replace rather than update existing instances",
+        "Replace end-of-life software and service versions with supported, maintained versions",
+        "Uninstall and remove unauthorized software and services that pose undue risks",
+        "Uninstall and remove any unnecessary software components (e.g., operating system utilities) that attackers might misuse",
+        "Define and implement plans for software and service end-of-life maintenance support and obsolescence"
+      ]
+    },
+    {
+      "id": "PR.PS-03",
+      "categoryId": "PR.PS",
+      "functionId": "PR",
+      "description": "Hardware is maintained, replaced, and removed commensurate with risk",
+      "implementationExamples": [
+        "Replace hardware when it lacks needed security capabilities or when it cannot support software with needed security capabilities",
+        "Define and implement plans for hardware end-of-life maintenance support and obsolescence",
+        "Perform hardware disposal in a secure, responsible, and auditable manner"
+      ]
+    },
+    {
+      "id": "PR.PS-04",
+      "categoryId": "PR.PS",
+      "functionId": "PR",
+      "description": "Log records are generated and made available for continuous monitoring",
+      "implementationExamples": [
+        "Configure all operating systems, applications, and services (including cloud-based services) to generate log records",
+        "Configure log generators to securely share their logs with the organization's logging infrastructure systems and services",
+        "Configure log generators to record the data needed by zero-trust architectures"
+      ]
+    },
+    {
+      "id": "PR.PS-05",
+      "categoryId": "PR.PS",
+      "functionId": "PR",
+      "description": "Installation and execution of unauthorized software are prevented",
+      "implementationExamples": [
+        "When risk warrants it, restrict software execution to permitted products only or deny the execution of prohibited and unauthorized software",
+        "Verify the source of new software and the software's integrity before installing it",
+        "Configure platforms to use only approved DNS services that block access to known malicious domains",
+        "Configure platforms to allow the installation of organization-approved software only"
+      ]
+    },
+    {
+      "id": "PR.PS-06",
+      "categoryId": "PR.PS",
+      "functionId": "PR",
+      "description": "Secure software development practices are integrated, and their performance is monitored throughout the software development life cycle",
+      "implementationExamples": [
+        "Protect all components of organization-developed software from tampering and unauthorized access",
+        "Secure all software produced by the organization, with minimal vulnerabilities in their releases",
+        "Maintain the software used in production environments, and securely dispose of software once it is no longer needed"
+      ]
+    },
+    {
+      "id": "PR.IR-01",
+      "categoryId": "PR.IR",
+      "functionId": "PR",
+      "description": "Networks and environments are protected from unauthorized logical access and usage",
+      "implementationExamples": [
+        "Logically segment organization networks and cloud-based platforms according to trust boundaries and platform types (e.g., IT, IoT, OT, mobile, guests), and permit required communications only between segments",
+        "Logically segment organization networks from external networks, and permit only necessary communications to enter the organization's networks from the external networks",
+        "Implement zero trust architectures to restrict network access to each resource to the minimum necessary",
+        "Check the cyber health of endpoints before allowing them to access and use production resources"
+      ]
+    },
+    {
+      "id": "PR.IR-02",
+      "categoryId": "PR.IR",
+      "functionId": "PR",
+      "description": "The organization's technology assets are protected from environmental threats",
+      "implementationExamples": [
+        "Protect organizational equipment from known environmental threats, such as flooding, fire, wind, and excessive heat and humidity",
+        "Include protection from environmental threats and provisions for adequate operating infrastructure in requirements for service providers that operate systems on the organization's behalf"
+      ]
+    },
+    {
+      "id": "PR.IR-03",
+      "categoryId": "PR.IR",
+      "functionId": "PR",
+      "description": "Mechanisms are implemented to achieve resilience requirements in normal and adverse situations",
+      "implementationExamples": [
+        "Avoid single points of failure in systems and infrastructure",
+        "Use load balancing to increase capacity and improve reliability",
+        "Use high-availability components like redundant storage and power supplies to improve system reliability"
+      ]
+    },
+    {
+      "id": "PR.IR-04",
+      "categoryId": "PR.IR",
+      "functionId": "PR",
+      "description": "Adequate resource capacity to ensure availability is maintained",
+      "implementationExamples": [
+        "Monitor usage of storage, power, compute, network bandwidth, and other resources",
+        "Forecast future needs, and scale resources accordingly"
+      ]
+    }
+  ]
+}

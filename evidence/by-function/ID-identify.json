@@ -1,0 +1,1708 @@
+{
+  "ID.AM-01": {
+    "subcategoryId": "ID.AM-01",
+    "categoryId": "ID.AM",
+    "functionId": "ID",
+    "title": "Hardware Asset Inventory",
+    "assessorFocus": "Verify the organization maintains a comprehensive, current inventory of all hardware assets including IT, IoT, OT, and mobile devices, with automated discovery mechanisms to detect unauthorized or unmanaged devices.",
+    "evidenceItems": [
+      {
+        "id": "ID.AM-01-E1",
+        "name": "Hardware Asset Inventory Register",
+        "description": "Demonstrates the organization maintains a complete catalog of all hardware assets with key attributes such as owner, location, classification, and lifecycle status.",
+        "whatGoodLooksLike": [
+          "Inventory includes asset type, serial number, owner, location, criticality, and lifecycle status for every device",
+          "Entries are timestamped with last-verified dates within the past 90 days",
+          "Coverage spans IT, IoT, OT, and mobile device categories with no known gaps"
+        ],
+        "commonGaps": [
+          "IoT and OT devices are excluded or tracked in separate undocumented systems",
+          "Inventory is a static spreadsheet with no last-verified date or reconciliation process",
+          "Mobile and BYOD devices are not tracked or are only partially enumerated"
+        ],
+        "suggestedSources": [
+          "CMDB or IT asset management platform export (e.g., ServiceNow, Lansweeper)",
+          "Network discovery scan results (e.g., Nmap, Qualys asset inventory)",
+          "Procurement and receiving records"
+        ],
+        "format": "Spreadsheet | System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.AM-01-E2",
+        "name": "Automated Network Discovery Reports",
+        "description": "Demonstrates continuous or periodic automated scanning to detect new or rogue hardware on the network and reconcile findings against the authorized inventory.",
+        "whatGoodLooksLike": [
+          "Automated scans run at least weekly with results compared against the authorized asset inventory",
+          "Newly discovered devices trigger an investigation and onboarding workflow",
+          "Reports show historical trending of discovered vs. authorized device counts"
+        ],
+        "commonGaps": [
+          "Scans are run ad hoc with no defined schedule or coverage targets",
+          "Discovered devices are logged but never reconciled against the authorized inventory",
+          "Wireless and segmented OT networks are excluded from scanning scope"
+        ],
+        "suggestedSources": [
+          "NAC or network discovery tool dashboards and reports",
+          "SIEM alerts for unauthorized device connections"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.AM-01-E3",
+        "name": "Asset Inventory Policy and Procedures",
+        "description": "Demonstrates a formal policy governing hardware asset identification, registration, tracking, and periodic reconciliation.",
+        "whatGoodLooksLike": [
+          "Policy defines roles, responsibilities, and frequency for inventory updates and reconciliation",
+          "Procedures address onboarding, transfer, and decommissioning of hardware assets",
+          "Policy is reviewed and updated at least annually with documented approval"
+        ],
+        "commonGaps": [
+          "Policy exists but lacks defined reconciliation frequency or responsible parties",
+          "No documented procedures for handling newly discovered or decommissioned assets",
+          "Policy has not been reviewed or updated in over two years"
+        ],
+        "suggestedSources": [
+          "IT asset management policy document",
+          "Configuration management plan",
+          "Change advisory board meeting minutes"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request a live demonstration of the CMDB or asset management tool rather than relying solely on exported reports, to verify real-time accuracy.",
+      "Cross-reference the hardware inventory against recent vulnerability scan target lists to identify assets that exist in one system but not the other.",
+      "Ask how the organization handles assets in air-gapped or segmented OT environments that may not be reachable by standard network discovery tools.",
+      "Verify that the inventory includes non-traditional assets such as IoT sensors, building management systems, and removable media storage devices."
+    ]
+  },
+  "ID.AM-02": {
+    "subcategoryId": "ID.AM-02",
+    "categoryId": "ID.AM",
+    "functionId": "ID",
+    "title": "Software, Service, and System Inventory",
+    "assessorFocus": "Confirm the organization maintains a current, comprehensive inventory of all software (COTS, open-source, custom), services (SaaS, APIs, cloud), and systems, with mechanisms to detect unauthorized installations or shadow IT.",
+    "evidenceItems": [
+      {
+        "id": "ID.AM-02-E1",
+        "name": "Software and Service Inventory Register",
+        "description": "Demonstrates a complete catalog of authorized software, cloud services, APIs, and systems with ownership, version, licensing, and classification details.",
+        "whatGoodLooksLike": [
+          "Inventory covers COTS, open-source, custom-developed applications, SaaS, PaaS, IaaS, and API services",
+          "Each entry includes version, owner, licensing status, data classification, and approval date",
+          "Inventory is updated within 48 hours of new deployments or decommissions"
+        ],
+        "commonGaps": [
+          "Open-source libraries and dependencies are not tracked at the component level",
+          "SaaS subscriptions purchased by business units bypass central tracking",
+          "Container images and serverless functions are absent from the inventory"
+        ],
+        "suggestedSources": [
+          "Software asset management (SAM) tool or CMDB export",
+          "Cloud service broker or CASB inventory report",
+          "Application portfolio management tool"
+        ],
+        "format": "Spreadsheet | System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.AM-02-E2",
+        "name": "Software Discovery and Monitoring Evidence",
+        "description": "Demonstrates continuous monitoring of endpoints, servers, and cloud environments to detect unauthorized or unmanaged software and services.",
+        "whatGoodLooksLike": [
+          "Endpoint detection agents report installed software inventory at least daily",
+          "Cloud environment monitoring detects new service deployments and triggers review workflows",
+          "Alerts are generated for software installations not on the approved whitelist"
+        ],
+        "commonGaps": [
+          "Monitoring covers only managed endpoints and excludes cloud workloads or containers",
+          "Detection of unauthorized software exists but has no defined response or remediation workflow",
+          "Virtual machine and container image registries are not scanned for unapproved software"
+        ],
+        "suggestedSources": [
+          "Endpoint management platform reports (e.g., SCCM, Intune, Jamf)",
+          "CASB or cloud security posture management (CSPM) dashboards"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.AM-02-E3",
+        "name": "System Inventory and Architecture Documentation",
+        "description": "Demonstrates a maintained inventory of organizational systems with architecture documentation showing component relationships and dependencies.",
+        "whatGoodLooksLike": [
+          "Each system has a defined boundary, owner, and data classification with documented interconnections",
+          "System inventory aligns with the authorization boundary definitions used for risk assessments",
+          "Architecture diagrams are version-controlled and updated when significant changes occur"
+        ],
+        "commonGaps": [
+          "Systems are informally known but not documented with defined boundaries or owners",
+          "Architecture diagrams are outdated and do not reflect current cloud or hybrid deployments",
+          "No linkage between the system inventory and the software or hardware inventories"
+        ],
+        "suggestedSources": [
+          "System security plans or system inventory register",
+          "Enterprise architecture repository",
+          "Cloud management console resource listings"
+        ],
+        "format": "PDF/DOCX | Spreadsheet",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask to see the process for detecting and cataloging shadow IT, including SaaS applications procured outside of central IT.",
+      "Verify that container images, serverless functions, and infrastructure-as-code templates are included in the software inventory.",
+      "Compare the software inventory against license entitlement records to identify both unlicensed software and unused licenses that may indicate stale entries.",
+      "Check whether the organization maintains a software bill of materials (SBOM) for critical custom-developed and third-party applications."
+    ]
+  },
+  "ID.AM-03": {
+    "subcategoryId": "ID.AM-03",
+    "categoryId": "ID.AM",
+    "functionId": "ID",
+    "title": "Network Communication and Data Flow Documentation",
+    "assessorFocus": "Verify the organization maintains current, accurate representations of authorized network communications, data flows, and expected ports/protocols/services for both internal and external connections including cloud environments.",
+    "evidenceItems": [
+      {
+        "id": "ID.AM-03-E1",
+        "name": "Network Architecture and Data Flow Diagrams",
+        "description": "Demonstrates documented and current diagrams showing authorized network segments, communication paths, data flows, and trust boundaries for internal, external, and cloud environments.",
+        "whatGoodLooksLike": [
+          "Diagrams cover wired, wireless, cloud (IaaS/PaaS/SaaS), and OT network segments with clearly marked trust boundaries",
+          "Data flows between systems, third parties, and cloud services are labeled with data classification and direction",
+          "Diagrams are version-controlled with review dates within the past 12 months"
+        ],
+        "commonGaps": [
+          "Diagrams only cover the corporate LAN and omit cloud, remote access, or OT networks",
+          "Data flows to and from third-party services are not documented",
+          "Diagrams exist but have not been updated after significant infrastructure changes"
+        ],
+        "suggestedSources": [
+          "Enterprise architecture or network engineering documentation repository",
+          "Visio, Lucidchart, or draw.io diagram exports",
+          "Cloud provider VPC/network topology exports"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.AM-03-E2",
+        "name": "Authorized Ports, Protocols, and Services Documentation",
+        "description": "Demonstrates a maintained baseline of expected and authorized network ports, protocols, and services used across the environment.",
+        "whatGoodLooksLike": [
+          "Documented list of authorized ports, protocols, and services mapped to business justifications",
+          "Firewall and security group rule sets align with the documented authorized baseline",
+          "Deviations from the baseline are flagged and require formal exception approval"
+        ],
+        "commonGaps": [
+          "No documented baseline exists; firewall rules are the de facto documentation",
+          "Legacy or overly permissive rules remain without business justification",
+          "Cloud security group configurations are not correlated with the documented baseline"
+        ],
+        "suggestedSources": [
+          "Firewall and security group rule exports with business justification annotations",
+          "Network security policy or standards document",
+          "Network flow analysis tool reports (e.g., NetFlow, cloud VPC flow logs)"
+        ],
+        "format": "Spreadsheet | System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.AM-03-E3",
+        "name": "Third-Party and External Connection Inventory",
+        "description": "Demonstrates a tracked inventory of all external network connections including VPNs, dedicated links, API integrations, and third-party data exchanges.",
+        "whatGoodLooksLike": [
+          "Each external connection has a documented owner, purpose, data classification, and security controls",
+          "Interconnection security agreements (ISAs) or equivalent are in place for all external connections",
+          "Connections are reviewed at least annually and decommissioned when no longer needed"
+        ],
+        "commonGaps": [
+          "External API integrations and SaaS data flows are not tracked as network connections",
+          "No formal review cycle exists for active external connections",
+          "ISAs or connection agreements are missing or outdated for legacy connections"
+        ],
+        "suggestedSources": [
+          "Interconnection security agreements or third-party connection register",
+          "API gateway management console exports",
+          "VPN and remote access configuration documentation"
+        ],
+        "format": "PDF/DOCX | Spreadsheet",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Compare documented data flow diagrams against actual network traffic captures or flow logs to identify undocumented communication paths.",
+      "Ask how the organization tracks and documents data flows to cloud services, especially multi-cloud and hybrid environments.",
+      "Review firewall change request records to verify that the data flow documentation is updated when new rules are approved.",
+      "Verify that OT/ICS network segments and their connections to IT networks are included in the documentation."
+    ]
+  },
+  "ID.AM-04": {
+    "subcategoryId": "ID.AM-04",
+    "categoryId": "ID.AM",
+    "functionId": "ID",
+    "title": "Supplier Service Inventory",
+    "assessorFocus": "Confirm the organization maintains a comprehensive inventory of all external services provided by suppliers, including cloud services, APIs, and outsourced functions, with sufficient detail to support cybersecurity risk management.",
+    "evidenceItems": [
+      {
+        "id": "ID.AM-04-E1",
+        "name": "External Service and Supplier Inventory",
+        "description": "Demonstrates a complete, maintained catalog of all external services including IaaS, PaaS, SaaS, APIs, managed services, and outsourced functions with risk-relevant metadata.",
+        "whatGoodLooksLike": [
+          "Inventory includes service name, supplier, data handled, criticality rating, contract owner, and renewal date",
+          "Each service is linked to a risk assessment or due diligence record",
+          "Inventory is updated before new services are onboarded and reviewed at least quarterly"
+        ],
+        "commonGaps": [
+          "Only major vendors are tracked while departmental SaaS subscriptions and API services are omitted",
+          "Inventory lacks data classification or criticality ratings for the services",
+          "No defined process triggers inventory updates when new supplier services are procured"
+        ],
+        "suggestedSources": [
+          "Vendor management or third-party risk management (TPRM) platform export",
+          "Procurement and contract management system records",
+          "CASB-discovered cloud service inventory"
+        ],
+        "format": "Spreadsheet | System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.AM-04-E2",
+        "name": "Service Onboarding and Offboarding Records",
+        "description": "Demonstrates a formal process for adding new supplier services to the inventory and removing decommissioned services, including risk evaluation prior to activation.",
+        "whatGoodLooksLike": [
+          "Onboarding workflow includes security review, data classification, and inventory registration before go-live",
+          "Offboarding records confirm data retrieval or destruction, access revocation, and inventory removal",
+          "Workflow is integrated into procurement so no service bypasses the process"
+        ],
+        "commonGaps": [
+          "Services are onboarded without security review or inventory registration",
+          "No formal offboarding process exists; decommissioned services remain in the inventory indefinitely",
+          "Business units can procure services using corporate credit cards without triggering the workflow"
+        ],
+        "suggestedSources": [
+          "Service request and approval workflow records",
+          "TPRM onboarding checklists and completed assessments"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.AM-04-E3",
+        "name": "Supplier Service Risk Categorization",
+        "description": "Demonstrates that supplier services are categorized by criticality and risk level to enable proportionate monitoring and oversight.",
+        "whatGoodLooksLike": [
+          "Services are tiered (e.g., critical, high, medium, low) based on data sensitivity, availability requirements, and business impact",
+          "Tier assignment drives the frequency and depth of ongoing monitoring and reassessment",
+          "Categorization is reviewed when service scope changes or incidents occur"
+        ],
+        "commonGaps": [
+          "All suppliers are treated equally with no risk-based tiering",
+          "Categorization criteria are not documented or consistently applied",
+          "Tiering was performed once at onboarding and never revisited"
+        ],
+        "suggestedSources": [
+          "TPRM risk tiering methodology document",
+          "Supplier risk register or categorization matrix",
+          "Board or management risk reporting on critical suppliers"
+        ],
+        "format": "Spreadsheet | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Compare the supplier inventory against accounts payable records to identify services being paid for that are not in the inventory.",
+      "Ask how the organization discovers and tracks SaaS services adopted directly by business units without IT involvement.",
+      "Verify that API-based integrations and data feeds from third parties are included in the supplier service inventory.",
+      "Check whether the inventory distinguishes between services that process, store, or transmit sensitive data versus those that do not."
+    ]
+  },
+  "ID.AM-05": {
+    "subcategoryId": "ID.AM-05",
+    "categoryId": "ID.AM",
+    "functionId": "ID",
+    "title": "Asset Prioritization and Classification",
+    "assessorFocus": "Verify that assets are classified and prioritized based on defined criteria including criticality to mission, data sensitivity, regulatory requirements, and potential impact, and that prioritization is actively used to guide resource allocation and security controls.",
+    "evidenceItems": [
+      {
+        "id": "ID.AM-05-E1",
+        "name": "Asset Classification and Prioritization Criteria",
+        "description": "Demonstrates formally defined and approved criteria for classifying and prioritizing assets based on business criticality, data sensitivity, regulatory requirements, and impact to organizational mission.",
+        "whatGoodLooksLike": [
+          "Classification scheme defines clear tiers (e.g., critical, high, medium, low) with objective criteria for each",
+          "Criteria address confidentiality, integrity, availability, and regulatory or contractual requirements",
+          "Scheme is approved by senior leadership and reviewed at least annually"
+        ],
+        "commonGaps": [
+          "Classification criteria are informal or inconsistently interpreted across business units",
+          "Criteria focus solely on data confidentiality and neglect availability or integrity impacts",
+          "No documented approval or review cycle for the classification scheme"
+        ],
+        "suggestedSources": [
+          "Data classification policy and asset criticality framework documents",
+          "Risk management framework or methodology documentation",
+          "Business impact analysis (BIA) criteria and results"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.AM-05-E2",
+        "name": "Classified Asset Register with Prioritization",
+        "description": "Demonstrates that assets in the inventory have been assigned classifications and priority levels consistent with the defined criteria.",
+        "whatGoodLooksLike": [
+          "Every asset in the inventory has an assigned classification and priority with justification recorded",
+          "High-criticality and mission-essential assets are clearly identified and flagged for enhanced protections",
+          "Classifications are reviewed periodically and updated when asset roles or risk profiles change"
+        ],
+        "commonGaps": [
+          "Classifications are assigned only to a subset of assets, typically servers, while endpoints and cloud assets are unclassified",
+          "Priority assignments are outdated and do not reflect current business dependencies",
+          "No evidence of periodic review or reclassification process"
+        ],
+        "suggestedSources": [
+          "CMDB export with classification and criticality fields populated",
+          "Business impact analysis results mapped to asset inventory",
+          "Risk register entries linked to critical assets"
+        ],
+        "format": "Spreadsheet | System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.AM-05-E3",
+        "name": "Evidence of Prioritization Driving Decisions",
+        "description": "Demonstrates that asset prioritization actively informs security control selection, patching priority, incident response, and resource allocation decisions.",
+        "whatGoodLooksLike": [
+          "Vulnerability patching SLAs are tiered based on asset criticality levels",
+          "Incident response procedures reference asset priority to guide escalation and response urgency",
+          "Security control baselines are differentiated by asset classification tier"
+        ],
+        "commonGaps": [
+          "Asset classifications exist on paper but are not referenced in operational procedures",
+          "Patching and incident response treat all assets with equal priority regardless of classification",
+          "No documented linkage between asset criticality and security investment decisions"
+        ],
+        "suggestedSources": [
+          "Vulnerability management policy showing criticality-based SLAs",
+          "Incident response plan referencing asset priority tiers",
+          "Security architecture standards differentiated by asset classification"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask how asset criticality ratings were determined and whether a formal business impact analysis was conducted.",
+      "Verify that prioritization is not just a label in the CMDB but actually drives differentiated treatment in patching, monitoring, and incident response.",
+      "Check whether the organization periodically reassesses asset priority, especially after mergers, acquisitions, or significant business changes.",
+      "Look for alignment between asset criticality ratings and the resources allocated to protect those assets."
+    ]
+  },
+  "ID.AM-06": {
+    "subcategoryId": "ID.AM-06",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "GV.RR-02",
+      "GV.SC-02"
+    ]
+  },
+  "ID.AM-07": {
+    "subcategoryId": "ID.AM-07",
+    "categoryId": "ID.AM",
+    "functionId": "ID",
+    "title": "Data Inventory and Metadata Management",
+    "assessorFocus": "Verify the organization maintains inventories of designated data types (e.g., PII, PHI, financial data, IP, OT data) with associated metadata including classification, provenance, ownership, and geolocation, and uses automated discovery to identify new data instances.",
+    "evidenceItems": [
+      {
+        "id": "ID.AM-07-E1",
+        "name": "Data Inventory and Classification Register",
+        "description": "Demonstrates a maintained inventory of designated data types with classification labels, data owners, storage locations, and retention requirements.",
+        "whatGoodLooksLike": [
+          "Inventory covers all designated data types (PII, PHI, financial, IP, OT) with classification tags applied consistently",
+          "Each data entry identifies the owner, custodian, storage location, and applicable regulatory requirements",
+          "Provenance and geolocation of data instances are tracked, especially for cross-border data"
+        ],
+        "commonGaps": [
+          "Only structured data in primary databases is inventoried while unstructured data in file shares and cloud storage is excluded",
+          "Data ownership is undefined or assigned generically to IT rather than business data stewards",
+          "Geolocation tracking is absent, creating compliance risks for data residency requirements"
+        ],
+        "suggestedSources": [
+          "Data governance platform or data catalog tool export",
+          "Data classification policy with designated data type definitions",
+          "Records of processing activities (ROPA) for privacy compliance"
+        ],
+        "format": "Spreadsheet | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.AM-07-E2",
+        "name": "Automated Data Discovery Scan Results",
+        "description": "Demonstrates the use of automated tools to continuously discover and classify instances of designated data types across the environment.",
+        "whatGoodLooksLike": [
+          "DLP or data discovery tools scan endpoints, file shares, databases, and cloud storage on a defined schedule",
+          "Newly discovered data instances are automatically classified and flagged for data steward review",
+          "Scan coverage reports demonstrate comprehensive reach across on-premises and cloud environments"
+        ],
+        "commonGaps": [
+          "Data discovery is limited to email and endpoints, excluding cloud storage, SaaS applications, and databases",
+          "Scans run infrequently or only on demand rather than on a recurring schedule",
+          "Discovered data is reported but not automatically tagged or added to the data inventory"
+        ],
+        "suggestedSources": [
+          "DLP or data discovery tool scan reports and dashboards",
+          "Cloud-native data classification service outputs (e.g., AWS Macie, Azure Purview)",
+          "Data steward review and remediation records"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.AM-07-E3",
+        "name": "Data Classification and Labeling Standards",
+        "description": "Demonstrates formally defined data classification tiers, labeling conventions, and procedures for assigning and maintaining classifications on designated data types.",
+        "whatGoodLooksLike": [
+          "Classification tiers are clearly defined (e.g., public, internal, confidential, restricted) with handling requirements for each",
+          "Labeling is enforced through technical controls such as metadata tags, document headers, and email markings",
+          "Standards address classification of data at rest, in transit, and in use"
+        ],
+        "commonGaps": [
+          "Classification tiers are defined in policy but labeling is voluntary and inconsistently applied",
+          "No technical enforcement of classification labels, relying solely on user awareness",
+          "Classification standards do not address cloud-hosted data or data shared with third parties"
+        ],
+        "suggestedSources": [
+          "Data classification policy and labeling standards document",
+          "Information protection tool configuration showing label enforcement",
+          "Training records for data classification awareness"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask for a demonstration of the data discovery tool scanning a representative sample of data repositories to verify coverage and accuracy.",
+      "Verify that the organization can locate all instances of a specific designated data type (e.g., PII) across the environment on demand.",
+      "Check whether metadata includes provenance and geolocation, which are essential for cross-border data transfer compliance.",
+      "Assess whether the data inventory is integrated with the organization's privacy program and records of processing activities."
+    ]
+  },
+  "ID.AM-08": {
+    "subcategoryId": "ID.AM-08",
+    "categoryId": "ID.AM",
+    "functionId": "ID",
+    "title": "Asset Lifecycle Management",
+    "assessorFocus": "Verify the organization integrates cybersecurity considerations throughout the full lifecycle of systems, hardware, software, services, and data -- from acquisition and deployment through operations, transfer, and secure decommissioning or destruction.",
+    "evidenceItems": [
+      {
+        "id": "ID.AM-08-E1",
+        "name": "Lifecycle Management Policy and Procedures",
+        "description": "Demonstrates formal policies and procedures governing cybersecurity considerations at each lifecycle stage including acquisition, deployment, operation, transfer, and decommissioning.",
+        "whatGoodLooksLike": [
+          "Policy defines cybersecurity requirements for each lifecycle phase with clear roles and responsibilities",
+          "Procedures address secure configuration prior to deployment, change management during operations, and secure sanitization at end of life",
+          "Shadow IT identification and remediation processes are documented and operational"
+        ],
+        "commonGaps": [
+          "Policy addresses acquisition and operations but lacks guidance on secure decommissioning and data destruction",
+          "No defined process for identifying and managing shadow IT or unauthorized technology usage",
+          "Lifecycle procedures exist for hardware but not for software, services, or data"
+        ],
+        "suggestedSources": [
+          "Asset lifecycle management policy and associated procedures",
+          "System development lifecycle (SDLC) documentation",
+          "Data retention and destruction policy"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.AM-08-E2",
+        "name": "Secure Decommissioning and Data Destruction Records",
+        "description": "Demonstrates that hardware, software, and data are securely sanitized, destroyed, or disposed of in accordance with policy when reaching end of life or being reassigned.",
+        "whatGoodLooksLike": [
+          "Certificates of destruction or sanitization records exist for all decommissioned hardware and storage media",
+          "Data destruction methods align with NIST SP 800-88 or equivalent standards and are documented per asset",
+          "Decommissioning records link back to the asset inventory with timestamps and responsible party identified"
+        ],
+        "commonGaps": [
+          "No formal records of data sanitization or hardware destruction are maintained",
+          "Hard drives and storage media are disposed of without verified sanitization",
+          "Cloud data and virtual resources are terminated without verifiable data destruction confirmation"
+        ],
+        "suggestedSources": [
+          "Certificates of destruction from ITAD vendors",
+          "Internal data sanitization logs with method and verification records",
+          "Cloud resource termination and data deletion audit logs"
+        ],
+        "format": "PDF/DOCX | Spreadsheet",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.AM-08-E3",
+        "name": "Pre-Deployment Security Configuration Evidence",
+        "description": "Demonstrates that systems, hardware, and software are securely configured and hardened prior to deployment in production, including validation against security baselines.",
+        "whatGoodLooksLike": [
+          "Hardening checklists or automated configuration compliance scans are completed before production deployment",
+          "Security baselines exist for each asset type and deviations require documented exceptions",
+          "Deployment pipelines include automated security validation gates"
+        ],
+        "commonGaps": [
+          "Systems are deployed with default configurations and hardened retroactively, if at all",
+          "Security baselines exist only for servers and not for network devices, endpoints, or cloud resources",
+          "No automated enforcement or verification of security configurations prior to deployment"
+        ],
+        "suggestedSources": [
+          "CIS benchmark or STIG compliance scan reports for newly deployed assets",
+          "Deployment pipeline configuration showing security validation gates",
+          "Change management records showing security sign-off prior to go-live"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Trace a recently decommissioned asset from inventory removal through data sanitization to destruction certificate to verify the end-to-end process.",
+      "Ask how the organization identifies and addresses redundant systems or software that unnecessarily expand the attack surface.",
+      "Verify that cybersecurity requirements are embedded in procurement and acquisition processes, not just applied after deployment.",
+      "Check whether the lifecycle management process addresses cloud-specific considerations such as ephemeral resources, container image lifecycle, and infrastructure-as-code versioning."
+    ]
+  },
+  "ID.RA-01": {
+    "subcategoryId": "ID.RA-01",
+    "categoryId": "ID.RA",
+    "functionId": "ID",
+    "title": "Vulnerability Identification and Recording",
+    "assessorFocus": "Verify the organization systematically identifies, validates, and records vulnerabilities across all asset types -- including software, network architecture, facilities, and processes -- using both automated scanning and manual assessment techniques.",
+    "evidenceItems": [
+      {
+        "id": "ID.RA-01-E1",
+        "name": "Vulnerability Scan Reports and Findings",
+        "description": "Demonstrates regular, comprehensive vulnerability scanning across the environment with findings validated, prioritized, and tracked to remediation.",
+        "whatGoodLooksLike": [
+          "Authenticated scans run at least monthly across all network segments including cloud, OT, and DMZ environments",
+          "Findings are validated to eliminate false positives and prioritized using CVSS scores augmented by asset criticality",
+          "Reports show trending data demonstrating reduction in vulnerability counts over time"
+        ],
+        "commonGaps": [
+          "Scans are unauthenticated or limited to external-facing assets only",
+          "Findings are generated but not validated, resulting in high false positive rates that erode trust in results",
+          "OT, IoT, and cloud-native workloads are excluded from scanning scope"
+        ],
+        "suggestedSources": [
+          "Vulnerability scanner reports (e.g., Nessus, Qualys, Rapid7)",
+          "Cloud security posture management (CSPM) findings",
+          "SIEM correlation of vulnerability data with asset inventory"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.RA-01-E2",
+        "name": "Vulnerability Management Policy and Procedures",
+        "description": "Demonstrates a formal program governing vulnerability identification, validation, prioritization, remediation timelines, and exception handling.",
+        "whatGoodLooksLike": [
+          "Policy defines scanning frequency, scope, remediation SLAs by severity, and exception approval processes",
+          "Procedures address multiple vulnerability sources including scans, threat intelligence, code review, and architecture assessments",
+          "Policy is reviewed annually and updated to address emerging vulnerability classes"
+        ],
+        "commonGaps": [
+          "Policy defines scanning but lacks remediation SLAs or accountability for overdue findings",
+          "Vulnerability management is limited to patch management and does not cover architectural or process weaknesses",
+          "No defined exception or risk acceptance process for vulnerabilities that cannot be remediated"
+        ],
+        "suggestedSources": [
+          "Vulnerability management policy and procedure documents",
+          "Remediation SLA matrix by severity and asset criticality",
+          "Exception and risk acceptance request records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-01-E3",
+        "name": "Vulnerability Remediation Tracking and Metrics",
+        "description": "Demonstrates that identified vulnerabilities are tracked through remediation with metrics reporting on SLA compliance, aging, and closure rates.",
+        "whatGoodLooksLike": [
+          "Remediation tracking system shows open, overdue, and closed vulnerabilities with SLA compliance rates",
+          "Mean time to remediate (MTTR) is tracked by severity level and trending downward",
+          "Management receives regular reporting on vulnerability posture and overdue remediation items"
+        ],
+        "commonGaps": [
+          "Vulnerabilities are identified but not formally tracked to closure in a centralized system",
+          "Remediation metrics are not reported to management or used to drive accountability",
+          "Overdue vulnerabilities accumulate without escalation or risk acceptance documentation"
+        ],
+        "suggestedSources": [
+          "Vulnerability management platform dashboards showing remediation status",
+          "POA&M or remediation tracker exports",
+          "Management briefing slides on vulnerability posture"
+        ],
+        "format": "System export | Spreadsheet",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Compare the vulnerability scanning scope against the asset inventory to verify that all assets are being assessed.",
+      "Request evidence of remediation for a sample of critical and high vulnerabilities to verify the end-to-end process from detection to closure.",
+      "Ask how the organization identifies vulnerabilities beyond software patches, including architectural weaknesses, misconfigurations, and process gaps.",
+      "Verify that vulnerability assessments include code review findings for custom-developed applications."
+    ]
+  },
+  "ID.RA-02": {
+    "subcategoryId": "ID.RA-02",
+    "categoryId": "ID.RA",
+    "functionId": "ID",
+    "title": "Cyber Threat Intelligence Reception",
+    "assessorFocus": "Confirm the organization receives cyber threat intelligence from multiple reputable sources and forums, and that this intelligence is ingested into security tools and used to inform detection, response, and risk assessment activities.",
+    "evidenceItems": [
+      {
+        "id": "ID.RA-02-E1",
+        "name": "Threat Intelligence Source Inventory and Feed Configuration",
+        "description": "Demonstrates that the organization subscribes to and ingests threat intelligence from multiple reputable sources including ISACs, government advisories, and commercial feeds.",
+        "whatGoodLooksLike": [
+          "Multiple CTI sources are documented including ISACs, CISA advisories, vendor feeds, and commercial TI platforms",
+          "Feeds are configured for automated ingestion into SIEM, SOAR, or threat intelligence platforms",
+          "Source quality and relevance are reviewed at least annually"
+        ],
+        "commonGaps": [
+          "Organization relies on a single CTI source with no diversity of intelligence",
+          "CTI feeds are subscribed to but not integrated into detection or response tools",
+          "No formal evaluation of CTI source quality, relevance, or timeliness"
+        ],
+        "suggestedSources": [
+          "Threat intelligence platform (TIP) configuration and source list",
+          "SIEM or SOAR integration settings showing CTI feed ingestion",
+          "ISAC membership records and advisory subscription confirmations"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.RA-02-E2",
+        "name": "Threat Advisory Review and Dissemination Records",
+        "description": "Demonstrates that received threat advisories are reviewed, analyzed for organizational relevance, and disseminated to appropriate stakeholders.",
+        "whatGoodLooksLike": [
+          "Advisories are triaged within defined SLAs based on severity and relevance to organizational assets",
+          "Relevant advisories are disseminated to asset owners and operational teams with recommended actions",
+          "Review and action records are maintained for audit trail purposes"
+        ],
+        "commonGaps": [
+          "Advisories are received but accumulate in inboxes without formal triage or review",
+          "No process to assess advisory relevance against the organization's specific technology stack and threat profile",
+          "Dissemination is ad hoc with no tracking of whether recipients took recommended actions"
+        ],
+        "suggestedSources": [
+          "Threat advisory triage logs and analyst notes",
+          "Internal security bulletins or advisory dissemination records",
+          "Ticketing system records for advisory-driven actions"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.RA-02-E3",
+        "name": "CTI Integration with Detection and Response",
+        "description": "Demonstrates that threat intelligence is operationalized by being integrated into detection rules, indicator matching, and response playbooks.",
+        "whatGoodLooksLike": [
+          "IOCs from threat feeds are automatically matched against network, endpoint, and log data",
+          "Detection rules and SIEM use cases are updated based on emerging TTPs from threat intelligence",
+          "Response playbooks reference threat actor profiles and TTPs to guide investigation steps"
+        ],
+        "commonGaps": [
+          "CTI is consumed as informational reports but not translated into actionable detection or response content",
+          "IOC matching is performed but TTPs are not used to develop or update detection analytics",
+          "No feedback loop exists to refine CTI quality based on detection and response outcomes"
+        ],
+        "suggestedSources": [
+          "SIEM detection rules referencing CTI-sourced indicators or TTPs",
+          "TIP dashboard showing IOC match statistics and alert generation",
+          "Response playbooks with CTI-informed investigation steps"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask analysts to walk through how a recent threat advisory was received, analyzed, and actioned to assess the operational reality of CTI consumption.",
+      "Verify that CTI sources are relevant to the organization's industry, geographic presence, and technology stack.",
+      "Check whether CTI is used proactively for threat hunting or only reactively for IOC matching.",
+      "Assess whether the organization participates in bidirectional intelligence sharing, not just consumption."
+    ]
+  },
+  "ID.RA-03": {
+    "subcategoryId": "ID.RA-03",
+    "categoryId": "ID.RA",
+    "functionId": "ID",
+    "title": "Internal and External Threat Identification",
+    "assessorFocus": "Verify the organization identifies and records both external threats (nation-state actors, cybercriminals, hacktivists) and internal threats (malicious insiders, negligent employees, compromised accounts) with ongoing monitoring and threat hunting activities.",
+    "evidenceItems": [
+      {
+        "id": "ID.RA-03-E1",
+        "name": "Threat Profile and Threat Actor Registry",
+        "description": "Demonstrates the organization maintains awareness of relevant threat actors, their motivations, capabilities, and TTPs, documented in a threat profile or registry.",
+        "whatGoodLooksLike": [
+          "Threat profiles identify likely threat actors by category (nation-state, criminal, insider, hacktivist) with relevance to the organization's sector",
+          "TTPs are mapped to MITRE ATT&CK framework for consistent classification",
+          "Profiles are updated at least quarterly based on evolving threat intelligence"
+        ],
+        "commonGaps": [
+          "Threat awareness is informal and resides in individual analysts' knowledge rather than documented profiles",
+          "Only external threats are profiled while insider threat scenarios are not addressed",
+          "Profiles are static documents that have not been updated to reflect current threat landscape"
+        ],
+        "suggestedSources": [
+          "Threat profile or threat landscape assessment documents",
+          "MITRE ATT&CK navigator heat maps for prioritized threat groups",
+          "Annual or quarterly threat intelligence summary reports"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.RA-03-E2",
+        "name": "Insider Threat Program Documentation",
+        "description": "Demonstrates processes for identifying, monitoring, and managing internal threat actors including malicious insiders, negligent employees, and compromised accounts.",
+        "whatGoodLooksLike": [
+          "Formal insider threat program with defined indicators, escalation procedures, and cross-functional governance (security, HR, legal)",
+          "User behavior analytics (UBA) or similar tools monitor for anomalous internal activity",
+          "Program addresses both intentional malicious activity and unintentional negligent behavior"
+        ],
+        "commonGaps": [
+          "No formal insider threat program exists; insider risk is addressed only through general access controls",
+          "Monitoring focuses on external threats while internal user activity is not analyzed for anomalies",
+          "Insider threat concerns are handled ad hoc without defined procedures or governance"
+        ],
+        "suggestedSources": [
+          "Insider threat program charter and governance documentation",
+          "UBA or UEBA tool configuration and alert reports",
+          "HR and security collaboration records for insider threat cases"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-03-E3",
+        "name": "Threat Hunting Reports and Findings",
+        "description": "Demonstrates proactive threat hunting activities to detect signs of threat actors within the environment that may evade automated detection.",
+        "whatGoodLooksLike": [
+          "Threat hunts are conducted regularly based on hypotheses derived from CTI and known TTPs",
+          "Hunt reports document the hypothesis, methodology, data sources analyzed, findings, and recommended actions",
+          "Findings from hunts feed back into detection rule development and security posture improvements"
+        ],
+        "commonGaps": [
+          "No formal threat hunting program exists; detection relies entirely on automated alerting",
+          "Hunts are performed ad hoc without documented hypotheses or methodology",
+          "Hunt findings are not formally recorded or used to improve detection capabilities"
+        ],
+        "suggestedSources": [
+          "Threat hunting reports with hypotheses, methodology, and findings",
+          "Threat hunting program charter and schedule",
+          "Detection rule improvements derived from hunt findings"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask the organization to describe which threat actors are most relevant to their sector and how that assessment was derived.",
+      "Verify that the insider threat program has appropriate governance including legal, HR, and privacy stakeholders.",
+      "Review threat hunting reports for quality and consistency, looking for documented hypotheses, methodology, and actionable findings.",
+      "Check whether the organization differentiates its security posture based on the threat actors most likely to target it."
+    ]
+  },
+  "ID.RA-04": {
+    "subcategoryId": "ID.RA-04",
+    "categoryId": "ID.RA",
+    "functionId": "ID",
+    "title": "Impact and Likelihood Assessment",
+    "assessorFocus": "Confirm the organization systematically estimates and records the potential impacts and likelihoods of threats exploiting vulnerabilities, using risk registers and scenarios that account for cascading failures and business consequences.",
+    "evidenceItems": [
+      {
+        "id": "ID.RA-04-E1",
+        "name": "Risk Register with Impact and Likelihood Ratings",
+        "description": "Demonstrates that identified risks are recorded in a risk register with assessed impact and likelihood ratings, risk owners, and treatment status.",
+        "whatGoodLooksLike": [
+          "Risk register contains entries for all significant cyber risks with quantitative or qualitative impact and likelihood scores",
+          "Each risk has an assigned owner, residual risk rating, and documented risk treatment decision",
+          "Register is reviewed and updated at least quarterly with management oversight"
+        ],
+        "commonGaps": [
+          "Risk register exists but entries are incomplete, lacking impact or likelihood assessments",
+          "Risks are recorded at initial assessment but not updated as the threat landscape or business context changes",
+          "No designated risk owners, making accountability for treatment unclear"
+        ],
+        "suggestedSources": [
+          "Enterprise or cybersecurity risk register export",
+          "GRC platform risk dashboard and reports",
+          "Risk committee meeting minutes showing register reviews"
+        ],
+        "format": "Spreadsheet | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-04-E2",
+        "name": "Risk Assessment Methodology and Criteria",
+        "description": "Demonstrates a formally defined and consistently applied methodology for assessing the impact and likelihood of cybersecurity risk scenarios.",
+        "whatGoodLooksLike": [
+          "Methodology defines rating scales, criteria, and scoring approaches for both impact and likelihood",
+          "Impact criteria address financial, operational, reputational, regulatory, and safety dimensions",
+          "Methodology accounts for cascading failures and systemic risk across interconnected systems"
+        ],
+        "commonGaps": [
+          "Impact assessments focus only on financial loss and neglect operational, safety, or reputational dimensions",
+          "Likelihood assessments are subjective with no defined criteria or calibration across assessors",
+          "Cascading failure scenarios and system-of-systems dependencies are not considered"
+        ],
+        "suggestedSources": [
+          "Risk assessment methodology document (e.g., aligned to NIST SP 800-30, ISO 27005, or FAIR)",
+          "Risk rating matrices and scoring rubrics",
+          "Training materials for risk assessors"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-04-E3",
+        "name": "Business Impact Analysis Results",
+        "description": "Demonstrates completed business impact analyses that identify potential consequences of disruption to critical systems and services, informing risk likelihood and impact assessments.",
+        "whatGoodLooksLike": [
+          "BIA covers all critical business processes and supporting systems with quantified impact over time",
+          "Recovery time objectives (RTO) and recovery point objectives (RPO) are defined for each critical process",
+          "BIA results are integrated into the risk register and used to inform risk prioritization"
+        ],
+        "commonGaps": [
+          "BIA was conducted once and not updated to reflect current business processes or technology dependencies",
+          "BIA focuses on availability impacts only and does not address confidentiality or integrity breach scenarios",
+          "RTOs and RPOs are defined but not validated through testing"
+        ],
+        "suggestedSources": [
+          "Business impact analysis reports and supporting worksheets",
+          "RTO/RPO matrices for critical systems",
+          "Disaster recovery and business continuity plans informed by BIA"
+        ],
+        "format": "PDF/DOCX | Spreadsheet",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that risk assessments involve both business leaders and cybersecurity practitioners, not just the security team working in isolation.",
+      "Ask how the organization accounts for cascading failures when assessing impact, particularly for interconnected or dependent systems.",
+      "Check whether likelihood assessments incorporate current threat intelligence about active threat actor targeting of the organization's sector.",
+      "Review a sample of risk register entries for completeness and consistency in how impact and likelihood are scored."
+    ]
+  },
+  "ID.RA-05": {
+    "subcategoryId": "ID.RA-05",
+    "categoryId": "ID.RA",
+    "functionId": "ID",
+    "title": "Risk-Informed Prioritization",
+    "assessorFocus": "Verify that the organization uses assessed threats, vulnerabilities, likelihoods, and impacts to understand inherent risk and prioritize risk response actions and cybersecurity resource allocations accordingly.",
+    "evidenceItems": [
+      {
+        "id": "ID.RA-05-E1",
+        "name": "Risk Prioritization and Treatment Plan",
+        "description": "Demonstrates that risks are prioritized based on assessed inherent risk levels and that treatment plans are developed and resourced proportionately.",
+        "whatGoodLooksLike": [
+          "Risks are ranked by inherent risk score and treatment plans are prioritized by residual risk and business impact",
+          "Resource allocation decisions reference risk assessment outputs as justification",
+          "Treatment plans include timelines, responsible parties, and measurable success criteria"
+        ],
+        "commonGaps": [
+          "Risk assessments are completed but not translated into prioritized treatment plans",
+          "All risks are treated with equal priority regardless of assessed severity",
+          "No documented linkage between risk assessment results and budget or resource allocation decisions"
+        ],
+        "suggestedSources": [
+          "Risk treatment plan or POA&M prioritized by risk score",
+          "Cybersecurity budget justification documents referencing risk assessments",
+          "Management risk briefing materials showing prioritized risk dashboard"
+        ],
+        "format": "Spreadsheet | PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-05-E2",
+        "name": "Threat Models for Critical Systems",
+        "description": "Demonstrates that threat modeling is performed for critical systems and applications to understand risk exposure and identify appropriate controls.",
+        "whatGoodLooksLike": [
+          "Threat models exist for critical systems using structured methodologies (e.g., STRIDE, PASTA, attack trees)",
+          "Models identify relevant threats, attack vectors, and existing controls with gap analysis",
+          "Threat models are updated when significant system changes occur or new threats emerge"
+        ],
+        "commonGaps": [
+          "Threat modeling is performed only for new development projects and not for existing critical systems",
+          "Models are informal whiteboard exercises without documentation or follow-through",
+          "No process to update threat models as the threat landscape evolves"
+        ],
+        "suggestedSources": [
+          "Threat model documents for critical systems and applications",
+          "Architecture risk analysis reports",
+          "MITRE ATT&CK-based threat analysis for key systems"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-05-E3",
+        "name": "Risk-Based Resource Allocation Evidence",
+        "description": "Demonstrates that cybersecurity investment and staffing decisions are driven by risk assessment outputs and prioritized risk posture.",
+        "whatGoodLooksLike": [
+          "Annual cybersecurity budget proposals reference risk assessment findings to justify investments",
+          "Staffing and tool acquisition decisions are linked to risk reduction targets",
+          "Management reviews and approves resource allocations with visibility into risk-based prioritization"
+        ],
+        "commonGaps": [
+          "Cybersecurity budgets are based on prior year spending rather than current risk posture",
+          "Investment decisions are driven by vendor marketing or compliance checklists rather than risk analysis",
+          "No documented process connecting risk assessment outputs to resource allocation decisions"
+        ],
+        "suggestedSources": [
+          "Cybersecurity budget proposals with risk-based justifications",
+          "Board or executive risk committee presentations on security investment priorities",
+          "Capital expenditure requests linked to risk register entries"
+        ],
+        "format": "PDF/DOCX | Spreadsheet",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask the CISO or risk manager to explain how the most recent budget cycle was influenced by risk assessment results.",
+      "Verify that threat models exist for the organization's most critical systems and are not limited to development projects.",
+      "Check whether risk prioritization accounts for compensating controls and residual risk, not just inherent risk.",
+      "Look for evidence that risk-based prioritization drives operational decisions such as patching order, monitoring intensity, and control deployment."
+    ]
+  },
+  "ID.RA-06": {
+    "subcategoryId": "ID.RA-06",
+    "categoryId": "ID.RA",
+    "functionId": "ID",
+    "title": "Risk Response Selection and Tracking",
+    "assessorFocus": "Confirm that risk responses (accept, transfer, mitigate, avoid) are formally chosen, prioritized, planned, tracked through implementation, and communicated to affected stakeholders with documented rationale.",
+    "evidenceItems": [
+      {
+        "id": "ID.RA-06-E1",
+        "name": "Risk Response Decision Records",
+        "description": "Demonstrates that for each identified risk, a formal response decision (accept, mitigate, transfer, avoid) has been made with documented rationale and appropriate authority approval.",
+        "whatGoodLooksLike": [
+          "Each risk in the register has a documented response decision with rationale and approving authority identified",
+          "Risk acceptance decisions are approved at appropriate management levels based on risk severity",
+          "Compensating controls are documented when primary mitigation is not feasible"
+        ],
+        "commonGaps": [
+          "Risk response decisions are implied but not formally documented or approved",
+          "Risk acceptance is the default response without deliberate analysis or appropriate-level approval",
+          "No criteria defined for when each response type (accept, transfer, mitigate, avoid) is appropriate"
+        ],
+        "suggestedSources": [
+          "Risk register entries showing response decisions and approval signatures",
+          "Risk acceptance forms with management signatures and expiration dates",
+          "Risk committee meeting minutes documenting response decisions"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-06-E2",
+        "name": "Plan of Action and Milestones (POA&M)",
+        "description": "Demonstrates that planned risk mitigations are tracked through a POA&M or equivalent mechanism with milestones, responsible parties, and progress updates.",
+        "whatGoodLooksLike": [
+          "POA&M entries link to specific risk register items with defined milestones, due dates, and responsible parties",
+          "Progress is updated at least monthly with documented status and any schedule changes explained",
+          "Overdue items are escalated to management with revised timelines and risk impact assessments"
+        ],
+        "commonGaps": [
+          "POA&M exists but is not regularly updated or reviewed by management",
+          "Milestones are vague with no measurable completion criteria",
+          "Overdue items accumulate without escalation or revised risk acceptance"
+        ],
+        "suggestedSources": [
+          "POA&M or remediation tracker export with status history",
+          "GRC platform risk treatment tracking dashboards",
+          "Management review meeting minutes for POA&M progress"
+        ],
+        "format": "Spreadsheet | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-06-E3",
+        "name": "Stakeholder Communication of Risk Responses",
+        "description": "Demonstrates that planned risk responses are communicated to affected stakeholders in priority order, including risk owners, system owners, and senior leadership.",
+        "whatGoodLooksLike": [
+          "Stakeholders are notified of risk response decisions and their responsibilities through formal channels",
+          "Communication is prioritized based on risk severity and stakeholder impact",
+          "Regular risk posture reports are provided to senior leadership and governance bodies"
+        ],
+        "commonGaps": [
+          "Risk response plans are developed but not communicated to affected system or business owners",
+          "Communication is limited to the security team without reaching business stakeholders",
+          "No regular cadence of risk posture reporting to senior leadership"
+        ],
+        "suggestedSources": [
+          "Risk communication records (emails, meeting minutes, dashboards)",
+          "Executive risk briefing presentations and board reports",
+          "Risk owner notification and acknowledgment records"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review a sample of risk acceptance decisions to verify they were approved at the appropriate management level and include expiration or review dates.",
+      "Trace several POA&M items from creation through closure to verify that milestones are realistic and progress tracking is genuine.",
+      "Ask how stakeholders are informed when risk response plans change or when new risks are identified that affect their areas.",
+      "Verify that risk transfer decisions (e.g., cyber insurance) are informed by actual risk assessment outputs, not just standard coverage."
+    ]
+  },
+  "ID.RA-07": {
+    "subcategoryId": "ID.RA-07",
+    "categoryId": "ID.RA",
+    "functionId": "ID",
+    "title": "Change and Exception Risk Management",
+    "assessorFocus": "Verify that changes and exceptions are formally documented, assessed for cybersecurity risk impact, approved through defined authority, and tracked with periodic review of previously accepted risks.",
+    "evidenceItems": [
+      {
+        "id": "ID.RA-07-E1",
+        "name": "Change Management Records with Risk Assessment",
+        "description": "Demonstrates that proposed changes undergo formal risk assessment including cybersecurity impact analysis, testing, and approval before implementation.",
+        "whatGoodLooksLike": [
+          "Change requests include documented risk impact assessment covering confidentiality, integrity, and availability",
+          "Changes are tested in non-production environments and include rollback plans",
+          "Change advisory board (CAB) or equivalent reviews and approves changes with documented cybersecurity input"
+        ],
+        "commonGaps": [
+          "Change requests are approved without cybersecurity risk assessment or security team involvement",
+          "Emergency changes bypass the risk assessment process with no post-implementation review",
+          "Rollback plans are not required or are not tested before implementation"
+        ],
+        "suggestedSources": [
+          "Change management system records with risk assessment fields",
+          "CAB meeting minutes showing security review of proposed changes",
+          "Change testing and rollback plan documentation"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.RA-07-E2",
+        "name": "Security Exception Request and Approval Records",
+        "description": "Demonstrates a formal process for requesting, risk-assessing, approving, and tracking exceptions to security policies and standards.",
+        "whatGoodLooksLike": [
+          "Exception requests document the specific policy or control deviation, business justification, and compensating controls",
+          "Risk assessment is performed for each exception with residual risk documented",
+          "Exceptions have defined expiration dates and are approved at an authority level commensurate with risk"
+        ],
+        "commonGaps": [
+          "Exceptions are granted informally without documented risk assessment or approval",
+          "Approved exceptions have no expiration date and persist indefinitely without review",
+          "No centralized tracking of active exceptions across the organization"
+        ],
+        "suggestedSources": [
+          "Security exception request forms and approval records",
+          "Exception register or GRC platform tracking dashboard",
+          "Risk committee minutes showing exception review decisions"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-07-E3",
+        "name": "Periodic Review of Accepted Risks and Exceptions",
+        "description": "Demonstrates that previously accepted risks and approved exceptions are periodically reviewed to determine if conditions have changed and the acceptance or exception remains appropriate.",
+        "whatGoodLooksLike": [
+          "Accepted risks and exceptions are reviewed at least annually or when significant changes occur",
+          "Reviews reassess the risk in light of current threat landscape, business context, and compensating control effectiveness",
+          "Expired or no-longer-justified exceptions are remediated or formally re-approved"
+        ],
+        "commonGaps": [
+          "Accepted risks are recorded once and never revisited",
+          "No defined trigger or schedule for reviewing previously accepted risks",
+          "Expired exceptions remain active because no one tracks expiration dates"
+        ],
+        "suggestedSources": [
+          "Risk review meeting minutes or periodic reassessment records",
+          "Exception expiration tracking reports",
+          "Updated risk register entries showing reassessment dates and outcomes"
+        ],
+        "format": "PDF/DOCX | Spreadsheet",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review a sample of recent changes to verify that cybersecurity risk was assessed before approval, not just after implementation.",
+      "Ask for the complete list of active security exceptions and check whether any have expired without review or renewal.",
+      "Verify that emergency changes undergo post-implementation risk review even when pre-implementation assessment is abbreviated.",
+      "Check whether the organization distinguishes between risk acceptances (with ongoing monitoring) and exceptions (with expiration dates and compensating controls)."
+    ]
+  },
+  "ID.RA-08": {
+    "subcategoryId": "ID.RA-08",
+    "categoryId": "ID.RA",
+    "functionId": "ID",
+    "title": "Vulnerability Disclosure Processes",
+    "assessorFocus": "Confirm the organization has established processes for receiving, analyzing, and responding to vulnerability disclosures from external researchers, suppliers, customers, partners, and government entities.",
+    "evidenceItems": [
+      {
+        "id": "ID.RA-08-E1",
+        "name": "Vulnerability Disclosure Policy and Program",
+        "description": "Demonstrates a formal, published vulnerability disclosure policy that defines how external parties can report vulnerabilities and how the organization will respond.",
+        "whatGoodLooksLike": [
+          "Published VDP accessible on the organization's website with clear submission channels and scope",
+          "Policy defines response timelines, safe harbor provisions for good-faith researchers, and disclosure coordination process",
+          "Program is staffed with assigned analysts responsible for triage, validation, and response"
+        ],
+        "commonGaps": [
+          "No published vulnerability disclosure policy exists, leaving external reporters without a clear channel",
+          "Policy exists but lacks response timeline commitments or safe harbor language",
+          "No dedicated personnel are assigned to handle incoming vulnerability disclosures"
+        ],
+        "suggestedSources": [
+          "Published vulnerability disclosure policy (website or security.txt file)",
+          "VDP program charter and operational procedures",
+          "Bug bounty platform configuration (if applicable)"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-08-E2",
+        "name": "Vulnerability Disclosure Handling Records",
+        "description": "Demonstrates that received vulnerability disclosures are triaged, analyzed for impact, and responded to within defined timelines.",
+        "whatGoodLooksLike": [
+          "Each disclosure is logged with receipt timestamp, triage priority, analyst assignment, and response timeline",
+          "Impact analysis is documented for each validated disclosure with remediation plan",
+          "Reporter receives acknowledgment and status updates throughout the process"
+        ],
+        "commonGaps": [
+          "Disclosures are received sporadically and handled ad hoc without consistent logging",
+          "No formal impact analysis is performed; disclosures are forwarded to development without assessment",
+          "Reporters receive no acknowledgment or follow-up communication"
+        ],
+        "suggestedSources": [
+          "VDP case management system or ticketing records",
+          "Bug bounty platform submission and response history",
+          "Correspondence records with vulnerability reporters"
+        ],
+        "format": "System export | Spreadsheet",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.RA-08-E3",
+        "name": "Supplier Vulnerability Information Sharing Agreements",
+        "description": "Demonstrates that vulnerability information sharing between the organization and its suppliers is governed by contractual agreements with defined rules and protocols.",
+        "whatGoodLooksLike": [
+          "Contracts with critical suppliers include vulnerability notification requirements with defined timelines",
+          "Bidirectional sharing protocols define what information is shared, classification levels, and handling requirements",
+          "Compliance with sharing obligations is monitored and included in supplier performance reviews"
+        ],
+        "commonGaps": [
+          "Supplier contracts do not include vulnerability notification or disclosure requirements",
+          "Sharing is one-directional (supplier to organization) with no obligation for the organization to notify suppliers of relevant vulnerabilities",
+          "No monitoring or enforcement of supplier vulnerability notification obligations"
+        ],
+        "suggestedSources": [
+          "Supplier contract clauses related to vulnerability notification",
+          "Vulnerability sharing agreement or protocol documents",
+          "Records of vulnerability information exchanges with suppliers"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Test the vulnerability disclosure process by checking that the submission channel is functional and clearly documented on the organization's website.",
+      "Review a sample of received disclosures to verify that they were acknowledged, triaged, and resolved within stated timelines.",
+      "Ask how the organization coordinates disclosure timing with reporters, especially for vulnerabilities affecting customers or the public.",
+      "Verify that supplier contracts include specific vulnerability notification clauses with defined response timelines."
+    ]
+  },
+  "ID.RA-09": {
+    "subcategoryId": "ID.RA-09",
+    "categoryId": "ID.RA",
+    "functionId": "ID",
+    "title": "Hardware and Software Authenticity Assessment",
+    "assessorFocus": "Verify the organization assesses the authenticity and integrity of hardware and software prior to acquisition and deployment, including supply chain provenance verification and integrity validation.",
+    "evidenceItems": [
+      {
+        "id": "ID.RA-09-E1",
+        "name": "Pre-Acquisition Security Assessment Procedures",
+        "description": "Demonstrates formal procedures for evaluating the cybersecurity posture, authenticity, and integrity of hardware and software before procurement and deployment.",
+        "whatGoodLooksLike": [
+          "Procurement process includes security evaluation criteria for critical technology products and services",
+          "Assessment covers vendor security practices, product integrity verification, and known vulnerability review",
+          "Results of pre-acquisition assessments are documented and factor into procurement decisions"
+        ],
+        "commonGaps": [
+          "Procurement decisions are based solely on cost and functionality with no security assessment",
+          "Security review occurs only for high-value purchases with no defined threshold or criteria",
+          "Pre-acquisition assessments are performed by procurement staff without security expertise"
+        ],
+        "suggestedSources": [
+          "Procurement security evaluation checklist or assessment template",
+          "Vendor security questionnaire responses and assessment reports",
+          "Procurement policy sections addressing security requirements"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-09-E2",
+        "name": "Software Integrity Verification Records",
+        "description": "Demonstrates that software authenticity and integrity are verified through cryptographic validation, code signing verification, or SBOM analysis before deployment.",
+        "whatGoodLooksLike": [
+          "Software downloads are verified against publisher-provided hashes or digital signatures before installation",
+          "SBOMs are obtained and reviewed for critical software to verify component provenance",
+          "Automated pipeline checks validate software integrity as part of the deployment process"
+        ],
+        "commonGaps": [
+          "Software is downloaded and installed without hash or signature verification",
+          "SBOMs are not requested from vendors or generated for internally developed software",
+          "Integrity verification is manual and inconsistently applied across the organization"
+        ],
+        "suggestedSources": [
+          "Software deployment logs showing integrity verification steps",
+          "SBOM records for critical third-party and custom software",
+          "Code signing certificate management and verification records"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.RA-09-E3",
+        "name": "Hardware Supply Chain Provenance Verification",
+        "description": "Demonstrates that hardware authenticity and provenance are verified, particularly for critical infrastructure components, to mitigate supply chain tampering risks.",
+        "whatGoodLooksLike": [
+          "Critical hardware is procured from authorized resellers or directly from manufacturers with chain of custody documentation",
+          "Hardware is inspected upon receipt for signs of tampering or counterfeit components",
+          "Firmware integrity is verified against manufacturer-published baselines before deployment"
+        ],
+        "commonGaps": [
+          "Hardware is procured from unauthorized or unvetted resellers without provenance verification",
+          "No physical inspection or integrity verification process exists for received hardware",
+          "Firmware versions are not validated against manufacturer baselines prior to deployment"
+        ],
+        "suggestedSources": [
+          "Approved supplier and reseller list with authorization verification records",
+          "Hardware receiving inspection checklists and logs",
+          "Firmware integrity verification records"
+        ],
+        "format": "PDF/DOCX | Spreadsheet",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask the organization to demonstrate the end-to-end process for a recent critical hardware or software acquisition, from security evaluation through integrity verification.",
+      "Verify that the organization maintains SBOMs for critical software and knows how to use them for vulnerability management.",
+      "Check whether the organization has processes to detect counterfeit hardware, especially for network equipment and infrastructure components.",
+      "Assess whether firmware integrity validation is part of the standard deployment process or only performed on an ad hoc basis."
+    ]
+  },
+  "ID.RA-10": {
+    "subcategoryId": "ID.RA-10",
+    "categoryId": "ID.RA",
+    "functionId": "ID",
+    "title": "Critical Supplier Pre-Acquisition Assessment",
+    "assessorFocus": "Confirm that critical suppliers undergo formal cybersecurity risk assessments prior to acquisition, covering the supplier's security posture, supply chain practices, and alignment with organizational cybersecurity requirements.",
+    "evidenceItems": [
+      {
+        "id": "ID.RA-10-E1",
+        "name": "Supplier Due Diligence and Risk Assessment Records",
+        "description": "Demonstrates that critical suppliers undergo formal cybersecurity due diligence and risk assessment before contracts are executed.",
+        "whatGoodLooksLike": [
+          "Due diligence includes review of supplier security certifications, audit reports, and incident history",
+          "Risk assessments evaluate the supplier's cybersecurity controls, data handling practices, and supply chain management",
+          "Assessment results are documented and factor into the go/no-go procurement decision"
+        ],
+        "commonGaps": [
+          "Due diligence is limited to financial and operational review without cybersecurity assessment",
+          "Security questionnaires are sent but responses are not validated or assessed by qualified personnel",
+          "Assessments are performed only for new suppliers, not when existing suppliers are engaged for new critical services"
+        ],
+        "suggestedSources": [
+          "Completed supplier security assessment questionnaires and evaluation reports",
+          "Supplier SOC 2 or ISO 27001 certification review records",
+          "TPRM platform assessment records for critical suppliers"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-10-E2",
+        "name": "Critical Supplier Identification Criteria",
+        "description": "Demonstrates formally defined criteria for identifying which suppliers are critical and therefore require pre-acquisition cybersecurity assessment.",
+        "whatGoodLooksLike": [
+          "Criteria consider data access, system integration, business dependency, and supply chain position",
+          "Critical supplier designation triggers enhanced due diligence requirements before procurement",
+          "Criteria are documented, approved by leadership, and consistently applied"
+        ],
+        "commonGaps": [
+          "No formal criteria exist for distinguishing critical from non-critical suppliers",
+          "Criticality is determined subjectively by individual procurement officers",
+          "Only IT vendors are considered for criticality assessment, while operational and professional service suppliers are excluded"
+        ],
+        "suggestedSources": [
+          "Supplier criticality assessment methodology document",
+          "TPRM tiering criteria and classification matrix",
+          "Procurement policy sections defining supplier assessment requirements"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.RA-10-E3",
+        "name": "Supplier Supply Chain Risk Evaluation",
+        "description": "Demonstrates that pre-acquisition assessments evaluate the supplier's own supply chain practices and fourth-party risk management capabilities.",
+        "whatGoodLooksLike": [
+          "Assessment questionnaires include questions about the supplier's subcontractor and fourth-party risk management",
+          "Critical suppliers provide evidence of their own supply chain security practices and vendor management programs",
+          "Contractual requirements flow down security obligations to the supplier's subcontractors"
+        ],
+        "commonGaps": [
+          "Assessments focus only on the direct supplier without considering their supply chain",
+          "No visibility into fourth-party risks or subcontractor security practices",
+          "Contracts do not require suppliers to manage or disclose their subcontractor relationships"
+        ],
+        "suggestedSources": [
+          "Supplier assessment questionnaire sections on subcontractor and supply chain management",
+          "Supplier-provided documentation of their vendor management program",
+          "Contract clauses requiring supply chain security flow-down"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request the list of suppliers classified as critical and verify it aligns with the organization's actual business dependencies.",
+      "Review completed pre-acquisition assessments for critical suppliers to verify depth and quality, not just checkbox completion.",
+      "Ask how the organization handles situations where a critical supplier's risk assessment reveals significant cybersecurity deficiencies.",
+      "Verify that supply chain risk is evaluated, not just the direct supplier's own security posture."
+    ]
+  },
+  "ID.IM-01": {
+    "subcategoryId": "ID.IM-01",
+    "categoryId": "ID.IM",
+    "functionId": "ID",
+    "title": "Improvement from Evaluations",
+    "assessorFocus": "Verify the organization identifies cybersecurity improvements from self-assessments, third-party audits, independent evaluations, and automated compliance monitoring, and that identified improvements are tracked to implementation.",
+    "evidenceItems": [
+      {
+        "id": "ID.IM-01-E1",
+        "name": "Self-Assessment and Internal Audit Reports",
+        "description": "Demonstrates the organization conducts regular self-assessments or internal audits of its cybersecurity program with findings that identify areas for improvement.",
+        "whatGoodLooksLike": [
+          "Self-assessments are conducted at least annually against a recognized framework (e.g., NIST CSF, CIS Controls)",
+          "Findings are documented with severity ratings, root cause analysis, and recommended improvements",
+          "Assessment scope covers critical services and accounts for current threats and TTPs"
+        ],
+        "commonGaps": [
+          "Self-assessments are superficial compliance checklists without meaningful analysis of control effectiveness",
+          "Assessments are conducted irregularly or only when required by external parties",
+          "Findings lack root cause analysis, making it difficult to identify systemic improvements"
+        ],
+        "suggestedSources": [
+          "Internal cybersecurity audit reports and self-assessment results",
+          "Framework maturity assessment scorecards (e.g., NIST CSF profile comparisons)",
+          "Internal audit department cybersecurity review reports"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.IM-01-E2",
+        "name": "Third-Party Assessment and Independent Audit Reports",
+        "description": "Demonstrates the organization invests in independent third-party assessments to objectively evaluate cybersecurity program effectiveness.",
+        "whatGoodLooksLike": [
+          "Independent assessments are conducted at least annually by qualified third parties",
+          "Reports include actionable findings prioritized by risk with remediation recommendations",
+          "Organization demonstrates a trend of addressing findings from prior assessments"
+        ],
+        "commonGaps": [
+          "Third-party assessments are performed only when required by regulators or customers",
+          "Findings from external assessments are received but not formally tracked to remediation",
+          "Same findings appear repeatedly across multiple assessment cycles without remediation"
+        ],
+        "suggestedSources": [
+          "External penetration test and security assessment reports",
+          "SOC 2 or ISO 27001 audit reports with findings",
+          "Regulatory examination findings and responses"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.IM-01-E3",
+        "name": "Improvement Tracking from Evaluation Findings",
+        "description": "Demonstrates that improvement opportunities identified from evaluations are tracked through implementation with accountability and progress monitoring.",
+        "whatGoodLooksLike": [
+          "Findings from all evaluation sources feed into a centralized improvement tracker or POA&M",
+          "Each improvement item has an owner, target date, and defined completion criteria",
+          "Progress is reviewed by management at least quarterly with escalation of overdue items"
+        ],
+        "commonGaps": [
+          "Evaluation findings are documented in reports but not transferred to a tracking system",
+          "Improvement items lack assigned owners or target completion dates",
+          "No management oversight or regular review of improvement implementation progress"
+        ],
+        "suggestedSources": [
+          "Improvement tracker or POA&M showing evaluation-sourced items",
+          "Management review meeting minutes for improvement progress",
+          "GRC platform corrective action workflow records"
+        ],
+        "format": "Spreadsheet | System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Compare findings from prior year assessments to current year results to verify that previously identified issues were addressed.",
+      "Ask how the organization selects the scope and depth of self-assessments to ensure they cover critical services and emerging risks.",
+      "Verify that automated compliance monitoring tools are configured to check controls continuously, not just during assessment periods.",
+      "Check whether the organization distinguishes between compliance findings and effectiveness findings in its evaluations."
+    ]
+  },
+  "ID.IM-02": {
+    "subcategoryId": "ID.IM-02",
+    "categoryId": "ID.IM",
+    "functionId": "ID",
+    "title": "Improvement from Security Tests and Exercises",
+    "assessorFocus": "Confirm the organization identifies cybersecurity improvements from security tests and exercises including penetration tests, tabletop exercises, simulations, red team engagements, and exercises conducted with suppliers and third parties.",
+    "evidenceItems": [
+      {
+        "id": "ID.IM-02-E1",
+        "name": "Penetration Test and Red Team Engagement Reports",
+        "description": "Demonstrates regular penetration testing and red team exercises targeting high-risk systems with findings documented and tracked to remediation.",
+        "whatGoodLooksLike": [
+          "Penetration tests are conducted at least annually for high-risk systems with scope approved by leadership",
+          "Reports detail exploitation paths, business impact, and prioritized remediation recommendations",
+          "Findings are tracked in the remediation system with defined SLAs and closure verification"
+        ],
+        "commonGaps": [
+          "Penetration tests are limited to external network scans without internal or application-layer testing",
+          "Test scope excludes critical systems due to business concerns without risk-based justification",
+          "Findings are reported but not formally tracked to remediation with verified closure"
+        ],
+        "suggestedSources": [
+          "Penetration test and red team engagement reports",
+          "Remediation tracking records for pentest findings",
+          "Scope approval documentation and rules of engagement"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.IM-02-E2",
+        "name": "Tabletop Exercise and Simulation After-Action Reports",
+        "description": "Demonstrates that the organization conducts tabletop exercises and simulations for incident response, business continuity, and disaster recovery, with lessons learned driving improvements.",
+        "whatGoodLooksLike": [
+          "Exercises are conducted at least annually with participation from cross-functional stakeholders including senior executives",
+          "After-action reports document observed gaps, lessons learned, and specific improvement actions",
+          "Improvement actions from exercises are assigned owners, deadlines, and tracked to completion"
+        ],
+        "commonGaps": [
+          "Exercises are limited to the IT or security team without involvement of business leaders, legal, or HR",
+          "After-action reports identify issues but do not assign specific improvement actions or owners",
+          "Exercises use generic scenarios that do not reflect the organization's actual threat landscape"
+        ],
+        "suggestedSources": [
+          "Tabletop exercise scenarios, participant lists, and after-action reports",
+          "Business continuity and disaster recovery exercise reports",
+          "Improvement action items derived from exercises with tracking status"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.IM-02-E3",
+        "name": "Supplier and Third-Party Joint Exercise Records",
+        "description": "Demonstrates that security tests and exercises are conducted in coordination with critical suppliers and third parties to validate cross-organizational response capabilities.",
+        "whatGoodLooksLike": [
+          "Joint exercises with critical suppliers are conducted at least annually covering supply chain disruption scenarios",
+          "Exercise findings identify improvements needed in cross-organizational communication and coordination",
+          "Supplier participation and improvement commitments are tracked and followed up"
+        ],
+        "commonGaps": [
+          "No joint exercises are conducted with suppliers; testing is purely internal",
+          "Supplier participation in exercises is requested but not required or tracked",
+          "Supply chain disruption scenarios are not included in the exercise program"
+        ],
+        "suggestedSources": [
+          "Joint exercise reports with supplier participants documented",
+          "Supply chain incident response exercise scenarios and after-action reviews",
+          "Contractual requirements for supplier participation in exercises"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review after-action reports from recent exercises to verify that identified improvements were assigned, tracked, and implemented.",
+      "Ask how exercise scenarios are developed and whether they incorporate current threat intelligence and real-world incident trends.",
+      "Verify that penetration test scope covers the organization's most critical systems and is not limited by convenience.",
+      "Check whether the organization conducts exercises with critical suppliers and how supplier-side improvements are tracked."
+    ]
+  },
+  "ID.IM-03": {
+    "subcategoryId": "ID.IM-03",
+    "categoryId": "ID.IM",
+    "functionId": "ID",
+    "title": "Improvement from Operational Execution",
+    "assessorFocus": "Verify the organization identifies cybersecurity improvements from the execution of day-to-day operational processes, procedures, and activities, including lessons learned from incidents, operational metrics, and supplier collaboration.",
+    "evidenceItems": [
+      {
+        "id": "ID.IM-03-E1",
+        "name": "Lessons Learned and Post-Incident Review Records",
+        "description": "Demonstrates that the organization conducts structured lessons-learned reviews after incidents and significant operational events, with findings driving process improvements.",
+        "whatGoodLooksLike": [
+          "Post-incident reviews are conducted for all significant incidents with documented root cause analysis and improvement actions",
+          "Lessons learned sessions include cross-functional participants and, where relevant, supplier representatives",
+          "Improvement actions are tracked to implementation with verified effectiveness"
+        ],
+        "commonGaps": [
+          "Post-incident reviews are conducted only for major incidents, missing improvement opportunities from smaller events",
+          "Lessons learned are documented but not translated into specific process or control changes",
+          "Suppliers are not included in lessons-learned sessions even when they contributed to the incident"
+        ],
+        "suggestedSources": [
+          "Post-incident review reports with improvement action items",
+          "Lessons learned meeting minutes and participant records",
+          "Improvement implementation tracking for incident-driven changes"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.IM-03-E2",
+        "name": "Operational Cybersecurity Metrics and Performance Reports",
+        "description": "Demonstrates that the organization collects and analyzes operational cybersecurity metrics to identify trends, inefficiencies, and improvement opportunities.",
+        "whatGoodLooksLike": [
+          "Defined set of key performance indicators (KPIs) and key risk indicators (KRIs) are collected and reported regularly",
+          "Metrics cover operational areas such as MTTR, patch compliance, alert volume, false positive rates, and access review completion",
+          "Metrics are analyzed for trends and used to justify process improvements and resource requests"
+        ],
+        "commonGaps": [
+          "Metrics are collected but not analyzed for trends or used to drive improvement decisions",
+          "Only compliance-oriented metrics are tracked while operational effectiveness metrics are absent",
+          "No defined thresholds or targets for metrics that would trigger improvement actions"
+        ],
+        "suggestedSources": [
+          "Security operations dashboard and periodic metric reports",
+          "KPI/KRI definition document with targets and thresholds",
+          "Management presentations using metrics to justify improvements"
+        ],
+        "format": "System export | PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.IM-03-E3",
+        "name": "Annual Policy and Procedure Review Records",
+        "description": "Demonstrates that cybersecurity policies, processes, and procedures are reviewed at least annually to incorporate lessons learned from operational execution.",
+        "whatGoodLooksLike": [
+          "All cybersecurity policies and procedures have a defined review cycle with documented review and approval dates",
+          "Review process incorporates input from operational teams, incident findings, and metric trends",
+          "Changes made during reviews are tracked with rationale linked to lessons learned or operational findings"
+        ],
+        "commonGaps": [
+          "Policies are reviewed on paper but no substantive changes are made to reflect operational lessons",
+          "Review cycle is not consistently followed, with some policies years overdue for review",
+          "Operational staff who execute the procedures are not consulted during the review process"
+        ],
+        "suggestedSources": [
+          "Policy review logs showing review dates, reviewers, and changes made",
+          "Policy version history with change annotations",
+          "Procedure update records linked to operational improvement findings"
+        ],
+        "format": "PDF/DOCX | Spreadsheet",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask for specific examples of operational improvements that were implemented as a result of lessons learned from incidents or operational metrics.",
+      "Review the last two annual policy review cycles to verify that reviews resulted in meaningful updates, not just date changes.",
+      "Check whether the organization conducts collaborative lessons-learned sessions with critical suppliers on a regular basis.",
+      "Verify that operational metrics have defined thresholds that trigger investigation and improvement action when breached."
+    ]
+  },
+  "ID.IM-04": {
+    "subcategoryId": "ID.IM-04",
+    "categoryId": "ID.IM",
+    "functionId": "ID",
+    "title": "Cybersecurity Plan Establishment and Maintenance",
+    "assessorFocus": "Confirm that incident response plans, business continuity plans, disaster recovery plans, vulnerability management plans, and other cybersecurity plans are formally established, communicated to responsible parties, maintained current, and improved based on lessons learned.",
+    "evidenceItems": [
+      {
+        "id": "ID.IM-04-E1",
+        "name": "Cybersecurity Contingency Plans",
+        "description": "Demonstrates formally established and approved cybersecurity plans including incident response, business continuity, disaster recovery, and vulnerability management plans.",
+        "whatGoodLooksLike": [
+          "Plans are formally documented, approved by senior leadership, and cover incident response, BC/DR, and vulnerability management",
+          "Plans include contact information, communication protocols, escalation criteria, and scenario-specific procedures",
+          "Plans address both common and sector-specific scenarios relevant to the organization's threat profile"
+        ],
+        "commonGaps": [
+          "Plans exist for incident response but business continuity and disaster recovery plans are missing or outdated",
+          "Plans are generic templates that have not been tailored to the organization's specific environment and risks",
+          "Contact information and escalation procedures are outdated or incomplete"
+        ],
+        "suggestedSources": [
+          "Incident response plan, business continuity plan, disaster recovery plan documents",
+          "Vulnerability management plan",
+          "Plan approval records and distribution lists"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "5 years"
+      },
+      {
+        "id": "ID.IM-04-E2",
+        "name": "Plan Communication and Training Records",
+        "description": "Demonstrates that cybersecurity plans are communicated to all responsible parties and that personnel are trained on their roles and responsibilities within the plans.",
+        "whatGoodLooksLike": [
+          "Plans are distributed to all personnel with defined roles and receipt acknowledgment is recorded",
+          "Training on plan execution is conducted at least annually for personnel with incident response or BC/DR responsibilities",
+          "Plan updates are communicated promptly to affected parties when changes occur"
+        ],
+        "commonGaps": [
+          "Plans are stored in a repository but not actively distributed or communicated to responsible parties",
+          "Training on plan execution is limited to the security team and does not include business stakeholders or executives",
+          "Plan updates are published without notification to personnel whose roles are affected"
+        ],
+        "suggestedSources": [
+          "Plan distribution and acknowledgment records",
+          "Training completion records for incident response and BC/DR exercises",
+          "Communication records for plan updates and changes"
+        ],
+        "format": "PDF/DOCX | System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "ID.IM-04-E3",
+        "name": "Plan Review and Improvement Records",
+        "description": "Demonstrates that cybersecurity plans are reviewed and updated at least annually or when significant changes or improvement needs are identified, incorporating lessons learned from exercises and incidents.",
+        "whatGoodLooksLike": [
+          "Plans are reviewed at least annually with documented review dates, reviewers, and changes made",
+          "Plan updates incorporate lessons learned from incidents, exercises, and operational experience",
+          "Significant organizational changes (mergers, new systems, regulatory changes) trigger out-of-cycle plan reviews"
+        ],
+        "commonGaps": [
+          "Plans have not been reviewed or updated in over 12 months",
+          "Reviews are cosmetic (date changes only) without substantive incorporation of lessons learned",
+          "No trigger mechanism exists for out-of-cycle reviews when significant changes occur"
+        ],
+        "suggestedSources": [
+          "Plan version history showing review dates and change summaries",
+          "After-action reports with plan improvement recommendations cross-referenced to plan updates",
+          "Change log documenting specific modifications and rationale"
+        ],
+        "format": "PDF/DOCX | Spreadsheet",
+        "retentionPeriod": "5 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that all required cybersecurity plans exist, are current, and are approved by appropriate leadership -- not just the incident response plan.",
+      "Check whether plan contact information and escalation procedures are current by spot-checking a sample of entries.",
+      "Ask how lessons learned from incidents and exercises are formally incorporated into plan updates, looking for specific examples.",
+      "Verify that the vulnerability management plan is a standalone document or clearly defined section, not just ad hoc patching procedures."
+    ]
+  }
+}

@@ -1,0 +1,940 @@
+{
+  "DE.CM-01": {
+    "subcategoryId": "DE.CM-01",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "Network and Network Services Monitoring",
+    "assessorFocus": "Verify that the organization continuously monitors networks and network services for anomalies, unauthorized connections, and deviations from established baselines. Confirm that monitoring covers wired, wireless, DNS, BGP, and other critical network services.",
+    "evidenceItems": [
+      {
+        "id": "DE.CM-01-E1",
+        "name": "Network Monitoring Tool Configuration and Alert Logs",
+        "description": "Demonstrates that network monitoring tools (IDS/IPS, NDR, NetFlow analyzers) are actively configured, tuned, and generating alerts for potentially adverse events across all network segments.",
+        "whatGoodLooksLike": [
+          "IDS/IPS and NDR tools cover all network segments including DMZ, internal, and cloud VPCs with current rulesets updated within the last 30 days",
+          "Alert logs show continuous monitoring activity with evidence of triage and disposition of flagged events",
+          "Baseline network flow profiles are established and deviations trigger automated alerts"
+        ],
+        "commonGaps": [
+          "Monitoring covers only perimeter networks while internal east-west traffic and cloud environments are unmonitored",
+          "IDS/IPS signatures and detection rules are outdated by more than 90 days",
+          "No established network traffic baselines exist, making anomaly detection ineffective"
+        ],
+        "suggestedSources": [
+          "IDS/IPS management console exports (e.g., Suricata, Snort, Zeek)",
+          "NDR platform dashboards and alert summaries (e.g., Darktrace, ExtraHop)",
+          "NetFlow/sFlow collector reports showing monitored segments"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.CM-01-E2",
+        "name": "Wireless Network Scanning and Rogue Detection Reports",
+        "description": "Demonstrates that the organization actively scans for unauthorized wireless access points and rogue networks within facilities.",
+        "whatGoodLooksLike": [
+          "Scheduled wireless scans are conducted at least quarterly with documented results and remediation actions for rogue devices",
+          "Wireless intrusion prevention system (WIPS) is deployed and actively alerting on unauthorized SSIDs",
+          "Scan coverage includes all physical locations where sensitive data is processed or stored"
+        ],
+        "commonGaps": [
+          "No wireless scanning program exists or scans are performed only during annual assessments",
+          "Rogue access point detections are logged but never investigated or remediated",
+          "Remote offices and branch locations are excluded from wireless monitoring scope"
+        ],
+        "suggestedSources": [
+          "WIPS console exports and rogue AP detection logs",
+          "Wireless site survey reports with identified anomalies",
+          "Remediation tickets for detected rogue wireless devices"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.CM-01-E3",
+        "name": "DNS and Network Service Monitoring Configuration",
+        "description": "Demonstrates that DNS queries, BGP route announcements, and other critical network services are monitored for signs of abuse such as DNS tunneling, hijacking, or route manipulation.",
+        "whatGoodLooksLike": [
+          "DNS query logs are collected centrally and analyzed for tunneling, DGA domains, and anomalous resolution patterns",
+          "BGP monitoring detects route hijacking and prefix anomalies with alerts sent to network operations",
+          "Critical network services (DHCP, NTP, LDAP) have monitoring dashboards with defined alert thresholds"
+        ],
+        "commonGaps": [
+          "DNS logging is not enabled or logs are not forwarded to a central analysis platform",
+          "BGP route monitoring is entirely delegated to the ISP with no organizational visibility",
+          "Monitoring focuses only on availability and not on security-relevant anomalies in network services"
+        ],
+        "suggestedSources": [
+          "DNS security platform reports (e.g., Cisco Umbrella, Infoblox)",
+          "BGP monitoring service alerts (e.g., BGPStream, RIPE RIS)",
+          "SIEM correlation rules and alerts for DNS and network service anomalies"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request a network architecture diagram and verify that every segment has corresponding monitoring coverage documented in the tool configurations",
+      "Ask for a sample of recent alerts and trace the workflow from detection through triage to closure to confirm alerts are actionable and acted upon",
+      "Verify that monitoring extends to cloud environments, not just on-premises infrastructure, including VPC flow logs and cloud-native detection services",
+      "Check that monitoring rule updates are tied to a threat intelligence feed and that rule update frequency meets organizational policy requirements"
+    ]
+  },
+  "DE.CM-02": {
+    "subcategoryId": "DE.CM-02",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "Physical Environment Monitoring",
+    "assessorFocus": "Confirm that the organization monitors the physical environment including access control systems, surveillance cameras, environmental sensors, and visitor management to detect unauthorized physical access or tampering.",
+    "evidenceItems": [
+      {
+        "id": "DE.CM-02-E1",
+        "name": "Physical Access Control System (PACS) Logs and Alerts",
+        "description": "Demonstrates that badge reader logs and physical access control system events are collected, reviewed, and analyzed for unusual access patterns and failed access attempts.",
+        "whatGoodLooksLike": [
+          "PACS logs are forwarded to a centralized monitoring system and reviewed at least daily for anomalies such as after-hours access and tailgating alerts",
+          "Failed access attempts trigger automated alerts to security personnel with defined response procedures",
+          "Access patterns are compared against employee schedules and role-based access authorizations"
+        ],
+        "commonGaps": [
+          "PACS logs are stored locally on badge reader controllers and never centrally reviewed or analyzed",
+          "Failed badge attempts are logged but no alerting thresholds or review processes are defined",
+          "Terminated employee badges are not promptly deactivated, creating false baseline activity"
+        ],
+        "suggestedSources": [
+          "PACS management console exports showing event logs and alert configurations",
+          "Physical security operations center (PSOC) daily review reports",
+          "Integration documentation between PACS and HR systems for automated deprovisioning"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.CM-02-E2",
+        "name": "Video Surveillance Coverage and Review Records",
+        "description": "Demonstrates that surveillance cameras cover critical areas and that footage is reviewed in response to security events and on a periodic basis.",
+        "whatGoodLooksLike": [
+          "Cameras cover all entry/exit points, server rooms, data centers, and sensitive areas with documented coverage maps",
+          "Video analytics or motion detection alerts are configured for restricted areas during non-business hours",
+          "Surveillance footage retention meets policy requirements (typically 30-90 days) and footage is retrievable upon request"
+        ],
+        "commonGaps": [
+          "Camera coverage has blind spots in critical areas such as loading docks, secondary entrances, or server room interiors",
+          "Video is recorded but never reviewed proactively; only consulted after an incident is reported",
+          "Retention periods are inconsistent and some cameras overwrite footage before the required retention period"
+        ],
+        "suggestedSources": [
+          "Camera coverage maps with annotated zones and retention settings",
+          "Video management system (VMS) health reports showing recording uptime and storage capacity",
+          "Sample incident investigation logs showing video footage retrieval and review"
+        ],
+        "format": "Screenshot",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.CM-02-E3",
+        "name": "Tamper Detection and Environmental Monitoring Records",
+        "description": "Demonstrates that physical security controls such as locks, alarms, environmental sensors, and tamper seals are monitored for signs of tampering or environmental threats.",
+        "whatGoodLooksLike": [
+          "Environmental sensors (temperature, humidity, water, smoke) in data centers are integrated with alerting systems and thresholds are configured",
+          "Tamper-evident seals on equipment cabinets and enclosures are inspected on a documented schedule",
+          "Alarm system events are monitored 24/7 with defined response procedures and escalation paths"
+        ],
+        "commonGaps": [
+          "Environmental sensors exist but alert thresholds are not configured or alerts are routed to unmonitored mailboxes",
+          "Tamper-evident seals are applied during installation but never subsequently inspected",
+          "Alarm system monitoring contracts have lapsed or response procedures are not tested"
+        ],
+        "suggestedSources": [
+          "Building management system (BMS) alert logs and environmental sensor dashboards",
+          "Tamper seal inspection checklists and records",
+          "Alarm monitoring service contracts and response time SLA reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Conduct a physical walkthrough of key facilities to verify that camera coverage, badge readers, and alarm systems match documented configurations",
+      "Request visitor access logs for the past 90 days and verify that escort requirements and sign-in/sign-out procedures are consistently followed",
+      "Verify that physical access logs are correlated with logical access events to detect anomalies such as VPN logins from users badged into a different location",
+      "Check that physical security monitoring operates 24/7 or that after-hours gaps are addressed by compensating controls"
+    ]
+  },
+  "DE.CM-03": {
+    "subcategoryId": "DE.CM-03",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "Personnel Activity and Technology Usage Monitoring",
+    "assessorFocus": "Verify that the organization monitors personnel activity and technology usage for insider threats, policy violations, and anomalous behavior through UEBA, logical access monitoring, and deception technologies.",
+    "evidenceItems": [
+      {
+        "id": "DE.CM-03-E1",
+        "name": "User and Entity Behavior Analytics (UEBA) Configuration and Alerts",
+        "description": "Demonstrates that behavior analytics tools are deployed to detect anomalous user activity patterns that could indicate insider threats, compromised accounts, or policy violations.",
+        "whatGoodLooksLike": [
+          "UEBA platform is deployed with behavioral baselines established for all user populations including privileged accounts and service accounts",
+          "Risk scores are assigned to users based on behavioral deviations and high-risk users trigger automated investigations",
+          "UEBA analytics cover multiple data sources including authentication logs, email, file access, and endpoint activity"
+        ],
+        "commonGaps": [
+          "No behavior analytics capability exists; monitoring relies solely on static threshold-based alerts",
+          "UEBA is deployed but baselines were never properly established, resulting in excessive false positives and ignored alerts",
+          "Service accounts and non-interactive accounts are excluded from behavioral monitoring"
+        ],
+        "suggestedSources": [
+          "UEBA platform configuration and risk scoring methodology documentation",
+          "Sample high-risk user alerts with investigation and resolution records",
+          "Data source integration summary showing which log sources feed the UEBA platform"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.CM-03-E2",
+        "name": "Logical Access Monitoring and Failed Authentication Reports",
+        "description": "Demonstrates that logical access control system logs are monitored for unusual access patterns, brute force attempts, and failed authentication across identity providers and critical applications.",
+        "whatGoodLooksLike": [
+          "Failed authentication attempts are monitored with automatic account lockout and alert escalation after defined thresholds",
+          "Anomalous access patterns such as impossible travel, unusual hours, and access from new devices trigger alerts",
+          "Privileged account usage is specifically monitored with session recording or enhanced logging enabled"
+        ],
+        "commonGaps": [
+          "Authentication logs are collected but no alerting rules are configured for brute force or credential stuffing patterns",
+          "Monitoring covers only the primary identity provider while application-specific authentication mechanisms are unmonitored",
+          "Privileged access monitoring is limited to login events without visibility into commands executed or actions taken"
+        ],
+        "suggestedSources": [
+          "Identity provider (IdP) security event logs and alert configurations (e.g., Azure AD, Okta)",
+          "Privileged access management (PAM) session logs and usage reports",
+          "SIEM correlation rules for authentication anomaly detection"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.CM-03-E3",
+        "name": "Deception Technology Deployment and Monitoring Records",
+        "description": "Demonstrates that deception technologies such as honeypots, honey tokens, and canary accounts are deployed and monitored to detect unauthorized access and lateral movement.",
+        "whatGoodLooksLike": [
+          "Deception assets are deployed across network segments and integrated with alerting systems so any interaction generates an immediate high-priority alert",
+          "Honey credentials and canary files are placed in locations attackers commonly target and any access is treated as a confirmed compromise indicator",
+          "Deception technology alerts are reviewed and investigated within defined SLA timeframes"
+        ],
+        "commonGaps": [
+          "No deception technology program exists despite being referenced in the monitoring strategy",
+          "Honeypots are deployed but alerts are not monitored or are routed to an unattended notification channel",
+          "Deception assets have not been updated or rotated and may be detectable by sophisticated attackers"
+        ],
+        "suggestedSources": [
+          "Deception platform deployment map and configuration documentation",
+          "Alert logs showing deception asset interaction events and investigation outcomes",
+          "Deception asset refresh and rotation schedule documentation"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask how the organization differentiates between legitimate unusual behavior and genuine insider threats in its monitoring processes",
+      "Verify that monitoring activities comply with applicable privacy laws and that employees are notified of monitoring through acceptable use policies",
+      "Request evidence that monitoring covers both on-premises and remote worker activity including VPN and cloud application usage",
+      "Confirm that deception technology interactions are treated as high-fidelity indicators of compromise and trigger immediate incident response"
+    ]
+  },
+  "DE.CM-04": {
+    "subcategoryId": "DE.CM-04",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "DE.CM-01",
+      "DE.CM-09"
+    ]
+  },
+  "DE.CM-05": {
+    "subcategoryId": "DE.CM-05",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "DE.CM-01",
+      "DE.CM-09"
+    ]
+  },
+  "DE.CM-06": {
+    "subcategoryId": "DE.CM-06",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "External Service Provider Monitoring",
+    "assessorFocus": "Confirm that the organization monitors activities and services performed by external providers including cloud services, managed service providers, and contractors for deviations from expected behavior and potential adverse events.",
+    "evidenceItems": [
+      {
+        "id": "DE.CM-06-E1",
+        "name": "Third-Party Activity Monitoring Configuration and Logs",
+        "description": "Demonstrates that external service provider activities, including remote administration and maintenance, are logged and monitored with defined alert criteria for unexpected behavior.",
+        "whatGoodLooksLike": [
+          "All third-party remote access sessions are logged with session start/end times, user identity, and actions performed",
+          "Monitoring rules detect deviations from approved maintenance windows and authorized activities for third-party accounts",
+          "Third-party administrative actions are recorded in tamper-evident audit logs separate from the provider's own logging infrastructure"
+        ],
+        "commonGaps": [
+          "Third-party remote access uses shared credentials making it impossible to attribute actions to specific individuals",
+          "No monitoring rules are specific to third-party accounts; they are treated identically to internal user accounts",
+          "Cloud provider administrative actions are not monitored beyond what the provider's default logging offers"
+        ],
+        "suggestedSources": [
+          "PAM or remote access gateway logs showing third-party sessions and actions",
+          "Cloud provider activity logs (e.g., AWS CloudTrail, Azure Activity Log, GCP Audit Logs)",
+          "SIEM alert rules specific to third-party account activity"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.CM-06-E2",
+        "name": "Cloud Service Provider Security Monitoring Reports",
+        "description": "Demonstrates that cloud-based services are monitored for security events, configuration changes, and deviations from expected behavior through both provider-native and organizational tools.",
+        "whatGoodLooksLike": [
+          "Cloud security posture management (CSPM) tools continuously monitor for misconfigurations and compliance deviations",
+          "Provider-native security services (e.g., GuardDuty, Defender for Cloud, Security Command Center) are enabled and alerts are forwarded to organizational SIEM",
+          "Regular review of cloud provider transparency reports and security advisories is documented"
+        ],
+        "commonGaps": [
+          "Cloud environment monitoring relies solely on provider-native tools without integration into organizational security operations",
+          "CSPM coverage is limited to production environments while development and staging environments are unmonitored",
+          "Cloud service provider SLA and security performance metrics are not tracked or reviewed"
+        ],
+        "suggestedSources": [
+          "CSPM dashboard reports showing monitored accounts and findings (e.g., Prisma Cloud, Wiz)",
+          "Cloud-native security service alert configurations and forwarding rules",
+          "Quarterly cloud provider security review meeting minutes"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.CM-06-E3",
+        "name": "Managed Service Provider SLA and Performance Monitoring",
+        "description": "Demonstrates that managed service provider performance is monitored against contractual SLAs and that security-relevant deviations trigger investigation and escalation.",
+        "whatGoodLooksLike": [
+          "SLA compliance dashboards track provider availability, incident response times, and security metric targets",
+          "Regular operational review meetings with providers include security performance discussion items with documented action items",
+          "Automated monitoring of provider service health enables detection of degradations that could indicate a security incident at the provider"
+        ],
+        "commonGaps": [
+          "SLA monitoring focuses exclusively on availability metrics and ignores security-specific performance indicators",
+          "Provider performance reviews are conducted annually instead of at operationally relevant intervals",
+          "No mechanism exists to detect or be notified of security incidents at the service provider"
+        ],
+        "suggestedSources": [
+          "SLA compliance dashboards and monthly provider performance reports",
+          "Operational review meeting agendas and minutes documenting security discussions",
+          "Provider incident notification procedures and recent notification records"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that the organization maintains an inventory of all external service providers and can demonstrate monitoring coverage for each",
+      "Ask how the organization would detect if a third-party provider's credentials were compromised and used for unauthorized access",
+      "Check that cloud monitoring extends beyond infrastructure to include SaaS application security events and administrative actions",
+      "Confirm that contractual agreements include provisions for log sharing, security event notification, and audit rights"
+    ]
+  },
+  "DE.CM-07": {
+    "subcategoryId": "DE.CM-07",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "DE.CM-01",
+      "DE.CM-03",
+      "DE.CM-06",
+      "DE.CM-09"
+    ]
+  },
+  "DE.CM-08": {
+    "subcategoryId": "DE.CM-08",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "ID.RA-01"
+    ]
+  },
+  "DE.CM-09": {
+    "subcategoryId": "DE.CM-09",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "Computing Hardware, Software, and Data Monitoring",
+    "assessorFocus": "Verify that the organization monitors computing hardware, software, runtime environments, and data for malware, unauthorized changes, configuration deviations, and other potentially adverse events across endpoints, servers, and cloud workloads.",
+    "evidenceItems": [
+      {
+        "id": "DE.CM-09-E1",
+        "name": "Endpoint Detection and Response (EDR) Deployment and Alert Logs",
+        "description": "Demonstrates that EDR or anti-malware solutions are deployed across endpoints and servers, actively monitoring for malware, exploits, and suspicious process behavior.",
+        "whatGoodLooksLike": [
+          "EDR agent deployment coverage is at or above 98% of all managed endpoints and servers with current signatures and detection engines",
+          "Alert logs show continuous detection activity with evidence of automated containment actions for confirmed threats",
+          "EDR telemetry is forwarded to the SIEM for cross-correlation with network and identity events"
+        ],
+        "commonGaps": [
+          "EDR deployment gaps exist on legacy systems, Linux servers, or containerized workloads",
+          "Anti-malware signature updates are delayed by more than 24 hours on a significant number of endpoints",
+          "EDR alerts are generated but no triage process exists, resulting in uninvestigated alerts accumulating"
+        ],
+        "suggestedSources": [
+          "EDR management console showing deployment coverage, agent health, and detection statistics",
+          "Sample alert investigation reports demonstrating triage and response workflow",
+          "SIEM integration configuration showing EDR telemetry forwarding"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.CM-09-E2",
+        "name": "Security Configuration Monitoring and Drift Detection",
+        "description": "Demonstrates that software and system configurations are continuously compared against security baselines and that deviations trigger alerts and remediation workflows.",
+        "whatGoodLooksLike": [
+          "Configuration baselines are defined for all system types (servers, endpoints, network devices) and automated scanning detects drift within 24 hours",
+          "Configuration drift alerts include severity ratings and are integrated into the vulnerability management or change management workflow",
+          "Baseline configurations are reviewed and updated at least annually or when significant changes occur to the threat landscape"
+        ],
+        "commonGaps": [
+          "Security baselines exist as documents but are not enforced or monitored through automated tooling",
+          "Configuration monitoring is limited to initial deployment and does not detect post-deployment drift",
+          "Cloud resource configurations are not monitored for drift from infrastructure-as-code templates"
+        ],
+        "suggestedSources": [
+          "Configuration management tool reports (e.g., CIS-CAT, Qualys PC, Chef InSpec)",
+          "Drift detection dashboards showing baseline compliance trends over time",
+          "Remediation tickets generated from configuration drift findings"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.CM-09-E3",
+        "name": "Email, Web, and Collaboration Security Monitoring",
+        "description": "Demonstrates that email, web browsing, file sharing, and collaboration platforms are monitored for malware delivery, phishing, data exfiltration, and other adverse events.",
+        "whatGoodLooksLike": [
+          "Email security gateway logs show phishing and malware detections with automated quarantine actions and user notification",
+          "Web proxy or secure web gateway (SWG) logs demonstrate URL filtering, malware scanning, and blocking of known malicious domains",
+          "DLP policies monitor collaboration platforms for unauthorized sharing of sensitive data with external parties"
+        ],
+        "commonGaps": [
+          "Email security monitoring does not cover internal email traffic (lateral phishing) or personal email accessed from corporate devices",
+          "Web filtering blocks known categories but does not inspect encrypted (HTTPS) traffic for embedded threats",
+          "Collaboration platform monitoring is limited to the primary platform while shadow IT collaboration tools are unmonitored"
+        ],
+        "suggestedSources": [
+          "Email security gateway detection and quarantine reports",
+          "Secure web gateway or proxy blocking and threat detection logs",
+          "DLP policy violation reports from collaboration platform monitoring"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request EDR deployment coverage metrics and verify they account for all asset types including servers, workstations, mobile devices, and cloud workloads",
+      "Ask how the organization detects software tampering or unauthorized modifications to critical system files and binaries",
+      "Verify that monitoring of email and web vectors includes analysis of both inbound threats and outbound data exfiltration attempts",
+      "Check that runtime environment monitoring extends to containers, serverless functions, and other modern compute platforms where applicable"
+    ]
+  },
+  "DE.AE-01": {
+    "subcategoryId": "DE.AE-01",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "ID.AM-03"
+    ]
+  },
+  "DE.AE-02": {
+    "subcategoryId": "DE.AE-02",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Adverse Event Analysis",
+    "assessorFocus": "Verify that potentially adverse events are analyzed using SIEM tools, threat intelligence, and manual review to understand the nature, scope, and significance of the activities detected by monitoring systems.",
+    "evidenceItems": [
+      {
+        "id": "DE.AE-02-E1",
+        "name": "SIEM Correlation Rules and Detection Logic Documentation",
+        "description": "Demonstrates that the SIEM platform is configured with correlation rules, detection logic, and analytics to identify known malicious patterns and suspicious activity from aggregated log sources.",
+        "whatGoodLooksLike": [
+          "SIEM correlation rules are mapped to MITRE ATT&CK techniques and cover key attack vectors including initial access, lateral movement, and exfiltration",
+          "Detection rules are version-controlled, peer-reviewed, and updated at least monthly based on emerging threats",
+          "Rule effectiveness metrics such as true positive rate and mean time to detect are tracked and reported"
+        ],
+        "commonGaps": [
+          "SIEM contains only vendor-supplied default rules that have not been customized to the organization's environment",
+          "Detection rules have not been updated in over six months and do not reflect current threat intelligence",
+          "No metrics exist to measure detection rule effectiveness, making it impossible to assess monitoring quality"
+        ],
+        "suggestedSources": [
+          "SIEM rule inventory with MITRE ATT&CK mapping documentation",
+          "Change log showing detection rule updates and additions over the past 12 months",
+          "Detection efficacy reports showing true/false positive rates by rule category"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-02-E2",
+        "name": "Log Analysis and Event Investigation Records",
+        "description": "Demonstrates that security analysts actively analyze log events through both automated tools and manual review processes to characterize potentially adverse events.",
+        "whatGoodLooksLike": [
+          "SOC analysts document investigation findings for each triaged alert including analysis steps, evidence reviewed, and conclusions",
+          "Regular manual log reviews are scheduled for systems that cannot be effectively monitored through automation alone",
+          "Analysis reports include contextual enrichment from threat intelligence, asset criticality, and vulnerability data"
+        ],
+        "commonGaps": [
+          "Alert triage is limited to checking whether antivirus quarantined the threat with no deeper analysis performed",
+          "Manual log review is not performed, and the organization relies entirely on automated alerting that may miss novel threats",
+          "Investigation documentation is inconsistent with no standardized format or required fields"
+        ],
+        "suggestedSources": [
+          "SOC case management system showing alert triage and investigation records",
+          "Manual log review schedules and completed review reports",
+          "Sample investigation reports demonstrating analysis depth and enrichment"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-02-E3",
+        "name": "Threat Intelligence Integration in Analysis Tools",
+        "description": "Demonstrates that current cyber threat intelligence is integrated into log analysis and event investigation tools to improve detection accuracy and threat characterization.",
+        "whatGoodLooksLike": [
+          "Threat intelligence feeds (commercial and open source) are integrated into SIEM and automatically enrich events with IOC context",
+          "Intelligence-driven detections identify threat actor TTPs, campaign indicators, and known malicious infrastructure",
+          "Threat intelligence is updated in near real-time and stale indicators are automatically aged out"
+        ],
+        "commonGaps": [
+          "Threat intelligence feeds are subscribed to but not integrated into detection or analysis tooling",
+          "Only IP and domain IOCs are consumed while behavioral indicators (TTPs) are not operationalized",
+          "Stale threat intelligence indicators remain active indefinitely, contributing to alert fatigue"
+        ],
+        "suggestedSources": [
+          "Threat intelligence platform (TIP) integration configuration with SIEM",
+          "IOC match reports showing intelligence-driven detections over the past quarter",
+          "Threat intelligence feed inventory with update frequency and source quality assessments"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request a sample set of recent SIEM alerts and trace the full analysis workflow from initial alert through investigation to disposition",
+      "Ask how the organization measures detection coverage gaps and prioritizes development of new detection rules",
+      "Verify that threat intelligence enrichment adds meaningful context to analyst workflows rather than simply generating additional unreviewed alerts",
+      "Check that log analysis capabilities scale appropriately with log volume and that performance degradation does not result in dropped or delayed analysis"
+    ]
+  },
+  "DE.AE-03": {
+    "subcategoryId": "DE.AE-03",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Information Correlation from Multiple Sources",
+    "assessorFocus": "Confirm that the organization correlates information from multiple detection sources to gain comprehensive visibility into adverse events and reduce reliance on any single data source for detection decisions.",
+    "evidenceItems": [
+      {
+        "id": "DE.AE-03-E1",
+        "name": "SIEM Log Source Inventory and Integration Status",
+        "description": "Demonstrates that log data from diverse sources across the environment is centrally collected and available for correlation analysis.",
+        "whatGoodLooksLike": [
+          "SIEM ingests logs from network devices, endpoints, identity systems, cloud platforms, applications, and security tools with documented source coverage",
+          "Log source health monitoring ensures continuous data flow and alerts on missing or delayed log sources",
+          "Log normalization and parsing ensures consistent field mapping across disparate source types for effective correlation"
+        ],
+        "commonGaps": [
+          "Critical log sources such as cloud platform logs, application logs, or OT/IoT device logs are not forwarded to the SIEM",
+          "No log source health monitoring exists, resulting in undetected gaps when sources stop sending data",
+          "Log formats are inconsistent and unnormalized, preventing effective cross-source correlation"
+        ],
+        "suggestedSources": [
+          "SIEM log source inventory showing all integrated data feeds and their health status",
+          "Log source coverage matrix mapped against asset inventory",
+          "Log ingestion health dashboards showing data flow rates and gap alerts"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-03-E2",
+        "name": "Cross-Source Correlation Rule Examples and Results",
+        "description": "Demonstrates that detection rules correlate events across multiple data sources to identify complex attack patterns that would not be visible from any single source alone.",
+        "whatGoodLooksLike": [
+          "Multi-source correlation rules combine network, endpoint, and identity events to detect attack chains spanning multiple phases",
+          "Correlation rules include time-windowed event sequences to identify patterns like authentication anomaly followed by lateral movement",
+          "Cross-source correlation produces higher-fidelity alerts with lower false positive rates compared to single-source detection"
+        ],
+        "commonGaps": [
+          "Correlation rules operate on single data sources without cross-referencing events from other detection layers",
+          "Time synchronization issues across log sources prevent accurate temporal correlation of events",
+          "Cross-source correlation is technically possible but no rules have been developed to exploit this capability"
+        ],
+        "suggestedSources": [
+          "SIEM correlation rule documentation showing multi-source detection logic",
+          "Sample correlated alerts demonstrating cross-source event linking",
+          "NTP synchronization configuration ensuring consistent timestamps across sources"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-03-E3",
+        "name": "Threat Intelligence Correlation Across Event Sources",
+        "description": "Demonstrates that cyber threat intelligence is used to correlate events across log sources by identifying related activities linked to known threat actors, campaigns, or indicators of compromise.",
+        "whatGoodLooksLike": [
+          "IOCs from threat intelligence feeds are automatically matched against all ingested log sources simultaneously, not just network traffic",
+          "Threat intelligence correlation identifies related events across email, endpoint, and network logs linked to the same campaign or threat actor",
+          "Analysts receive consolidated views showing all events correlated to a single threat intelligence indicator across the environment"
+        ],
+        "commonGaps": [
+          "Threat intelligence matching is limited to a single data source (e.g., only network proxy logs) rather than applied across all sources",
+          "No capability exists to correlate disparate events as belonging to the same campaign or threat actor",
+          "Intelligence-driven correlation operates in batch mode with significant delays rather than near real-time"
+        ],
+        "suggestedSources": [
+          "TIP integration documentation showing which log sources receive IOC matching",
+          "Sample intelligence-correlated investigation showing linked events across multiple sources",
+          "Threat intelligence matching latency metrics and coverage reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Compare the SIEM log source inventory against the organization's asset inventory to identify gaps in detection coverage",
+      "Request evidence that time synchronization (NTP) is consistently configured across all log sources to support accurate temporal correlation",
+      "Ask the SOC team to demonstrate a recent investigation where cross-source correlation was essential to understanding the full scope of an event",
+      "Verify that log retention periods support correlation of slow-and-low attacks that may span days or weeks across multiple sources"
+    ]
+  },
+  "DE.AE-04": {
+    "subcategoryId": "DE.AE-04",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Impact and Scope Estimation of Adverse Events",
+    "assessorFocus": "Confirm that the organization has processes and tools to estimate the potential impact and scope of adverse events, enabling prioritized and proportionate response actions.",
+    "evidenceItems": [
+      {
+        "id": "DE.AE-04-E1",
+        "name": "Impact Assessment Methodology and Criteria",
+        "description": "Demonstrates that a defined methodology exists for estimating the business impact and technical scope of adverse events, with criteria that consider asset criticality, data sensitivity, and operational dependencies.",
+        "whatGoodLooksLike": [
+          "Documented impact assessment criteria incorporate asset criticality ratings, data classification levels, and business process dependencies",
+          "Impact severity levels are defined with clear thresholds and map to specific response actions and escalation requirements",
+          "Assessment methodology is trained to SOC staff and consistently applied across all event types"
+        ],
+        "commonGaps": [
+          "No formal impact assessment methodology exists; analysts make ad-hoc severity determinations based on personal judgment",
+          "Impact criteria do not consider business context such as asset criticality or data sensitivity and focus solely on technical indicators",
+          "Impact assessment criteria are documented but not consistently applied due to lack of training or tool integration"
+        ],
+        "suggestedSources": [
+          "Incident severity classification matrix with impact criteria definitions",
+          "SOC standard operating procedures for impact and scope assessment",
+          "Training records showing analyst certification on impact assessment methodology"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-04-E2",
+        "name": "SIEM Impact Scoring and Scope Analysis Reports",
+        "description": "Demonstrates that SIEM or other tools provide automated or semi-automated impact scoring and scope analysis to support analyst decision-making during event evaluation.",
+        "whatGoodLooksLike": [
+          "SIEM automatically enriches events with asset criticality and vulnerability context to produce risk-weighted severity scores",
+          "Scope analysis capabilities identify all potentially affected assets, users, and data repositories related to an adverse event",
+          "Impact estimates are refined as additional information becomes available during the investigation"
+        ],
+        "commonGaps": [
+          "SIEM assigns generic severity levels based only on detection rule priority without considering environmental context",
+          "No automated scope analysis capability exists, requiring analysts to manually identify affected assets",
+          "Initial impact estimates are never updated even as new information emerges during investigation"
+        ],
+        "suggestedSources": [
+          "SIEM risk scoring configuration showing integration with CMDB and vulnerability data",
+          "Sample event analysis showing automated impact and scope enrichment",
+          "Event status updates demonstrating iterative refinement of impact estimates"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-04-E3",
+        "name": "Business Impact Analysis Integration with Detection",
+        "description": "Demonstrates that business impact analysis (BIA) results and system categorization data are available to and used by detection and analysis personnel when estimating the significance of adverse events.",
+        "whatGoodLooksLike": [
+          "BIA results and system criticality ratings are integrated into SIEM asset enrichment so analysts see business context alongside technical alerts",
+          "Data classification labels are accessible during event analysis to immediately assess potential data exposure impact",
+          "Service dependency maps enable analysts to estimate cascading impact of events affecting shared infrastructure"
+        ],
+        "commonGaps": [
+          "BIA data exists but is not integrated into security tooling and is only available in offline documents that analysts cannot easily access during triage",
+          "System criticality ratings are outdated and do not reflect current business priorities or dependencies",
+          "Data classification labeling is inconsistent, making it difficult to assess the sensitivity of potentially exposed data"
+        ],
+        "suggestedSources": [
+          "SIEM asset enrichment configuration showing BIA data integration",
+          "CMDB exports showing system criticality ratings and service dependencies",
+          "Data classification scheme documentation and implementation coverage reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Select several past events of varying severity and ask analysts to walk through how impact and scope were estimated for each",
+      "Verify that impact assessment considers supply chain dependencies and downstream effects on partners and customers",
+      "Check that business impact data is current and reflects the actual operating environment, not a point-in-time snapshot from years ago",
+      "Ask how the organization handles impact estimation for novel attack types that do not match existing classification criteria"
+    ]
+  },
+  "DE.AE-05": {
+    "subcategoryId": "DE.AE-05",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "DE.AE-08"
+    ]
+  },
+  "DE.AE-06": {
+    "subcategoryId": "DE.AE-06",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Adverse Event Information Distribution",
+    "assessorFocus": "Verify that information about adverse events is promptly provided to authorized personnel and tools through automated alerting, ticketing systems, and accessible reporting to enable timely response actions.",
+    "evidenceItems": [
+      {
+        "id": "DE.AE-06-E1",
+        "name": "Automated Alert Routing and Notification Configuration",
+        "description": "Demonstrates that detection systems automatically generate and route alerts to appropriate personnel and response tools based on event type, severity, and affected assets.",
+        "whatGoodLooksLike": [
+          "Alert routing rules direct notifications to appropriate teams based on severity, asset ownership, and event category with defined SLAs for acknowledgment",
+          "Multiple notification channels (e.g., SIEM dashboard, email, SMS, pager, chat integration) ensure alerts reach responders regardless of communication method",
+          "Alert fatigue is managed through tuning, aggregation, and prioritization so that high-priority events are not lost in noise"
+        ],
+        "commonGaps": [
+          "All alerts go to a single undifferentiated queue regardless of severity, resulting in critical alerts being delayed behind low-priority noise",
+          "Alert notification relies on a single channel (e.g., email only) that may not be monitored during off-hours",
+          "No acknowledgment tracking exists to confirm that alerts have been received and are being actively worked"
+        ],
+        "suggestedSources": [
+          "SIEM alert routing rules and notification channel configurations",
+          "Alert acknowledgment and SLA compliance reports",
+          "On-call schedule and escalation procedures documentation"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-06-E2",
+        "name": "Incident Ticketing System Integration and Workflow",
+        "description": "Demonstrates that adverse events automatically or manually generate tickets in the organization's tracking system, enabling structured follow-up, assignment, and resolution tracking.",
+        "whatGoodLooksLike": [
+          "High and critical severity alerts automatically create tickets with relevant event context pre-populated for immediate analyst action",
+          "Ticket workflows enforce required fields including classification, impact assessment, and resolution details before closure",
+          "Ticket metrics (MTTA, MTTR, open ticket aging) are tracked and reported to management regularly"
+        ],
+        "commonGaps": [
+          "Ticket creation is entirely manual, resulting in events being investigated without formal tracking or documentation",
+          "Tickets are created but lack mandatory fields, allowing closure without meaningful investigation documentation",
+          "No metrics are tracked for ticket response times, making it impossible to assess operational efficiency"
+        ],
+        "suggestedSources": [
+          "Ticketing system configuration showing auto-creation rules and required fields",
+          "Ticket lifecycle reports showing MTTA, MTTR, and aging metrics",
+          "Sample tickets demonstrating complete investigation and resolution workflow"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-06-E3",
+        "name": "Authorized Personnel Access to Analysis Findings",
+        "description": "Demonstrates that incident responders and authorized staff have continuous access to log analysis findings, detection dashboards, and investigation outputs needed to support response activities.",
+        "whatGoodLooksLike": [
+          "Role-based access controls ensure that all authorized incident responders can access SIEM dashboards, investigation tools, and log data at any time",
+          "Shared investigation workspaces or war room dashboards provide real-time visibility into ongoing analysis findings",
+          "Access to analysis findings is available from remote locations to support distributed response teams and after-hours incidents"
+        ],
+        "commonGaps": [
+          "SIEM access is limited to a small number of SOC analysts while incident responders and IT staff lack access to detection findings",
+          "Analysis findings are shared ad hoc through email or verbal communication without a centralized accessible repository",
+          "Remote access to detection and analysis tools is not available, limiting response capability during off-hours or remote work scenarios"
+        ],
+        "suggestedSources": [
+          "SIEM and investigation tool access control lists showing authorized users and roles",
+          "SOC dashboard and reporting platform access logs",
+          "Remote access configuration for security operations tools"
+        ],
+        "format": "Screenshot",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Test the alert notification chain by asking for evidence of a recent critical alert and tracing it from detection through notification to acknowledgment",
+      "Verify that after-hours and weekend alert coverage matches the organization's stated monitoring hours with no unmonitored gaps",
+      "Ask how the organization ensures that alert fatigue does not cause critical events to be missed or dismissed without proper analysis",
+      "Confirm that all incident response team members have tested their access to detection and analysis tools within the past year"
+    ]
+  },
+  "DE.AE-07": {
+    "subcategoryId": "DE.AE-07",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Threat Intelligence Integration in Analysis",
+    "assessorFocus": "Verify that cyber threat intelligence and contextual information such as asset inventories and vulnerability disclosures are systematically integrated into the analysis of potentially adverse events to improve detection accuracy and response decisions.",
+    "evidenceItems": [
+      {
+        "id": "DE.AE-07-E1",
+        "name": "Threat Intelligence Feed Inventory and Integration Architecture",
+        "description": "Demonstrates that the organization maintains curated threat intelligence feeds from multiple sources and has integrated them into detection and analysis workflows.",
+        "whatGoodLooksLike": [
+          "Multiple threat intelligence sources (commercial feeds, ISACs, open source, government advisories) are inventoried with quality assessments and integration points documented",
+          "Intelligence feeds are delivered securely to detection technologies through automated pipelines with minimal manual intervention",
+          "Feed quality and relevance are reviewed periodically with underperforming sources replaced or supplemented"
+        ],
+        "commonGaps": [
+          "Only a single free threat intelligence feed is used without quality assessment or validation of its relevance to the organization's threat landscape",
+          "Intelligence feeds are manually downloaded and imported, creating significant delays between publication and operational use",
+          "No process exists to evaluate feed quality or decommission feeds that generate false positives without adding detection value"
+        ],
+        "suggestedSources": [
+          "Threat intelligence feed inventory with source types, update frequencies, and integration status",
+          "TIP architecture diagram showing feed ingestion, processing, and distribution to security tools",
+          "Feed quality assessment reports and periodic review documentation"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-07-E2",
+        "name": "Vulnerability Disclosure Monitoring and Analysis Integration",
+        "description": "Demonstrates that the organization rapidly acquires and analyzes vulnerability disclosures from vendors, suppliers, and third-party advisories and integrates this information into detection and analysis processes.",
+        "whatGoodLooksLike": [
+          "Vulnerability disclosure sources (CVE databases, vendor advisories, CISA KEV catalog) are monitored continuously with automated alerting for newly disclosed vulnerabilities affecting organizational technologies",
+          "Newly disclosed vulnerabilities are cross-referenced against the asset inventory to identify exposure within 24 hours of publication",
+          "Detection rules are created or updated to identify exploitation attempts for critical vulnerabilities within defined SLA timeframes"
+        ],
+        "commonGaps": [
+          "Vulnerability disclosures are monitored only through periodic vendor email newsletters with no systematic tracking or triage process",
+          "No automated correlation exists between vulnerability disclosures and the organization's technology inventory to identify exposure",
+          "Detection rules for exploitation of newly disclosed vulnerabilities are not created, leaving a window of exposure until patches are applied"
+        ],
+        "suggestedSources": [
+          "Vulnerability disclosure monitoring configuration and subscription documentation",
+          "Exposure assessment reports correlating new disclosures with asset inventory",
+          "Detection rule creation logs showing response to vulnerability disclosures"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-07-E3",
+        "name": "Asset and Configuration Context in Analysis Workflows",
+        "description": "Demonstrates that asset inventory data, system configurations, and network topology information are available to analysts during event investigation to provide contextual enrichment.",
+        "whatGoodLooksLike": [
+          "SIEM events are automatically enriched with asset metadata including owner, criticality, operating system, installed software, and network segment",
+          "Analysts can pivot from an alert to the affected asset's full profile including known vulnerabilities, recent changes, and business function",
+          "Network topology context helps analysts understand lateral movement potential and blast radius of detected events"
+        ],
+        "commonGaps": [
+          "Asset inventory data is not integrated into security tooling, requiring analysts to manually look up asset details in separate systems during investigations",
+          "Asset inventory is incomplete or outdated, providing unreliable context for event analysis",
+          "No network topology or service dependency information is available to analysts for scope and impact estimation"
+        ],
+        "suggestedSources": [
+          "SIEM asset enrichment configuration showing CMDB integration",
+          "Sample enriched alert showing contextual asset and vulnerability data",
+          "CMDB completeness and accuracy audit reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask analysts to demonstrate how threat intelligence is used during a typical investigation and whether it provides actionable context or merely additional data",
+      "Verify that the organization tracks time-to-operationalize for critical threat intelligence (time from publication to active detection rule deployment)",
+      "Check that threat intelligence consumption is bidirectional with the organization contributing back to sharing communities where appropriate",
+      "Confirm that vulnerability disclosure monitoring covers the organization's full technology stack including third-party and open-source components"
+    ]
+  },
+  "DE.AE-08": {
+    "subcategoryId": "DE.AE-08",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Incident Declaration Criteria and Process",
+    "assessorFocus": "Confirm that the organization has defined incident criteria and a formal process for declaring incidents when adverse events meet those criteria, including consideration of false positives and escalation thresholds.",
+    "evidenceItems": [
+      {
+        "id": "DE.AE-08-E1",
+        "name": "Incident Declaration Criteria and Classification Framework",
+        "description": "Demonstrates that the organization has documented criteria defining when adverse events warrant declaration as cybersecurity incidents, including severity classification levels and escalation triggers.",
+        "whatGoodLooksLike": [
+          "Incident criteria are clearly defined with specific conditions, thresholds, and examples that differentiate events from incidents",
+          "Classification framework includes severity levels (e.g., low, medium, high, critical) with objective criteria for each level",
+          "Criteria explicitly address common scenarios including ransomware, data breaches, account compromises, and DDoS attacks"
+        ],
+        "commonGaps": [
+          "Incident declaration relies on analyst judgment without documented criteria, leading to inconsistent classification",
+          "Criteria are too vague (e.g., 'significant impact') without measurable thresholds or scenario-specific guidance",
+          "No distinction exists between security events and declared incidents, resulting in either over-declaration or under-declaration"
+        ],
+        "suggestedSources": [
+          "Incident response plan sections defining incident criteria and classification framework",
+          "Decision tree or flowchart for incident declaration used by SOC analysts",
+          "Training materials for incident classification and declaration procedures"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-08-E2",
+        "name": "Incident Declaration Records and Decision Documentation",
+        "description": "Demonstrates that incident declaration decisions are documented with rationale, including events that were analyzed but did not meet incident criteria, to establish consistent application of the criteria.",
+        "whatGoodLooksLike": [
+          "Each declared incident includes documentation of which specific criteria were met and who made the declaration decision",
+          "Events investigated but determined not to be incidents are also documented with rationale for the decision",
+          "Declaration decisions are reviewed by senior analysts or incident managers to ensure consistency across the team"
+        ],
+        "commonGaps": [
+          "Incidents are declared informally through verbal communication without documented criteria matching",
+          "Only declared incidents are documented; events that did not meet criteria are not tracked, preventing trend analysis",
+          "No quality review of declaration decisions exists, allowing inconsistent application of criteria across analysts"
+        ],
+        "suggestedSources": [
+          "Incident management system records showing declaration decisions and criteria citations",
+          "SOC triage logs showing events analyzed with incident/non-incident disposition rationale",
+          "Quality review records of incident declaration decisions"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "DE.AE-08-E3",
+        "name": "False Positive Management and Criteria Refinement Process",
+        "description": "Demonstrates that known false positives are documented, accounted for when applying incident criteria, and used to refine detection rules and declaration thresholds over time.",
+        "whatGoodLooksLike": [
+          "Known false positive patterns are documented and incorporated into triage procedures so analysts can quickly identify and properly handle them",
+          "False positive trends are analyzed and used to tune detection rules and refine incident criteria to reduce noise",
+          "Regular false positive reviews occur with detection engineering to distinguish between true false positives and detection rule quality issues"
+        ],
+        "commonGaps": [
+          "False positives are dismissed individually without tracking patterns or using them to improve detection quality",
+          "High false positive rates in certain detection categories cause analysts to ignore or auto-close those alerts without investigation",
+          "No feedback loop exists between incident declaration outcomes and detection rule tuning"
+        ],
+        "suggestedSources": [
+          "False positive tracking logs with pattern analysis and rule tuning actions taken",
+          "Detection rule tuning change log showing adjustments based on false positive feedback",
+          "Alert disposition metrics showing true/false positive rates by detection category"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask analysts to walk through recent examples of both declared incidents and events that did not meet incident criteria to verify consistent application",
+      "Verify that incident declaration criteria are aligned with regulatory notification requirements so that reportable incidents are not inadvertently classified below the declaration threshold",
+      "Check that the incident declaration process includes provisions for declaring incidents based on external notifications (e.g., law enforcement, CERT advisories, vendor notifications)",
+      "Confirm that incident criteria are reviewed and updated at least annually based on lessons learned from past incidents and changes in the threat landscape"
+    ]
+  }
+}

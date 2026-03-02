@@ -1,0 +1,190 @@
+{
+  "function": {
+    "id": "DE",
+    "name": "DETECT",
+    "description": "Possible cybersecurity attacks and compromises are found and analyzed"
+  },
+  "categories": [
+    {
+      "id": "DE.CM",
+      "functionId": "DE",
+      "name": "Continuous Monitoring",
+      "description": "Assets are monitored to find anomalies, indicators of compromise, and other potentially adverse events"
+    },
+    {
+      "id": "DE.AE",
+      "functionId": "DE",
+      "name": "Adverse Event Analysis",
+      "description": "Anomalies, indicators of compromise, and other potentially adverse events are analyzed to characterize the events and detect cybersecurity incidents"
+    }
+  ],
+  "subcategories": [
+    {
+      "id": "DE.CM-01",
+      "categoryId": "DE.CM",
+      "functionId": "DE",
+      "description": "Networks and network services are monitored to find potentially adverse events",
+      "implementationExamples": [
+        "Monitor DNS, BGP, and other network services for adverse events",
+        "Monitor wired and wireless networks for connections from unauthorized endpoints",
+        "Monitor facilities for unauthorized or rogue wireless networks",
+        "Compare actual network flows against baselines to detect deviations",
+        "Monitor network communications to identify changes in security postures for zero trust purposes"
+      ]
+    },
+    {
+      "id": "DE.CM-02",
+      "categoryId": "DE.CM",
+      "functionId": "DE",
+      "description": "The physical environment is monitored to find potentially adverse events",
+      "implementationExamples": [
+        "Monitor logs from physical access control systems (e.g., badge readers) to find unusual access patterns (e.g., deviations from the norm) and failed access attempts",
+        "Review and monitor physical access records (e.g., from visitor registration, sign-in sheets)",
+        "Monitor physical access controls (e.g., locks, latches, hinge pins, alarms) for signs of tampering",
+        "Monitor the physical environment using alarm systems, cameras, and security guards"
+      ]
+    },
+    {
+      "id": "DE.CM-03",
+      "categoryId": "DE.CM",
+      "functionId": "DE",
+      "description": "Personnel activity and technology usage are monitored to find potentially adverse events",
+      "implementationExamples": [
+        "Use behavior analytics software to detect anomalous user activity to mitigate insider threats",
+        "Monitor logs from logical access control systems to find unusual access patterns and failed access attempts",
+        "Continuously monitor deception technology, including user accounts, for any usage"
+      ]
+    },
+    {
+      "id": "DE.CM-04",
+      "categoryId": "DE.CM",
+      "functionId": "DE",
+      "description": "[Withdrawn: Incorporated into DE.CM-01, DE.CM-09]",
+      "implementationExamples": []
+    },
+    {
+      "id": "DE.CM-05",
+      "categoryId": "DE.CM",
+      "functionId": "DE",
+      "description": "[Withdrawn: Incorporated into DE.CM-01, DE.CM-09]",
+      "implementationExamples": []
+    },
+    {
+      "id": "DE.CM-06",
+      "categoryId": "DE.CM",
+      "functionId": "DE",
+      "description": "External service provider activities and services are monitored to find potentially adverse events",
+      "implementationExamples": [
+        "Monitor remote and onsite administration and maintenance activities that external providers perform on organizational systems",
+        "Monitor activity from cloud-based services, internet service providers, and other service providers for deviations from expected behavior"
+      ]
+    },
+    {
+      "id": "DE.CM-07",
+      "categoryId": "DE.CM",
+      "functionId": "DE",
+      "description": "[Withdrawn: Incorporated into DE.CM-01, DE.CM-03, DE.CM-06, DE.CM-09]",
+      "implementationExamples": []
+    },
+    {
+      "id": "DE.CM-08",
+      "categoryId": "DE.CM",
+      "functionId": "DE",
+      "description": "[Withdrawn: Incorporated into ID.RA-01]",
+      "implementationExamples": []
+    },
+    {
+      "id": "DE.CM-09",
+      "categoryId": "DE.CM",
+      "functionId": "DE",
+      "description": "Computing hardware and software, runtime environments, and their data are monitored to find potentially adverse events",
+      "implementationExamples": [
+        "Monitor email, web, file sharing, collaboration services, and other common attack vectors to detect malware, phishing, data leaks and exfiltration, and other adverse events",
+        "Monitor authentication attempts to identify attacks against credentials and unauthorized credential reuse",
+        "Monitor software configurations for deviations from security baselines",
+        "Monitor hardware and software for signs of tampering",
+        "Use technologies with a presence on endpoints to detect cyber health issues (e.g., missing patches, malware infections, unauthorized software), and redirect the endpoints to a remediation environment before access is authorized"
+      ]
+    },
+    {
+      "id": "DE.AE-01",
+      "categoryId": "DE.AE",
+      "functionId": "DE",
+      "description": "[Withdrawn: Incorporated into ID.AM-03]",
+      "implementationExamples": []
+    },
+    {
+      "id": "DE.AE-02",
+      "categoryId": "DE.AE",
+      "functionId": "DE",
+      "description": "Potentially adverse events are analyzed to better understand associated activities",
+      "implementationExamples": [
+        "Use security information and event management (SIEM) or other tools to continuously monitor log events for known malicious and suspicious activity",
+        "Utilize up-to-date cyber threat intelligence in log analysis tools to improve detection accuracy and characterize threat actors, their methods, and indicators of compromise",
+        "Regularly conduct manual reviews of log events for technologies that cannot be sufficiently monitored through automation",
+        "Use log analysis tools to generate reports on their findings"
+      ]
+    },
+    {
+      "id": "DE.AE-03",
+      "categoryId": "DE.AE",
+      "functionId": "DE",
+      "description": "Information is correlated from multiple sources",
+      "implementationExamples": [
+        "Constantly transfer log data generated by other sources to a relatively small number of log servers",
+        "Use event correlation technology (e.g., SIEM) to collect information captured by multiple sources",
+        "Utilize cyber threat intelligence to help correlate events among log sources"
+      ]
+    },
+    {
+      "id": "DE.AE-04",
+      "categoryId": "DE.AE",
+      "functionId": "DE",
+      "description": "The estimated impact and scope of adverse events are understood",
+      "implementationExamples": [
+        "Use SIEMs or other tools to estimate impact and scope, and review and refine the estimates",
+        "A person creates their own estimates of impact and scope"
+      ]
+    },
+    {
+      "id": "DE.AE-05",
+      "categoryId": "DE.AE",
+      "functionId": "DE",
+      "description": "[Withdrawn: Moved to DE.AE-08]",
+      "implementationExamples": []
+    },
+    {
+      "id": "DE.AE-06",
+      "categoryId": "DE.AE",
+      "functionId": "DE",
+      "description": "Information on adverse events is provided to authorized staff and tools",
+      "implementationExamples": [
+        "Use cybersecurity software to generate alerts and provide them to the security operations center (SOC), incident responders, and incident response tools",
+        "Incident responders and other authorized personnel can access log analysis findings at all times",
+        "Automatically create and assign tickets in the organization's ticketing system when certain types of alerts occur",
+        "Manually create and assign tickets in the organization's ticketing system when technical staff discover indicators of compromise"
+      ]
+    },
+    {
+      "id": "DE.AE-07",
+      "categoryId": "DE.AE",
+      "functionId": "DE",
+      "description": "Cyber threat intelligence and other contextual information are integrated into the analysis",
+      "implementationExamples": [
+        "Securely provide cyber threat intelligence feeds to detection technologies, processes, and personnel",
+        "Securely provide information from asset inventories to detection technologies, processes, and personnel",
+        "Rapidly acquire and analyze vulnerability disclosures for the organization's technologies from suppliers, vendors, and third-party security advisories"
+      ]
+    },
+    {
+      "id": "DE.AE-08",
+      "categoryId": "DE.AE",
+      "functionId": "DE",
+      "description": "Incidents are declared when adverse events meet the defined incident criteria",
+      "implementationExamples": [
+        "Apply incident criteria to known and assumed characteristics of activity in order to determine whether an incident should be declared",
+        "Take known false positives into account when applying incident criteria"
+      ]
+    }
+  ]
+}

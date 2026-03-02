@@ -1,0 +1,382 @@
+{
+  "RC.RP-01": {
+    "subcategoryId": "RC.RP-01",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Execute Incident Recovery Plan",
+    "objective": "Initiate and execute the recovery portion of the incident response plan in a coordinated manner, ensuring all personnel with recovery responsibilities understand their roles, required authorizations, and the sequence of restoration activities.",
+    "keyActivities": [
+      {
+        "activity": "Formally initiate recovery operations upon authorization from the Incident Commander, activating the DRP/BCP recovery procedures specific to the incident type and affected systems",
+        "owner": "DR Coordinator",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Brief all recovery team members on the recovery plan, their specific responsibilities, authorization requirements, priority sequencing, and any constraints imposed by ongoing forensic or legal activities",
+        "owner": "Business Continuity Manager",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Activate failover mechanisms and alternate processing sites as defined in the DRP when primary systems cannot be restored within RTO, ensuring service continuity during the restoration period",
+        "owner": "DR Coordinator",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Establish recovery coordination war rooms (physical or virtual) with real-time status dashboards tracking restoration progress across all affected systems and services",
+        "owner": "Business Continuity Manager",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct annual recovery plan exercises (tabletop and functional) that simulate post-incident recovery scenarios to validate plan effectiveness, team readiness, and RTO/RPO achievability",
+        "owner": "Business Continuity Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Recovery is performed ad-hoc with informal coordination. Recovery plans exist but are rarely exercised, and team members are uncertain about their specific roles and authorization requirements during actual incidents.",
+      "mature": "Recovery plans are well-documented with clear role assignments, authorization chains, and priority sequencing. Plans are tested annually through tabletop and functional exercises, and recovery coordination follows established procedures.",
+      "advanced": "Automated recovery orchestration initiates predefined restoration sequences based on incident type and affected system classifications. Real-time recovery dashboards provide visibility into RTO/RPO compliance, and recovery plans are continuously refined based on exercise results and actual incident recovery metrics."
+    }
+  },
+  "RC.RP-02": {
+    "subcategoryId": "RC.RP-02",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Select and Prioritize Recovery Actions",
+    "objective": "Strategically select, scope, and prioritize recovery actions based on business impact, available resources, and incident-specific constraints, adapting the recovery approach as organizational needs and situational awareness evolve.",
+    "keyActivities": [
+      {
+        "activity": "Prioritize system and service restoration based on Business Impact Analysis (BIA) tiers, restoring Tier 1 critical business services first, followed by Tier 2 and Tier 3 systems in accordance with documented RTOs",
+        "owner": "Business Continuity Manager",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Select recovery methods (rebuild from gold images, restore from backup, failover to DR site, cloud redeployment) for each affected system based on incident type, contamination scope, and available recovery resources",
+        "owner": "DR Coordinator",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Dynamically reassess recovery priorities as new information emerges about incident scope, resource availability, business impact changes, or stakeholder requirements, adjusting recovery sequencing accordingly",
+        "owner": "Incident Commander",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Coordinate resource allocation for recovery activities, including personnel assignments, hardware procurement, vendor support activation, and budget authorization for emergency recovery spending",
+        "owner": "Business Continuity Manager",
+        "frequency": "Per-incident",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Recovery actions are selected reactively based on which systems are easiest to restore rather than business priority. Resource allocation is uncoordinated, and recovery sequencing does not follow BIA rankings.",
+      "mature": "Recovery prioritization consistently follows BIA-based tier rankings with defined RTOs. Recovery method selection considers incident context, and resource allocation is centrally coordinated with documented decision rationale.",
+      "advanced": "Automated recovery orchestration prioritizes and sequences restoration based on real-time dependency mapping, BIA tiers, and dynamic resource availability. Recovery plans automatically adapt to changing conditions, and recovery progress is tracked against RTO/RPO targets with automated escalation when targets are at risk."
+    }
+  },
+  "RC.RP-03": {
+    "subcategoryId": "RC.RP-03",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Verify Backup Integrity Pre-Restoration",
+    "objective": "Verify the integrity, authenticity, and cleanliness of all backup data and restoration assets before using them for recovery to prevent reintroduction of malware, compromised configurations, or corrupted data into the production environment.",
+    "keyActivities": [
+      {
+        "activity": "Scan all backup media and restoration images for indicators of compromise, malware signatures, and known threat actor artifacts before initiating any restoration to production systems",
+        "owner": "DR Coordinator",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Verify backup data integrity through cryptographic hash validation, checksum verification, and test restoration in an isolated sandbox environment before production deployment",
+        "owner": "Backup Administrator",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Determine the last known clean backup point by correlating backup timestamps against the incident timeline to identify backups created before the adversary gained access or deployed malware",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Conduct regular backup integrity testing (monthly for critical systems, quarterly for others) under non-incident conditions to ensure restoration readiness and identify integrity issues proactively",
+        "owner": "Backup Administrator",
+        "frequency": "Monthly",
+        "priority": "High"
+      },
+      {
+        "activity": "Maintain immutable backup copies (air-gapped, WORM storage, or cloud immutable vaults) that cannot be modified or deleted by ransomware or compromised administrative accounts",
+        "owner": "Infrastructure Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Backups are restored without pre-restoration integrity checks or malware scanning. The last known clean backup point is determined informally, and backup integrity testing is infrequent.",
+      "mature": "All backups are scanned for IOCs and integrity-verified in isolated environments before production restoration. Immutable backup copies exist for critical systems, and regular integrity testing validates backup viability.",
+      "advanced": "Automated backup verification pipelines continuously validate integrity and scan for compromise. AI-assisted analysis correlates backup timestamps with threat intelligence to identify optimal clean restore points, and immutable backup infrastructure is tested quarterly with automated recovery validation."
+    }
+  },
+  "RC.RP-04": {
+    "subcategoryId": "RC.RP-04",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Establish Post-Incident Operational Norms",
+    "objective": "Define and validate post-incident operational norms by considering critical mission functions, updated cybersecurity risk posture, and service delivery objectives to ensure restored operations meet both business requirements and enhanced security standards.",
+    "keyActivities": [
+      {
+        "activity": "Validate that essential services are restored in the correct priority order per BIA and system categorization records, confirming service delivery objectives (RTO, RPO, service level agreements) are met",
+        "owner": "Business Continuity Manager",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Collaborate with system owners and business unit leaders to confirm successful system restoration, validate data integrity, and formally accept the return to operational status for each restored system",
+        "owner": "DR Coordinator",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Define enhanced security controls and monitoring requirements for the post-incident operating environment, including heightened logging, additional detection rules, and temporary access restrictions informed by incident findings",
+        "owner": "CISO",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Monitor restored system performance, availability, and security posture for a defined observation period (e.g., 30 days) to verify adequacy of restoration and detect any signs of adversary re-entry",
+        "owner": "SOC Manager",
+        "frequency": "Per-incident",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Systems are returned to operation without formal acceptance from business owners. Post-incident security enhancements are not systematically implemented, and there is no defined observation period for restored systems.",
+      "mature": "Formal system acceptance procedures involve business owners confirming restoration adequacy. Post-incident security enhancements are defined based on incident findings, and a structured monitoring period validates the restored environment.",
+      "advanced": "Automated service health monitoring validates restoration against SLA baselines and triggers alerts for deviations. Post-incident operational norms are dynamically adjusted based on continuous risk assessment, and restored systems are subjected to automated security validation testing before full production release."
+    }
+  },
+  "RC.RP-05": {
+    "subcategoryId": "RC.RP-05",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Verify Restored Asset Integrity",
+    "objective": "Confirm the integrity and security of all restored assets, validate that systems and services are fully operational, and formally verify that normal operating status has been achieved before returning systems to production use.",
+    "keyActivities": [
+      {
+        "activity": "Conduct post-restoration security validation including vulnerability scanning, configuration compliance checks, and IOC sweeps on all restored systems before they are returned to production",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Verify that root causes identified during incident analysis have been remediated in the restored environment, including patched vulnerabilities, hardened configurations, and removed attack vectors",
+        "owner": "Vulnerability Management Lead",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Execute functional testing and service validation procedures to confirm restored systems operate correctly, data integrity is maintained, and integrations with dependent systems are functioning",
+        "owner": "DR Coordinator",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Perform user acceptance testing with business owners to verify that restored systems meet operational requirements and data is complete and accurate before full production release",
+        "owner": "Business Continuity Manager",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement enhanced monitoring and alerting for restored systems during a post-restoration observation window to rapidly detect any anomalies, performance degradation, or signs of re-compromise",
+        "owner": "SOC Manager",
+        "frequency": "Per-incident",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Restored systems are returned to production with minimal validation beyond basic connectivity testing. Security validation is informal, and root cause remediation verification is inconsistent.",
+      "mature": "A structured post-restoration validation checklist includes security scanning, configuration verification, functional testing, and business owner acceptance before production release. Root cause remediations are confirmed in the restored environment.",
+      "advanced": "Automated post-restoration validation pipelines execute security scans, configuration compliance checks, functional tests, and performance baselines before allowing production traffic. Continuous validation during the observation window uses behavioral analytics to detect anomalies in restored system behavior."
+    }
+  },
+  "RC.RP-06": {
+    "subcategoryId": "RC.RP-06",
+    "categoryId": "RC.RP",
+    "functionId": "RC",
+    "title": "Close Recovery and Document Lessons",
+    "objective": "Formally declare the end of incident recovery based on predefined criteria, complete all incident-related documentation, conduct lessons-learned analysis, and ensure findings are incorporated into plan improvements and organizational knowledge.",
+    "keyActivities": [
+      {
+        "activity": "Apply predefined recovery completion criteria (all systems restored, business operations confirmed normal, monitoring period completed, stakeholders confirmed satisfaction) to formally declare the end of incident recovery",
+        "owner": "Incident Commander",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Prepare a comprehensive after-action report documenting the complete incident lifecycle: detection, triage, analysis, containment, eradication, recovery actions, timeline, costs, and business impact",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Conduct a structured lessons-learned session with all involved parties (IR team, IT operations, business stakeholders, third-party responders) within 14 days of recovery closure to identify improvement opportunities",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Track and drive implementation of improvement actions identified during lessons-learned sessions, including updates to IR plans, playbooks, detection rules, security controls, and training programs",
+        "owner": "CISO",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Archive all incident documentation, evidence, and recovery records in accordance with legal retention requirements and organizational records management policies for future reference, legal proceedings, and trend analysis",
+        "owner": "Legal Counsel",
+        "frequency": "Per-incident",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Recovery is informally concluded when systems appear functional. After-action reports are incomplete or not produced, and lessons learned are discussed informally without systematic tracking of improvement actions.",
+      "mature": "Formal recovery completion criteria are applied consistently. Comprehensive after-action reports are produced for all significant incidents, structured lessons-learned sessions are conducted, and improvement actions are tracked to completion in a formal action register.",
+      "advanced": "Recovery closure is data-driven with automated validation of completion criteria. After-action reports are standardized and feed into an organizational incident knowledge base. Improvement actions are automatically generated from lessons-learned analysis, prioritized by risk reduction impact, and tracked with executive-level visibility into completion rates and trend analysis across incidents."
+    }
+  },
+  "RC.CO-01": {
+    "subcategoryId": "RC.CO-01",
+    "categoryId": "RC.CO",
+    "functionId": "RC",
+    "title": "Withdrawn — See RC.CO-04",
+    "objective": "This subcategory has been withdrawn and its content incorporated into RC.CO-04 (Public updates on incident recovery are shared using approved methods and messaging). Refer to RC.CO-04 for implementation guidance.",
+    "keyActivities": [
+      {
+        "activity": "Refer to RC.CO-04 for public communication activities previously covered by this subcategory",
+        "owner": "Communications Director",
+        "frequency": "N/A",
+        "priority": "N/A"
+      }
+    ],
+    "maturity": {
+      "basic": "Withdrawn subcategory — see RC.CO-04 for maturity guidance.",
+      "mature": "Withdrawn subcategory — see RC.CO-04 for maturity guidance.",
+      "advanced": "Withdrawn subcategory — see RC.CO-04 for maturity guidance."
+    }
+  },
+  "RC.CO-02": {
+    "subcategoryId": "RC.CO-02",
+    "categoryId": "RC.CO",
+    "functionId": "RC",
+    "title": "Withdrawn — See RC.CO-04",
+    "objective": "This subcategory has been withdrawn and its content incorporated into RC.CO-04 (Public updates on incident recovery are shared using approved methods and messaging). Refer to RC.CO-04 for implementation guidance.",
+    "keyActivities": [
+      {
+        "activity": "Refer to RC.CO-04 for reputation recovery and public communication activities previously covered by this subcategory",
+        "owner": "Communications Director",
+        "frequency": "N/A",
+        "priority": "N/A"
+      }
+    ],
+    "maturity": {
+      "basic": "Withdrawn subcategory — see RC.CO-04 for maturity guidance.",
+      "mature": "Withdrawn subcategory — see RC.CO-04 for maturity guidance.",
+      "advanced": "Withdrawn subcategory — see RC.CO-04 for maturity guidance."
+    }
+  },
+  "RC.CO-03": {
+    "subcategoryId": "RC.CO-03",
+    "categoryId": "RC.CO",
+    "functionId": "RC",
+    "title": "Communicate Recovery Progress Internally",
+    "objective": "Ensure recovery activities, restoration progress, and operational capability status are regularly and accurately communicated to all designated internal and external stakeholders throughout the recovery process.",
+    "keyActivities": [
+      {
+        "activity": "Provide regular recovery status updates to senior leadership and the board using predefined reporting cadences that include restoration progress, RTO/RPO compliance, remaining activities, and estimated completion timelines",
+        "owner": "Business Continuity Manager",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Share recovery progress information with critical suppliers and partners per contractual agreements, including service restoration timelines, any ongoing risks to shared services, and required partner actions",
+        "owner": "Third-Party Risk Manager",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Coordinate crisis communication messaging with critical suppliers to ensure consistent and aligned external communications about service availability and recovery timelines",
+        "owner": "Communications Director",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Maintain a centralized recovery status dashboard accessible to authorized stakeholders that provides real-time visibility into restoration progress, affected services, and estimated recovery timelines",
+        "owner": "DR Coordinator",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Distribute internal employee communications about service availability, workaround procedures, and expected restoration timelines to minimize business disruption and prevent shadow IT workarounds",
+        "owner": "Communications Director",
+        "frequency": "Per-incident",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Recovery status is communicated informally through ad-hoc emails and calls. Stakeholders lack consistent visibility into recovery progress, and communications to partners and suppliers are reactive.",
+      "mature": "Structured recovery communication plans define reporting cadences, audiences, and channels for each stakeholder group. A centralized status dashboard provides real-time visibility, and supplier communications follow contractual requirements.",
+      "advanced": "Automated recovery dashboards pull real-time restoration metrics and automatically generate stakeholder-specific status reports at predefined intervals. Communications are dynamically tailored to audience needs, and stakeholder satisfaction with recovery communications is measured and improved upon."
+    }
+  },
+  "RC.CO-04": {
+    "subcategoryId": "RC.CO-04",
+    "categoryId": "RC.CO",
+    "functionId": "RC",
+    "title": "Manage Public Recovery Communications",
+    "objective": "Control and manage all public-facing communications about incident recovery, ensuring approved messaging is delivered through authorized channels to protect organizational reputation, maintain stakeholder trust, and meet regulatory disclosure requirements.",
+    "keyActivities": [
+      {
+        "activity": "Execute the organization's public breach notification and communication procedures, including customer notifications, press statements, social media responses, and regulatory filings, using pre-approved messaging templates reviewed by legal counsel",
+        "owner": "Communications Director",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Communicate the specific steps being taken to recover from the incident and prevent recurrence, demonstrating organizational accountability and competence to affected parties and the public",
+        "owner": "Communications Director",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Designate authorized spokesperson(s) and establish media protocols, including holding statements, Q&A scripts, and escalation procedures for media inquiries during the recovery period",
+        "owner": "CISO",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Monitor public sentiment, media coverage, and social media discussions about the incident to identify misinformation and address stakeholder concerns proactively",
+        "owner": "Communications Director",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Maintain and regularly update pre-approved public communication templates for common incident types (data breach, ransomware, service outage) with legal counsel review to enable rapid deployment during incidents",
+        "owner": "Legal Counsel",
+        "frequency": "Semi-annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Public communications during incidents are reactive and drafted under pressure without pre-approved templates. Messaging is inconsistent across channels, and media inquiries are handled ad-hoc without designated spokespeople.",
+      "mature": "Pre-approved communication templates exist for common incident types, authorized spokespeople are designated, and all public communications undergo legal review. Media monitoring tracks coverage and sentiment during incidents.",
+      "advanced": "Integrated crisis communication platforms manage multi-channel public messaging with real-time legal review workflows. AI-driven media monitoring and sentiment analysis inform communication strategy adjustments, and post-incident communication effectiveness is measured through stakeholder trust surveys and media analysis."
+    }
+  }
+}

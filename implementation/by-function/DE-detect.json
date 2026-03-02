@@ -1,0 +1,522 @@
+{
+  "DE.CM-01": {
+    "subcategoryId": "DE.CM-01",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "Network Monitoring and Threat Detection",
+    "objective": "Continuously monitor networks and network services to detect potentially adverse events including unauthorized access, anomalous traffic patterns, and indicators of compromise. This provides early warning of network-based attacks and enables rapid containment.",
+    "keyActivities": [
+      {
+        "activity": "Deploy network detection and response (NDR) sensors (e.g., Darktrace, ExtraHop, Vectra, Corelight) at key network vantage points (internet egress, inter-zone boundaries, data center core) to detect anomalous traffic, lateral movement, C2 communications, and data exfiltration",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Monitor DNS query logs for indicators of compromise (DGA domains, DNS tunneling, lookups to known malicious domains) using DNS security analytics tools integrated with threat intelligence feeds",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Collect and analyze NetFlow/IPFIX data to establish network traffic baselines and detect deviations indicative of reconnaissance, lateral movement, data staging, or exfiltration, with automated alerting for threshold violations",
+        "owner": "Network Security Engineer",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Monitor for unauthorized wireless access points (rogue APs) and unauthorized device connections through wireless intrusion detection systems (WIDS), 802.1X enforcement, and periodic wireless surveys of facilities",
+        "owner": "Network Security Engineer",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement network traffic analysis for zero trust architecture, continuously evaluating device behavior and communication patterns against expected baselines, with policy enforcement triggered by anomalous changes in security posture",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Network monitoring is limited to SNMP-based availability monitoring and basic IDS signatures at the perimeter. DNS monitoring is not implemented, network flow data is not collected, and rogue wireless detection is limited to periodic manual surveys.",
+      "mature": "NDR is deployed at critical network points with behavioral analytics. DNS security monitoring detects tunneling and DGA activity, NetFlow baselines detect anomalous traffic patterns, WIDS monitors for rogue APs, and network alerts are correlated in the SIEM.",
+      "advanced": "AI-powered NDR provides real-time behavioral analysis across all network segments including encrypted traffic. Automated response orchestration can isolate compromised segments within seconds, network digital twins enable threat simulation, and continuous threat hunting leverages full-packet capture for retrospective analysis."
+    }
+  },
+  "DE.CM-02": {
+    "subcategoryId": "DE.CM-02",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "Physical Environment Monitoring",
+    "objective": "Monitor the physical environment to detect potentially adverse events such as unauthorized access, tailgating, tampering with physical controls, and environmental anomalies. This provides early detection of physical security incidents that could lead to or accompany cyber incidents.",
+    "keyActivities": [
+      {
+        "activity": "Integrate physical access control system (PACS) logs with the SIEM to detect anomalous badge activity (access outside business hours, rapid badge-in at multiple locations, failed attempts, tailgating patterns) with automated alerting and investigation workflows",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Deploy and monitor video surveillance systems with recording and retention capabilities at all facility entry points, data center areas, and sensitive zones, with tamper detection on camera systems themselves",
+        "owner": "Physical Security Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement tamper detection on physical access controls (door sensors, lock status monitors, hinge pin alarms) with real-time alerting to security operations when tampering is detected",
+        "owner": "Physical Security Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct regular review and audit of physical access logs and visitor records to identify patterns of unauthorized access, policy violations, or social engineering indicators, with findings reported to security management",
+        "owner": "Physical Security Manager",
+        "frequency": "Weekly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Basic badge reader systems log access but logs are only reviewed reactively after incidents. Camera footage is recorded but not actively monitored, and tamper detection on physical controls is limited.",
+      "mature": "PACS logs are integrated with the SIEM for automated anomaly detection. Video surveillance is actively monitored during off-hours with tamper-evident cameras, physical access reviews are conducted weekly, and visitor records are audited monthly.",
+      "advanced": "AI-powered video analytics automatically detect tailgating, unauthorized access, and anomalous behavior in real-time. Converged physical-cyber SOC correlates badge events with logical access for comprehensive threat detection, and predictive models identify insider threat patterns across physical and digital activity."
+    }
+  },
+  "DE.CM-03": {
+    "subcategoryId": "DE.CM-03",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "Personnel Activity and Insider Threat Monitoring",
+    "objective": "Monitor personnel activity and technology usage to detect potentially adverse events including insider threats, account compromise, policy violations, and anomalous behavior. This detects threats that originate from or exploit authorized user access.",
+    "keyActivities": [
+      {
+        "activity": "Deploy user and entity behavior analytics (UEBA) integrated with the SIEM to establish behavioral baselines and detect anomalies such as unusual access patterns, off-hours activity, large data transfers, privilege escalation, and geographic impossibility",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Monitor authentication logs across all systems for indicators of credential compromise including brute force attempts, credential stuffing, password spraying, anomalous login locations, and concurrent sessions from different geographies",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Deploy deception technology (honeypots, honeyfiles, honey credentials, canary tokens) throughout the network and monitor for any interaction, which indicates unauthorized exploration or compromised credentials",
+        "owner": "Threat Intelligence Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Monitor for data loss indicators including unusual volume of downloads, email attachments to personal accounts, USB transfers, cloud storage uploads, and printing of sensitive documents, with DLP alerting integrated into SIEM workflows",
+        "owner": "Data Protection Officer",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement a formal insider threat program with cross-functional participation (security, HR, legal, management) that defines insider threat indicators, investigation procedures, and privacy-compliant monitoring boundaries",
+        "owner": "CISO",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Authentication failure monitoring is limited to basic lockout policies. User activity monitoring is ad-hoc, insider threat detection relies on manager observation, and deception technology is not deployed.",
+      "mature": "UEBA is deployed and integrated with the SIEM to detect behavioral anomalies. Authentication monitoring covers all systems, a formal insider threat program is established with defined indicators and investigation procedures, and deception technology is deployed in critical network segments.",
+      "advanced": "ML-powered behavioral analytics continuously refine individual risk scores combining activity across all data sources (authentication, DLP, PACS, email, endpoint). Automated risk-adaptive controls dynamically adjust access based on user risk scores, and advanced deception environments create convincing decoy infrastructure that maps attacker techniques to MITRE ATT&CK."
+    }
+  },
+  "DE.CM-04": {
+    "subcategoryId": "DE.CM-04",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into DE.CM-01 and DE.CM-09.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See DE.CM-01 and DE.CM-09.",
+      "mature": "Withdrawn: See DE.CM-01 and DE.CM-09.",
+      "advanced": "Withdrawn: See DE.CM-01 and DE.CM-09."
+    }
+  },
+  "DE.CM-05": {
+    "subcategoryId": "DE.CM-05",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into DE.CM-01 and DE.CM-09.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See DE.CM-01 and DE.CM-09.",
+      "mature": "Withdrawn: See DE.CM-01 and DE.CM-09.",
+      "advanced": "Withdrawn: See DE.CM-01 and DE.CM-09."
+    }
+  },
+  "DE.CM-06": {
+    "subcategoryId": "DE.CM-06",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "External Service Provider Monitoring",
+    "objective": "Monitor external service provider activities and services to detect potentially adverse events, ensuring that outsourced services and third-party access do not introduce undetected threats. This extends the security monitoring perimeter to encompass the extended enterprise.",
+    "keyActivities": [
+      {
+        "activity": "Configure monitoring and logging of all remote administration sessions by external providers (MSPs, outsourced IT, vendor support) including session recording, keystroke logging for privileged access, and real-time alerting for high-risk actions",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Ingest and analyze cloud service provider audit logs (AWS CloudTrail, Azure Activity Log, GCP Audit Logs) in the SIEM, with detection rules for anomalous administrative actions, configuration changes, and data access patterns",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Establish and monitor service-level baselines for third-party services (availability, response times, error rates) to detect degradation that may indicate compromise, misconfiguration, or denial-of-service affecting service providers",
+        "owner": "Vendor Risk Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement CASB (Cloud Access Security Broker) to monitor SaaS application usage, detect shadow IT, enforce security policies for cloud services, and identify anomalous data access or sharing patterns across sanctioned and unsanctioned cloud services",
+        "owner": "Cloud Security Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Third-party access is logged but not actively monitored. Cloud audit logs are retained but not analyzed in real-time, and there is no systematic approach to detecting anomalous service provider behavior.",
+      "mature": "All external provider access is logged and monitored with session recording for privileged access. Cloud audit logs are ingested into the SIEM with active detection rules, CASB monitors SaaS usage, and service baselines detect degradation.",
+      "advanced": "Continuous third-party risk monitoring integrates real-time behavioral analysis of provider activity with external threat intelligence on supply chain compromises. Automated playbooks can instantly revoke provider access upon detection of anomalous behavior, and provider security posture is continuously assessed through automated evidence collection."
+    }
+  },
+  "DE.CM-07": {
+    "subcategoryId": "DE.CM-07",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into DE.CM-01, DE.CM-03, DE.CM-06, and DE.CM-09.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See DE.CM-01, DE.CM-03, DE.CM-06, and DE.CM-09.",
+      "mature": "Withdrawn: See DE.CM-01, DE.CM-03, DE.CM-06, and DE.CM-09.",
+      "advanced": "Withdrawn: See DE.CM-01, DE.CM-03, DE.CM-06, and DE.CM-09."
+    }
+  },
+  "DE.CM-08": {
+    "subcategoryId": "DE.CM-08",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into ID.RA-01.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See ID.RA-01.",
+      "mature": "Withdrawn: See ID.RA-01.",
+      "advanced": "Withdrawn: See ID.RA-01."
+    }
+  },
+  "DE.CM-09": {
+    "subcategoryId": "DE.CM-09",
+    "categoryId": "DE.CM",
+    "functionId": "DE",
+    "title": "Endpoint and Software Monitoring",
+    "objective": "Monitor computing hardware, software, runtime environments, and their data to detect potentially adverse events including malware, unauthorized changes, configuration drift, and signs of compromise. This provides host-level visibility that complements network-based detection.",
+    "keyActivities": [
+      {
+        "activity": "Deploy endpoint detection and response (EDR) on all endpoints and servers (e.g., CrowdStrike Falcon, Microsoft Defender for Endpoint, SentinelOne) with behavioral detection, memory analysis, and automated containment capabilities, managed by the SOC",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Monitor email, web browsing, file sharing, and collaboration platforms for malware delivery, phishing, data leaks, and social engineering using secure email gateways (SEG), web proxies, and CASB with threat intelligence-enriched detection",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement file integrity monitoring (FIM) on critical systems to detect unauthorized changes to system files, configurations, registry keys, and application binaries, with alerts correlated in the SIEM for investigation",
+        "owner": "Security Operations Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Monitor software configurations continuously against approved security baselines using compliance scanning tools, alerting on drift and unauthorized changes that may indicate compromise or misconfiguration",
+        "owner": "Platform Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Deploy endpoint health verification that assesses device posture (OS version, patch level, EDR status, encryption status, firewall state) before granting access, redirecting non-compliant endpoints to remediation environments",
+        "owner": "Endpoint Security Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Traditional antivirus is deployed on endpoints with signature-based detection. FIM is limited to critical servers, email filtering relies on basic spam/malware rules, and configuration compliance monitoring is periodic rather than continuous.",
+      "mature": "EDR with behavioral detection is deployed across all endpoints and servers. FIM covers all critical systems, email and web security use advanced threat protection with sandboxing, configuration compliance is continuously monitored, and endpoint health gates access decisions.",
+      "advanced": "Extended detection and response (XDR) correlates endpoint, email, identity, and cloud telemetry for unified threat detection. Automated investigation and response playbooks handle common threats without analyst intervention, runtime application self-protection (RASP) monitors application behavior, and threat hunting proactively searches for indicators of compromise across all endpoint telemetry."
+    }
+  },
+  "DE.AE-01": {
+    "subcategoryId": "DE.AE-01",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and incorporated into ID.AM-03.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See ID.AM-03.",
+      "mature": "Withdrawn: See ID.AM-03.",
+      "advanced": "Withdrawn: See ID.AM-03."
+    }
+  },
+  "DE.AE-02": {
+    "subcategoryId": "DE.AE-02",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Adverse Event Log Analysis",
+    "objective": "Analyze potentially adverse events to better understand associated activities, attack techniques, and scope. This transforms raw security data into actionable intelligence that enables accurate threat characterization and informed response decisions.",
+    "keyActivities": [
+      {
+        "activity": "Operate a SIEM platform (e.g., Splunk, Microsoft Sentinel, Elastic SIEM, IBM QRadar) with continuously tuned detection rules, correlation searches, and dashboards that monitor for known malicious patterns, TTPs, and anomalous activity across all log sources",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Integrate commercial and open-source cyber threat intelligence (CTI) feeds (STIX/TAXII, MISP, vendor feeds) into the SIEM and detection tools to improve detection accuracy, enrich alerts with threat actor context, and identify IoCs in historical logs",
+        "owner": "Threat Intelligence Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Conduct regular manual log reviews for systems and technologies that cannot be sufficiently monitored through automated detection, including OT/SCADA systems, legacy applications, and niche platforms",
+        "owner": "SOC Analyst",
+        "frequency": "Weekly",
+        "priority": "High"
+      },
+      {
+        "activity": "Develop and maintain a detection engineering program that creates, tests, and refines detection rules mapped to MITRE ATT&CK techniques, with regular testing through adversary emulation and detection gap analysis",
+        "owner": "Detection Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Generate and distribute regular analysis reports (daily SOC summaries, weekly trend reports, monthly executive dashboards) that communicate detection findings, emerging patterns, and security posture to technical and leadership stakeholders",
+        "owner": "SOC Manager",
+        "frequency": "Daily",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "SIEM is deployed with vendor-default rules. Alert triage is reactive and manual, threat intelligence is not integrated, and log analysis is limited to investigating known incidents rather than proactive detection.",
+      "mature": "SIEM has custom detection rules mapped to MITRE ATT&CK with regular tuning. CTI feeds enrich alerts, a detection engineering program continuously improves coverage, manual log reviews supplement automated monitoring, and regular reporting communicates findings to stakeholders.",
+      "advanced": "ML-augmented analytics detect novel attack patterns and reduce false positives. Purple team exercises continuously validate detection coverage, automated detection-as-code pipelines deploy and test new rules in hours, and retrospective analysis of threat intelligence automatically hunts for previously undetected compromises in historical data."
+    }
+  },
+  "DE.AE-03": {
+    "subcategoryId": "DE.AE-03",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Multi-Source Event Correlation",
+    "objective": "Correlate information from multiple sources to provide a comprehensive view of security events, enabling detection of complex attacks that span multiple systems and attack vectors. This transforms siloed alerts into coherent attack narratives.",
+    "keyActivities": [
+      {
+        "activity": "Centralize log collection from all security-relevant sources (endpoints, network devices, cloud services, identity providers, email gateways, physical access systems) into the SIEM with normalized data schemas and consistent timestamp synchronization (NTP)",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Develop and maintain correlation rules that combine signals from multiple data sources to detect multi-stage attacks (e.g., phishing email + credential use from anomalous location + lateral movement + data exfiltration), mapped to MITRE ATT&CK kill chain stages",
+        "owner": "Detection Engineering Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Integrate cyber threat intelligence into correlation analysis to identify when observed activity across multiple sources matches known threat actor TTPs, campaign indicators, or emerging threat patterns",
+        "owner": "Threat Intelligence Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement entity-centric analytics that aggregate all activity associated with a user, device, or service into unified timelines, enabling analysts to quickly understand the full scope of potentially compromised entities",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Logs from multiple sources are collected in the SIEM but analyzed in isolation. Correlation is limited to basic rules (e.g., multiple failed logins), and analysts manually piece together events across different consoles during investigations.",
+      "mature": "The SIEM ingests and normalizes logs from all major sources with consistent schemas. Multi-stage correlation rules detect complex attack patterns, entity-centric views aggregate related events, and CTI enrichment connects observed activity to known threats.",
+      "advanced": "Graph-based analytics and knowledge graphs automatically identify relationships between entities and events across all data sources. ML models detect previously unknown attack chains, automated investigation playbooks generate comprehensive attack narratives, and real-time streaming correlation processes events at scale with sub-second latency."
+    }
+  },
+  "DE.AE-04": {
+    "subcategoryId": "DE.AE-04",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Impact and Scope Estimation",
+    "objective": "Understand the estimated impact and scope of adverse events to inform response prioritization and resource allocation. This ensures that response efforts are proportional to the actual or potential business impact of detected threats.",
+    "keyActivities": [
+      {
+        "activity": "Define and maintain an impact assessment framework that maps affected assets to business processes, data classification levels, regulatory exposure, and financial impact, enabling rapid estimation of incident severity",
+        "owner": "Risk Manager",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Configure SIEM correlation rules to automatically enrich alerts with asset criticality, data classification, business owner, and regulatory context from the CMDB and asset inventory, enabling analysts to quickly estimate business impact",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Develop and maintain blast radius analysis capabilities that can rapidly determine the potential scope of a compromise based on network segmentation, trust relationships, credential reuse, and lateral movement paths",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct regular tabletop exercises and incident simulations that practice impact and scope estimation for various attack scenarios, refining estimation techniques and ensuring responders can make accurate assessments under pressure",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Impact estimation is informal and relies on individual analyst judgment. Asset criticality information is not readily available during incident triage, and scope estimation requires manual investigation across multiple systems.",
+      "mature": "An impact assessment framework links assets to business criticality and regulatory exposure. SIEM alerts are enriched with asset context, blast radius analysis tools are available to responders, and tabletop exercises practice impact estimation for common scenarios.",
+      "advanced": "Automated impact scoring dynamically calculates business impact based on real-time asset graph analysis, active attack path modeling, and financial impact quantification. Scope estimation tools automatically map the potential blast radius using network topology, credential graphs, and trust relationships, providing responders with instant situational awareness."
+    }
+  },
+  "DE.AE-05": {
+    "subcategoryId": "DE.AE-05",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "[Withdrawn]",
+    "objective": "This subcategory has been withdrawn and moved to DE.AE-08.",
+    "keyActivities": [],
+    "maturity": {
+      "basic": "Withdrawn: See DE.AE-08.",
+      "mature": "Withdrawn: See DE.AE-08.",
+      "advanced": "Withdrawn: See DE.AE-08."
+    }
+  },
+  "DE.AE-06": {
+    "subcategoryId": "DE.AE-06",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Adverse Event Information Distribution",
+    "objective": "Provide information on adverse events to authorized staff and tools in a timely manner to enable rapid response and coordinated action. This ensures that the right people and systems receive actionable intelligence when threats are detected.",
+    "keyActivities": [
+      {
+        "activity": "Configure SIEM and security tools to generate automated alerts through multiple channels (SOC console, email, SMS, PagerDuty/Opsgenie, Slack/Teams) based on event severity and escalation matrix, ensuring 24/7 coverage for critical alerts",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement automated ticket creation in the ITSM/SOAR platform (ServiceNow, Jira, Splunk SOAR) when security events meet defined thresholds, with automatic assignment to appropriate response teams based on event type, affected assets, and business context",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Establish role-based access to security dashboards, investigation platforms, and log analysis tools so that incident responders, IT operations, and authorized managers can access relevant findings at all times without bottlenecks",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Define and enforce escalation procedures with timebound escalation thresholds (e.g., critical events escalated to incident commander within 15 minutes, executive notification within 1 hour for severity-1 incidents) and after-hours on-call rotation",
+        "owner": "CISO",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Alerts are generated by individual tools but not centrally managed. Notification relies on email, escalation procedures are informal, and there is no automated ticket creation for security events.",
+      "mature": "SIEM generates centralized alerts with automated multi-channel notification based on severity. Tickets are automatically created and assigned, escalation procedures are defined and tested, and responders have self-service access to investigation tools and dashboards.",
+      "advanced": "SOAR orchestrates end-to-end alert lifecycle from detection through notification, enrichment, and initial response. Intelligent alert routing adapts based on analyst workload, skillset, and shift coverage, dynamic escalation automatically adjusts based on evolving event severity, and mobile-accessible war room dashboards provide real-time situational awareness during major incidents."
+    }
+  },
+  "DE.AE-07": {
+    "subcategoryId": "DE.AE-07",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Threat Intelligence Integration",
+    "objective": "Integrate cyber threat intelligence and other contextual information into the analysis of adverse events to improve detection accuracy, understand threat actor motivations and capabilities, and anticipate follow-on attacks. This transforms raw alerts into contextualized threat assessments.",
+    "keyActivities": [
+      {
+        "activity": "Subscribe to and operationalize multiple threat intelligence sources (commercial feeds, ISACs/ISAOs, government advisories, open-source feeds like AlienVault OTX, MISP communities) covering strategic, operational, and tactical intelligence relevant to the organization's industry and threat profile",
+        "owner": "Threat Intelligence Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Automate the ingestion of tactical indicators of compromise (IoCs) into detection tools (SIEM, EDR, NGFW, DNS filtering, email gateway) through a threat intelligence platform (TIP) using STIX/TAXII standards, with confidence scoring and automated expiration",
+        "owner": "Threat Intelligence Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Integrate asset inventory, data classification, and vulnerability scan data into the analysis workflow so that analysts can quickly assess whether detected threats target vulnerable assets and determine the potential business impact",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Monitor vendor security advisories, CVE disclosures, and third-party vulnerability reports for the organization's technology stack, and rapidly assess applicability and exposure, feeding confirmed threats into detection and response workflows",
+        "owner": "Vulnerability Management Lead",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Threat intelligence consumption is limited to reading vendor advisories and news articles. IoCs are manually checked against logs during investigations, and no formal threat intelligence platform or feeds are operational.",
+      "mature": "A TIP aggregates and normalizes intelligence from multiple feeds. Automated IoC ingestion distributes indicators to detection tools, analysts use CTI to enrich investigations and understand threat actor TTPs, and vulnerability advisories are systematically tracked and assessed.",
+      "advanced": "Threat intelligence is fully operationalized across all security functions (detection, hunting, vulnerability management, risk assessment). Automated threat modeling correlates intelligence against the organization's specific attack surface, predictive intelligence anticipates emerging threats, and the organization contributes intelligence back to sharing communities."
+    }
+  },
+  "DE.AE-08": {
+    "subcategoryId": "DE.AE-08",
+    "categoryId": "DE.AE",
+    "functionId": "DE",
+    "title": "Incident Declaration Criteria",
+    "objective": "Declare incidents when adverse events meet defined incident criteria, ensuring consistent and timely classification of security events that require formal incident response procedures. This prevents both under-reporting (missed incidents) and over-reporting (alert fatigue) through clear, documented criteria.",
+    "keyActivities": [
+      {
+        "activity": "Define and document incident declaration criteria with clear thresholds for different severity levels (e.g., confirmed malware execution = Severity 2, data exfiltration confirmed = Severity 1, phishing email received but not clicked = Event only), reviewed and updated annually",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Train all SOC analysts and incident responders on incident declaration criteria, including how to apply criteria to ambiguous situations, when to escalate for classification decisions, and how known false positive patterns should be handled",
+        "owner": "SOC Manager",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement automated incident classification rules in the SOAR/SIEM that apply incident criteria to enriched alerts, auto-declaring incidents and initiating response workflows when criteria are clearly met, while flagging borderline cases for analyst review",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct monthly reviews of incident declaration accuracy, analyzing false positive rates, missed incidents, classification consistency across analysts, and time-to-declare metrics, with findings driving criteria refinement and analyst training",
+        "owner": "SOC Manager",
+        "frequency": "Monthly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Incident declaration relies on individual analyst judgment without formal criteria. Classification is inconsistent across analysts and shifts, known false positives are not documented, and there is no systematic review of declaration accuracy.",
+      "mature": "Documented incident criteria define clear thresholds for declaration and severity classification. SOC analysts are trained on criteria application, known false positives are catalogued, and monthly reviews assess classification consistency and accuracy.",
+      "advanced": "Automated classification applies incident criteria to enriched alerts with high accuracy. Machine learning assists borderline classification decisions based on historical patterns, real-time feedback loops adjust criteria based on evolving threat landscape, and incident declaration metrics (accuracy, consistency, time-to-declare) are tracked as SOC performance KPIs."
+    }
+  }
+}

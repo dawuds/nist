@@ -1,0 +1,29 @@
+{
+  "IRP-Sec-1": [
+    "GV.OC-01",
+    "GV.SC-01"
+  ],
+  "IRP-Sec-2": [
+    "GV.RM-01",
+    "GV.RM-06",
+    "ID.RA-01"
+  ],
+  "IRP-Sec-5": [
+    "GV.PO-01",
+    "GV.RM-02",
+    "RS.MI-01"
+  ],
+  "IRP-Sec-4": [
+    "DE.CM-01",
+    "GV.RR-03",
+    "PR.AA-01",
+    "PR.PS-06"
+  ],
+  "IRP-Sec-3": [
+    "PR.DS-02"
+  ],
+  "IRP-Sec-6": [
+    "PR.DS-11",
+    "RS.MA-01"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "function": {
+    "id": "RC",
+    "name": "RECOVER",
+    "description": "Assets and operations affected by a cybersecurity incident are restored"
+  },
+  "categories": [
+    {
+      "id": "RC.RP",
+      "functionId": "RC",
+      "name": "Incident Recovery Plan Execution",
+      "description": "Restoration activities are performed to ensure operational availability of systems and services affected by cybersecurity incidents"
+    },
+    {
+      "id": "RC.CO",
+      "functionId": "RC",
+      "name": "Incident Recovery Communication",
+      "description": "Restoration activities are coordinated with internal and external parties"
+    }
+  ],
+  "subcategories": [
+    {
+      "id": "RC.RP-01",
+      "categoryId": "RC.RP",
+      "functionId": "RC",
+      "description": "The recovery portion of the incident response plan is executed once initiated from the incident response process",
+      "implementationExamples": [
+        "Begin recovery procedures during or after incident response processes",
+        "Make all individuals with recovery responsibilities aware of the plans for recovery and the authorizations required to implement each aspect of the plans"
+      ]
+    },
+    {
+      "id": "RC.RP-02",
+      "categoryId": "RC.RP",
+      "functionId": "RC",
+      "description": "Recovery actions are selected, scoped, prioritized, and performed",
+      "implementationExamples": [
+        "Select recovery actions based on the criteria defined in the incident response plan and available resources",
+        "Change planned recovery actions based on a reassessment of organizational needs and resources"
+      ]
+    },
+    {
+      "id": "RC.RP-03",
+      "categoryId": "RC.RP",
+      "functionId": "RC",
+      "description": "The integrity of backups and other restoration assets is verified before using them for restoration",
+      "implementationExamples": [
+        "Check restoration assets for indicators of compromise, file corruption, and other integrity issues before use"
+      ]
+    },
+    {
+      "id": "RC.RP-04",
+      "categoryId": "RC.RP",
+      "functionId": "RC",
+      "description": "Critical mission functions and cybersecurity risk management are considered to establish post-incident operational norms",
+      "implementationExamples": [
+        "Use business impact and system categorization records (including service delivery objectives) to validate that essential services are restored in the appropriate order",
+        "Work with system owners to confirm the successful restoration of systems and the return to normal operations",
+        "Monitor the performance of restored systems to verify the adequacy of the restoration"
+      ]
+    },
+    {
+      "id": "RC.RP-05",
+      "categoryId": "RC.RP",
+      "functionId": "RC",
+      "description": "The integrity of restored assets is verified, systems and services are restored, and normal operating status is confirmed",
+      "implementationExamples": [
+        "Check restored assets for indicators of compromise and remediation of root causes of the incident before production use",
+        "Verify the correctness and adequacy of the restoration actions taken before putting a restored system online"
+      ]
+    },
+    {
+      "id": "RC.RP-06",
+      "categoryId": "RC.RP",
+      "functionId": "RC",
+      "description": "The end of incident recovery is declared based on criteria, and incident-related documentation is completed",
+      "implementationExamples": [
+        "Prepare an after-action report that documents the incident itself, the response and recovery actions taken, and lessons learned",
+        "Declare the end of incident recovery once the criteria are met"
+      ]
+    },
+    {
+      "id": "RC.CO-01",
+      "categoryId": "RC.CO",
+      "functionId": "RC",
+      "description": "[Withdrawn: Incorporated into RC.CO-04]",
+      "implementationExamples": []
+    },
+    {
+      "id": "RC.CO-02",
+      "categoryId": "RC.CO",
+      "functionId": "RC",
+      "description": "[Withdrawn: Incorporated into RC.CO-04]",
+      "implementationExamples": []
+    },
+    {
+      "id": "RC.CO-03",
+      "categoryId": "RC.CO",
+      "functionId": "RC",
+      "description": "Recovery activities and progress in restoring operational capabilities are communicated to designated internal and external stakeholders",
+      "implementationExamples": [
+        "Securely share recovery information, including restoration progress, consistent with response plans and information sharing agreements",
+        "Regularly update senior leadership on recovery status and restoration progress for major incidents",
+        "Follow the rules and protocols defined in contracts for incident information sharing between the organization and its suppliers",
+        "Coordinate crisis communication between the organization and its critical suppliers"
+      ]
+    },
+    {
+      "id": "RC.CO-04",
+      "categoryId": "RC.CO",
+      "functionId": "RC",
+      "description": "Public updates on incident recovery are shared using approved methods and messaging",
+      "implementationExamples": [
+        "Follow the organization's breach notification procedures for recovering from a data breach incident",
+        "Explain the steps being taken to recover from the incident and to prevent a recurrence"
+      ]
+    }
+  ]
+}

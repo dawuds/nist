@@ -1,0 +1,716 @@
+{
+  "RS.MA-01": {
+    "subcategoryId": "RS.MA-01",
+    "categoryId": "RS.MA",
+    "functionId": "RS",
+    "title": "Execute Incident Response Plan",
+    "objective": "Ensure the incident response plan is promptly activated and executed in a coordinated manner with all relevant internal teams and third-party partners once an incident is formally declared. This includes triggering automated workflows, engaging external IR retainers, and designating clear incident leadership.",
+    "keyActivities": [
+      {
+        "activity": "Configure SIEM/SOAR platforms to automatically declare incidents based on detection correlation rules and trigger the IR playbook workflow, including automated notification to the incident response team and pre-designated third parties",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Designate an Incident Commander for each declared incident who assumes authority over response coordination, resource allocation, and third-party engagement decisions",
+        "owner": "Incident Commander",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Activate contracts with external incident response retainers (e.g., CrowdStrike, Mandiant, Secureworks) based on incident severity thresholds defined in the IR plan",
+        "owner": "CISO",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Initiate parallel execution of BCP and DRP plans when incident characteristics indicate potential operational disruption to critical business services",
+        "owner": "Business Continuity Manager",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct annual tabletop exercises and biannual functional IR drills to validate plan execution readiness, third-party coordination mechanisms, and handoff procedures",
+        "owner": "IR Team Lead",
+        "frequency": "Semi-annual",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "An incident response plan exists in document form but is infrequently tested. Incident declaration is informal and ad-hoc, with third-party engagement handled reactively on a case-by-case basis.",
+      "mature": "The IR plan is codified in SOAR playbooks with automated incident declaration, pre-established third-party engagement criteria, and defined Incident Commander rotation. Tabletop exercises are conducted at least annually.",
+      "advanced": "Fully orchestrated IR execution with automated playbook triggering, real-time third-party coordination through secure collaboration platforms, dynamic resource allocation based on incident severity scoring, and continuous plan optimization driven by post-incident metrics and threat intelligence."
+    }
+  },
+  "RS.MA-02": {
+    "subcategoryId": "RS.MA-02",
+    "categoryId": "RS.MA",
+    "functionId": "RS",
+    "title": "Triage and Validate Incident Reports",
+    "objective": "Ensure all incoming incident reports are promptly reviewed, confirmed as legitimate cybersecurity incidents, and validated to warrant formal incident response activities, filtering out false positives and non-security events.",
+    "keyActivities": [
+      {
+        "activity": "Establish and maintain a standardized triage procedure with defined criteria for confirming whether a reported event constitutes a cybersecurity incident requiring IR activation versus a false positive or IT operational issue",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement severity estimation criteria (e.g., CVSS-based scoring, data sensitivity classification, system criticality tiers) to assign initial severity ratings during triage within defined SLA timeframes",
+        "owner": "SOC Analyst (Tier 2)",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Correlate incoming incident reports against threat intelligence feeds, IOC databases, and recent alert telemetry to validate the nature and credibility of the reported incident",
+        "owner": "Threat Intelligence Analyst",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Maintain and tune SIEM detection rules and alert thresholds quarterly to reduce false positive rates and improve triage accuracy, tracking false positive ratios as a KPI",
+        "owner": "SOC Manager",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Document triage decisions, rationale, and severity assessments in the incident management system within 30 minutes of initial report receipt for audit trail purposes",
+        "owner": "SOC Analyst (Tier 1)",
+        "frequency": "Per-incident",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Triage is performed manually by available SOC analysts with informal criteria. Severity estimation is subjective and inconsistent, with limited documentation of triage decisions.",
+      "mature": "Standardized triage playbooks are implemented in the SOAR platform with defined severity matrices, SLA-driven response times, and automated enrichment from threat intelligence feeds. Triage decisions are consistently documented.",
+      "advanced": "AI/ML-assisted triage automatically correlates alerts, enriches with contextual threat intelligence, assigns preliminary severity scores, and routes to appropriate responders. False positive rates are tracked and continuously optimized, with triage accuracy metrics feeding back into detection tuning."
+    }
+  },
+  "RS.MA-03": {
+    "subcategoryId": "RS.MA-03",
+    "categoryId": "RS.MA",
+    "functionId": "RS",
+    "title": "Categorize and Prioritize Incidents",
+    "objective": "Classify confirmed incidents by type and prioritize them based on scope, likely business impact, time sensitivity, and strategic response considerations to ensure optimal allocation of response resources.",
+    "keyActivities": [
+      {
+        "activity": "Maintain a formal incident categorization taxonomy (e.g., data breach, ransomware, DDoS, insider threat, account compromise, supply chain attack) aligned with regulatory reporting requirements and integrate it into the incident management platform",
+        "owner": "IR Team Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Apply a risk-based prioritization matrix that weighs data sensitivity, number of affected systems/users, regulatory implications, business process criticality, and threat actor sophistication to assign incident priority levels",
+        "owner": "Incident Commander",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Balance response strategy selection between rapid containment/recovery and extended observation/investigation based on threat actor behavior, intelligence value, and business tolerance for ongoing risk",
+        "owner": "CISO",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Review and update the incident categorization taxonomy and prioritization criteria annually, incorporating lessons learned from past incidents and emerging threat landscape changes",
+        "owner": "IR Team Lead",
+        "frequency": "Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Incidents are informally categorized by the responding analyst based on personal experience. Prioritization is reactive and inconsistent, with no formal taxonomy or scoring methodology.",
+      "mature": "A defined incident categorization taxonomy and prioritization matrix are embedded in SOAR workflows. Categories map to predefined response playbooks, and prioritization consistently considers business impact and regulatory requirements.",
+      "advanced": "Dynamic prioritization leverages real-time threat intelligence, automated asset criticality mapping, and predictive analytics to continuously reassess incident priority as new information emerges. Response strategy selection is data-driven with documented decision frameworks that account for intelligence collection opportunities."
+    }
+  },
+  "RS.MA-04": {
+    "subcategoryId": "RS.MA-04",
+    "categoryId": "RS.MA",
+    "functionId": "RS",
+    "title": "Escalate Incidents as Needed",
+    "objective": "Ensure incidents are escalated or elevated to appropriate internal leadership, external stakeholders, and regulatory bodies in a timely manner based on predefined escalation criteria and evolving incident characteristics.",
+    "keyActivities": [
+      {
+        "activity": "Define and maintain escalation matrices with clear thresholds for severity-based escalation to executive leadership, board of directors, legal counsel, regulators, and law enforcement, including maximum time-to-escalate SLAs",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement automated escalation triggers in the incident management platform that notify designated stakeholders when severity thresholds are met, time-based SLAs are approaching, or incident scope expands",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Track and validate the status of all ongoing incidents through a centralized incident dashboard, ensuring accurate real-time status reporting for escalation decision-making",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish secure communication channels (e.g., out-of-band comms, encrypted messaging) for escalation communications to prevent adversary awareness of response activities",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct quarterly reviews of escalation effectiveness by analyzing escalation timeliness, appropriateness, and stakeholder satisfaction from past incidents",
+        "owner": "IR Team Lead",
+        "frequency": "Quarterly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Escalation decisions are made informally by individual responders. Escalation paths are not well-documented, leading to delays and inconsistent stakeholder notification.",
+      "mature": "Formal escalation matrices with defined severity thresholds and time-based SLAs are integrated into the SOAR platform. Automated notifications ensure timely escalation, and out-of-band communication channels are pre-established.",
+      "advanced": "Intelligent escalation automation dynamically adjusts escalation paths based on real-time incident evolution, stakeholder availability, and organizational context. Escalation effectiveness metrics are continuously tracked, and escalation criteria are refined based on trend analysis and regulatory changes."
+    }
+  },
+  "RS.MA-05": {
+    "subcategoryId": "RS.MA-05",
+    "categoryId": "RS.MA",
+    "functionId": "RS",
+    "title": "Apply Incident Recovery Criteria",
+    "objective": "Systematically evaluate predefined criteria to determine when an incident has been sufficiently contained and analyzed to safely initiate recovery operations, balancing urgency of restoration against risk of premature recovery.",
+    "keyActivities": [
+      {
+        "activity": "Define explicit recovery initiation criteria in the IR plan, including required containment confirmation, root cause identification status, eradication verification, and business impact assessment completion",
+        "owner": "Incident Commander",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Assess the operational disruption risk of proposed recovery activities against current business operations, coordinating with business unit leaders to identify acceptable maintenance windows and rollback plans",
+        "owner": "Business Continuity Manager",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Conduct a formal recovery readiness assessment that evaluates whether all known threat actor footholds have been eliminated, all IOCs have been swept, and backup integrity has been verified before authorizing recovery",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Document the recovery initiation decision, including the criteria evaluated, evidence reviewed, and authorization chain, in the incident record for post-incident review and compliance purposes",
+        "owner": "Incident Commander",
+        "frequency": "Per-incident",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Recovery is initiated based on informal judgment by the responding team with no documented criteria. There is limited consideration of whether the threat has been fully contained before recovery begins.",
+      "mature": "Formal recovery initiation criteria are documented in the IR plan and consistently applied. A structured recovery readiness checklist is completed before authorization, and the decision is documented with supporting evidence.",
+      "advanced": "Recovery initiation decisions are supported by automated threat sweep results, validated containment metrics, and quantitative risk assessments. Decision frameworks dynamically account for threat actor persistence techniques and incorporate threat intelligence on adversary re-entry patterns."
+    }
+  },
+  "RS.AN-01": {
+    "subcategoryId": "RS.AN-01",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Withdrawn — See RS.MA-02",
+    "objective": "This subcategory has been withdrawn and its content incorporated into RS.MA-02 (Incident reports are triaged and validated). Refer to RS.MA-02 for implementation guidance.",
+    "keyActivities": [
+      {
+        "activity": "Refer to RS.MA-02 for triage and validation activities previously covered by this subcategory",
+        "owner": "SOC Manager",
+        "frequency": "N/A",
+        "priority": "N/A"
+      }
+    ],
+    "maturity": {
+      "basic": "Withdrawn subcategory — see RS.MA-02 for maturity guidance.",
+      "mature": "Withdrawn subcategory — see RS.MA-02 for maturity guidance.",
+      "advanced": "Withdrawn subcategory — see RS.MA-02 for maturity guidance."
+    }
+  },
+  "RS.AN-02": {
+    "subcategoryId": "RS.AN-02",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Withdrawn — See RS.MA-02/03/04",
+    "objective": "This subcategory has been withdrawn and its content incorporated into RS.MA-02, RS.MA-03, and RS.MA-04. Refer to those subcategories for implementation guidance.",
+    "keyActivities": [
+      {
+        "activity": "Refer to RS.MA-02, RS.MA-03, and RS.MA-04 for activities previously covered by this subcategory",
+        "owner": "SOC Manager",
+        "frequency": "N/A",
+        "priority": "N/A"
+      }
+    ],
+    "maturity": {
+      "basic": "Withdrawn subcategory — see RS.MA-02, RS.MA-03, RS.MA-04 for maturity guidance.",
+      "mature": "Withdrawn subcategory — see RS.MA-02, RS.MA-03, RS.MA-04 for maturity guidance.",
+      "advanced": "Withdrawn subcategory — see RS.MA-02, RS.MA-03, RS.MA-04 for maturity guidance."
+    }
+  },
+  "RS.AN-03": {
+    "subcategoryId": "RS.AN-03",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Analyze Incident Root Cause",
+    "objective": "Conduct thorough technical and contextual analysis to reconstruct the full sequence of events during an incident, identify all involved assets, determine the vulnerabilities exploited, and establish the systemic root cause to inform both immediate response and long-term remediation.",
+    "keyActivities": [
+      {
+        "activity": "Reconstruct the complete incident timeline by correlating logs from SIEM, EDR, network traffic analysis, authentication systems, and cloud audit trails to determine the precise sequence of attacker actions and lateral movement",
+        "owner": "Senior Incident Analyst",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Identify the initial attack vector, exploited vulnerabilities, and threat actor TTPs using MITRE ATT&CK framework mapping to build a comprehensive understanding of the attack chain",
+        "owner": "Threat Intelligence Analyst",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Perform systemic root cause analysis (e.g., 5 Whys, fault tree analysis) to identify underlying organizational, process, or technical failures that enabled the incident beyond the immediate technical vulnerability",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Analyze deception technology artifacts (honeypots, honeytokens, canary files) for additional attacker behavioral intelligence and validate findings against network forensic evidence",
+        "owner": "Senior Incident Analyst",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Produce a structured incident analysis report documenting findings, root causes, and recommended remediations within defined SLAs based on incident severity",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Root cause analysis is performed informally by available analysts using manual log review. Analysis depth varies by analyst skill, and findings are inconsistently documented.",
+      "mature": "Structured root cause analysis methodology is applied consistently, leveraging centralized SIEM correlation, EDR telemetry, and MITRE ATT&CK mapping. Analysis reports follow a standard template and feed into remediation tracking.",
+      "advanced": "Automated attack chain reconstruction powered by XDR and AI-driven correlation produces near-real-time timeline visualization. Root cause analysis integrates threat intelligence, asset criticality context, and historical incident patterns to identify systemic weaknesses and predict future attack paths."
+    }
+  },
+  "RS.AN-04": {
+    "subcategoryId": "RS.AN-04",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Withdrawn — See RS.MA-03",
+    "objective": "This subcategory has been withdrawn and its content moved to RS.MA-03 (Incidents are categorized and prioritized). Refer to RS.MA-03 for implementation guidance.",
+    "keyActivities": [
+      {
+        "activity": "Refer to RS.MA-03 for categorization and prioritization activities previously covered by this subcategory",
+        "owner": "IR Team Lead",
+        "frequency": "N/A",
+        "priority": "N/A"
+      }
+    ],
+    "maturity": {
+      "basic": "Withdrawn subcategory — see RS.MA-03 for maturity guidance.",
+      "mature": "Withdrawn subcategory — see RS.MA-03 for maturity guidance.",
+      "advanced": "Withdrawn subcategory — see RS.MA-03 for maturity guidance."
+    }
+  },
+  "RS.AN-05": {
+    "subcategoryId": "RS.AN-05",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Withdrawn — See ID.RA-08",
+    "objective": "This subcategory has been withdrawn and its content moved to ID.RA-08. Refer to ID.RA-08 in the Identify function for implementation guidance.",
+    "keyActivities": [
+      {
+        "activity": "Refer to ID.RA-08 for activities previously covered by this subcategory",
+        "owner": "CISO",
+        "frequency": "N/A",
+        "priority": "N/A"
+      }
+    ],
+    "maturity": {
+      "basic": "Withdrawn subcategory — see ID.RA-08 for maturity guidance.",
+      "mature": "Withdrawn subcategory — see ID.RA-08 for maturity guidance.",
+      "advanced": "Withdrawn subcategory — see ID.RA-08 for maturity guidance."
+    }
+  },
+  "RS.AN-06": {
+    "subcategoryId": "RS.AN-06",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Record Investigation Actions Immutably",
+    "objective": "Ensure all actions performed during incident investigation are thoroughly recorded in an immutable, tamper-evident manner to maintain chain of custody, support legal proceedings, and enable comprehensive post-incident review.",
+    "keyActivities": [
+      {
+        "activity": "Require all incident responders, system administrators, and security engineers involved in response activities to log every action taken (commands executed, systems accessed, configurations changed) in the incident management system with timestamps and operator identification",
+        "owner": "Incident Commander",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement immutable logging for all incident response actions using write-once storage, cryptographic hashing, or blockchain-anchored audit trails to prevent tampering with investigation records",
+        "owner": "SOC Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Assign the Incident Commander responsibility for maintaining a master incident chronology document that consolidates all responder action logs, decision rationale, and evidence references",
+        "owner": "Incident Commander",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish chain-of-custody procedures for all digital evidence and investigation records, including documentation of who accessed records, when, and for what purpose",
+        "owner": "Digital Forensics Lead",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct quarterly audits of investigation record completeness and integrity from past incidents to validate compliance with documentation standards and identify improvement areas",
+        "owner": "IR Team Lead",
+        "frequency": "Quarterly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Investigation actions are recorded inconsistently, often in personal notes or emails. No formal requirements for immutability or chain of custody exist, and records may be incomplete or modifiable.",
+      "mature": "All responders are required to log actions in a centralized incident management platform with enforced timestamps. Immutable storage is used for investigation records, and chain-of-custody procedures are documented and followed.",
+      "advanced": "Automated action capture from SOAR, EDR, and privileged access management tools supplements manual logging, creating a comprehensive and tamper-proof audit trail. Record integrity is cryptographically verified, and completeness is automatically validated against playbook steps."
+    }
+  },
+  "RS.AN-07": {
+    "subcategoryId": "RS.AN-07",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Collect and Preserve Incident Data",
+    "objective": "Systematically collect, preserve, and safeguard all pertinent incident data and metadata using forensically sound procedures that maintain evidence integrity and chain of custody for legal, regulatory, and analytical purposes.",
+    "keyActivities": [
+      {
+        "activity": "Execute forensic evidence collection procedures including disk imaging, memory capture, network packet captures, and cloud log exports using validated forensic tools with cryptographic hash verification of all collected artifacts",
+        "owner": "Digital Forensics Lead",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Maintain a comprehensive evidence catalog documenting data source, collection date/time, collector identity, storage location, hash values, and chain-of-custody transfers for every piece of collected evidence",
+        "owner": "Digital Forensics Lead",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Store collected evidence in secure, access-controlled, and tamper-evident storage (physical write-blockers for hardware, encrypted and access-logged cloud storage for digital evidence) with defined retention periods aligned to legal hold requirements",
+        "owner": "IR Team Lead",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Ensure volatile evidence (RAM, running processes, network connections) is captured before containment actions that may alter system state, following a defined order-of-volatility collection procedure",
+        "owner": "Senior Incident Analyst",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Validate forensic tool licenses, calibration, and chain-of-custody documentation annually to ensure evidence admissibility in legal and regulatory proceedings",
+        "owner": "Digital Forensics Lead",
+        "frequency": "Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Evidence collection is ad-hoc, relying on individual analyst skills. Volatile evidence is frequently lost due to premature containment actions, and chain-of-custody documentation is informal or absent.",
+      "mature": "Forensic collection follows documented procedures with validated tools, order-of-volatility awareness, and consistent chain-of-custody tracking. Evidence is stored in secure, access-controlled environments with cryptographic integrity verification.",
+      "advanced": "Automated evidence collection pipelines capture and preserve forensic data at scale across on-premises and cloud environments. AI-assisted evidence triage prioritizes collection efforts, and all evidence metadata is centrally cataloged with automated integrity verification and legal hold management."
+    }
+  },
+  "RS.AN-08": {
+    "subcategoryId": "RS.AN-08",
+    "categoryId": "RS.AN",
+    "functionId": "RS",
+    "title": "Estimate and Validate Incident Magnitude",
+    "objective": "Determine the full scope and magnitude of an incident by systematically searching for indicators of compromise across all potentially affected systems and validating the extent of adversary access, persistence, and data impact.",
+    "keyActivities": [
+      {
+        "activity": "Conduct enterprise-wide IOC sweeps using EDR, SIEM, and network detection tools to identify all compromised endpoints, accounts, and systems beyond the initially detected scope",
+        "owner": "SOC Manager",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Search for evidence of adversary persistence mechanisms (backdoors, scheduled tasks, registry modifications, implanted credentials, rogue accounts) across all systems in the blast radius and adjacent network segments",
+        "owner": "Senior Incident Analyst",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Assess data exposure by identifying what data stores, databases, file shares, and cloud repositories the adversary accessed, and quantify the volume and sensitivity of potentially exfiltrated data",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Continuously reassess incident magnitude as new evidence emerges during investigation, updating severity ratings, stakeholder notifications, and resource allocation accordingly",
+        "owner": "Incident Commander",
+        "frequency": "Per-incident",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Magnitude estimation is limited to initially detected systems with minimal proactive hunting. Scope validation relies on manual checks of individual systems without systematic IOC sweeps.",
+      "mature": "Automated IOC sweeps are executed across the full enterprise using EDR and SIEM correlation. Persistence mechanism hunting follows structured checklists, and data exposure assessments are conducted for all incidents involving data access.",
+      "advanced": "Real-time attack surface mapping combined with automated IOC hunting and ML-based anomaly detection continuously validates and updates incident magnitude. Threat intelligence is automatically correlated to predict likely lateral movement paths, and data loss quantification is integrated with DLP telemetry."
+    }
+  },
+  "RS.CO-01": {
+    "subcategoryId": "RS.CO-01",
+    "categoryId": "RS.CO",
+    "functionId": "RS",
+    "title": "Withdrawn — See PR.AT-01",
+    "objective": "This subcategory has been withdrawn and its content incorporated into PR.AT-01 in the Protect function. Refer to PR.AT-01 for implementation guidance on personnel awareness and training.",
+    "keyActivities": [
+      {
+        "activity": "Refer to PR.AT-01 for awareness and training activities previously covered by this subcategory",
+        "owner": "CISO",
+        "frequency": "N/A",
+        "priority": "N/A"
+      }
+    ],
+    "maturity": {
+      "basic": "Withdrawn subcategory — see PR.AT-01 for maturity guidance.",
+      "mature": "Withdrawn subcategory — see PR.AT-01 for maturity guidance.",
+      "advanced": "Withdrawn subcategory — see PR.AT-01 for maturity guidance."
+    }
+  },
+  "RS.CO-02": {
+    "subcategoryId": "RS.CO-02",
+    "categoryId": "RS.CO",
+    "functionId": "RS",
+    "title": "Notify Stakeholders of Incidents",
+    "objective": "Ensure all required internal and external stakeholders, including affected customers, business partners, regulators, and law enforcement, are notified of cybersecurity incidents within mandated timeframes and in accordance with contractual and regulatory obligations.",
+    "keyActivities": [
+      {
+        "activity": "Maintain a comprehensive stakeholder notification matrix that maps incident types and severity levels to specific notification requirements, including regulatory deadlines (e.g., GDPR 72 hours, SEC 4 business days, state breach notification laws), contractual obligations, and contact information",
+        "owner": "Legal Counsel",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Execute breach notification procedures within mandated timeframes, including drafting customer notification letters, filing regulatory reports, and coordinating with outside counsel for legal review of all external communications",
+        "owner": "Legal Counsel",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Notify law enforcement agencies (FBI, Secret Service, local CISA office) for incidents meeting defined thresholds, following pre-established reporting channels and preserving evidence per law enforcement guidance",
+        "owner": "CISO",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Inform business partners, suppliers, and customers of incidents that may impact shared services, data, or interconnected systems, consistent with contractual incident notification clauses",
+        "owner": "Communications Director",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Maintain pre-approved notification templates for common incident types that have been reviewed by legal, compliance, and communications teams to enable rapid deployment during incidents",
+        "owner": "Communications Director",
+        "frequency": "Semi-annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Notification decisions are made ad-hoc during incidents with uncertain awareness of regulatory timelines. No pre-approved templates exist, and notification responsibilities are unclear.",
+      "mature": "A formal notification matrix links incident types to regulatory requirements and stakeholder contacts. Pre-approved templates enable rapid notification, and legal counsel is embedded in the notification workflow for all external communications.",
+      "advanced": "Automated notification workflows trigger based on incident categorization, automatically identifying applicable regulatory regimes and contractual obligations. Multi-jurisdictional notification requirements are tracked in real time, and notification compliance is audited with automated evidence collection."
+    }
+  },
+  "RS.CO-03": {
+    "subcategoryId": "RS.CO-03",
+    "categoryId": "RS.CO",
+    "functionId": "RS",
+    "title": "Share Incident Information Strategically",
+    "objective": "Proactively share incident information with designated internal and external stakeholders, including ISACs, senior leadership, HR, suppliers, and sector partners, in a controlled and secure manner consistent with information sharing agreements and operational security requirements.",
+    "keyActivities": [
+      {
+        "activity": "Share sanitized threat intelligence (observed TTPs, IOCs, attack patterns) with relevant ISACs and sector-specific sharing communities using TLP-designated protocols to support collective defense",
+        "owner": "Threat Intelligence Analyst",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Provide regular status updates to senior leadership and the board of directors during major incidents using pre-defined reporting cadences (e.g., every 4 hours for critical incidents) with executive-appropriate summaries",
+        "owner": "CISO",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Notify HR and legal immediately when incidents involve suspected malicious insider activity, credential misuse by employees, or policy violations that may require employment action",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Coordinate incident information sharing with critical suppliers and partners per contractual information sharing agreements, ensuring appropriate classification and secure transmission channels",
+        "owner": "Third-Party Risk Manager",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Maintain and regularly test secure, out-of-band communication channels for incident information sharing that remain operational even if primary corporate communications infrastructure is compromised",
+        "owner": "SOC Manager",
+        "frequency": "Quarterly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Information sharing during incidents is reactive and unstructured. Senior leadership updates are inconsistent, and external sharing with ISACs or partners occurs rarely or not at all.",
+      "mature": "Pre-defined information sharing protocols specify what information is shared, with whom, through what channels, and at what classification level. Executive reporting cadences are established, and ISAC participation is active.",
+      "advanced": "Automated threat intelligence sharing pipelines disseminate sanitized IOCs and TTPs to trusted communities in near-real-time using STIX/TAXII protocols. Bidirectional information sharing enriches internal investigation with community intelligence, and sharing effectiveness is measured through attribution and detection metrics."
+    }
+  },
+  "RS.CO-04": {
+    "subcategoryId": "RS.CO-04",
+    "categoryId": "RS.CO",
+    "functionId": "RS",
+    "title": "Withdrawn — See RS.MA-01/04",
+    "objective": "This subcategory has been withdrawn and its content incorporated into RS.MA-01 and RS.MA-04. Refer to those subcategories for coordination and escalation guidance.",
+    "keyActivities": [
+      {
+        "activity": "Refer to RS.MA-01 and RS.MA-04 for coordination activities previously covered by this subcategory",
+        "owner": "Incident Commander",
+        "frequency": "N/A",
+        "priority": "N/A"
+      }
+    ],
+    "maturity": {
+      "basic": "Withdrawn subcategory — see RS.MA-01 and RS.MA-04 for maturity guidance.",
+      "mature": "Withdrawn subcategory — see RS.MA-01 and RS.MA-04 for maturity guidance.",
+      "advanced": "Withdrawn subcategory — see RS.MA-01 and RS.MA-04 for maturity guidance."
+    }
+  },
+  "RS.CO-05": {
+    "subcategoryId": "RS.CO-05",
+    "categoryId": "RS.CO",
+    "functionId": "RS",
+    "title": "Withdrawn — See RS.CO-03",
+    "objective": "This subcategory has been withdrawn and its content incorporated into RS.CO-03. Refer to RS.CO-03 for information sharing guidance.",
+    "keyActivities": [
+      {
+        "activity": "Refer to RS.CO-03 for information sharing activities previously covered by this subcategory",
+        "owner": "CISO",
+        "frequency": "N/A",
+        "priority": "N/A"
+      }
+    ],
+    "maturity": {
+      "basic": "Withdrawn subcategory — see RS.CO-03 for maturity guidance.",
+      "mature": "Withdrawn subcategory — see RS.CO-03 for maturity guidance.",
+      "advanced": "Withdrawn subcategory — see RS.CO-03 for maturity guidance."
+    }
+  },
+  "RS.MI-01": {
+    "subcategoryId": "RS.MI-01",
+    "categoryId": "RS.MI",
+    "functionId": "RS",
+    "title": "Contain Cybersecurity Incidents",
+    "objective": "Execute containment actions to prevent the expansion of a cybersecurity incident, limit adversary lateral movement, and reduce the blast radius while preserving forensic evidence and maintaining essential business operations where possible.",
+    "keyActivities": [
+      {
+        "activity": "Deploy automated containment playbooks in SOAR that isolate compromised endpoints via EDR network quarantine, disable compromised accounts, and block malicious IPs/domains at the firewall and DNS level within minutes of confirmed compromise",
+        "owner": "SOC Manager",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Implement network segmentation containment strategies including VLAN isolation, micro-segmentation policy enforcement, and network access control changes to restrict adversary movement while maintaining critical business traffic flows",
+        "owner": "Network Security Engineer",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Enable incident responders to manually execute containment actions (account lockouts, firewall rule changes, service shutdowns) with proper authorization and documentation when automated containment is insufficient or inappropriate",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Coordinate with managed security service providers and ISPs to execute upstream containment actions such as null-routing DDoS traffic, blocking C2 domains, or isolating compromised cloud workloads",
+        "owner": "SOC Manager",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Maintain and test pre-built containment action packages for common incident types (ransomware, data exfiltration, account compromise, DDoS) to enable rapid deployment with known business impact profiles",
+        "owner": "IR Team Lead",
+        "frequency": "Quarterly",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Containment is performed manually and reactively, often with significant delays. Containment actions may inadvertently destroy forensic evidence, and business impact of containment is not assessed beforehand.",
+      "mature": "Automated containment playbooks in SOAR execute predefined isolation actions within SLA timeframes. Containment strategies are pre-defined per incident type, evidence preservation is considered, and business impact is assessed before executing disruptive containment measures.",
+      "advanced": "Intelligent containment orchestration dynamically selects optimal containment strategies based on real-time threat context, asset criticality, and business impact modeling. Containment effectiveness is measured through adversary dwell-time metrics, and containment actions are automatically validated to confirm successful isolation."
+    }
+  },
+  "RS.MI-02": {
+    "subcategoryId": "RS.MI-02",
+    "categoryId": "RS.MI",
+    "functionId": "RS",
+    "title": "Eradicate Incident Threats",
+    "objective": "Systematically remove all threat actor artifacts, malware, persistence mechanisms, and unauthorized access from affected systems to eliminate the adversary's presence and prevent re-compromise before recovery operations begin.",
+    "keyActivities": [
+      {
+        "activity": "Execute malware removal, unauthorized account deletion, backdoor elimination, and persistence mechanism cleanup across all identified compromised systems using validated eradication procedures and verified IOC lists",
+        "owner": "Senior Incident Analyst",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Reset all potentially compromised credentials including service accounts, API keys, certificates, and tokens across the entire scope of affected systems and any systems where credential reuse is suspected",
+        "owner": "Identity and Access Management Lead",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Patch or mitigate the vulnerabilities exploited during the incident, including both the initial access vector and any additional vulnerabilities leveraged for privilege escalation or lateral movement",
+        "owner": "Vulnerability Management Lead",
+        "frequency": "Per-incident",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Verify eradication completeness by conducting post-eradication IOC sweeps, reviewing system integrity baselines, and monitoring for any signs of adversary re-entry or dormant persistence",
+        "owner": "IR Team Lead",
+        "frequency": "Per-incident",
+        "priority": "High"
+      },
+      {
+        "activity": "Coordinate with third-party managed security service providers for eradication support on complex incidents involving advanced persistent threats, supply chain compromises, or firmware-level implants",
+        "owner": "CISO",
+        "frequency": "Per-incident",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Eradication is performed ad-hoc, often limited to reimaging individual systems without comprehensive persistence mechanism removal. Credential resets are inconsistent, and eradication verification is minimal.",
+      "mature": "Structured eradication procedures address malware removal, credential reset, vulnerability patching, and persistence mechanism elimination comprehensively. Post-eradication verification sweeps confirm completeness before recovery authorization.",
+      "advanced": "Automated eradication workflows orchestrate cross-platform cleanup actions at enterprise scale, with real-time verification of eradication completeness. Threat intelligence-driven persistence hunting proactively identifies novel persistence techniques, and eradication effectiveness is validated through controlled re-testing and continuous monitoring."
+    }
+  },
+  "RS.MI-03": {
+    "subcategoryId": "RS.MI-03",
+    "categoryId": "RS.MI",
+    "functionId": "RS",
+    "title": "Withdrawn — See ID.RA-06",
+    "objective": "This subcategory has been withdrawn and its content incorporated into ID.RA-06 in the Identify function. Refer to ID.RA-06 for vulnerability management guidance.",
+    "keyActivities": [
+      {
+        "activity": "Refer to ID.RA-06 for vulnerability remediation activities previously covered by this subcategory",
+        "owner": "Vulnerability Management Lead",
+        "frequency": "N/A",
+        "priority": "N/A"
+      }
+    ],
+    "maturity": {
+      "basic": "Withdrawn subcategory — see ID.RA-06 for maturity guidance.",
+      "mature": "Withdrawn subcategory — see ID.RA-06 for maturity guidance.",
+      "advanced": "Withdrawn subcategory — see ID.RA-06 for maturity guidance."
+    }
+  }
+}

@@ -1,0 +1,1264 @@
+{
+  "GV.OC-01": {
+    "subcategoryId": "GV.OC-01",
+    "categoryId": "GV.OC",
+    "functionId": "GV",
+    "title": "Mission-Informed Risk Management",
+    "objective": "The organization's mission, vision, and strategic objectives are clearly articulated and directly inform how cybersecurity risks are identified, assessed, and prioritized. Decision-makers can trace cybersecurity investments and risk acceptance decisions back to mission imperatives.",
+    "keyActivities": [
+      {
+        "activity": "Document the organization's mission, vision, and strategic objectives in a manner accessible to cybersecurity risk management stakeholders, and map each to the systems, data, and processes that support them",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct mission-impact workshops with business unit leaders to identify which cybersecurity risks could impede core mission objectives and quantify potential mission degradation",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Integrate mission context into the risk register so that each identified risk is linked to specific mission outcomes it could affect",
+        "owner": "Risk Manager",
+        "frequency": "Ongoing",
+        "priority": "Medium"
+      },
+      {
+        "activity": "Review and update mission-to-risk mappings when significant organizational changes occur, such as mergers, new product launches, or market expansions",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "The organization has a published mission statement, but cybersecurity risk management decisions are made without formal reference to mission objectives. Risk discussions rarely involve business leaders.",
+      "mature": "Mission objectives are formally mapped to critical assets and systems. Cybersecurity risk assessments explicitly reference mission impact, and business leaders regularly participate in risk prioritization decisions.",
+      "advanced": "Dynamic mission-risk alignment is maintained through automated dashboards that correlate threat intelligence, asset criticality, and mission impact. Risk appetite thresholds are calibrated to mission-critical services and adjusted in near-real-time as the threat landscape evolves."
+    }
+  },
+  "GV.OC-02": {
+    "subcategoryId": "GV.OC-02",
+    "categoryId": "GV.OC",
+    "functionId": "GV",
+    "title": "Stakeholder Expectations Management",
+    "objective": "Internal and external stakeholders are systematically identified, and their cybersecurity-related expectations are documented, prioritized, and factored into risk management decisions. The organization maintains ongoing dialogue with stakeholders to ensure evolving expectations are captured.",
+    "keyActivities": [
+      {
+        "activity": "Develop and maintain a stakeholder registry that identifies all internal stakeholders (board, executives, employees, unions) and external stakeholders (regulators, customers, partners, investors, community) with their specific cybersecurity expectations",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct structured stakeholder engagement sessions (surveys, interviews, advisory panels) to validate and update cybersecurity expectations, particularly after regulatory changes or significant incidents",
+        "owner": "CRO",
+        "frequency": "Semi-Annual",
+        "priority": "Medium"
+      },
+      {
+        "activity": "Map stakeholder expectations to specific cybersecurity controls, policies, and risk tolerance thresholds, documenting gaps and remediation plans",
+        "owner": "Risk Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish formal feedback mechanisms (e.g., customer trust portals, partner security reviews) so external stakeholders can communicate evolving expectations",
+        "owner": "CISO",
+        "frequency": "Ongoing",
+        "priority": "Medium"
+      },
+      {
+        "activity": "Report to the board and senior leadership on stakeholder expectation alignment, highlighting areas where current cybersecurity posture falls short of stated expectations",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Key stakeholders are informally known but their cybersecurity expectations are not documented. Engagement is reactive, typically triggered by complaints or regulatory inquiries.",
+      "mature": "A formal stakeholder registry exists with documented expectations mapped to controls and risk tolerances. Regular engagement sessions are conducted and results feed into risk management planning.",
+      "advanced": "Stakeholder expectations are continuously monitored through automated sentiment analysis, regulatory tracking, and real-time feedback loops. Expectations are quantitatively integrated into risk scoring models, and the organization proactively anticipates emerging stakeholder concerns."
+    }
+  },
+  "GV.OC-03": {
+    "subcategoryId": "GV.OC-03",
+    "categoryId": "GV.OC",
+    "functionId": "GV",
+    "title": "Legal and Regulatory Compliance",
+    "objective": "All applicable legal, regulatory, and contractual cybersecurity obligations -- including privacy and civil liberties requirements -- are identified, tracked, and systematically addressed through the organization's cybersecurity program. Compliance gaps are identified and remediated proactively.",
+    "keyActivities": [
+      {
+        "activity": "Maintain a comprehensive compliance obligations register that catalogs all applicable cybersecurity laws, regulations, standards, and contractual requirements across all jurisdictions of operation",
+        "owner": "General Counsel",
+        "frequency": "Quarterly",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Conduct compliance gap analyses mapping each obligation to implemented controls, identifying deficiencies and assigning remediation owners and timelines",
+        "owner": "Compliance Manager",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Subscribe to regulatory alert services and legal advisories to proactively identify new or changing cybersecurity requirements (e.g., SEC cyber disclosure rules, state privacy laws, DORA, NIS2)",
+        "owner": "General Counsel",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Integrate contractual cybersecurity requirements from customer and partner agreements into the control framework, ensuring SLA-driven obligations are monitored and evidenced",
+        "owner": "Procurement Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct annual privacy impact assessments for systems processing personal data to ensure civil liberties and privacy obligations are being met",
+        "owner": "Data Protection Officer",
+        "frequency": "Annual",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "The organization has a general awareness of major regulatory requirements but lacks a centralized register. Compliance tracking is ad hoc, spreadsheet-based, and often reactive to audit findings.",
+      "mature": "A centralized compliance obligations register exists with clear mappings to controls and evidence. Regulatory change management processes are defined, and compliance status is reported to leadership quarterly.",
+      "advanced": "Continuous compliance monitoring is automated through GRC platforms that map obligations to controls and evidence in real time. Regulatory intelligence feeds automatically flag changes, trigger impact assessments, and initiate remediation workflows. Compliance posture is dashboarded for leadership with predictive analytics on emerging regulatory trends."
+    }
+  },
+  "GV.OC-04": {
+    "subcategoryId": "GV.OC-04",
+    "categoryId": "GV.OC",
+    "functionId": "GV",
+    "title": "Critical Services Identification",
+    "objective": "The organization has identified and communicated the critical objectives, capabilities, and services upon which external stakeholders depend, along with associated resilience requirements. This understanding drives prioritization of cybersecurity protections and recovery planning.",
+    "keyActivities": [
+      {
+        "activity": "Conduct a Business Impact Analysis (BIA) to identify mission-critical capabilities and services, their dependencies, and the potential impact of degradation or loss on stakeholders",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Define and communicate Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) for each critical service, validated by business owners and external stakeholder requirements",
+        "owner": "IT Director",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Establish criticality tiers for all capabilities and services (e.g., Tier 1 = mission-critical, Tier 2 = important, Tier 3 = supporting) and align cybersecurity investment proportionally",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Communicate critical service expectations and resilience commitments to external stakeholders through SLAs, trust centers, or published security commitments",
+        "owner": "CIO",
+        "frequency": "Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Critical services are informally understood but not formally documented. RTO/RPO targets are undefined or exist only for IT disaster recovery without business validation.",
+      "mature": "A formal BIA has been completed with documented criticality tiers, validated RTO/RPO targets, and clear linkages between critical services and cybersecurity protections. Stakeholders are informed of resilience commitments.",
+      "advanced": "Critical service identification is dynamic, leveraging real-time dependency mapping and automated impact modeling. Resilience targets are continuously validated through chaos engineering, service-level monitoring, and stakeholder feedback loops. Criticality assessments automatically adjust based on evolving business conditions and threat landscapes."
+    }
+  },
+  "GV.OC-05": {
+    "subcategoryId": "GV.OC-05",
+    "categoryId": "GV.OC",
+    "functionId": "GV",
+    "title": "External Dependencies Mapping",
+    "objective": "The organization has identified and documented all external outcomes, capabilities, and services upon which it depends, assessed them as potential points of failure, and communicated this understanding to relevant personnel for risk-informed decision-making.",
+    "keyActivities": [
+      {
+        "activity": "Create and maintain a dependency inventory that catalogs all external resources the organization relies on (cloud providers, ISPs, SaaS platforms, utility providers, key suppliers) and maps them to supported business functions",
+        "owner": "IT Director",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Assess each external dependency for single points of failure, concentration risk, and potential cascade effects on critical capabilities and services",
+        "owner": "Risk Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Develop contingency plans for critical external dependencies, including alternative providers, failover mechanisms, and degraded-mode operating procedures",
+        "owner": "IT Director",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Communicate dependency risks and contingency plans to business process owners, ensuring they understand the impact of external service disruptions on their operations",
+        "owner": "CISO",
+        "frequency": "Semi-Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Major external dependencies (e.g., primary cloud provider) are known informally, but a comprehensive inventory does not exist. Contingency plans for dependency failures are limited to basic IT disaster recovery.",
+      "mature": "A formal dependency inventory is maintained with documented risk assessments, single-point-of-failure analysis, and contingency plans for critical dependencies. Business owners are informed of dependency risks.",
+      "advanced": "Real-time dependency mapping integrates with service monitoring, vendor risk intelligence, and BIA data. Automated alerting triggers when dependency risk thresholds are breached. The organization continuously validates contingency plans through regular testing and simulation, and proactively reduces concentration risk through architectural diversification."
+    }
+  },
+  "GV.RM-01": {
+    "subcategoryId": "GV.RM-01",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Risk Management Objectives",
+    "objective": "Cybersecurity risk management objectives are formally established, agreed to by organizational stakeholders at all relevant levels, measurable, and aligned with the enterprise's broader strategic objectives. These objectives guide resource allocation and risk decision-making.",
+    "keyActivities": [
+      {
+        "activity": "Define measurable cybersecurity risk management objectives aligned with enterprise strategic goals, including specific targets for risk reduction, compliance, and capability maturity",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Present cybersecurity risk management objectives to senior leadership and the board for formal endorsement, documenting agreement and any modifications requested",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Cascade agreed-upon cybersecurity objectives into departmental and team-level goals, ensuring alignment throughout the organization",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Track progress against cybersecurity risk management objectives using defined KPIs and report status to stakeholders quarterly",
+        "owner": "Risk Manager",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Review and revise objectives following major cybersecurity incidents, significant organizational changes, or material shifts in the threat landscape",
+        "owner": "CISO",
+        "frequency": "As Needed",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Cybersecurity objectives exist informally or are limited to high-level statements such as 'protect the organization.' They are not measurable and lack formal stakeholder endorsement.",
+      "mature": "Measurable cybersecurity risk management objectives are formally documented, endorsed by senior leadership and the board, and tracked through defined KPIs. Objectives are reviewed and updated annually.",
+      "advanced": "Cybersecurity objectives are dynamically aligned with enterprise strategy through integrated planning cycles. Real-time performance dashboards track objective attainment, and predictive analytics inform proactive objective adjustments. Objectives are stress-tested against emerging threat scenarios."
+    }
+  },
+  "GV.RM-02": {
+    "subcategoryId": "GV.RM-02",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Risk Appetite and Tolerance",
+    "objective": "The organization has formally defined, communicated, and maintains risk appetite statements that express the acceptable level of cybersecurity risk, and has translated these into specific, measurable risk tolerance thresholds that guide operational risk decisions.",
+    "keyActivities": [
+      {
+        "activity": "Develop board-approved risk appetite statements that articulate the types and levels of cybersecurity risk the organization is willing to accept in pursuit of its strategic objectives",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Translate risk appetite statements into quantitative risk tolerance thresholds for specific risk categories (e.g., maximum acceptable data breach impact, acceptable vulnerability exposure window, tolerable downtime)",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Communicate risk appetite and tolerance statements across all organizational levels, ensuring operational staff understand how tolerance thresholds affect their decision-making authority",
+        "owner": "Risk Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Monitor risk exposure against defined tolerance thresholds and trigger escalation procedures when tolerances are approached or exceeded",
+        "owner": "Risk Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Periodically reassess risk appetite and tolerance based on changes in business environment, threat landscape, actual loss experience, and stakeholder expectations",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Risk appetite is implicitly understood but not formally documented. Risk tolerance is expressed in vague terms (e.g., 'low risk tolerance') without measurable thresholds. Decisions about acceptable risk are made inconsistently.",
+      "mature": "Board-approved risk appetite statements exist with measurable risk tolerance thresholds for key risk categories. Tolerance monitoring is in place, and escalation occurs when thresholds are approached. Statements are reviewed annually.",
+      "advanced": "Risk appetite and tolerance are dynamically calibrated using quantitative risk models (e.g., cyber value-at-risk). Real-time monitoring dashboards track exposure against tolerances across all risk categories. Tolerance thresholds automatically adjust based on market conditions, threat intelligence, and loss data analytics."
+    }
+  },
+  "GV.RM-03": {
+    "subcategoryId": "GV.RM-03",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Enterprise Risk Integration",
+    "objective": "Cybersecurity risk management is fully integrated with the enterprise risk management (ERM) program, ensuring that cybersecurity risks are assessed, aggregated, and managed alongside financial, operational, compliance, reputational, and strategic risks.",
+    "keyActivities": [
+      {
+        "activity": "Integrate cybersecurity risk into the enterprise risk taxonomy and ensure that the risk scoring methodology for cybersecurity is compatible with the ERM framework used for other risk domains",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Ensure the CISO or cybersecurity risk representative has a standing seat on the enterprise risk committee and regularly presents aggregated cybersecurity risk posture",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Establish escalation criteria that define when cybersecurity risks must be elevated to the enterprise risk committee or board risk committee for decision-making",
+        "owner": "Risk Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Aggregate cybersecurity risks with related enterprise risks (e.g., linking data breach risk to reputational and financial risk) to provide a holistic view of organizational exposure",
+        "owner": "Risk Manager",
+        "frequency": "Quarterly",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Cybersecurity risk management operates as a siloed function within IT. Cybersecurity risks are not routinely included in enterprise risk reporting, and the CISO does not participate in enterprise risk governance.",
+      "mature": "Cybersecurity risks are included in the enterprise risk register, assessed using a compatible methodology, and presented to the enterprise risk committee quarterly. The CISO participates in ERM governance processes.",
+      "advanced": "Cybersecurity risks are seamlessly integrated into ERM with unified risk quantification models. Cross-domain risk correlations are analyzed automatically. Cybersecurity risk data feeds into enterprise-wide scenario analysis, capital allocation, and strategic planning processes."
+    }
+  },
+  "GV.RM-04": {
+    "subcategoryId": "GV.RM-04",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Risk Response Strategy",
+    "objective": "The organization has established clear strategic direction for responding to cybersecurity risks, including defined criteria for risk acceptance, avoidance, mitigation, and transfer. This direction is communicated to decision-makers and guides consistent risk treatment across the enterprise.",
+    "keyActivities": [
+      {
+        "activity": "Define and document criteria for each risk response option (accept, avoid, mitigate, transfer) based on risk severity, asset criticality, cost-benefit analysis, and regulatory requirements",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Evaluate and make decisions regarding cybersecurity insurance coverage, including scope, limits, exclusions, and alignment with residual risk exposure after other response options are applied",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish and document conditions and governance for shared responsibility models, including outsourced cybersecurity functions, cloud shared responsibility, and third-party managed services",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Communicate risk response strategy and decision-making authority to all managers with risk ownership responsibilities, ensuring they understand when they can accept risk versus when escalation is required",
+        "owner": "Risk Manager",
+        "frequency": "Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Risk responses are decided on a case-by-case basis without consistent criteria. Risk acceptance decisions are informal and not well documented. Cybersecurity insurance may exist but is not aligned to the risk profile.",
+      "mature": "Documented risk response criteria exist for each response option. Decision authority is clearly defined. Cybersecurity insurance is reviewed annually and aligned with quantified residual risk. Shared responsibility models are governed by policy.",
+      "advanced": "Risk response selection is supported by quantitative cost-benefit models and scenario analysis. Automated workflows recommend optimal response strategies based on risk data. Insurance coverage is dynamically aligned with evolving risk exposure, and shared responsibility models are continuously validated through audits and control testing."
+    }
+  },
+  "GV.RM-05": {
+    "subcategoryId": "GV.RM-05",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Risk Communication Channels",
+    "objective": "Formal lines of communication for cybersecurity risk information are established across all organizational levels and functions, including supply chain partners, ensuring that risk-relevant information flows efficiently to those who need it for decision-making.",
+    "keyActivities": [
+      {
+        "activity": "Define and document cybersecurity risk communication channels, including reporting cadences, escalation paths, and responsible parties for each organizational level (board, executive, management, operational)",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish cross-functional risk communication protocols between cybersecurity, IT operations, legal, HR, physical security, procurement, and business units to ensure coordinated risk awareness",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement secure channels for sharing cybersecurity risk information with critical suppliers and third parties, including protocols for threat intelligence sharing and incident notification",
+        "owner": "CISO",
+        "frequency": "Ongoing",
+        "priority": "Medium"
+      },
+      {
+        "activity": "Provide regular cybersecurity posture briefings to the board and executive leadership using business-aligned metrics and language that supports informed decision-making",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Cybersecurity risk communication is informal and inconsistent. Information flows primarily within the IT department. Board reporting on cybersecurity is infrequent or absent, and cross-functional communication occurs only during incidents.",
+      "mature": "Formal communication channels and cadences are defined for all organizational levels. The CISO provides regular board briefings with business-aligned metrics. Cross-functional communication protocols are documented and followed. Supplier communication channels are established.",
+      "advanced": "Real-time risk communication is enabled through integrated dashboards accessible to all stakeholders at appropriate levels of detail. Automated alerting triggers risk communications when thresholds are breached. Bi-directional threat intelligence sharing with industry peers and suppliers is routine and automated."
+    }
+  },
+  "GV.RM-06": {
+    "subcategoryId": "GV.RM-06",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Standardized Risk Methodology",
+    "objective": "The organization employs a standardized, documented methodology for calculating, documenting, categorizing, and prioritizing cybersecurity risks, enabling consistent risk assessment across all business units and supporting meaningful aggregation and comparison of risks.",
+    "keyActivities": [
+      {
+        "activity": "Adopt and document a standardized risk assessment methodology (e.g., FAIR, NIST SP 800-30, ISO 27005) that defines how risks are identified, analyzed, evaluated, and scored consistently across the enterprise",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Establish and maintain a centralized risk register with standardized fields (risk description, category, likelihood, impact, inherent risk, controls, residual risk, owner, treatment plan, status) used by all business units",
+        "owner": "Risk Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Define a risk categorization taxonomy (e.g., data breach, ransomware, insider threat, supply chain, regulatory non-compliance) that supports aggregation, trending, and cross-functional comparison",
+        "owner": "Risk Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Train all personnel involved in risk assessment on the standardized methodology to ensure consistency in risk scoring and documentation",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish risk prioritization criteria at enterprise, business unit, and system levels, ensuring alignment with risk appetite and tolerance thresholds",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Risk assessment approaches vary across teams and business units. Risk registers exist but use inconsistent formats and scoring. Risk prioritization is largely subjective, making aggregation and comparison unreliable.",
+      "mature": "A standardized risk methodology is documented and consistently applied across the enterprise. A centralized risk register uses uniform taxonomy and scoring. Personnel are trained, and risk data supports meaningful aggregation and trending.",
+      "advanced": "Quantitative risk analysis (e.g., FAIR-based cyber value-at-risk) is used for high-impact scenarios. Risk assessment is partially automated through integration with vulnerability scanners, threat intelligence, and asset management tools. Machine learning models assist in risk scoring calibration and anomaly detection in risk data."
+    }
+  },
+  "GV.RM-07": {
+    "subcategoryId": "GV.RM-07",
+    "categoryId": "GV.RM",
+    "functionId": "GV",
+    "title": "Strategic Opportunity Identification",
+    "objective": "The organization proactively identifies and evaluates strategic opportunities (positive risks) arising from cybersecurity capabilities, including competitive advantages, market differentiation, and innovation enablement. These opportunities are documented alongside negative risks and factored into investment decisions.",
+    "keyActivities": [
+      {
+        "activity": "Establish a process for identifying cybersecurity-related strategic opportunities, such as leveraging strong security posture for competitive differentiation, enabling new digital business models, or achieving compliance-driven market access",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Medium"
+      },
+      {
+        "activity": "Include positive risks in SWOT analyses and strategic planning sessions, documenting how cybersecurity investments can create business value beyond risk reduction",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "Medium"
+      },
+      {
+        "activity": "Document and track strategic cybersecurity opportunities in the risk register alongside negative risks, assigning owners and investment priorities",
+        "owner": "Risk Manager",
+        "frequency": "Quarterly",
+        "priority": "Medium"
+      },
+      {
+        "activity": "Present cybersecurity-enabled business opportunities to the board and senior leadership alongside risk reports, reframing cybersecurity as a business enabler rather than solely a cost center",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Cybersecurity is viewed purely as a cost center and risk mitigation function. Positive risks are not identified or discussed. Strategic planning does not consider cybersecurity as a potential source of competitive advantage.",
+      "mature": "Cybersecurity-related opportunities are formally identified and documented alongside negative risks. SWOT analyses include cybersecurity capabilities. Leadership receives regular briefings on how cybersecurity investments create business value.",
+      "advanced": "Cybersecurity is recognized as a strategic differentiator and business enabler. Quantitative models estimate the business value of cybersecurity investments (e.g., customer trust premium, market access enabled by certifications). Opportunities are proactively pursued and tracked with the same rigor as negative risk treatments."
+    }
+  },
+  "GV.RR-01": {
+    "subcategoryId": "GV.RR-01",
+    "categoryId": "GV.RR",
+    "functionId": "GV",
+    "title": "Leadership Accountability and Culture",
+    "objective": "Organizational leadership -- including the board of directors and C-suite -- takes explicit responsibility and accountability for cybersecurity risk management, and actively fosters a culture that is risk-aware, ethical, and committed to continuous improvement in cybersecurity practices.",
+    "keyActivities": [
+      {
+        "activity": "Formally assign board-level oversight responsibility for cybersecurity risk, including designating a board committee (e.g., Risk Committee, Audit Committee) or full board with documented cybersecurity governance responsibilities",
+        "owner": "Board of Directors",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Issue executive-level directives establishing the CISO's authority to maintain a comprehensive cybersecurity strategy, with requirements for annual review and post-incident updates",
+        "owner": "CEO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Model and communicate expectations for a security-aware and ethical culture through regular leadership communications, town halls, and responses to security events that reinforce desired behaviors",
+        "owner": "CEO",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct periodic reviews of cybersecurity governance effectiveness, including assessment of whether those responsible for managing cybersecurity risk have adequate authority, resources, and coordination mechanisms",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Incorporate cybersecurity risk management performance into executive compensation and performance evaluation criteria to reinforce accountability",
+        "owner": "HR Director",
+        "frequency": "Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Cybersecurity is delegated entirely to IT with minimal executive or board involvement. Security culture is compliance-driven rather than values-driven. Leadership engagement occurs primarily in response to incidents.",
+      "mature": "Board-level cybersecurity oversight is formally established. The CISO has a direct reporting line to senior leadership and presents to the board regularly. Leadership actively communicates security expectations and models risk-aware behavior.",
+      "advanced": "Cybersecurity accountability is embedded at every leadership level with quantified performance metrics tied to compensation. A strong security culture is evidenced by employee behavior metrics, phishing simulation results, and voluntary reporting rates. Leadership proactively drives continuous improvement through innovation investment and industry leadership."
+    }
+  },
+  "GV.RR-02": {
+    "subcategoryId": "GV.RR-02",
+    "categoryId": "GV.RR",
+    "functionId": "GV",
+    "title": "Roles and Responsibilities Definition",
+    "objective": "Cybersecurity risk management roles, responsibilities, and authorities are clearly defined, documented, communicated to all relevant personnel, understood by those who hold them, and enforced through performance management processes.",
+    "keyActivities": [
+      {
+        "activity": "Document cybersecurity risk management roles and responsibilities in formal policy, using RACI matrices to clarify who is responsible, accountable, consulted, and informed for each major cybersecurity function",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Embed cybersecurity responsibilities into all relevant job descriptions and personnel performance requirements, particularly for security, IT, risk, compliance, and operational roles",
+        "owner": "HR Director",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish and communicate decision authority boundaries, ensuring personnel understand their authority to accept risk, approve exceptions, and authorize security-relevant changes",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct periodic performance reviews for personnel with cybersecurity responsibilities against documented goals, identifying areas for improvement and development",
+        "owner": "HR Director",
+        "frequency": "Annual",
+        "priority": "Medium"
+      },
+      {
+        "activity": "Ensure three-lines-of-defense model clarity: articulate cybersecurity responsibilities within operations (first line), risk functions (second line), and internal audit (third line)",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Cybersecurity responsibilities are informally understood within the security team but not formally documented or communicated organization-wide. Job descriptions rarely reference cybersecurity duties. Accountability is unclear when incidents occur.",
+      "mature": "RACI matrices and formal role definitions exist for all cybersecurity functions. Job descriptions include cybersecurity responsibilities. Performance goals include cybersecurity metrics. Three-lines-of-defense model is documented and operational.",
+      "advanced": "Roles and responsibilities are dynamically managed through an integrated GRC platform. Real-time dashboards track responsibility fulfillment. Cross-functional accountability is reinforced through automated workflow routing, escalation triggers, and continuous performance analytics."
+    }
+  },
+  "GV.RR-03": {
+    "subcategoryId": "GV.RR-03",
+    "categoryId": "GV.RR",
+    "functionId": "GV",
+    "title": "Resource Allocation Adequacy",
+    "objective": "Adequate resources -- including budget, personnel, technology, and training -- are allocated to cybersecurity commensurate with the organization's risk strategy, defined roles, and policy requirements. Resource sufficiency is periodically validated against evolving threats and business needs.",
+    "keyActivities": [
+      {
+        "activity": "Develop and maintain a cybersecurity resource plan that aligns budget, staffing, and technology investments with the cybersecurity strategy, risk appetite, and identified control gaps",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Conduct workforce gap analyses to identify cybersecurity skill shortages and develop hiring, training, and retention plans to address them",
+        "owner": "HR Director",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Validate that personnel in cybersecurity risk management roles have adequate authority, tools, and organizational support to fulfill their responsibilities effectively",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Benchmark cybersecurity spending against industry peers and regulatory expectations to identify potential under- or over-investment",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Cybersecurity budgets are set without formal linkage to risk strategy or identified gaps. Staffing decisions are reactive, often triggered by incidents or audit findings. Resource adequacy is not systematically assessed.",
+      "mature": "Cybersecurity resource plans are linked to the risk strategy and control gap analysis. Workforce planning addresses skill gaps. Budget adequacy is benchmarked against peers. Management reviews periodically validate resource sufficiency.",
+      "advanced": "Resource allocation is dynamically optimized using risk-based investment models that quantify the return on cybersecurity spending. Predictive workforce analytics anticipate skill needs. Resource sufficiency is continuously monitored against evolving threats, and budget reallocation processes enable rapid response to emerging priorities."
+    }
+  },
+  "GV.RR-04": {
+    "subcategoryId": "GV.RR-04",
+    "categoryId": "GV.RR",
+    "functionId": "GV",
+    "title": "HR-Cybersecurity Integration",
+    "objective": "Cybersecurity considerations are systematically integrated into human resources practices throughout the employee lifecycle, including screening, onboarding, role changes, ongoing training, and offboarding, to reduce insider risk and ensure workforce security competence.",
+    "keyActivities": [
+      {
+        "activity": "Integrate cybersecurity requirements into HR processes for screening (background checks), onboarding (security awareness training, acceptable use acknowledgment), role changes (access review), and offboarding (access revocation, exit procedures)",
+        "owner": "HR Director",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Conduct risk-based background checks for all personnel, with enhanced screening for roles with elevated access to sensitive systems or data",
+        "owner": "HR Director",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Require all personnel to acknowledge cybersecurity policies upon hire, annually, and upon policy updates, and enforce consequences for policy violations",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Incorporate cybersecurity knowledge and awareness as positive factors in hiring, promotion, and retention decisions, particularly for technology and leadership roles",
+        "owner": "HR Director",
+        "frequency": "Ongoing",
+        "priority": "Medium"
+      },
+      {
+        "activity": "Ensure timely notification from HR to IT/Security when personnel changes occur (transfers, terminations, role changes) to trigger access reviews and adjustments",
+        "owner": "HR Director",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      }
+    ],
+    "maturity": {
+      "basic": "Background checks are performed for some roles. Onboarding includes basic security awareness training. Offboarding access revocation is manual and sometimes delayed. HR and security functions operate independently.",
+      "mature": "Cybersecurity is systematically integrated into all HR lifecycle stages. Background checks are risk-based and periodic for sensitive roles. Automated workflows trigger access reviews upon personnel changes. Policy acknowledgment is tracked. Insider threat indicators are incorporated into HR processes.",
+      "advanced": "HR and cybersecurity systems are fully integrated, enabling real-time access adjustments based on personnel changes. Behavioral analytics support insider threat detection. Continuous vetting programs supplement periodic background checks. Cybersecurity competency frameworks inform career development and succession planning."
+    }
+  },
+  "GV.PO-01": {
+    "subcategoryId": "GV.PO-01",
+    "categoryId": "GV.PO",
+    "functionId": "GV",
+    "title": "Cybersecurity Policy Establishment",
+    "objective": "A comprehensive cybersecurity risk management policy framework is established, approved by senior management, communicated to all relevant personnel, enforceable, and aligned with the organization's risk strategy, regulatory requirements, and business context.",
+    "keyActivities": [
+      {
+        "activity": "Develop a hierarchical policy framework comprising an overarching cybersecurity policy, supporting standards, and detailed procedures that address all relevant control domains (access control, data protection, incident response, etc.)",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Obtain formal senior management (C-suite or board) approval for the cybersecurity policy, documenting the approval chain and effective date",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Disseminate cybersecurity policies to all personnel and relevant third parties through accessible channels (intranet, LMS, onboarding materials) and require documented acknowledgment of receipt and understanding",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish enforcement mechanisms for policy violations, including escalation procedures, disciplinary actions, and exception management processes",
+        "owner": "HR Director",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Ensure policies include clear statements of management intent, scope, applicability, roles and responsibilities, and consequences for non-compliance",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "A cybersecurity policy exists but may be outdated, overly generic, or not widely communicated. Policy acknowledgment is not consistently tracked. Enforcement is inconsistent, and exceptions are managed informally.",
+      "mature": "A comprehensive, well-organized policy framework is approved by senior management, communicated to all personnel, and acknowledged in writing. Enforcement mechanisms are defined and applied consistently. Exception management follows a formal process.",
+      "advanced": "Policies are dynamically maintained through a GRC platform with version control, automated distribution, acknowledgment tracking, and compliance monitoring. Policy effectiveness is measured through control testing and behavioral metrics. Natural language processing assists in keeping policies current with regulatory changes."
+    }
+  },
+  "GV.PO-02": {
+    "subcategoryId": "GV.PO-02",
+    "categoryId": "GV.PO",
+    "functionId": "GV",
+    "title": "Policy Review and Update",
+    "objective": "Cybersecurity policies are regularly reviewed and updated to reflect changes in the threat landscape, technology environment, regulatory requirements, organizational structure, and lessons learned from incidents and assessments. Updates are communicated and enforced.",
+    "keyActivities": [
+      {
+        "activity": "Establish a formal policy review cycle (at minimum annually) with triggers for out-of-cycle reviews based on significant incidents, regulatory changes, organizational restructuring, or technology adoption",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Review and update policies to address emerging technology risks (e.g., AI/ML, IoT, cloud migration, quantum computing) and evolving threat TTPs",
+        "owner": "Security Architect",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Incorporate lessons learned from incidents, audit findings, and risk assessment results into policy updates, closing identified gaps in guidance and controls",
+        "owner": "CISO",
+        "frequency": "As Needed",
+        "priority": "High"
+      },
+      {
+        "activity": "Track policy version history and communicate all updates to affected personnel, requiring re-acknowledgment for material changes",
+        "owner": "Compliance Manager",
+        "frequency": "Ongoing",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Policies are reviewed on an ad hoc basis, often only when triggered by audits or incidents. Updates are slow, and personnel may be operating under outdated guidance. Version control is minimal.",
+      "mature": "A formal policy review cycle is established and followed. Change triggers are defined for out-of-cycle reviews. Version control and communication of updates are systematic. Re-acknowledgment is required for material changes.",
+      "advanced": "Continuous policy monitoring automatically flags sections impacted by regulatory changes, threat intelligence, or incident findings. Policy effectiveness is measured through compliance metrics and behavioral analytics. Stakeholder feedback loops drive iterative improvements."
+    }
+  },
+  "GV.OV-01": {
+    "subcategoryId": "GV.OV-01",
+    "categoryId": "GV.OV",
+    "functionId": "GV",
+    "title": "Strategy Outcome Review",
+    "objective": "The outcomes of the cybersecurity risk management strategy are systematically reviewed to determine whether the strategy is effectively supporting leadership decision-making and organizational objectives. Findings are used to adjust strategic direction.",
+    "keyActivities": [
+      {
+        "activity": "Measure and evaluate whether the cybersecurity risk management strategy has effectively supported leadership decisions and achievement of organizational objectives during the review period",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Assess whether cybersecurity risk strategies have created unintended friction with business operations or innovation, and identify opportunities for optimization without increasing risk exposure",
+        "owner": "CIO",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Present strategy outcome reviews to the board and senior leadership, including evidence-based recommendations for strategic adjustments",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Solicit feedback from business unit leaders on how the cybersecurity strategy is impacting their ability to achieve objectives, and incorporate input into strategy refinement",
+        "owner": "CRO",
+        "frequency": "Semi-Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Strategy outcomes are not formally measured. Review occurs only after major incidents or during annual planning. There is limited understanding of whether the strategy is achieving intended outcomes.",
+      "mature": "Strategy outcomes are measured against defined objectives and reviewed quarterly. Leadership receives evidence-based reports. Business unit feedback is solicited and incorporated. Adjustments are documented and tracked.",
+      "advanced": "Continuous strategy performance monitoring through automated KPI/KRI dashboards with trend analysis. Predictive models assess strategy effectiveness under various scenarios. Real-time feedback loops enable agile strategy adjustments in response to changing conditions."
+    }
+  },
+  "GV.OV-02": {
+    "subcategoryId": "GV.OV-02",
+    "categoryId": "GV.OV",
+    "functionId": "GV",
+    "title": "Strategy Coverage Assessment",
+    "objective": "The cybersecurity risk management strategy is regularly reviewed and adjusted to ensure it adequately covers all organizational requirements, addresses identified risks, and remains aligned with evolving internal and external conditions.",
+    "keyActivities": [
+      {
+        "activity": "Review audit findings, assessment results, and compliance reports to confirm the cybersecurity strategy ensures adequate coverage of internal policies and external regulatory requirements",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Evaluate the cybersecurity strategy against the current threat landscape to identify coverage gaps, particularly for emerging threats and attack vectors not addressed by the existing strategy",
+        "owner": "Security Architect",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Review the strategy following significant cybersecurity incidents to determine whether strategic gaps contributed to the incident and what adjustments are needed",
+        "owner": "CISO",
+        "frequency": "As Needed",
+        "priority": "High"
+      },
+      {
+        "activity": "Assess whether personnel in cybersecurity-related roles are performing effectively and whether policy or strategy changes are needed to improve performance",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Strategy reviews occur only during annual planning or after major incidents. Coverage gaps are identified reactively through audit findings rather than proactive assessment.",
+      "mature": "Regular strategy coverage assessments are conducted that compare the strategy against current requirements, threats, and audit findings. Gaps are documented and remediation is tracked. Post-incident strategy reviews are systematic.",
+      "advanced": "Continuous strategy coverage analysis leverages automated control mapping, threat intelligence correlation, and regulatory change tracking. Digital twin and simulation techniques model strategy effectiveness against emerging scenarios. Strategy adjustments are data-driven and proactive."
+    }
+  },
+  "GV.OV-03": {
+    "subcategoryId": "GV.OV-03",
+    "categoryId": "GV.OV",
+    "functionId": "GV",
+    "title": "Performance Measurement",
+    "objective": "The organization systematically measures, evaluates, and reports on cybersecurity risk management performance using Key Performance Indicators (KPIs) and Key Risk Indicators (KRIs), enabling data-driven adjustments to the program.",
+    "keyActivities": [
+      {
+        "activity": "Define and implement KPIs that measure the effectiveness and efficiency of cybersecurity controls, processes, and programs (e.g., mean time to detect, mean time to respond, patching compliance rate, phishing click rate)",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Define and monitor KRIs that provide early warning indicators of increasing cybersecurity risk exposure (e.g., number of critical unpatched vulnerabilities, privileged account growth, third-party risk scores)",
+        "owner": "Risk Manager",
+        "frequency": "Monthly",
+        "priority": "High"
+      },
+      {
+        "activity": "Collect, analyze, and report cybersecurity performance metrics to senior leadership and the board in a format that supports decision-making, including trend analysis and benchmarking against industry peers",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Use performance measurement data to identify specific areas requiring adjustment, investment, or improvement, and track remediation progress",
+        "owner": "Risk Manager",
+        "frequency": "Quarterly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Performance measurement is limited to basic operational metrics (e.g., number of incidents, alerts). Metrics are collected inconsistently and not aligned with strategic objectives. Reporting to leadership is ad hoc.",
+      "mature": "A defined set of KPIs and KRIs aligned with strategic objectives is tracked consistently. Metrics are reported to leadership quarterly with trend analysis. Performance data drives improvement decisions.",
+      "advanced": "Automated, real-time performance dashboards integrate data from across the security stack. Advanced analytics provide predictive insights and anomaly detection. Performance benchmarking against industry peers is continuous. Machine learning identifies correlations between metrics and risk outcomes."
+    }
+  },
+  "GV.SC-01": {
+    "subcategoryId": "GV.SC-01",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supply Chain Risk Program",
+    "objective": "A formal cybersecurity supply chain risk management (C-SCRM) program is established with a defined strategy, objectives, policies, and processes that are agreed to by organizational stakeholders and integrated into the broader cybersecurity and enterprise risk management frameworks.",
+    "keyActivities": [
+      {
+        "activity": "Develop and publish a C-SCRM strategy that defines program objectives, scope, governance structure, and alignment with enterprise cybersecurity and risk management strategies",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Establish C-SCRM policies and procedures covering supplier assessment, onboarding, ongoing monitoring, incident response, and offboarding, and communicate them to all relevant stakeholders",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Form a cross-functional C-SCRM governance body with representation from cybersecurity, IT, procurement, legal, operations, and HR to ensure aligned decision-making",
+        "owner": "CRO",
+        "frequency": "Quarterly",
+        "priority": "High"
+      },
+      {
+        "activity": "Develop a C-SCRM implementation plan with milestones, resource requirements, and success metrics to guide program maturation over time",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Supply chain cybersecurity is managed on an ad hoc basis within procurement or IT. No formal C-SCRM program, strategy, or dedicated policies exist. Supplier risk is assessed inconsistently.",
+      "mature": "A formal C-SCRM program exists with documented strategy, policies, and procedures. A cross-functional governance body oversees the program. Suppliers are assessed according to defined criteria, and program performance is tracked.",
+      "advanced": "C-SCRM is deeply integrated into enterprise risk management with automated supplier risk intelligence, continuous monitoring, and dynamic risk scoring. The program leverages industry threat intelligence sharing, regulatory alignment automation, and predictive analytics to anticipate supply chain risks before they materialize."
+    }
+  },
+  "GV.SC-02": {
+    "subcategoryId": "GV.SC-02",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supply Chain Roles Definition",
+    "objective": "Cybersecurity roles and responsibilities for the organization, its suppliers, customers, and partners are clearly defined, documented, communicated both internally and externally, and coordinated to ensure accountability across the supply chain.",
+    "keyActivities": [
+      {
+        "activity": "Designate specific roles accountable for C-SCRM program planning, execution, and oversight, with documented authority and reporting lines",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Develop RACI matrices for C-SCRM activities covering internal functions (cybersecurity, IT, procurement, legal) and external parties (suppliers, customers, partners)",
+        "owner": "Risk Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Define and communicate shared cybersecurity responsibilities with suppliers and partners through contractual agreements, ensuring clarity on security obligations, incident notification duties, and compliance requirements",
+        "owner": "Procurement Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish rules and protocols for cybersecurity information sharing and incident reporting between the organization and its supply chain partners",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Medium"
+      },
+      {
+        "activity": "Include C-SCRM performance metrics in relevant personnel performance reviews and job descriptions to reinforce accountability",
+        "owner": "HR Director",
+        "frequency": "Annual",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Supply chain cybersecurity responsibilities are undefined or loosely assigned within procurement or IT. Supplier contracts mention security in general terms without specific role definitions. Internal coordination is informal.",
+      "mature": "C-SCRM roles are formally documented with RACI matrices for internal and external parties. Contracts specify cybersecurity responsibilities, incident reporting duties, and information sharing protocols. Internal coordination is structured.",
+      "advanced": "Supply chain cybersecurity responsibilities are managed through integrated platforms that automate responsibility tracking, compliance verification, and information sharing. Shared responsibility models are continuously validated through joint exercises, audits, and automated compliance monitoring."
+    }
+  },
+  "GV.SC-03": {
+    "subcategoryId": "GV.SC-03",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supply Chain Risk Integration",
+    "objective": "Cybersecurity supply chain risk management is fully integrated into the organization's cybersecurity risk management, enterprise risk management, risk assessment, and continuous improvement processes, ensuring supply chain risks are not managed in isolation.",
+    "keyActivities": [
+      {
+        "activity": "Align C-SCRM risk assessment methodologies with the enterprise cybersecurity risk assessment framework, ensuring supply chain risks are scored and categorized using compatible approaches",
+        "owner": "Risk Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Include supply chain risks in the enterprise risk register, enabling aggregation and comparison with other cybersecurity and business risks",
+        "owner": "Risk Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish escalation criteria for supply chain cybersecurity risks that reach thresholds requiring senior management or board-level attention and decision-making",
+        "owner": "CRO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Incorporate supply chain risk findings into the organization's continuous improvement processes, ensuring lessons learned from supply chain incidents and assessments drive programmatic enhancements",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Supply chain risks are managed separately from cybersecurity and enterprise risk management. Supply chain risk data does not appear in the enterprise risk register. Escalation paths are undefined.",
+      "mature": "Supply chain risks are integrated into the enterprise risk register and assessed using compatible methodologies. Escalation criteria are defined. Supply chain risk findings feed into continuous improvement processes.",
+      "advanced": "Supply chain risk data is automatically ingested into the enterprise risk platform from multiple sources (vendor risk ratings, threat intelligence, contract management systems). Cross-domain risk correlations between supply chain, cybersecurity, and business risks are analyzed in real time."
+    }
+  },
+  "GV.SC-04": {
+    "subcategoryId": "GV.SC-04",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supplier Criticality Prioritization",
+    "objective": "All suppliers are inventoried and prioritized based on clearly defined criticality criteria, enabling the organization to focus its supply chain risk management resources on the suppliers that pose the greatest risk to mission-critical operations.",
+    "keyActivities": [
+      {
+        "activity": "Develop supplier criticality criteria based on factors including data sensitivity, system access levels, service dependency, financial impact of disruption, and replaceability",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Maintain a comprehensive supplier inventory that includes all third parties providing products, services, or access to organizational data or systems, and classify each according to the criticality criteria",
+        "owner": "Procurement Manager",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Assign differentiated risk management requirements (assessment frequency, depth, monitoring intensity) based on supplier criticality tier",
+        "owner": "Risk Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Review and update supplier criticality classifications when business relationships change, new dependencies emerge, or the threat landscape shifts",
+        "owner": "Risk Manager",
+        "frequency": "Quarterly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "A list of key suppliers exists within procurement, but it is not comprehensive and lacks cybersecurity criticality classifications. All suppliers are treated similarly regardless of risk exposure.",
+      "mature": "A comprehensive supplier inventory exists with documented criticality criteria and tiered classifications. Risk management intensity (assessment frequency, monitoring depth) varies by criticality tier. Classifications are reviewed regularly.",
+      "advanced": "Supplier criticality is dynamically calculated using automated data feeds from contract management, dependency mapping, threat intelligence, and financial impact models. Criticality scores update in near-real-time as conditions change, and automated workflows adjust monitoring intensity accordingly."
+    }
+  },
+  "GV.SC-05": {
+    "subcategoryId": "GV.SC-05",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Contractual Security Requirements",
+    "objective": "Cybersecurity requirements addressing supply chain risks are formally established, prioritized, and incorporated into contracts and agreements with suppliers and third parties, ensuring enforceable security obligations commensurate with criticality.",
+    "keyActivities": [
+      {
+        "activity": "Develop standardized cybersecurity contract clauses (security requirements, SBOMs, vulnerability disclosure, incident notification timelines, audit rights, data handling, compliance attestation) scaled by supplier criticality tier",
+        "owner": "General Counsel",
+        "frequency": "Annual",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Include cybersecurity SLA requirements in supplier contracts that define acceptable security performance levels, monitoring methods, and consequences for non-compliance",
+        "owner": "Procurement Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Require critical suppliers to provide and maintain current Software Bills of Materials (SBOMs) or Hardware Bills of Materials (HBOMs) for products and services delivered to the organization",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Contractually require suppliers to provide evidence of security compliance through certifications (SOC 2, ISO 27001), self-attestations, or independent audit results",
+        "owner": "Procurement Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Ensure contracts define information sharing rules, data protection requirements, and the rights and responsibilities of all parties with respect to cybersecurity risks throughout the engagement lifecycle",
+        "owner": "General Counsel",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Supplier contracts include boilerplate security language but lack specific, enforceable cybersecurity requirements. SBOM requirements and incident notification timelines are not addressed. Compliance evidence is not required.",
+      "mature": "Standardized cybersecurity clauses scaled by criticality are included in all supplier contracts. SBOMs are required for critical products. Incident notification timelines are specified. Compliance evidence (certifications, audits) is contractually required and collected.",
+      "advanced": "Contract cybersecurity requirements are dynamically generated based on automated risk assessments and regulatory mapping. Compliance evidence is collected and verified through automated platforms. Contract performance is continuously monitored against cybersecurity SLAs with automated alerting for deviations."
+    }
+  },
+  "GV.SC-06": {
+    "subcategoryId": "GV.SC-06",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supplier Due Diligence",
+    "objective": "Thorough cybersecurity due diligence is performed on prospective suppliers and third parties before entering into formal relationships, with the depth and rigor of assessment proportional to the criticality and risk level of the proposed engagement.",
+    "keyActivities": [
+      {
+        "activity": "Establish a formal pre-engagement cybersecurity due diligence process that scales with supplier criticality, ranging from questionnaire-based self-assessment for low-risk suppliers to comprehensive on-site audits for critical ones",
+        "owner": "CISO",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Assess prospective suppliers' cybersecurity capabilities, including their security program maturity, incident response capabilities, data protection practices, and compliance with relevant standards and regulations",
+        "owner": "Risk Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Evaluate the authenticity, integrity, and security posture of critical technology products and services prior to acquisition, including reviewing known vulnerabilities and supply chain provenance",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Document due diligence findings and risk acceptance decisions, ensuring that identified risks are formally accepted by appropriate risk owners before contract execution",
+        "owner": "Risk Manager",
+        "frequency": "Ongoing",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Due diligence on suppliers is inconsistent, often limited to financial and operational assessments without cybersecurity evaluation. Security questionnaires may be used but results are not systematically analyzed.",
+      "mature": "A formal due diligence process is defined and consistently applied, scaled by supplier criticality. Cybersecurity assessments evaluate program maturity, incident response, and compliance. Risk acceptance decisions are documented before engagement.",
+      "advanced": "Pre-engagement due diligence is augmented by automated vendor risk rating services, dark web monitoring, and real-time threat intelligence. Product integrity verification includes SBOM analysis and vulnerability correlation. AI-assisted analysis of questionnaire responses identifies inconsistencies and risk indicators."
+    }
+  },
+  "GV.SC-07": {
+    "subcategoryId": "GV.SC-07",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Ongoing Supplier Risk Monitoring",
+    "objective": "Supplier risks are continuously understood, recorded, assessed, and monitored throughout the entire lifecycle of the relationship, with risk responses adjusted as conditions change and business continuity plans in place for supply chain disruptions.",
+    "keyActivities": [
+      {
+        "activity": "Implement a tiered ongoing supplier assessment program with assessment frequency and depth determined by supplier criticality (e.g., annual comprehensive assessments for critical suppliers, biennial for standard)",
+        "owner": "Risk Manager",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Monitor critical suppliers through multiple methods including compliance evidence review, third-party risk rating services, security audit reports, and real-time threat intelligence",
+        "owner": "CISO",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Evaluate supplier compliance evidence (SOC 2 reports, ISO certifications, penetration test results, self-attestations) against contractual cybersecurity requirements and document findings",
+        "owner": "Risk Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Develop and maintain business continuity plans for critical supplier disruptions, including identification of alternative suppliers and service transition procedures",
+        "owner": "IT Director",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Reassess supplier criticality and risk impact when changes occur (e.g., supplier M&A activity, new vulnerabilities in supplier products, changes in data shared with supplier)",
+        "owner": "Risk Manager",
+        "frequency": "As Needed",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Supplier monitoring is limited to initial assessment with minimal follow-up. Compliance evidence is collected inconsistently. Business continuity plans do not specifically address supplier disruptions.",
+      "mature": "A tiered ongoing assessment program is operational with defined cadences. Multiple monitoring methods are used for critical suppliers. Compliance evidence is systematically reviewed. Business continuity plans address critical supplier disruptions.",
+      "advanced": "Continuous supplier monitoring integrates automated risk rating feeds, real-time threat intelligence, dark web monitoring, and compliance evidence platforms. AI-driven analytics detect risk profile changes and automatically trigger reassessment workflows. Supplier disruption scenarios are regularly tested through exercises."
+    }
+  },
+  "GV.SC-08": {
+    "subcategoryId": "GV.SC-08",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supplier Incident Coordination",
+    "objective": "Critical suppliers and relevant third parties are integrated into the organization's incident planning, response, and recovery processes, ensuring coordinated and effective response to supply chain-related cybersecurity incidents.",
+    "keyActivities": [
+      {
+        "activity": "Define and document incident response roles, responsibilities, and communication protocols between the organization and its critical suppliers, including escalation paths and emergency contact information",
+        "owner": "SOC Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Include critical suppliers in incident response tabletop exercises and simulations, testing communication channels, escalation procedures, and coordinated response capabilities",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Establish crisis communication methods and protocols with critical suppliers, including secure communication channels, public messaging coordination, and regulatory notification alignment",
+        "owner": "CISO",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Conduct collaborative post-incident reviews and lessons-learned sessions with involved suppliers to improve joint response capabilities",
+        "owner": "SOC Manager",
+        "frequency": "As Needed",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Supplier involvement in incident response is reactive and ad hoc. Communication during incidents relies on standard business channels. Suppliers are not included in exercises. Post-incident reviews rarely involve suppliers.",
+      "mature": "Critical suppliers are integrated into incident response plans with defined roles, communication protocols, and escalation paths. Suppliers participate in annual exercises. Lessons learned sessions include supplier representatives.",
+      "advanced": "Automated incident coordination platforms connect the organization and critical suppliers for real-time incident information sharing. Joint response playbooks are maintained and regularly tested. Coordinated threat intelligence sharing enables proactive threat mitigation across the supply chain."
+    }
+  },
+  "GV.SC-09": {
+    "subcategoryId": "GV.SC-09",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supply Chain Lifecycle Security",
+    "objective": "Supply chain security practices are embedded throughout the entire technology product and service lifecycle -- from acquisition through deployment, operations, and retirement -- with performance monitored and integrated into broader cybersecurity and ERM programs.",
+    "keyActivities": [
+      {
+        "activity": "Establish policies requiring provenance records and authenticity verification for all acquired technology products and services, particularly for critical systems and components",
+        "owner": "CISO",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement controls ensuring that software patches, updates, and upgrades are obtained only from authenticated and trustworthy providers through verified distribution channels",
+        "owner": "IT Director",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Require that only approved supplier personnel perform maintenance on supplier-provided products and services, with appropriate access controls and monitoring in place",
+        "owner": "IT Director",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Implement integrity verification procedures for critical hardware upgrades and replacements to detect unauthorized modifications or counterfeit components",
+        "owner": "Security Architect",
+        "frequency": "Ongoing",
+        "priority": "High"
+      },
+      {
+        "activity": "Report regularly to leadership on supply chain security posture, including provenance compliance rates, integrity verification results, and identified tampering or counterfeiting incidents",
+        "owner": "CISO",
+        "frequency": "Quarterly",
+        "priority": "Medium"
+      }
+    ],
+    "maturity": {
+      "basic": "Provenance tracking and integrity verification are limited to ad hoc checks on select products. Software updates are obtained from vendor sites without formal verification procedures. Supplier maintenance access is loosely controlled.",
+      "mature": "Formal provenance and integrity verification policies are in place and followed for critical acquisitions. Software update sources are verified. Supplier maintenance access is controlled and logged. Lifecycle security is monitored and reported.",
+      "advanced": "Automated provenance tracking and integrity verification are integrated throughout the technology lifecycle using blockchain-based provenance records, automated SBOM analysis, and real-time tampering detection. Supply chain security performance metrics feed into continuous improvement and are benchmarked against industry standards."
+    }
+  },
+  "GV.SC-10": {
+    "subcategoryId": "GV.SC-10",
+    "categoryId": "GV.SC",
+    "functionId": "GV",
+    "title": "Supplier Offboarding Security",
+    "objective": "The organization has established and maintains plans and procedures for activities that occur after the conclusion of a supplier or third-party relationship, ensuring secure termination, data protection, access revocation, and risk mitigation during transitions.",
+    "keyActivities": [
+      {
+        "activity": "Develop and document supplier offboarding procedures covering access revocation, data return or destruction, knowledge transfer, and transition to alternative providers",
+        "owner": "Procurement Manager",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Ensure all supplier access to organizational systems, networks, and data is promptly revoked upon relationship termination, with verification that no residual access pathways exist",
+        "owner": "IT Director",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Verify that organizational data held by the terminated supplier is returned or securely destroyed in accordance with contractual requirements, with documented evidence of compliance",
+        "owner": "Data Protection Officer",
+        "frequency": "Ongoing",
+        "priority": "Critical"
+      },
+      {
+        "activity": "Develop transition plans for critical supplier relationships that address supply chain continuity, including alternative provider identification, data migration, and service cutover procedures",
+        "owner": "IT Director",
+        "frequency": "Annual",
+        "priority": "High"
+      },
+      {
+        "activity": "Assess and mitigate data leakage risks associated with supplier termination, including monitoring for unauthorized data retention or use by the former supplier",
+        "owner": "CISO",
+        "frequency": "Ongoing",
+        "priority": "High"
+      }
+    ],
+    "maturity": {
+      "basic": "Supplier offboarding is handled informally by individual relationship managers. Access revocation may be delayed. Data return or destruction is not consistently verified. Transition planning is minimal.",
+      "mature": "Formal offboarding procedures exist covering access revocation, data handling, and transition planning. Checklists ensure all steps are completed. Data destruction certificates are required. Transition plans exist for critical suppliers.",
+      "advanced": "Automated offboarding workflows integrate with identity management, data governance, and contract management systems to ensure comprehensive and timely supplier disengagement. Post-termination monitoring detects unauthorized data retention or access attempts. Transition exercises are conducted for critical supplier relationships."
+    }
+  }
+}

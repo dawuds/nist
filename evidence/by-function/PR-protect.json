@@ -1,0 +1,1853 @@
+{
+  "PR.AA-01": {
+    "subcategoryId": "PR.AA-01",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Identity and Credential Management",
+    "assessorFocus": "Verify the organization has a comprehensive identity lifecycle process covering provisioning, modification, and deprovisioning of credentials for users, services, and hardware assets.",
+    "evidenceItems": [
+      {
+        "id": "PR.AA-01-E1",
+        "name": "Identity Lifecycle Management Policy and Procedures",
+        "description": "Demonstrates the organization has formal policies governing credential issuance, management, and revocation for all entity types",
+        "whatGoodLooksLike": [
+          "Policy covers users, service accounts, and hardware identities with defined ownership",
+          "Procedures include timely deprovisioning triggered by HR separation events within 24 hours",
+          "Cryptographic key and certificate management lifecycle is documented with rotation schedules"
+        ],
+        "commonGaps": [
+          "Service accounts and non-human identities excluded from lifecycle management",
+          "No integration between HR termination process and access revocation workflow",
+          "Cryptographic key rotation not enforced or tracked"
+        ],
+        "suggestedSources": [
+          "Identity Governance and Administration (IGA) platform exports",
+          "HR-to-IT provisioning workflow documentation and audit logs",
+          "Certificate and key management system inventory reports"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-01-E2",
+        "name": "Access Request and Approval Records",
+        "description": "Shows that access provisioning follows a formal request, review, and approval workflow with data/system owner authorization",
+        "whatGoodLooksLike": [
+          "All access requests are tracked in a ticketing system with approver sign-off from resource owners",
+          "Requests include business justification and defined access scope",
+          "Automated workflows enforce approval chains before provisioning"
+        ],
+        "commonGaps": [
+          "Access granted informally via email or chat without formal approval records",
+          "No system or data owner involvement in approval decisions",
+          "Bulk provisioning bypasses individual request workflows"
+        ],
+        "suggestedSources": [
+          "ServiceNow or ITSM access request ticket exports",
+          "IGA platform approval workflow logs",
+          "Active Directory or IdP provisioning audit trails"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-01-E3",
+        "name": "Hardware Identity Inventory and Labeling Records",
+        "description": "Demonstrates that authorized hardware assets are uniquely identified, labeled, and tracked using immutable characteristics or securely provisioned identifiers",
+        "whatGoodLooksLike": [
+          "Hardware asset inventory includes unique identifiers tied to immutable hardware characteristics such as MAC address or TPM",
+          "Physical labels match inventory records and are verified during periodic audits",
+          "Device certificates or machine identities are provisioned and managed centrally"
+        ],
+        "commonGaps": [
+          "No correlation between physical labels and logical identity records",
+          "BYOD and IoT devices excluded from hardware identity management",
+          "Device certificates issued manually without centralized tracking"
+        ],
+        "suggestedSources": [
+          "CMDB or asset management platform exports",
+          "Endpoint management (Intune, JAMF) device inventory reports",
+          "PKI or device certificate management system logs"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request a sample of recent joiner, mover, and leaver events and trace them through the full identity lifecycle",
+      "Verify that service accounts and machine identities are included in governance processes, not just human users",
+      "Check for orphaned accounts by comparing IdP user lists against active HR employee rosters",
+      "Ask how cryptographic credentials such as API keys, certificates, and tokens are inventoried and rotated"
+    ]
+  },
+  "PR.AA-02": {
+    "subcategoryId": "PR.AA-02",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Identity Proofing and Credential Binding",
+    "assessorFocus": "Confirm that the organization verifies claimed identities before binding them to credentials, using context-appropriate proofing methods and ensuring unique credential assignment.",
+    "evidenceItems": [
+      {
+        "id": "PR.AA-02-E1",
+        "name": "Identity Proofing Policy and Procedures",
+        "description": "Demonstrates the organization has defined identity proofing requirements proportional to the risk of the access being granted",
+        "whatGoodLooksLike": [
+          "Policy specifies proofing levels (e.g., NIST SP 800-63A IAL1/2/3) matched to access risk tiers",
+          "Government-issued ID verification is required for enrollment of privileged and high-risk users",
+          "Remote identity proofing uses trusted third-party verification services"
+        ],
+        "commonGaps": [
+          "Same proofing level applied regardless of access risk or data sensitivity",
+          "No documented proofing standard for contractors or third-party users",
+          "Self-service enrollment lacks identity verification beyond email confirmation"
+        ],
+        "suggestedSources": [
+          "Identity proofing policy and enrollment procedures documentation",
+          "Third-party identity verification service contracts and SLAs",
+          "IdP enrollment configuration and workflow documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-02-E2",
+        "name": "Enrollment and Credential Issuance Audit Logs",
+        "description": "Shows that identity proofing was performed and credentials were uniquely issued to verified individuals",
+        "whatGoodLooksLike": [
+          "Audit logs capture proofing method used, verifier identity, and timestamp for each enrollment",
+          "Each individual receives unique credentials with no shared accounts",
+          "Credential issuance records are linked to verified identity proofing events"
+        ],
+        "commonGaps": [
+          "Enrollment logs do not record which proofing method was used",
+          "Shared or generic accounts exist without individual attribution",
+          "No audit trail linking a credential back to the proofing event"
+        ],
+        "suggestedSources": [
+          "IdP enrollment and credential issuance logs",
+          "HR onboarding records with ID verification checklists",
+          "Identity verification platform transaction logs"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-02-E3",
+        "name": "Unique Credential Assignment Records",
+        "description": "Demonstrates that every user has a unique credential and shared credential usage is prohibited or tightly controlled",
+        "whatGoodLooksLike": [
+          "Directory or IdP report shows one-to-one mapping between individuals and accounts",
+          "Policy explicitly prohibits credential sharing with enforcement controls",
+          "Exceptions for shared accounts are documented with compensating controls and individual accountability"
+        ],
+        "commonGaps": [
+          "Shared service or admin accounts used without individual attribution",
+          "No monitoring or detection of credential sharing behavior",
+          "Contractor accounts reused across different individuals over time"
+        ],
+        "suggestedSources": [
+          "Active Directory or IdP user account inventory reports",
+          "PAM platform shared account checkout and session logs",
+          "Acceptable use policy sections on credential sharing"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request documentation of the proofing process for different user populations such as employees, contractors, and partners",
+      "Verify that remote proofing methods use trusted verification services rather than self-attestation alone",
+      "Sample recent enrollments and confirm proofing evidence was collected before credential issuance",
+      "Check whether shared or generic accounts exist and whether they have compensating controls for individual accountability"
+    ]
+  },
+  "PR.AA-03": {
+    "subcategoryId": "PR.AA-03",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Authentication of Users, Services, and Hardware",
+    "assessorFocus": "Validate that the organization enforces strong authentication for all entity types, including multifactor authentication, password policies, and periodic reauthentication aligned with risk.",
+    "evidenceItems": [
+      {
+        "id": "PR.AA-03-E1",
+        "name": "Authentication Policy and MFA Configuration",
+        "description": "Demonstrates that the organization has defined and enforced authentication requirements including MFA and password strength",
+        "whatGoodLooksLike": [
+          "MFA is required for all remote access, privileged access, and access to sensitive systems",
+          "Password policies enforce minimum complexity, length, and rotation aligned with current NIST guidance",
+          "Phishing-resistant MFA methods (FIDO2, hardware tokens) are used for high-risk access"
+        ],
+        "commonGaps": [
+          "MFA not enforced for service accounts, VPN, or legacy applications",
+          "Password policies rely on frequent rotation instead of length and complexity",
+          "SMS-based MFA used as the sole second factor for privileged access"
+        ],
+        "suggestedSources": [
+          "IdP conditional access and MFA policy configuration exports",
+          "Password policy settings from Active Directory or IdP",
+          "Authentication policy documentation"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-03-E2",
+        "name": "Authentication Audit Logs and Metrics",
+        "description": "Shows authentication events including successful logins, failed attempts, lockouts, and reauthentication enforcement",
+        "whatGoodLooksLike": [
+          "Logs capture authentication method, source IP, device posture, and success/failure status",
+          "Failed authentication attempts trigger lockout after a defined threshold",
+          "Periodic reauthentication is enforced for long-running sessions based on risk context"
+        ],
+        "commonGaps": [
+          "Authentication logs lack detail on method used or device context",
+          "No account lockout policy or lockout thresholds set too high",
+          "Session timeouts not enforced allowing indefinite authenticated sessions"
+        ],
+        "suggestedSources": [
+          "SIEM authentication event reports",
+          "IdP sign-in logs and conditional access audit reports",
+          "VPN and remote access gateway authentication logs"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-03-E3",
+        "name": "Emergency Access and Break-Glass Procedures",
+        "description": "Demonstrates that authorized personnel can access critical accounts under emergency conditions through controlled break-glass procedures",
+        "whatGoodLooksLike": [
+          "Documented break-glass procedure with step-by-step instructions and authorized personnel list",
+          "Break-glass accounts are monitored and generate alerts on use",
+          "Post-incident review is required after every break-glass event including credential rotation"
+        ],
+        "commonGaps": [
+          "No formal break-glass procedure documented or tested",
+          "Break-glass credentials stored insecurely or shared without monitoring",
+          "No post-use review or credential rotation after break-glass access"
+        ],
+        "suggestedSources": [
+          "Break-glass procedure documentation and authorized personnel register",
+          "PAM platform emergency access logs",
+          "Incident response records involving break-glass account usage"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify MFA enforcement by reviewing conditional access policy configurations, not just stated policy",
+      "Test whether legacy protocols that bypass MFA such as IMAP, SMTP, or LDAP simple bind are disabled",
+      "Ask about reauthentication triggers and validate session timeout configurations",
+      "Request evidence of break-glass procedure testing and post-use review records"
+    ]
+  },
+  "PR.AA-04": {
+    "subcategoryId": "PR.AA-04",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Identity Assertion Protection and Verification",
+    "assessorFocus": "Assess whether identity assertions used in SSO, federation, and cross-domain authentication are protected through signing, encryption, and proper verification practices.",
+    "evidenceItems": [
+      {
+        "id": "PR.AA-04-E1",
+        "name": "Federation and SSO Architecture Documentation",
+        "description": "Demonstrates that the organization uses standards-based identity federation with proper assertion protection",
+        "whatGoodLooksLike": [
+          "Architecture diagrams show SAML, OIDC, or OAuth 2.0 flows with assertion signing and encryption",
+          "Identity provider and relying party trust relationships are documented and reviewed",
+          "Token lifetimes are configured to minimize exposure and require refresh"
+        ],
+        "commonGaps": [
+          "Assertions transmitted without digital signatures or encryption",
+          "Federation trust relationships established without periodic review or revalidation",
+          "Token lifetimes set excessively long without refresh or revocation mechanisms"
+        ],
+        "suggestedSources": [
+          "SSO and federation architecture diagrams and design documents",
+          "IdP configuration exports showing signing and encryption settings",
+          "OAuth/OIDC/SAML relying party trust configuration documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-04-E2",
+        "name": "Assertion Signing and Encryption Configuration",
+        "description": "Shows that identity assertions are digitally signed and encrypted using current cryptographic standards",
+        "whatGoodLooksLike": [
+          "SAML assertions are signed with SHA-256 or stronger and encrypted at the assertion level",
+          "OIDC tokens are signed with RS256 or ES256 and validated by relying parties",
+          "Certificate rotation for signing keys is scheduled and tracked"
+        ],
+        "commonGaps": [
+          "Assertions signed with deprecated algorithms such as SHA-1",
+          "Relying parties configured to accept unsigned assertions",
+          "Signing certificate rotation not planned or executed"
+        ],
+        "suggestedSources": [
+          "IdP SAML metadata showing signing certificate and algorithm configuration",
+          "OIDC well-known configuration endpoint exports",
+          "Certificate management records for assertion signing keys"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-04-E3",
+        "name": "Assertion Verification and Validation Logs",
+        "description": "Demonstrates that relying parties validate assertion signatures, check expiration, and reject invalid tokens",
+        "whatGoodLooksLike": [
+          "Application logs show signature verification performed on every received assertion",
+          "Invalid or expired assertions are rejected and logged as security events",
+          "Audience restriction and issuer validation are enforced at each relying party"
+        ],
+        "commonGaps": [
+          "Relying parties do not validate assertion signatures or audience restrictions",
+          "No logging of assertion validation failures",
+          "Replay attacks possible due to missing nonce or timestamp validation"
+        ],
+        "suggestedSources": [
+          "Application-level authentication logs showing assertion validation",
+          "Web application firewall or API gateway token validation logs",
+          "Security testing reports covering assertion handling"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review actual IdP and relying party configurations rather than relying solely on architecture documents",
+      "Verify that assertion signing uses current cryptographic algorithms and that SHA-1 is not in use",
+      "Check that token lifetimes and refresh policies are appropriate for the risk level of the applications",
+      "Ask whether penetration testing has included assertion manipulation, replay, and injection attacks"
+    ]
+  },
+  "PR.AA-05": {
+    "subcategoryId": "PR.AA-05",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Access Permissions and Least Privilege Enforcement",
+    "assessorFocus": "Evaluate whether access permissions are defined in policy, enforce least privilege and separation of duties, and are reviewed periodically with prompt revocation of unnecessary privileges.",
+    "evidenceItems": [
+      {
+        "id": "PR.AA-05-E1",
+        "name": "Access Control Policy and Role Definitions",
+        "description": "Demonstrates that access permissions are defined in policy with role-based or attribute-based access models enforcing least privilege",
+        "whatGoodLooksLike": [
+          "Documented RBAC or ABAC model with role definitions mapped to job functions",
+          "Least privilege and separation of duties principles explicitly stated and enforced in policy",
+          "Access control policies address physical and logical access across all platforms including cloud"
+        ],
+        "commonGaps": [
+          "Access roles are overly broad or not aligned with actual job responsibilities",
+          "Separation of duties not enforced for critical business functions such as financial approvals",
+          "Cloud resource access permissions not governed by the same policies as on-premises"
+        ],
+        "suggestedSources": [
+          "Access control policy and role definition documentation",
+          "RBAC or ABAC model design documents with role-to-permission mappings",
+          "Cloud IAM policy exports from AWS, Azure, or GCP"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-05-E2",
+        "name": "Access Review and Recertification Records",
+        "description": "Shows that access privileges are periodically reviewed by resource owners with documented decisions to retain or revoke",
+        "whatGoodLooksLike": [
+          "Quarterly or semi-annual access reviews completed by resource owners with documented accept/revoke decisions",
+          "Revocations executed within defined SLA after review decisions",
+          "Privileged access reviews conducted at higher frequency than standard user reviews"
+        ],
+        "commonGaps": [
+          "Access reviews are performed as a rubber-stamp exercise without meaningful owner evaluation",
+          "Revocation decisions identified during review are not acted upon timely",
+          "Privileged and service accounts excluded from periodic review campaigns"
+        ],
+        "suggestedSources": [
+          "IGA platform access certification campaign reports",
+          "Access review decision records with reviewer signatures",
+          "Remediation tracking records for revoked access"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-05-E3",
+        "name": "Separation of Duties Matrix and Enforcement Evidence",
+        "description": "Demonstrates that incompatible duties are identified and technical or procedural controls prevent their combination",
+        "whatGoodLooksLike": [
+          "SoD matrix defines incompatible role combinations for critical business processes",
+          "Technical controls in ERP or IAM systems prevent assignment of conflicting roles",
+          "SoD violations are detected, reported, and resolved through exception management"
+        ],
+        "commonGaps": [
+          "No formal SoD matrix exists or it has not been updated for current roles",
+          "SoD enforcement relies on manual processes without automated detection",
+          "Known SoD violations accepted without compensating controls or time-bound remediation"
+        ],
+        "suggestedSources": [
+          "SoD conflict matrix documentation",
+          "ERP or IAM system SoD violation detection reports",
+          "Exception management records for approved SoD conflicts"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Compare actual entitlements of a sample of users against their role definitions to verify least privilege",
+      "Request evidence of access revocation for recently departed or role-changed personnel",
+      "Evaluate whether access reviews are substantive by checking revocation rates and reviewer time-on-task",
+      "Verify that SoD controls extend to cloud environments and not just on-premises ERP systems"
+    ]
+  },
+  "PR.AA-06": {
+    "subcategoryId": "PR.AA-06",
+    "categoryId": "PR.AA",
+    "functionId": "PR",
+    "title": "Physical Access Management and Monitoring",
+    "assessorFocus": "Assess whether physical access to facilities and assets is managed, monitored, and enforced commensurate with the risk of the assets housed within, including visitor management and high-security zones.",
+    "evidenceItems": [
+      {
+        "id": "PR.AA-06-E1",
+        "name": "Physical Access Control Policy and Procedures",
+        "description": "Demonstrates that the organization has defined physical access requirements proportional to asset risk for all facility types",
+        "whatGoodLooksLike": [
+          "Policy defines physical access zones with escalating controls for higher-risk areas such as data centers and server rooms",
+          "Visitor management procedures require escort, sign-in, and badge issuance",
+          "Physical access provisioning and revocation follows a formal workflow tied to employment status"
+        ],
+        "commonGaps": [
+          "Physical access policy does not differentiate between general office areas and high-security zones",
+          "Visitor escort requirements not consistently enforced",
+          "Physical access badges not revoked promptly upon termination"
+        ],
+        "suggestedSources": [
+          "Physical security policy and facility access procedures",
+          "Visitor management policy and sign-in log templates",
+          "Physical access provisioning workflow documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-06-E2",
+        "name": "Physical Access Control System Logs and Reports",
+        "description": "Shows that physical access events are logged, monitored, and periodically reviewed for anomalies",
+        "whatGoodLooksLike": [
+          "Badge reader logs capture all entry and exit events with timestamps and individual identification",
+          "After-hours and unauthorized access attempts generate real-time alerts",
+          "Physical access logs are retained and reviewed as part of security monitoring"
+        ],
+        "commonGaps": [
+          "Physical access logs not integrated with security monitoring or SIEM",
+          "Tailgating and piggybacking not detected or monitored",
+          "No periodic review of physical access logs for anomalous patterns"
+        ],
+        "suggestedSources": [
+          "Physical access control system (PACS) event logs",
+          "Security camera and alarm system monitoring reports",
+          "SIEM physical access event correlation reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AA-06-E3",
+        "name": "Physical Access Review and Recertification Records",
+        "description": "Demonstrates that physical access privileges are periodically reviewed and aligned with current personnel status and need",
+        "whatGoodLooksLike": [
+          "Periodic reviews of physical access badges verify all holders are current authorized personnel",
+          "Access to high-security zones is reviewed at higher frequency with facility manager approval",
+          "Lost or stolen badges are reported and deactivated immediately with replacement tracking"
+        ],
+        "commonGaps": [
+          "Physical access reviews not conducted or conducted only for logical access",
+          "Former employees or contractors retain active physical access badges",
+          "No process for tracking and deactivating lost or stolen badges"
+        ],
+        "suggestedSources": [
+          "Physical access review records with reviewer attestations",
+          "Badge inventory reconciliation reports",
+          "Lost or stolen badge incident reports"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Walk the facility to verify that physical controls match documented policy including locked doors, cameras, and badge readers",
+      "Cross-reference physical access badge holders against current HR roster to identify orphaned badges",
+      "Test visitor management by observing sign-in process and escort compliance",
+      "Verify that high-security areas such as data centers and network closets have enhanced controls beyond standard office access"
+    ]
+  },
+  "PR.AT-01": {
+    "subcategoryId": "PR.AT-01",
+    "categoryId": "PR.AT",
+    "functionId": "PR",
+    "title": "General Cybersecurity Awareness and Training",
+    "assessorFocus": "Evaluate whether all personnel including employees, contractors, and third-party users receive general cybersecurity awareness training covering common threats, policies, and cyber hygiene, with periodic assessment of knowledge retention.",
+    "evidenceItems": [
+      {
+        "id": "PR.AT-01-E1",
+        "name": "Security Awareness Training Program Documentation",
+        "description": "Demonstrates the organization has a structured awareness training program covering all user populations",
+        "whatGoodLooksLike": [
+          "Training program covers social engineering, phishing, password hygiene, acceptable use, and incident reporting",
+          "Annual refresher training is mandated with new content reflecting current threat landscape",
+          "Training is required for all employees, contractors, and third-party users before system access is granted"
+        ],
+        "commonGaps": [
+          "Contractors and third-party users excluded from training requirements",
+          "Training content is static and not updated to reflect evolving threats",
+          "No consequences defined for non-completion of mandatory training"
+        ],
+        "suggestedSources": [
+          "Security awareness training program charter and curriculum",
+          "Training platform configuration and content catalog",
+          "Policy mandating training completion with enforcement mechanisms"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AT-01-E2",
+        "name": "Training Completion Records and Compliance Reports",
+        "description": "Shows that training was completed by all required personnel with tracking of compliance rates",
+        "whatGoodLooksLike": [
+          "Completion rates at or above 95% for all user populations with escalation for non-compliance",
+          "Individual completion records with dates, module names, and assessment scores",
+          "Management dashboards track completion rates by department and user type"
+        ],
+        "commonGaps": [
+          "Low completion rates without management escalation or enforcement",
+          "Completion records do not distinguish between initial and refresher training",
+          "No tracking mechanism for contractor or third-party training completion"
+        ],
+        "suggestedSources": [
+          "LMS training completion reports by department and user type",
+          "Non-compliance escalation records",
+          "Quarterly training compliance dashboards"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AT-01-E3",
+        "name": "Phishing Simulation and Knowledge Assessment Results",
+        "description": "Demonstrates that the organization periodically tests user awareness through simulations and assessments",
+        "whatGoodLooksLike": [
+          "Phishing simulations conducted at least quarterly with trending metrics on click rates",
+          "Users who fail simulations receive targeted remedial training",
+          "Knowledge assessment pass rates demonstrate comprehension of key security concepts"
+        ],
+        "commonGaps": [
+          "Phishing simulations not conducted or conducted infrequently",
+          "No remedial training for users who repeatedly fail simulations",
+          "Assessment results not used to improve training content or frequency"
+        ],
+        "suggestedSources": [
+          "Phishing simulation platform campaign reports and trend data",
+          "Post-training knowledge assessment score reports",
+          "Remedial training assignment and completion records"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify training content is current by reviewing the last update date and checking for coverage of recent threats",
+      "Review phishing simulation trend data to assess whether awareness is improving over time",
+      "Confirm that training is completed before system access is provisioned for new users",
+      "Check whether training addresses organization-specific policies such as data classification and acceptable use"
+    ]
+  },
+  "PR.AT-02": {
+    "subcategoryId": "PR.AT-02",
+    "categoryId": "PR.AT",
+    "functionId": "PR",
+    "title": "Specialized Role-Based Cybersecurity Training",
+    "assessorFocus": "Confirm that individuals in specialized roles such as IT administrators, security personnel, developers, finance staff, and senior leadership receive targeted training beyond general awareness that addresses the cybersecurity risks specific to their responsibilities.",
+    "evidenceItems": [
+      {
+        "id": "PR.AT-02-E1",
+        "name": "Specialized Role Training Matrix and Curriculum",
+        "description": "Demonstrates that the organization has identified roles requiring specialized training and mapped appropriate curricula to each role",
+        "whatGoodLooksLike": [
+          "Training matrix maps specialized roles to required cybersecurity courses and certifications",
+          "Role-based training covers topics specific to each role such as secure coding for developers and incident response for SOC analysts",
+          "Annual refreshers and updated content are required to address evolving role-specific threats"
+        ],
+        "commonGaps": [
+          "Specialized roles not formally identified or limited to IT security staff only",
+          "Senior leadership and finance staff not included in role-based training requirements",
+          "Training content is generic and not tailored to the specific risks of each role"
+        ],
+        "suggestedSources": [
+          "Role-based training matrix with role-to-course mappings",
+          "Specialized training curriculum and course descriptions",
+          "HR or learning team role classification documents"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AT-02-E2",
+        "name": "Specialized Training Completion and Certification Records",
+        "description": "Shows that individuals in specialized roles completed required training and hold relevant certifications",
+        "whatGoodLooksLike": [
+          "Completion records demonstrate role-specific training was delivered and assessed",
+          "Relevant professional certifications are tracked and maintained for security and IT staff",
+          "Third-party contractors in specialized roles meet the same training requirements"
+        ],
+        "commonGaps": [
+          "No differentiation between general awareness completion and specialized role training",
+          "Certifications not tracked or allowed to expire without renewal",
+          "Third-party contractors exempt from specialized training requirements"
+        ],
+        "suggestedSources": [
+          "LMS role-based training completion reports",
+          "Professional certification tracking register",
+          "Vendor or contractor training compliance records"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.AT-02-E3",
+        "name": "Role-Based Training Effectiveness Assessment",
+        "description": "Demonstrates that the organization evaluates whether specialized training translates into improved security practices for each role",
+        "whatGoodLooksLike": [
+          "Post-training assessments or practical exercises validate skill acquisition for specialized roles",
+          "Tabletop exercises and red team scenarios test trained competencies in realistic conditions",
+          "Training effectiveness metrics inform curriculum updates and investment decisions"
+        ],
+        "commonGaps": [
+          "No post-training assessment beyond simple completion tracking",
+          "Tabletop exercises and hands-on drills not conducted for specialized roles",
+          "Training program not updated based on assessment results or lessons learned"
+        ],
+        "suggestedSources": [
+          "Post-training assessment and practical exercise results",
+          "Tabletop exercise after-action reports",
+          "Annual training program effectiveness review reports"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that specialized roles are broadly defined beyond just IT security to include finance, HR, executives, and developers",
+      "Request evidence of hands-on or scenario-based training rather than only slide-deck awareness modules",
+      "Check whether training requirements for specialized roles are enforced as prerequisites for role assignment",
+      "Review whether training content reflects current threats and techniques relevant to each specialized role"
+    ]
+  },
+  "PR.AT-03": {
+    "subcategoryId": "PR.AT-03",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "PR.AT-01",
+      "PR.AT-02"
+    ]
+  },
+  "PR.AT-04": {
+    "subcategoryId": "PR.AT-04",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "PR.AT-02"
+    ]
+  },
+  "PR.AT-05": {
+    "subcategoryId": "PR.AT-05",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "PR.AT-02"
+    ]
+  },
+  "PR.DS-01": {
+    "subcategoryId": "PR.DS-01",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "Data-at-Rest Protection",
+    "assessorFocus": "Verify that the organization protects the confidentiality, integrity, and availability of stored data through encryption, integrity validation, and controls on removable media across all storage environments.",
+    "evidenceItems": [
+      {
+        "id": "PR.DS-01-E1",
+        "name": "Data-at-Rest Encryption Policy and Configuration",
+        "description": "Demonstrates that the organization has defined encryption requirements for stored data and implemented them across all relevant platforms",
+        "whatGoodLooksLike": [
+          "Policy mandates encryption for sensitive data at rest using current cryptographic standards such as AES-256",
+          "Full disk encryption is enabled on all endpoints with centralized key management",
+          "Database and cloud storage encryption is configured and verified across all environments"
+        ],
+        "commonGaps": [
+          "Encryption requirements not defined by data classification level",
+          "Legacy systems or databases store sensitive data without encryption",
+          "Encryption key management is decentralized or keys are stored alongside encrypted data"
+        ],
+        "suggestedSources": [
+          "Data encryption policy and standards documentation",
+          "Endpoint management platform encryption compliance reports",
+          "Cloud storage and database encryption configuration exports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.DS-01-E2",
+        "name": "Data Integrity Validation and Software Verification Records",
+        "description": "Shows that the organization validates integrity of stored data and software through cryptographic hashes and digital signatures",
+        "whatGoodLooksLike": [
+          "Software installations are verified against publisher-provided digital signatures before deployment",
+          "File integrity monitoring detects unauthorized changes to critical system and data files",
+          "Container images and VM disk images are signed and verified before deployment"
+        ],
+        "commonGaps": [
+          "No file integrity monitoring for critical data files and configuration files",
+          "Software signature verification not enforced during deployment",
+          "Container images deployed from untrusted or unverified registries"
+        ],
+        "suggestedSources": [
+          "File integrity monitoring (FIM) tool configuration and alert reports",
+          "Software deployment pipeline signature verification logs",
+          "Container registry image signing and scanning reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.DS-01-E3",
+        "name": "Removable Media Controls and Physical Security",
+        "description": "Demonstrates that removable media usage is controlled and physical security measures protect unencrypted sensitive data",
+        "whatGoodLooksLike": [
+          "Removable media usage is restricted via endpoint DLP policies to prevent data exfiltration",
+          "Approved removable media devices are encrypted and registered in the asset inventory",
+          "Physical storage areas for sensitive media are secured with locked cabinets and access logs"
+        ],
+        "commonGaps": [
+          "No technical controls blocking unauthorized USB or removable device usage",
+          "Removable media with sensitive data not encrypted or inventoried",
+          "Physical security for media storage not enforced or audited"
+        ],
+        "suggestedSources": [
+          "Endpoint DLP policy configuration for removable media controls",
+          "Approved removable media device inventory",
+          "Physical media storage access logs and audit records"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify encryption at rest by examining actual platform configurations, not just policy statements",
+      "Check that key management practices include key rotation, separation from encrypted data, and escrow for recovery",
+      "Review file integrity monitoring coverage to ensure critical system files and sensitive data stores are included",
+      "Test removable media controls by requesting evidence of DLP enforcement and any exception records"
+    ]
+  },
+  "PR.DS-02": {
+    "subcategoryId": "PR.DS-02",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "Data-in-Transit Protection",
+    "assessorFocus": "Assess whether the organization protects data in transit through encryption, prevents unauthorized data exfiltration, and controls the use of sensitive data across production and non-production environments.",
+    "evidenceItems": [
+      {
+        "id": "PR.DS-02-E1",
+        "name": "Data-in-Transit Encryption Standards and Configuration",
+        "description": "Demonstrates that all network communications carrying sensitive data use current encryption protocols",
+        "whatGoodLooksLike": [
+          "TLS 1.2 or higher enforced for all external and internal communications with deprecated protocols disabled",
+          "VPN tunnels use strong encryption for remote access and site-to-site connections",
+          "Certificate management ensures valid, non-expired certificates on all services"
+        ],
+        "commonGaps": [
+          "Legacy protocols such as TLS 1.0, TLS 1.1, or SSLv3 still enabled on some services",
+          "Internal east-west traffic not encrypted between application tiers",
+          "Self-signed or expired certificates in use on internal services"
+        ],
+        "suggestedSources": [
+          "TLS configuration scan results from tools such as SSL Labs or internal scanners",
+          "Network security architecture showing encryption boundaries",
+          "Certificate inventory and validity reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.DS-02-E2",
+        "name": "Data Loss Prevention Controls for Communications",
+        "description": "Shows that outbound communications are monitored and controlled to prevent unauthorized disclosure of sensitive data",
+        "whatGoodLooksLike": [
+          "DLP policies detect and block sensitive data in outbound email, web uploads, and cloud sharing",
+          "Automated encryption or blocking applied based on data classification labels",
+          "DLP incidents are logged, investigated, and tracked to resolution"
+        ],
+        "commonGaps": [
+          "DLP policies cover email only and do not extend to web, cloud, or endpoint channels",
+          "No data classification labels to trigger DLP enforcement",
+          "DLP alerts generate excessive false positives leading to alert fatigue and ignored incidents"
+        ],
+        "suggestedSources": [
+          "DLP platform policy configuration and channel coverage documentation",
+          "DLP incident reports with investigation and resolution details",
+          "Email gateway encryption and blocking rule configurations"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.DS-02-E3",
+        "name": "Production Data Segregation Controls",
+        "description": "Demonstrates that sensitive production data is prevented from being reused in development, testing, or other non-production environments",
+        "whatGoodLooksLike": [
+          "Data masking or anonymization applied before production data is used in non-production environments",
+          "Policy prohibits direct copy of production data to dev/test without approval and sanitization",
+          "Automated pipelines enforce data sanitization as part of environment refresh processes"
+        ],
+        "commonGaps": [
+          "Production databases cloned directly to development environments without masking",
+          "No policy or technical control governing production data use in non-production",
+          "Data sanitization is manual and inconsistently applied"
+        ],
+        "suggestedSources": [
+          "Data masking and anonymization tool configuration and run reports",
+          "Data handling policy sections on non-production data usage",
+          "Environment refresh process documentation with sanitization steps"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Run or request recent TLS scan results against externally facing and critical internal services",
+      "Verify DLP coverage extends beyond email to include web, cloud storage, and endpoint channels",
+      "Ask for evidence of how production data is handled when refreshing dev/test environments",
+      "Check whether personal communication services such as personal email and consumer cloud storage are blocked on corporate networks"
+    ]
+  },
+  "PR.DS-03": {
+    "subcategoryId": "PR.DS-03",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "ID.AM-08",
+      "PR.PS-03"
+    ]
+  },
+  "PR.DS-04": {
+    "subcategoryId": "PR.DS-04",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "PR.IR-04"
+    ]
+  },
+  "PR.DS-05": {
+    "subcategoryId": "PR.DS-05",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "PR.DS-01",
+      "PR.DS-02",
+      "PR.DS-10"
+    ]
+  },
+  "PR.DS-06": {
+    "subcategoryId": "PR.DS-06",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "PR.DS-01",
+      "DE.CM-09"
+    ]
+  },
+  "PR.DS-07": {
+    "subcategoryId": "PR.DS-07",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "PR.IR-01"
+    ]
+  },
+  "PR.DS-08": {
+    "subcategoryId": "PR.DS-08",
+    "withdrawn": true,
+    "incorporatedInto": [
+      "ID.RA-09",
+      "DE.CM-09"
+    ]
+  },
+  "PR.DS-10": {
+    "subcategoryId": "PR.DS-10",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "Data-in-Use Protection",
+    "assessorFocus": "Verify that the organization protects data while being actively processed, including clearing sensitive data from memory when no longer needed and isolating data across processes and users on shared platforms.",
+    "evidenceItems": [
+      {
+        "id": "PR.DS-10-E1",
+        "name": "Data-in-Use Protection Architecture and Controls",
+        "description": "Demonstrates that the organization has implemented technical controls to protect data during active processing",
+        "whatGoodLooksLike": [
+          "Memory protection mechanisms prevent unauthorized access to data in use by other processes or users",
+          "Sensitive data is cleared from memory, caches, and temporary storage as soon as processing completes",
+          "Confidential computing or secure enclave technologies are used for high-sensitivity workloads"
+        ],
+        "commonGaps": [
+          "No documented approach to protecting data in use beyond standard OS protections",
+          "Sensitive data persists in memory, swap files, or temp directories after processing",
+          "Multi-tenant environments lack process-level isolation for sensitive data"
+        ],
+        "suggestedSources": [
+          "Security architecture documents covering data-in-use protections",
+          "Platform hardening guides addressing memory and process isolation",
+          "Secure coding standards covering sensitive data handling in memory"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.DS-10-E2",
+        "name": "Input Validation and Runtime Integrity Controls",
+        "description": "Shows that applications enforce input validation and runtime integrity protections to prevent data corruption and injection during processing",
+        "whatGoodLooksLike": [
+          "Applications enforce input validation and output encoding to prevent injection attacks",
+          "Runtime application self-protection or integrity monitoring detects processing anomalies",
+          "Secure coding practices verified through code review and application security testing"
+        ],
+        "commonGaps": [
+          "Input validation implemented inconsistently across applications",
+          "No runtime monitoring for application-level data integrity violations",
+          "Secure coding practices not enforced or verified through testing"
+        ],
+        "suggestedSources": [
+          "Application security testing (SAST/DAST) reports covering input validation",
+          "Secure coding standards and code review checklists",
+          "RASP or application monitoring tool configuration and alert reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.DS-10-E3",
+        "name": "Data Access Monitoring During Processing",
+        "description": "Demonstrates that access to data during active processing is monitored and controlled",
+        "whatGoodLooksLike": [
+          "Database activity monitoring captures queries and data access during processing",
+          "Application-level audit logs record data access operations with user context",
+          "Anomalous data access patterns during processing trigger alerts"
+        ],
+        "commonGaps": [
+          "No database activity monitoring or application-level data access logging",
+          "Monitoring covers only stored data access and not in-memory processing",
+          "Alerts for anomalous data access patterns not configured or not actioned"
+        ],
+        "suggestedSources": [
+          "Database activity monitoring (DAM) reports and configurations",
+          "Application audit log samples showing data access during processing",
+          "SIEM use cases and alerts for anomalous data access patterns"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask developers how sensitive data is handled in application memory and when it is cleared",
+      "Review secure coding standards for guidance on data-in-use protections such as zeroing buffers and avoiding logging sensitive data",
+      "Verify that multi-tenant or shared infrastructure implements process and memory isolation",
+      "Check whether database activity monitoring is in place for systems processing high-sensitivity data"
+    ]
+  },
+  "PR.DS-11": {
+    "subcategoryId": "PR.DS-11",
+    "categoryId": "PR.DS",
+    "functionId": "PR",
+    "title": "Backup Management and Testing",
+    "assessorFocus": "Evaluate whether backups are created for all critical data, protected from unauthorized access and ransomware, stored with geographic separation, and regularly tested for successful restoration.",
+    "evidenceItems": [
+      {
+        "id": "PR.DS-11-E1",
+        "name": "Backup Policy and Schedule Configuration",
+        "description": "Demonstrates that the organization has defined backup requirements aligned with data criticality and recovery objectives",
+        "whatGoodLooksLike": [
+          "Backup policy defines RPO and RTO targets for each data classification tier",
+          "Critical data backed up continuously or near-real-time with other data on defined schedules",
+          "Backup schedules are automated and monitored for completion with failure alerting"
+        ],
+        "commonGaps": [
+          "Backup schedules not aligned with defined RPO and RTO requirements",
+          "SaaS and cloud-native data not included in backup scope",
+          "Backup job failures not monitored or addressed in a timely manner"
+        ],
+        "suggestedSources": [
+          "Backup policy with RPO/RTO definitions per data tier",
+          "Backup platform schedule configuration and job reports",
+          "Backup monitoring dashboard showing success/failure rates"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.DS-11-E2",
+        "name": "Backup Protection and Storage Controls",
+        "description": "Shows that backups are protected from unauthorized modification, deletion, and ransomware through offline/offsite storage and immutability controls",
+        "whatGoodLooksLike": [
+          "Immutable backup copies maintained with write-once-read-many or air-gapped storage",
+          "Backup storage is geographically separated from primary data with enforced geolocation restrictions",
+          "Backup encryption applied in transit and at rest with keys managed separately from primary systems"
+        ],
+        "commonGaps": [
+          "All backups stored on the same network or system as production data",
+          "No immutability or air-gapped copies to protect against ransomware",
+          "Backup encryption keys stored alongside backup data"
+        ],
+        "suggestedSources": [
+          "Backup storage architecture showing geographic separation and offline copies",
+          "Immutable storage configuration exports",
+          "Backup encryption configuration and key management documentation"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.DS-11-E3",
+        "name": "Backup Restoration Test Records",
+        "description": "Demonstrates that backups are regularly tested for successful restoration across all data source types",
+        "whatGoodLooksLike": [
+          "Restoration tests conducted at least annually for all critical data sources with documented results",
+          "Test results confirm data integrity and restoration completes within defined RTO targets",
+          "Lessons learned from failed restoration tests drive improvements to backup processes"
+        ],
+        "commonGaps": [
+          "Restoration testing not conducted or limited to only a few data sources",
+          "Test results not documented or not verified for data integrity post-restoration",
+          "Restoration tests never measure time to restore against RTO targets"
+        ],
+        "suggestedSources": [
+          "Backup restoration test plans and execution reports",
+          "Restoration test results with data integrity verification evidence",
+          "Remediation records from failed restoration tests"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Verify that backup scope includes cloud services, SaaS platforms, and databases, not just on-premises file systems",
+      "Ask for evidence of immutable or air-gapped backup copies and test whether they can survive a simulated ransomware event",
+      "Review restoration test records and verify they cover all critical data types, not just a single test server",
+      "Confirm that backup monitoring alerts are configured and that recent failures were investigated and resolved"
+    ]
+  },
+  "PR.PS-01": {
+    "subcategoryId": "PR.PS-01",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Configuration Management Practices",
+    "assessorFocus": "Verify that the organization establishes, deploys, and monitors hardened configuration baselines for all platform types, with change control processes that prevent unauthorized deviations.",
+    "evidenceItems": [
+      {
+        "id": "PR.PS-01-E1",
+        "name": "Configuration Baseline Standards and Hardening Guides",
+        "description": "Demonstrates that the organization has defined and documented secure configuration baselines for all platform types",
+        "whatGoodLooksLike": [
+          "Hardened baselines defined for each platform type referencing CIS Benchmarks, DISA STIGs, or equivalent",
+          "Baselines enforce least functionality by disabling unnecessary services, ports, and protocols",
+          "Baselines are version-controlled and updated when new platform versions are deployed"
+        ],
+        "commonGaps": [
+          "No formal baselines defined or baselines based on vendor defaults without hardening",
+          "Baselines exist for servers but not for network devices, cloud services, or containers",
+          "Baselines not updated to reflect current platform versions or emerging threats"
+        ],
+        "suggestedSources": [
+          "Configuration baseline documents or CIS Benchmark implementation guides",
+          "Group Policy Objects, Ansible playbooks, or infrastructure-as-code templates",
+          "Configuration management database showing baseline versions and applicability"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-01-E2",
+        "name": "Configuration Compliance Scanning Reports",
+        "description": "Shows that deployed systems are continuously monitored for deviations from approved configuration baselines",
+        "whatGoodLooksLike": [
+          "Automated configuration compliance scans run at least weekly against approved baselines",
+          "Compliance reports show current posture with remediation tracking for non-compliant items",
+          "Coverage includes all platform types: servers, endpoints, network devices, cloud resources, and containers"
+        ],
+        "commonGaps": [
+          "Compliance scanning limited to a subset of systems or platform types",
+          "Scan results not tracked through remediation to closure",
+          "Scanning cadence is insufficient with monthly or quarterly scans only"
+        ],
+        "suggestedSources": [
+          "Configuration compliance scanning tool reports (e.g., Qualys, Nessus, AWS Config)",
+          "Non-compliance remediation tracking records",
+          "Compliance trend dashboards showing posture over time"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-01-E3",
+        "name": "Change Management Records for Configuration Changes",
+        "description": "Demonstrates that configuration changes follow a formal change control process with testing, approval, and rollback planning",
+        "whatGoodLooksLike": [
+          "All configuration changes require a change request with risk assessment and approval",
+          "Changes are tested in non-production before deployment with rollback plans documented",
+          "Emergency changes follow an expedited process with post-implementation review"
+        ],
+        "commonGaps": [
+          "Configuration changes made directly in production without change requests",
+          "No pre-deployment testing or rollback planning for configuration changes",
+          "Emergency change procedures not defined or emergency changes not reviewed after implementation"
+        ],
+        "suggestedSources": [
+          "Change management system records for configuration changes",
+          "Change Advisory Board meeting minutes and approval records",
+          "Post-implementation review reports for significant configuration changes"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Compare deployed configurations against baselines by requesting recent compliance scan results for a sample of systems",
+      "Verify that cloud resource configurations are included in baseline management and not just traditional servers",
+      "Review default configuration settings on recently deployed systems to confirm hardening was applied",
+      "Check that infrastructure-as-code templates enforce baselines and drift is detected automatically"
+    ]
+  },
+  "PR.PS-02": {
+    "subcategoryId": "PR.PS-02",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Software Maintenance and Patch Management",
+    "assessorFocus": "Evaluate whether the organization maintains software through timely patching, replaces end-of-life software, and removes unauthorized or unnecessary software to reduce attack surface.",
+    "evidenceItems": [
+      {
+        "id": "PR.PS-02-E1",
+        "name": "Vulnerability and Patch Management Policy and SLAs",
+        "description": "Demonstrates that the organization has defined patching timelines based on vulnerability severity and asset criticality",
+        "whatGoodLooksLike": [
+          "Patching SLAs defined by severity level: critical within 72 hours, high within 14 days, medium within 30 days",
+          "Emergency patching process enables rapid deployment for actively exploited vulnerabilities",
+          "End-of-life software inventory maintained with replacement or migration plans"
+        ],
+        "commonGaps": [
+          "Patching SLAs not defined or not differentiated by severity and asset criticality",
+          "No expedited process for zero-day or actively exploited vulnerabilities",
+          "End-of-life software running in production without documented risk acceptance or migration plan"
+        ],
+        "suggestedSources": [
+          "Vulnerability and patch management policy with SLA definitions",
+          "Software lifecycle and end-of-life tracking inventory",
+          "Emergency patching procedure documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-02-E2",
+        "name": "Patch Compliance and Deployment Reports",
+        "description": "Shows that patches are deployed within defined SLAs with tracking of compliance rates across the environment",
+        "whatGoodLooksLike": [
+          "Patch compliance rates above 95% for critical and high severity patches within SLA timelines",
+          "Deployment reports show patching status across all OS, application, and firmware categories",
+          "Exceptions and deferrals documented with compensating controls and remediation timelines"
+        ],
+        "commonGaps": [
+          "Patching compliance measured only for OS patches and not application or firmware patches",
+          "Low patch compliance rates without management escalation",
+          "Systems excluded from patching due to operational concerns without formal risk acceptance"
+        ],
+        "suggestedSources": [
+          "Patch management platform compliance dashboards and reports",
+          "WSUS, SCCM, Intune, or equivalent patch deployment reports",
+          "Exception and deferral tracking records with risk acceptance"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-02-E3",
+        "name": "Unauthorized and End-of-Life Software Removal Records",
+        "description": "Demonstrates that unauthorized or unnecessary software is identified and removed, and end-of-life software is replaced",
+        "whatGoodLooksLike": [
+          "Software inventory scans identify unauthorized or unapproved software for removal",
+          "End-of-life software tracked with defined migration timelines and interim risk mitigation",
+          "Container images rebuilt with updated base images rather than patched in place"
+        ],
+        "commonGaps": [
+          "No automated discovery of unauthorized software installations",
+          "End-of-life software continues in production without replacement plans",
+          "Container images not rebuilt and continue running with outdated dependencies"
+        ],
+        "suggestedSources": [
+          "Software inventory audit reports identifying unauthorized software",
+          "End-of-life software remediation plans and status reports",
+          "Container image lifecycle management reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request patch compliance data segmented by severity, asset type, and time-to-patch to assess SLA adherence",
+      "Check for end-of-life operating systems and applications in the software inventory and review replacement plans",
+      "Verify that third-party and open-source library patching is included, not just OS and first-party application patches",
+      "Ask how container images and serverless functions are maintained and updated"
+    ]
+  },
+  "PR.PS-03": {
+    "subcategoryId": "PR.PS-03",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Hardware Maintenance and Lifecycle Management",
+    "assessorFocus": "Confirm that hardware assets are maintained, replaced when they can no longer support required security capabilities, and disposed of securely with auditable records.",
+    "evidenceItems": [
+      {
+        "id": "PR.PS-03-E1",
+        "name": "Hardware Lifecycle Management Policy and Inventory",
+        "description": "Demonstrates that the organization tracks hardware lifecycle status and has defined policies for maintenance, replacement, and disposal",
+        "whatGoodLooksLike": [
+          "Hardware asset inventory includes acquisition date, warranty status, end-of-life date, and security capability assessment",
+          "Lifecycle policy defines replacement criteria based on security capability requirements",
+          "End-of-support hardware tracked with defined replacement timelines"
+        ],
+        "commonGaps": [
+          "Hardware inventory does not track lifecycle status or security capability limitations",
+          "No defined criteria for when hardware must be replaced due to security limitations",
+          "End-of-support hardware continues in production without replacement planning"
+        ],
+        "suggestedSources": [
+          "CMDB or asset management platform hardware lifecycle reports",
+          "Hardware lifecycle management policy documentation",
+          "End-of-life hardware replacement plans and status tracking"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-03-E2",
+        "name": "Hardware Maintenance and Warranty Records",
+        "description": "Shows that hardware receives timely maintenance including firmware updates and that warranty and support coverage is maintained",
+        "whatGoodLooksLike": [
+          "Firmware updates applied to hardware devices on a defined schedule",
+          "Maintenance contracts and warranties actively managed and renewed before expiration",
+          "Hardware maintenance performed by authorized personnel with audit trails"
+        ],
+        "commonGaps": [
+          "Firmware updates for network devices, IoT, and OT equipment not tracked or applied",
+          "Hardware operating past warranty without maintenance contracts",
+          "No audit trail for hardware maintenance activities"
+        ],
+        "suggestedSources": [
+          "Hardware firmware update compliance reports",
+          "Maintenance contract and warranty status register",
+          "Hardware maintenance activity logs"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-03-E3",
+        "name": "Secure Hardware Disposal and Sanitization Records",
+        "description": "Demonstrates that hardware is disposed of securely with certified data sanitization and auditable chain-of-custody records",
+        "whatGoodLooksLike": [
+          "Data sanitization performed using NIST SP 800-88 approved methods before disposal or reuse",
+          "Certificates of destruction provided by certified e-waste vendors for all disposed hardware",
+          "Chain-of-custody records maintained from decommissioning through final disposal"
+        ],
+        "commonGaps": [
+          "No formal data sanitization procedure or reliance on simple formatting instead of cryptographic erasure",
+          "Disposal vendor certificates not obtained or retained",
+          "Hardware disposed without chain-of-custody tracking allowing unaccounted assets"
+        ],
+        "suggestedSources": [
+          "Data sanitization and destruction certificates",
+          "Certified e-waste vendor contracts and audit reports",
+          "Hardware disposal tracking logs with chain-of-custody records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Check the hardware inventory for devices past end-of-support and verify replacement plans exist",
+      "Request firmware update compliance data for network devices, which are frequently overlooked",
+      "Review disposal certificates and verify they reference specific serial numbers matching decommissioned assets",
+      "Ask whether hard drives from leased or returned hardware are sanitized before return to the vendor"
+    ]
+  },
+  "PR.PS-04": {
+    "subcategoryId": "PR.PS-04",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Log Generation and Continuous Monitoring",
+    "assessorFocus": "Verify that all operating systems, applications, and services generate log records that are securely transmitted to centralized logging infrastructure and made available for continuous security monitoring.",
+    "evidenceItems": [
+      {
+        "id": "PR.PS-04-E1",
+        "name": "Logging Policy and Standards",
+        "description": "Demonstrates that the organization has defined what must be logged, log content requirements, and retention periods for all system types",
+        "whatGoodLooksLike": [
+          "Logging policy specifies required log sources, event types, and minimum content fields per platform type",
+          "Retention periods defined based on regulatory requirements and security monitoring needs",
+          "Logging requirements address cloud services, containers, and SaaS platforms in addition to traditional infrastructure"
+        ],
+        "commonGaps": [
+          "Logging requirements not defined for cloud-native services, SaaS, or containerized workloads",
+          "Minimum log content fields not specified leading to inconsistent log quality",
+          "Retention periods not defined or not aligned with regulatory and business requirements"
+        ],
+        "suggestedSources": [
+          "Logging and monitoring policy and standards documentation",
+          "Log source inventory with required event types per source",
+          "Log retention schedule aligned with regulatory requirements"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-04-E2",
+        "name": "Log Source Coverage and Collection Configuration",
+        "description": "Shows that log sources are configured to generate and securely transmit logs to centralized infrastructure with comprehensive coverage",
+        "whatGoodLooksLike": [
+          "SIEM or log management platform shows ingestion from all critical log sources",
+          "Log collection uses encrypted transport and mutual authentication between sources and collectors",
+          "Log source coverage is tracked with gaps identified and remediated"
+        ],
+        "commonGaps": [
+          "Critical log sources such as DNS, DHCP, or cloud control plane not forwarded to SIEM",
+          "Log transport uses unencrypted syslog without integrity verification",
+          "No tracking of expected versus actual log sources to detect collection gaps"
+        ],
+        "suggestedSources": [
+          "SIEM log source inventory and ingestion status reports",
+          "Log collector configuration showing transport security settings",
+          "Log source coverage gap analysis reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-04-E3",
+        "name": "Log Integrity and Availability Controls",
+        "description": "Demonstrates that logs are protected from tampering, deletion, and unauthorized access, and are available for analysis",
+        "whatGoodLooksLike": [
+          "Logs are stored in append-only or immutable storage preventing tampering or deletion",
+          "Access to log management systems is restricted to authorized security personnel",
+          "Log availability is monitored with alerts for collection failures or gaps"
+        ],
+        "commonGaps": [
+          "Administrators of source systems can modify or delete their own audit logs",
+          "No immutability controls on log storage allowing post-facto tampering",
+          "Log collection failures not detected or alerted upon"
+        ],
+        "suggestedSources": [
+          "SIEM or log storage immutability and access control configuration",
+          "Log collection health monitoring dashboards and alerting configuration",
+          "Log access audit trails showing who accessed log data"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Compare the log source inventory against the asset inventory to identify systems not forwarding logs",
+      "Verify that cloud service logging such as AWS CloudTrail, Azure Activity Log, or GCP Audit Logs is enabled and forwarded",
+      "Check whether log retention meets both regulatory requirements and security investigation needs",
+      "Test log integrity by asking whether source system administrators can delete their own audit trails"
+    ]
+  },
+  "PR.PS-05": {
+    "subcategoryId": "PR.PS-05",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Prevention of Unauthorized Software Execution",
+    "assessorFocus": "Assess whether the organization prevents installation and execution of unauthorized software through application whitelisting, software source verification, and controlled DNS configurations.",
+    "evidenceItems": [
+      {
+        "id": "PR.PS-05-E1",
+        "name": "Application Control and Whitelisting Policy and Configuration",
+        "description": "Demonstrates that the organization controls which software can be installed and executed on managed systems",
+        "whatGoodLooksLike": [
+          "Application whitelisting enforced on critical systems with only approved executables permitted to run",
+          "Software installation restricted to approved sources such as enterprise app stores or managed deployment tools",
+          "Policy defines escalation path for requesting new software approval"
+        ],
+        "commonGaps": [
+          "Application control limited to blacklisting known malware rather than whitelisting approved software",
+          "Standard users retain local administrator privileges allowing unrestricted software installation",
+          "Application control not deployed on servers or only enforced on endpoints"
+        ],
+        "suggestedSources": [
+          "Application whitelisting tool configuration and policy exports (e.g., AppLocker, Carbon Black)",
+          "Software approval process documentation and approved software list",
+          "Endpoint management platform software restriction policy configuration"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-05-E2",
+        "name": "Software Integrity Verification Controls",
+        "description": "Shows that the organization verifies the source and integrity of software before installation",
+        "whatGoodLooksLike": [
+          "Digital signature verification required before software installation with unsigned code blocked",
+          "Software supply chain integrity verified through checksums and publisher certificates",
+          "Package managers configured to use only trusted repositories with signature verification enabled"
+        ],
+        "commonGaps": [
+          "Software installed from unverified internet sources without signature validation",
+          "Package manager repositories not restricted to trusted sources",
+          "No process for verifying integrity of open-source dependencies"
+        ],
+        "suggestedSources": [
+          "Code signing and signature verification policy and configuration",
+          "Package manager repository configuration showing trusted sources",
+          "Software bill of materials (SBOM) and dependency verification reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-05-E3",
+        "name": "DNS Security and Malicious Domain Blocking Configuration",
+        "description": "Demonstrates that DNS resolution is controlled to block access to known malicious domains",
+        "whatGoodLooksLike": [
+          "Managed DNS services configured to block resolution of known malicious and phishing domains",
+          "DNS-over-HTTPS and DNS-over-TLS used to prevent DNS hijacking and eavesdropping",
+          "All endpoints and servers configured to use only organization-approved DNS resolvers"
+        ],
+        "commonGaps": [
+          "No DNS-level blocking of malicious domains deployed",
+          "Endpoints can use arbitrary external DNS resolvers bypassing organizational controls",
+          "DNS security limited to on-premises and not extended to remote or cloud workloads"
+        ],
+        "suggestedSources": [
+          "Protective DNS service configuration and blocking reports",
+          "Network firewall rules restricting DNS traffic to approved resolvers",
+          "DNS query logs showing blocked malicious domain resolution attempts"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Test application whitelisting by asking whether an unapproved executable would be blocked on a sample system",
+      "Verify that local administrator privileges are removed from standard users to prevent unauthorized installations",
+      "Check whether DNS security controls extend to remote workers and cloud-hosted workloads",
+      "Review the approved software list process and verify it includes security review before approval"
+    ]
+  },
+  "PR.PS-06": {
+    "subcategoryId": "PR.PS-06",
+    "categoryId": "PR.PS",
+    "functionId": "PR",
+    "title": "Secure Software Development Lifecycle",
+    "assessorFocus": "Evaluate whether the organization integrates security practices throughout the software development lifecycle including secure coding, security testing, supply chain integrity, and secure disposal of retired software.",
+    "evidenceItems": [
+      {
+        "id": "PR.PS-06-E1",
+        "name": "Secure SDLC Policy and Framework Documentation",
+        "description": "Demonstrates that the organization has adopted a secure SDLC framework with security gates integrated throughout the development process",
+        "whatGoodLooksLike": [
+          "Secure SDLC framework adopted with security activities defined for each phase from design through deployment",
+          "Threat modeling performed during design phase for new applications and significant changes",
+          "Security requirements derived from risk assessments and integrated into user stories or specifications"
+        ],
+        "commonGaps": [
+          "Security activities bolt-on at the end of development rather than integrated throughout",
+          "No threat modeling performed during design phase",
+          "Security requirements not formally defined or tracked alongside functional requirements"
+        ],
+        "suggestedSources": [
+          "Secure SDLC policy and framework documentation",
+          "Threat modeling records for recent development projects",
+          "Security requirements documentation integrated into project backlogs"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-06-E2",
+        "name": "Application Security Testing Results",
+        "description": "Shows that the organization conducts security testing throughout the development pipeline including SAST, DAST, SCA, and penetration testing",
+        "whatGoodLooksLike": [
+          "SAST integrated into CI/CD pipeline with builds blocked on critical and high severity findings",
+          "DAST and penetration testing performed before production releases and on a recurring schedule",
+          "Software composition analysis identifies and tracks vulnerable open-source dependencies"
+        ],
+        "commonGaps": [
+          "Security testing performed only before major releases and not integrated into CI/CD pipeline",
+          "SAST findings not remediated before production deployment",
+          "Open-source dependency vulnerabilities not tracked or remediated"
+        ],
+        "suggestedSources": [
+          "SAST and DAST tool scan reports from recent releases",
+          "CI/CD pipeline configuration showing security gate enforcement",
+          "Software composition analysis reports and remediation tracking"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.PS-06-E3",
+        "name": "Source Code Protection and Supply Chain Integrity Controls",
+        "description": "Demonstrates that source code is protected from tampering and the software supply chain maintains integrity from development through deployment",
+        "whatGoodLooksLike": [
+          "Source code repositories enforce branch protection, code review approval, and signed commits",
+          "Build pipelines use hardened runners with reproducible builds and artifact signing",
+          "Third-party dependencies pinned to specific versions with integrity verification"
+        ],
+        "commonGaps": [
+          "Source code repositories lack branch protection or allow direct pushes to main branches",
+          "Build pipeline integrity not assured with no artifact signing or reproducible builds",
+          "Third-party dependencies not pinned or verified allowing supply chain injection"
+        ],
+        "suggestedSources": [
+          "Source code repository access controls and branch protection configuration",
+          "CI/CD pipeline configuration showing build integrity controls",
+          "Dependency management and SBOM documentation"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request SAST and DAST results from a recent release and verify that critical findings were resolved before deployment",
+      "Review CI/CD pipeline configuration to confirm security gates actually block deployments on policy violations",
+      "Ask about the process for managing and updating open-source dependencies and how vulnerabilities are tracked",
+      "Verify that source code repositories enforce code review and access controls appropriate for the sensitivity of the software"
+    ]
+  },
+  "PR.IR-01": {
+    "subcategoryId": "PR.IR-01",
+    "categoryId": "PR.IR",
+    "functionId": "PR",
+    "title": "Network Protection from Unauthorized Access",
+    "assessorFocus": "Verify that networks and environments are segmented according to trust boundaries, external communications are restricted to necessary traffic, and zero trust principles are applied to limit lateral movement.",
+    "evidenceItems": [
+      {
+        "id": "PR.IR-01-E1",
+        "name": "Network Segmentation Architecture and Design",
+        "description": "Demonstrates that the network is segmented according to trust boundaries with enforcement of communication restrictions between segments",
+        "whatGoodLooksLike": [
+          "Network architecture diagrams show segmentation by trust level (e.g., IT, OT, IoT, DMZ, guest) with defined allowed traffic flows",
+          "Micro-segmentation implemented for critical assets and sensitive data zones",
+          "External network boundaries enforce default-deny with only explicitly permitted traffic allowed inbound"
+        ],
+        "commonGaps": [
+          "Flat network architecture without meaningful segmentation between different trust levels",
+          "Segmentation exists at the perimeter but not between internal zones allowing unrestricted lateral movement",
+          "OT and IoT networks not segmented from IT networks"
+        ],
+        "suggestedSources": [
+          "Network architecture and segmentation design documents with traffic flow diagrams",
+          "Firewall and security group rule sets showing inter-segment access controls",
+          "Zero trust architecture implementation documentation"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.IR-01-E2",
+        "name": "Firewall and Access Control Rule Configuration",
+        "description": "Shows that network access controls enforce segmentation with explicit allow rules and default-deny posture",
+        "whatGoodLooksLike": [
+          "Firewall rule bases follow default-deny with explicit permit rules documented with business justification",
+          "Rule sets are reviewed periodically with unused or overly permissive rules identified and remediated",
+          "Cloud security groups and network ACLs enforce segmentation in cloud environments"
+        ],
+        "commonGaps": [
+          "Firewall rules include broad any-to-any permits or excessively permissive rules",
+          "Firewall rule reviews not conducted or not resulting in rule cleanup",
+          "Cloud network security groups use default allow or overly permissive configurations"
+        ],
+        "suggestedSources": [
+          "Firewall rule set exports with justification documentation",
+          "Firewall rule review and cleanup records",
+          "Cloud security group and network ACL configuration exports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.IR-01-E3",
+        "name": "Endpoint Health and Network Access Control",
+        "description": "Demonstrates that endpoint security posture is evaluated before granting network access to production resources",
+        "whatGoodLooksLike": [
+          "Network access control (NAC) validates endpoint compliance with security policy before granting access",
+          "Non-compliant endpoints quarantined or given limited network access until remediated",
+          "Endpoint health checks include patch status, antimalware presence, and configuration compliance"
+        ],
+        "commonGaps": [
+          "No network access control or endpoint health validation before network access",
+          "NAC deployed only on wired networks and not wireless or VPN connections",
+          "Non-compliant endpoints allowed full network access without remediation enforcement"
+        ],
+        "suggestedSources": [
+          "NAC platform configuration and compliance check results",
+          "VPN gateway posture assessment configuration",
+          "Endpoint compliance reports correlated with network access decisions"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Request firewall rule sets and look for overly permissive rules such as any-any permits or wide IP ranges",
+      "Verify segmentation by tracing a hypothetical attacker's path from an endpoint to critical assets and identifying controls at each boundary",
+      "Check whether cloud environments have equivalent segmentation controls to on-premises networks",
+      "Ask whether endpoint health is validated for remote workers connecting via VPN or zero trust network access"
+    ]
+  },
+  "PR.IR-02": {
+    "subcategoryId": "PR.IR-02",
+    "categoryId": "PR.IR",
+    "functionId": "PR",
+    "title": "Environmental Threat Protection",
+    "assessorFocus": "Assess whether technology assets are protected from environmental threats including fire, flooding, power loss, and temperature extremes, with equivalent requirements for third-party hosted environments.",
+    "evidenceItems": [
+      {
+        "id": "PR.IR-02-E1",
+        "name": "Environmental Protection Design and Controls Documentation",
+        "description": "Demonstrates that facilities housing technology assets have appropriate environmental protections based on risk",
+        "whatGoodLooksLike": [
+          "Data centers and server rooms equipped with fire suppression, flood detection, and climate control systems",
+          "Environmental monitoring systems provide real-time alerts for temperature, humidity, and water detection",
+          "Uninterruptible power supplies and backup generators ensure continued operation during power events"
+        ],
+        "commonGaps": [
+          "Network closets and secondary equipment rooms lack environmental protections",
+          "Environmental monitoring not configured to alert appropriate personnel",
+          "Backup power tested infrequently or capacity insufficient for full operational needs"
+        ],
+        "suggestedSources": [
+          "Facility environmental protection design documents and specifications",
+          "Environmental monitoring system configuration and alert routing",
+          "UPS and generator capacity planning and test records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.IR-02-E2",
+        "name": "Environmental Systems Testing and Maintenance Records",
+        "description": "Shows that environmental protection systems are regularly tested and maintained to ensure operational readiness",
+        "whatGoodLooksLike": [
+          "Fire suppression systems tested and inspected per code requirements with maintenance records retained",
+          "Backup power systems load-tested at least annually with results documenting capacity adequacy",
+          "HVAC systems maintained per manufacturer specifications with redundancy failover tested"
+        ],
+        "commonGaps": [
+          "Environmental system testing not conducted on schedule or test results not documented",
+          "Backup generator fuel supply not monitored or replenishment plan not defined",
+          "HVAC redundancy not tested under simulated failure conditions"
+        ],
+        "suggestedSources": [
+          "Fire suppression inspection and test certificates",
+          "Generator and UPS load test reports",
+          "HVAC maintenance and redundancy test records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.IR-02-E3",
+        "name": "Third-Party Facility Environmental Requirements",
+        "description": "Demonstrates that environmental protection requirements are included in contracts with service providers who host organizational systems",
+        "whatGoodLooksLike": [
+          "Service provider contracts specify environmental protection requirements and SLAs for uptime",
+          "Third-party data center certifications such as SOC 2 or ISO 27001 reviewed for environmental controls",
+          "Regular review of provider environmental protection posture through audits or certification reports"
+        ],
+        "commonGaps": [
+          "No environmental protection requirements in cloud or hosting provider contracts",
+          "Third-party facility certifications not reviewed for adequacy of environmental controls",
+          "No ongoing monitoring of provider environmental protection compliance"
+        ],
+        "suggestedSources": [
+          "Service provider contracts with environmental and uptime SLAs",
+          "Third-party SOC 2 or ISO 27001 reports covering physical and environmental controls",
+          "Provider facility audit and certification review records"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Tour the facility to observe environmental protections and verify they match documentation",
+      "Request recent generator and UPS test results and verify capacity meets current load requirements",
+      "Check whether cloud and hosting provider environmental protections have been assessed and documented",
+      "Verify that environmental monitoring alerts are routed to personnel who can respond 24/7"
+    ]
+  },
+  "PR.IR-03": {
+    "subcategoryId": "PR.IR-03",
+    "categoryId": "PR.IR",
+    "functionId": "PR",
+    "title": "Resilience Mechanisms for Normal and Adverse Conditions",
+    "assessorFocus": "Evaluate whether the organization has implemented resilience mechanisms that avoid single points of failure, provide redundancy, and maintain availability during both normal operations and adverse situations.",
+    "evidenceItems": [
+      {
+        "id": "PR.IR-03-E1",
+        "name": "Resilience Architecture and Redundancy Design",
+        "description": "Demonstrates that systems and infrastructure are designed to avoid single points of failure with appropriate redundancy",
+        "whatGoodLooksLike": [
+          "Architecture documents show elimination of single points of failure for critical systems and infrastructure",
+          "High-availability configurations deployed for critical applications with automatic failover",
+          "Redundant network paths, storage, and power supplies for critical infrastructure"
+        ],
+        "commonGaps": [
+          "Single points of failure exist in critical systems without compensating controls",
+          "High availability configured but failover never tested under realistic conditions",
+          "Redundancy limited to compute but not extended to network, storage, or power"
+        ],
+        "suggestedSources": [
+          "System architecture documents showing redundancy and high-availability design",
+          "Infrastructure resilience assessment identifying single points of failure",
+          "Cloud infrastructure configuration showing multi-AZ or multi-region deployment"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.IR-03-E2",
+        "name": "Failover and Load Balancing Configuration and Test Results",
+        "description": "Shows that failover mechanisms and load balancing are configured and tested to verify they function correctly",
+        "whatGoodLooksLike": [
+          "Load balancers distribute traffic across multiple instances with health checks that remove failed nodes",
+          "Failover tests conducted at least annually with documented results confirming successful cutover",
+          "Recovery times during failover meet defined availability SLAs"
+        ],
+        "commonGaps": [
+          "Load balancers configured but health checks not properly tuned leading to routing to failed nodes",
+          "Failover never tested or tested only at initial deployment without recurring validation",
+          "Failover test results not measured against defined recovery time objectives"
+        ],
+        "suggestedSources": [
+          "Load balancer and failover cluster configuration exports",
+          "Failover test execution records with results and recovery time measurements",
+          "Availability monitoring dashboards showing uptime and failover events"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.IR-03-E3",
+        "name": "Business Continuity and Disaster Recovery Plans",
+        "description": "Demonstrates that the organization has plans for maintaining operations during adverse situations with tested recovery procedures",
+        "whatGoodLooksLike": [
+          "BCP/DR plans define recovery procedures for critical systems with RTOs and RPOs",
+          "DR tests conducted at least annually with tabletop and technical recovery exercises",
+          "Lessons learned from DR tests and actual incidents drive plan improvements"
+        ],
+        "commonGaps": [
+          "BCP/DR plans exist but are outdated and do not reflect current systems and dependencies",
+          "DR testing limited to tabletop exercises without technical recovery validation",
+          "No lessons learned process to improve plans based on test results or actual incidents"
+        ],
+        "suggestedSources": [
+          "Business continuity and disaster recovery plan documentation",
+          "DR test execution reports with results and lessons learned",
+          "Plan update records showing revisions based on test findings"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Ask to see the single points of failure analysis and verify that identified risks have been mitigated",
+      "Request recent failover test results and verify that recovery met defined time and data loss objectives",
+      "Check whether DR plans cover cloud services and SaaS dependencies, not just on-premises systems",
+      "Verify that BCP/DR plans have been updated within the past year to reflect current architecture and personnel"
+    ]
+  },
+  "PR.IR-04": {
+    "subcategoryId": "PR.IR-04",
+    "categoryId": "PR.IR",
+    "functionId": "PR",
+    "title": "Resource Capacity Management",
+    "assessorFocus": "Confirm that the organization monitors resource usage across compute, storage, network, and power, forecasts future capacity needs, and scales resources proactively to maintain availability.",
+    "evidenceItems": [
+      {
+        "id": "PR.IR-04-E1",
+        "name": "Capacity Monitoring Configuration and Dashboards",
+        "description": "Demonstrates that the organization monitors resource utilization across all critical infrastructure components",
+        "whatGoodLooksLike": [
+          "Real-time monitoring dashboards track CPU, memory, storage, and network bandwidth utilization",
+          "Automated alerts trigger when resource utilization exceeds defined thresholds",
+          "Monitoring covers on-premises infrastructure, cloud resources, and network bandwidth"
+        ],
+        "commonGaps": [
+          "Capacity monitoring limited to server compute and not including storage, network, or power",
+          "Alert thresholds not configured or set too high to provide actionable early warning",
+          "Cloud resource utilization not monitored alongside on-premises infrastructure"
+        ],
+        "suggestedSources": [
+          "Infrastructure monitoring platform dashboards and configuration",
+          "Capacity alert threshold configuration and recent alert history",
+          "Cloud resource utilization monitoring reports"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.IR-04-E2",
+        "name": "Capacity Planning and Forecasting Documentation",
+        "description": "Shows that the organization forecasts future resource needs and plans capacity additions before constraints impact availability",
+        "whatGoodLooksLike": [
+          "Annual capacity planning reviews analyze growth trends and forecast requirements for the next 12-24 months",
+          "Capacity plans include budgeted procurement or scaling actions with defined timelines",
+          "Auto-scaling configured for cloud workloads with defined limits to balance cost and availability"
+        ],
+        "commonGaps": [
+          "No formal capacity planning process with decisions made reactively after outages",
+          "Capacity forecasting does not account for seasonal peaks or planned growth initiatives",
+          "Cloud auto-scaling not configured or configured without spending limits"
+        ],
+        "suggestedSources": [
+          "Annual capacity planning reports with forecasts and procurement plans",
+          "Cloud auto-scaling configuration and policy documentation",
+          "Budget and procurement records for planned capacity additions"
+        ],
+        "format": "PDF/DOCX",
+        "retentionPeriod": "3 years"
+      },
+      {
+        "id": "PR.IR-04-E3",
+        "name": "Capacity-Related Incident and Response Records",
+        "description": "Demonstrates that capacity-related incidents are tracked, root causes analyzed, and capacity management improved based on lessons learned",
+        "whatGoodLooksLike": [
+          "Capacity-related incidents documented with root cause analysis identifying planning gaps",
+          "Post-incident reviews result in updated capacity thresholds, monitoring, or planning processes",
+          "Trend analysis of capacity incidents shows declining frequency over time"
+        ],
+        "commonGaps": [
+          "Capacity-related outages not classified separately from other incidents for analysis",
+          "No root cause analysis performed on capacity-related incidents",
+          "Lessons learned not fed back into capacity planning and monitoring improvements"
+        ],
+        "suggestedSources": [
+          "Incident management records filtered for capacity-related incidents",
+          "Post-incident review reports for capacity-related outages",
+          "Capacity management improvement action tracking records"
+        ],
+        "format": "System export",
+        "retentionPeriod": "3 years"
+      }
+    ],
+    "assessmentTips": [
+      "Review monitoring dashboards live to verify real-time visibility into resource utilization",
+      "Ask for the most recent capacity planning document and verify it addresses growth projections for the next year",
+      "Check whether auto-scaling is configured for cloud workloads and whether cost controls are in place",
+      "Review recent capacity-related incidents and verify that corrective actions were taken to prevent recurrence"
+    ]
+  }
+}
