@@ -923,6 +923,193 @@ a:hover { text-decoration: underline; }
   color: var(--danger);
 }
 
+/* ---- Dark Mode ---- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0F172A;
+    --card: #1E293B;
+    --border: #334155;
+    --accent: #60A5FA;
+    --accent-light: #1E3A5F;
+    --text: #E2E8F0;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --danger: #F87171;
+
+    /* Function colors — brightened for dark bg */
+    --fn-GV: #A78BFA;
+    --fn-ID: #60A5FA;
+    --fn-PR: #4ADE80;
+    --fn-DE: #FBBF24;
+    --fn-RS: #F87171;
+    --fn-RC: #22D3EE;
+
+    /* Function backgrounds — dark tinted */
+    --fn-GV-bg: #2E1E5E;
+    --fn-ID-bg: #1E3A5F;
+    --fn-PR-bg: #1A3A2A;
+    --fn-DE-bg: #3D2E0A;
+    --fn-RS-bg: #3B1C1C;
+    --fn-RC-bg: #0C3644;
+
+    --shadow: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.35);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  /* Header */
+  .header {
+    background: var(--card);
+    border-bottom-color: var(--border);
+  }
+
+  .header h1 a { color: var(--text); }
+
+  /* Search box */
+  .search-box input {
+    background: #0F172A;
+    border-color: var(--border);
+    color: var(--text);
+  }
+
+  .search-box input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+  }
+
+  /* Header nav */
+  .header-nav a { color: var(--text-secondary); }
+  .header-nav a:hover { color: var(--accent); }
+
+  /* Accordion */
+  .accordion-trigger { color: var(--text); }
+  .accordion-trigger:hover { background: #263548; }
+
+  /* Category ID badges in accordion */
+  .accordion-trigger .cat-id {
+    /* The fn-*-bg variables already handle this */
+  }
+
+  /* Subcategory links */
+  .sub-link { color: var(--text); }
+  .sub-link:hover { background: #263548; }
+  .sub-link .sub-id { color: var(--accent); }
+
+  /* Tables */
+  .data-table tr:hover td { background: #263548; }
+  .data-table th {
+    border-bottom-color: var(--border);
+  }
+
+  /* Implementation objective */
+  .impl-objective {
+    background: var(--accent-light);
+    color: var(--text);
+  }
+
+  /* Assessor focus */
+  .assessor-focus {
+    background: #3D2E0A;
+    color: var(--text);
+  }
+
+  .assessor-focus strong {
+    color: var(--fn-DE);
+  }
+
+  /* Evidence list markers */
+  .ev-list.good li::before { background: var(--fn-PR); }
+  .ev-list.gap li::before { background: var(--danger); }
+
+  /* Assessment tips */
+  .assessment-tips {
+    background: #263548;
+  }
+
+  /* Badges */
+  .badge-category { background: var(--accent-light); color: var(--accent); }
+  .badge-owner { background: #1A3A2A; color: var(--fn-PR); }
+  .badge-frequency { background: #2E1E5E; color: var(--fn-GV); }
+  .badge-mandatory { background: var(--accent-light); color: var(--accent); }
+
+  /* Audit items */
+  .audit-artifact-item { background: #263548; }
+  .audit-evidence-item { background: #263548; }
+  .audit-artifact-name { color: var(--text); }
+  .audit-evidence-name { color: var(--text); }
+
+  .audit-evidence-details .accordion-item {
+    background: var(--card);
+  }
+
+  /* Select and input controls */
+  .ref-lookup-controls select,
+  .ref-lookup-controls input {
+    background: var(--card);
+    border-color: var(--border);
+    color: var(--text);
+  }
+
+  .ref-lookup-controls select:focus,
+  .ref-lookup-controls input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+  }
+
+  /* Risk matrix — keep strong colors, adjust text contrast */
+  .risk-matrix-table thead th {
+    background: #263548;
+    color: var(--text-muted);
+  }
+
+  .risk-matrix-row-header {
+    background: #263548;
+    color: var(--text-secondary);
+  }
+
+  .risk-matrix-cell.risk-medium {
+    color: #1F2937;
+  }
+
+  .risk-score-badge.risk-medium {
+    color: #1F2937;
+  }
+
+  /* Risk row hover */
+  .risk-row:hover { background-color: #263548; }
+
+  /* Checklist items */
+  .checklist-item {
+    background: var(--card);
+    border-color: var(--border);
+  }
+
+  /* Treatment card */
+  .treatment-card {
+    background: var(--card);
+    border-color: var(--border);
+  }
+
+  /* Fn badge — keep white text on function colors (already bright enough) */
+  .fn-badge { color: white; }
+
+  /* Fn pill — keep white text */
+  .search-group-title .fn-pill { color: white; }
+
+  /* Breadcrumbs */
+  .breadcrumbs a { color: var(--text-secondary); }
+  .breadcrumbs .current { color: var(--text); }
+
+  /* Sub detail header */
+  .sub-detail-header h2 .sub-id-badge {
+    /* Uses fn-*-bg variables which are already dark-adjusted */
+  }
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 1023px) {
   .fn-grid {
