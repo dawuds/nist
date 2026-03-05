@@ -1,5 +1,7 @@
 {
-  "sourceType": "constructed-indicative",
+  "_meta": {
+    "sourceType": "constructed-indicative"
+  },
   "policies": [
     {
       "slug": "cybersecurity-risk-management-policy",

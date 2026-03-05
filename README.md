@@ -7,9 +7,6 @@ Machine-readable extraction of the **NIST Cybersecurity Framework (CSF) 2.0**, w
 ## Repository Structure
 
 ```
-source/
-  NIST.CSWP.29.pdf                     # Official CSF 2.0 document
-
 core/                                   # Layer 1: Framework hierarchy
   functions.json                        # 6 functions with descriptions
   categories.json                       # 22 categories with descriptions
@@ -39,6 +36,8 @@ references/                             # Layer 2: Cross-framework mappings
     nice-framework.json                 # NICE Workforce Framework mappings
     scf.json                            # Secure Controls Framework mappings
     sp800-218.json                      # NIST SP 800-218 (SSDF) mappings
+    cop.json                            # Code of Practice mappings
+    irp.json                            # Incident Response Plan references
 
 implementation/                         # Layer 3: Implementation guidance (AI-generated)
   index.json                            # All guidance keyed by subcategory ID
@@ -232,7 +231,7 @@ Each artifact:
 
 ## Cross-Framework References
 
-Each subcategory maps to controls in multiple frameworks. 17 reference frameworks included:
+Each subcategory maps to controls in multiple frameworks. 15 reference frameworks included:
 
 | Framework | Key | Description |
 |-----------|-----|-------------|
@@ -354,7 +353,7 @@ for sid, g in impl.items():
 | Functions | 6 | GV, ID, PR, DE, RS, RC |
 | Categories | 22 | Grouped under 6 functions |
 | Subcategories | 132 | Outcome statements with implementation examples |
-| Reference Frameworks | 17 | Cross-framework informative references |
+| Reference Frameworks | 15 | Cross-framework informative references |
 | Implementation Guidance | 132 | Key activities, maturity levels per subcategory |
 | Evidence Guidance | 132 | Assessor focus, evidence items, assessment tips |
 | Artifacts | 57 | Across 6 categories (policies, procedures, standards, evidence, reports, logs) |

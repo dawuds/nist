@@ -1,5 +1,7 @@
 {
-  "sourceType": "constructed-indicative",
+  "_meta": {
+    "sourceType": "constructed-indicative"
+  },
   "GV.OC-01": {
     "subcategoryId": "GV.OC-01",
     "categoryId": "GV.OC",
