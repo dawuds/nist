@@ -979,6 +979,146 @@ a:hover { text-decoration: underline; }
   }
 }
 
+/* ---- Audit Package ---- */
+.audit-package {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--border);
+}
+
+.audit-package-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.audit-artifact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.audit-artifact-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.audit-artifact-item.mandatory {
+  border-left: 4px solid var(--accent);
+}
+
+.audit-artifact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.audit-artifact-name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text);
+}
+
+.badge-mandatory {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.audit-artifact-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.audit-artifact-contents {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.audit-artifact-contents li {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  padding: 0.125rem 0;
+}
+
+.audit-evidence-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.audit-evidence-item:last-child {
+  margin-bottom: 0;
+}
+
+.audit-evidence-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.375rem;
+  flex-wrap: wrap;
+}
+
+.audit-evidence-name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text);
+}
+
+.audit-evidence-id {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.audit-evidence-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.audit-evidence-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.audit-evidence-meta strong {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.audit-evidence-details {
+  margin-top: 0.5rem;
+}
+
+.audit-evidence-details .accordion-item {
+  background: var(--card);
+  margin-bottom: 0.375rem;
+}
+
+.audit-evidence-details .accordion-trigger {
+  padding: 0.625rem 1rem;
+  font-size: 0.8125rem;
+}
+
+.audit-evidence-details .accordion-content {
+  padding: 0 1rem 0.75rem;
+}
+
 /* ---- Print ---- */
 @media print {
   .header { position: static; }

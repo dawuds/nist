@@ -177,6 +177,122 @@ function renderSubcategory(subId) {
 
   const tabs = ['Overview', 'Implementation', 'Evidence', 'References', 'Artifacts'];
 
+  // Audit Package
+  const artifactIndex = {};
+  if (state.artifacts) {
+    Object.values(state.artifacts).forEach(arr => {
+      if (Array.isArray(arr)) arr.forEach(a => { artifactIndex[a.slug] = a; });
+    });
+  }
+  const linkedArtifacts = Object.values(artifactIndex)
+    .filter(a => Array.isArray(a.controlSlugs) && a.controlSlugs.includes(subId))
+    .sort((a, b) => (b.mandatory ? 1 : 0) - (a.mandatory ? 1 : 0));
+
+  const linkedArtifactSlugs = new Set(linkedArtifacts.map(a => a.slug));
+  const linkedEvidence = [];
+  const evEntry = state.evidence?.[subId];
+  if (evEntry && evEntry.evidenceItems) {
+    evEntry.evidenceItems.forEach(item => {
+      if (linkedEvidence.find(e => e.id === item.id)) return;
+      const itemArtifacts = item.artifactSlugs || [];
+      if (!itemArtifacts.length || itemArtifacts.some(sl => linkedArtifactSlugs.has(sl))) {
+        linkedEvidence.push(item);
+      }
+    });
+  }
+
+  const auditPackageHTML = (linkedArtifacts.length || linkedEvidence.length) ? `
+    <div class="audit-package">
+      <h3 class="audit-package-title">Audit Package</h3>
+      <div class="accordion">
+        ${linkedArtifacts.length ? `
+        <div class="accordion-item open">
+          <button class="accordion-trigger" data-accordion>
+            <span class="accordion-trigger-left">
+              <span>Required Artifacts</span>
+              <span style="color:var(--text-muted);font-weight:400;font-size:0.8125rem">(${linkedArtifacts.length})</span>
+            </span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="accordion-content">
+            <div class="audit-artifact-list">
+              ${linkedArtifacts.map(a => `
+                <div class="audit-artifact-item${a.mandatory ? ' mandatory' : ''}">
+                  <div class="audit-artifact-header">
+                    <span class="audit-artifact-name">${escHtml(a.name)}</span>
+                    ${a.mandatory ? '<span class="badge badge-mandatory">Required</span>' : '<span class="badge badge-frequency">Optional</span>'}
+                  </div>
+                  <div class="audit-artifact-meta">
+                    ${a.category ? `<span class="badge badge-category">${escHtml(a.category)}</span>` : ''}
+                    ${a.owner ? `<span class="badge badge-owner">${escHtml(a.owner)}</span>` : ''}
+                    ${a.reviewFrequency ? `<span class="badge badge-frequency">${escHtml(a.reviewFrequency)}</span>` : ''}
+                  </div>
+                  ${a.keyContents && a.keyContents.length > 0 ? `
+                    <ul class="audit-artifact-contents">
+                      ${a.keyContents.map(k => `<li>${escHtml(k)}</li>`).join('')}
+                    </ul>` : ''}
+                </div>`).join('')}
+            </div>
+          </div>
+        </div>` : ''}
+        ${linkedEvidence.length ? `
+        <div class="accordion-item open">
+          <button class="accordion-trigger" data-accordion>
+            <span class="accordion-trigger-left">
+              <span>Evidence Checklist</span>
+              <span style="color:var(--text-muted);font-weight:400;font-size:0.8125rem">(${linkedEvidence.length})</span>
+            </span>
+            <span class="chevron">▶</span>
+          </button>
+          <div class="accordion-content">
+            ${linkedEvidence.map(ev => `
+              <div class="audit-evidence-item">
+                <div class="audit-evidence-header">
+                  <span class="audit-evidence-name">${escHtml(ev.name)}</span>
+                  <span class="audit-evidence-id">${escHtml(ev.id)}</span>
+                </div>
+                <p class="audit-evidence-desc">${escHtml(ev.description)}</p>
+                <div class="audit-evidence-meta">
+                  ${ev.format ? `<span>Format: <strong>${escHtml(ev.format)}</strong></span>` : ''}
+                  ${ev.retentionPeriod ? `<span>Retention: <strong>${escHtml(ev.retentionPeriod)}</strong></span>` : ''}
+                </div>
+                ${(ev.whatGoodLooksLike && ev.whatGoodLooksLike.length) || (ev.commonGaps && ev.commonGaps.length) ? `
+                <div class="accordion audit-evidence-details">
+                  ${ev.whatGoodLooksLike && ev.whatGoodLooksLike.length ? `
+                  <div class="accordion-item">
+                    <button class="accordion-trigger" data-accordion>
+                      <span class="accordion-trigger-left">
+                        <span>What Good Looks Like</span>
+                      </span>
+                      <span class="chevron">▶</span>
+                    </button>
+                    <div class="accordion-content">
+                      <ul class="ev-list good">
+                        ${ev.whatGoodLooksLike.map(w => `<li>${escHtml(w)}</li>`).join('')}
+                      </ul>
+                    </div>
+                  </div>` : ''}
+                  ${ev.commonGaps && ev.commonGaps.length ? `
+                  <div class="accordion-item">
+                    <button class="accordion-trigger" data-accordion>
+                      <span class="accordion-trigger-left">
+                        <span>Common Gaps</span>
+                      </span>
+                      <span class="chevron">▶</span>
+                    </button>
+                    <div class="accordion-content">
+                      <ul class="ev-list gap">
+                        ${ev.commonGaps.map(g => `<li>${escHtml(g)}</li>`).join('')}
+                      </ul>
+                    </div>
+                  </div>` : ''}
+                </div>` : ''}
+              </div>`).join('')}
+          </div>
+        </div>` : ''}
+      </div>
+    </div>` : '';
+
   return `
     ${renderBreadcrumbs([
       { label: 'Home', hash: '' },
@@ -209,7 +325,8 @@ function renderSubcategory(subId) {
       <div class="tab-panel" data-panel="artifacts">
         ${renderLoading()}
       </div>
-    </div>`;
+    </div>
+    ${auditPackageHTML}`;
 }
 
 function renderOverviewTab(sub) {
@@ -514,6 +631,18 @@ async function render() {
     } catch (err) {
       app.innerHTML = `<div class="error-state">Failed to load core data: ${escHtml(err.message)}</div>`;
       return;
+    }
+  }
+
+  // Pre-load artifacts and evidence for subcategory view (needed by Audit Package)
+  if (route.view === 'subcategory') {
+    try {
+      const loads = [];
+      if (!state.artifacts) loads.push(fetchJSON('artifacts/inventory.json').then(d => { state.artifacts = d; }));
+      if (!state.evidence) loads.push(fetchJSON('evidence/index.json').then(d => { state.evidence = d; }));
+      if (loads.length) await Promise.all(loads);
+    } catch (err) {
+      // Non-fatal: Audit Package will degrade gracefully
     }
   }
 
