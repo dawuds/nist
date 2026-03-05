@@ -10,6 +10,7 @@ const state = {
   evidence: null,
   artifacts: null,
   subMap: null,
+  riskMgmt: null,
   route: { view: 'overview' },
   searchQuery: '',
 };
@@ -30,6 +31,7 @@ async function fetchJSON(path) {
 function parseHash() {
   const hash = location.hash.slice(1);
   if (!hash) return { view: 'overview' };
+  if (hash === 'risk-management') return { view: 'risk-management' };
   if (hash.startsWith('search/')) return { view: 'search', query: decodeURIComponent(hash.slice(7)) };
   if (hash.startsWith('ref/')) return { view: 'ref-lookup', framework: decodeURIComponent(hash.slice(4)) };
   // Subcategory: contains a dash (e.g., GV.OC-01)
@@ -613,6 +615,313 @@ function renderSearch(query) {
       </div>`).join('')}`;
 }
 
+// ---- View: Risk Management ----
+function getRiskLevelClass(level) {
+  switch (level) {
+    case 'Critical': return 'risk-critical';
+    case 'High': return 'risk-high';
+    case 'Medium': return 'risk-medium';
+    case 'Low': return 'risk-low';
+    case 'Very Low': return 'risk-verylow';
+    default: return '';
+  }
+}
+
+function renderRiskMatrix(matrix) {
+  const { headers, cells } = matrix;
+  return `
+    <div class="risk-matrix-wrapper">
+      <table class="risk-matrix-table">
+        <thead>
+          <tr>
+            <th class="risk-matrix-corner">Likelihood / Impact</th>
+            ${headers.columns.map(c => `<th>${escHtml(c)}</th>`).join('')}
+          </tr>
+        </thead>
+        <tbody>
+          ${cells.map((row, i) => `
+            <tr>
+              <td class="risk-matrix-row-header">${escHtml(headers.rows[i])}</td>
+              ${row.map(cell => `
+                <td class="risk-matrix-cell ${getRiskLevelClass(cell.level)}">
+                  <span class="risk-matrix-score">${cell.score}</span>
+                  <span class="risk-matrix-level">${escHtml(cell.level)}</span>
+                </td>`).join('')}
+            </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>`;
+}
+
+function renderRiskManagement() {
+  const rm = state.riskMgmt;
+  if (!rm) return '<div class="error-state">Failed to load risk management data.</div>';
+
+  const { methodology, matrix, register, checklist, treatment } = rm;
+
+  // Stats
+  const totalRisks = register.risks.length;
+  const criticalCount = register.risks.filter(r => r.inherentRiskLevel === 'Critical').length;
+  const highCount = register.risks.filter(r => r.inherentRiskLevel === 'High').length;
+  const avgResidual = (register.risks.reduce((s, r) => s + r.residualRisk, 0) / totalRisks).toFixed(1);
+
+  // Group checklist items by function
+  const checklistByFn = {};
+  for (const item of checklist.items) {
+    if (!checklistByFn[item.csfFunction]) checklistByFn[item.csfFunction] = [];
+    checklistByFn[item.csfFunction].push(item);
+  }
+  const fnOrder = ['GV', 'ID', 'PR', 'DE', 'RS', 'RC'];
+  const fnNames = { GV: 'Govern', ID: 'Identify', PR: 'Protect', DE: 'Detect', RS: 'Respond', RC: 'Recover' };
+
+  return `
+    ${renderBreadcrumbs([{ label: 'Home', hash: '' }, { label: 'Risk Management' }])}
+    <div class="fn-header">
+      <h2>Risk Management</h2>
+      <p class="fn-header-desc">Cyber risk assessment methodology, risk register, and assessment checklist aligned to NIST CSF 2.0.</p>
+    </div>
+
+    <div class="stats-banner">
+      <div class="stat"><div class="stat-value">${totalRisks}</div><div class="stat-label">Risks</div></div>
+      <div class="stat"><div class="stat-value">${criticalCount}</div><div class="stat-label">Critical (Inherent)</div></div>
+      <div class="stat"><div class="stat-value">${highCount}</div><div class="stat-label">High (Inherent)</div></div>
+      <div class="stat"><div class="stat-value">${avgResidual}</div><div class="stat-label">Avg Residual Score</div></div>
+      <div class="stat"><div class="stat-value">${checklist.items.length}</div><div class="stat-label">Checklist Items</div></div>
+    </div>
+
+    <div class="accordion">
+      <!-- Methodology -->
+      <div class="accordion-item open">
+        <button class="accordion-trigger" data-accordion>
+          <span class="accordion-trigger-left">
+            <span class="cat-id" style="background:var(--fn-GV-bg);color:var(--fn-GV)">M</span>
+            <span>Methodology</span>
+          </span>
+          <span class="chevron">&#9654;</span>
+        </button>
+        <div class="accordion-content">
+          <div class="impl-objective">
+            <strong style="display:block;margin-bottom:0.25rem;font-size:0.8125rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--accent)">Purpose</strong>
+            ${escHtml(methodology.purpose)}
+          </div>
+          <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:1rem"><strong>Scope:</strong> ${escHtml(methodology.scope)}</p>
+
+          <h4 style="font-size:1rem;margin-bottom:0.75rem">Aligned Frameworks</h4>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem">
+            ${methodology.alignedFrameworks.map(f => `
+              <a href="${f.url}" target="_blank" rel="noopener" class="badge badge-category" style="text-decoration:none;padding:0.25rem 0.75rem;font-size:0.75rem">${escHtml(f.framework)}</a>
+            `).join('')}
+          </div>
+
+          <h4 style="font-size:1rem;margin-bottom:0.75rem">Assessment Process</h4>
+          <div style="overflow-x:auto">
+            <table class="data-table">
+              <thead>
+                <tr><th>Step</th><th>Name</th><th>CSF Function</th><th>SP 800-30 Task</th></tr>
+              </thead>
+              <tbody>
+                ${methodology.riskAssessmentProcess.steps.map(step => `
+                  <tr>
+                    <td style="white-space:nowrap;font-weight:600">${step.step}</td>
+                    <td>
+                      <strong>${escHtml(step.name)}</strong>
+                      <div style="font-size:0.8125rem;color:var(--text-secondary);margin-top:0.25rem">${escHtml(step.description)}</div>
+                    </td>
+                    <td><span class="fn-pill fn-pill-${step.csfFunction}" style="color:white;padding:0.125rem 0.5rem;border-radius:4px;font-size:0.6875rem;font-weight:700">${step.csfFunction}</span></td>
+                    <td style="font-size:0.8125rem;color:var(--text-secondary)">${escHtml(step.sp800_30_task)}</td>
+                  </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+
+          <h4 style="font-size:1rem;margin:1.5rem 0 0.75rem">Impact Dimensions</h4>
+          <div class="maturity-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+            ${methodology.impactScale.dimensions.map(d => `
+              <div class="maturity-card">
+                <h5 style="color:var(--accent)">${escHtml(d.dimension)}</h5>
+                <p>${escHtml(d.description)}</p>
+              </div>`).join('')}
+          </div>
+
+          <h4 style="font-size:1rem;margin:1.5rem 0 0.75rem">Review Schedule</h4>
+          <div style="overflow-x:auto">
+            <table class="data-table">
+              <thead><tr><th>Type</th><th>Schedule</th></tr></thead>
+              <tbody>
+                <tr><td style="font-weight:600">Full Assessment</td><td>${escHtml(methodology.reviewSchedule.fullAssessment)}</td></tr>
+                <tr><td style="font-weight:600">Quarterly Review</td><td>${escHtml(methodology.reviewSchedule.quarterlyReview)}</td></tr>
+                <tr><td style="font-weight:600">Trigger-Based Review</td><td>${escHtml(methodology.reviewSchedule.triggerBasedReview)}</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Matrix -->
+      <div class="accordion-item open">
+        <button class="accordion-trigger" data-accordion>
+          <span class="accordion-trigger-left">
+            <span class="cat-id" style="background:var(--fn-DE-bg);color:var(--fn-DE)">5x5</span>
+            <span>Risk Matrix</span>
+          </span>
+          <span class="chevron">&#9654;</span>
+        </button>
+        <div class="accordion-content">
+          ${renderRiskMatrix(matrix.matrix)}
+          <h4 style="font-size:1rem;margin:1.5rem 0 0.75rem">Risk Levels</h4>
+          <div style="overflow-x:auto">
+            <table class="data-table">
+              <thead><tr><th>Level</th><th>Score Range</th><th>Action Required</th><th>Reporting</th></tr></thead>
+              <tbody>
+                ${matrix.riskLevels.map(l => `
+                  <tr>
+                    <td><span class="badge ${getRiskLevelClass(l.level)}" style="background:${l.color};color:white;padding:0.125rem 0.5rem">${escHtml(l.level)}</span></td>
+                    <td class="mono">${escHtml(l.range)}</td>
+                    <td style="font-size:0.8125rem">${escHtml(l.action)}</td>
+                    <td style="font-size:0.8125rem;white-space:nowrap">${escHtml(l.reportingFrequency)}</td>
+                  </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Register -->
+      <div class="accordion-item open">
+        <button class="accordion-trigger" data-accordion>
+          <span class="accordion-trigger-left">
+            <span class="cat-id" style="background:var(--fn-RS-bg);color:var(--fn-RS)">R</span>
+            <span>Risk Register</span>
+            <span style="color:var(--text-muted);font-weight:400;font-size:0.8125rem">(${register.risks.length})</span>
+          </span>
+          <span class="chevron">&#9654;</span>
+        </button>
+        <div class="accordion-content">
+          <div style="overflow-x:auto">
+            <table class="data-table risk-register-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Risk</th>
+                  <th>CSF</th>
+                  <th>Inherent</th>
+                  <th>Residual</th>
+                  <th>Treatment</th>
+                  <th>Owner</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${register.risks.map(r => `
+                  <tr class="risk-row" data-risk-id="${r.id}">
+                    <td class="mono" style="white-space:nowrap;font-weight:600">${escHtml(r.id)}</td>
+                    <td>
+                      <strong style="display:block">${escHtml(r.title)}</strong>
+                      <span style="font-size:0.75rem;color:var(--text-muted)">${escHtml(r.description).substring(0, 100)}${r.description.length > 100 ? '...' : ''}</span>
+                    </td>
+                    <td>
+                      <span class="fn-pill fn-pill-${r.csfFunction}" style="color:white;padding:0.125rem 0.5rem;border-radius:4px;font-size:0.6875rem;font-weight:700">${r.csfFunction}</span>
+                      <div class="mono" style="font-size:0.6875rem;color:var(--text-muted);margin-top:0.25rem">${escHtml(r.csfSubcategory)}</div>
+                    </td>
+                    <td style="text-align:center">
+                      <span class="risk-score-badge ${getRiskLevelClass(r.inherentRiskLevel)}">${r.inherentRisk}</span>
+                      <div style="font-size:0.6875rem;color:var(--text-muted)">${escHtml(r.inherentRiskLevel)}</div>
+                    </td>
+                    <td style="text-align:center">
+                      <span class="risk-score-badge ${getRiskLevelClass(r.residualRiskLevel)}">${r.residualRisk}</span>
+                      <div style="font-size:0.6875rem;color:var(--text-muted)">${escHtml(r.residualRiskLevel)}</div>
+                    </td>
+                    <td><span class="badge badge-category">${escHtml(r.treatment)}</span></td>
+                    <td style="font-size:0.8125rem;white-space:nowrap">${escHtml(r.owner)}</td>
+                  </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Assessment Checklist -->
+      <div class="accordion-item">
+        <button class="accordion-trigger" data-accordion>
+          <span class="accordion-trigger-left">
+            <span class="cat-id" style="background:var(--fn-PR-bg);color:var(--fn-PR)">C</span>
+            <span>Assessment Checklist</span>
+            <span style="color:var(--text-muted);font-weight:400;font-size:0.8125rem">(${checklist.items.length})</span>
+          </span>
+          <span class="chevron">&#9654;</span>
+        </button>
+        <div class="accordion-content">
+          ${fnOrder.filter(fn => checklistByFn[fn]).map(fn => `
+            <div style="margin-bottom:1.5rem">
+              <h4 style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem">
+                <span class="fn-pill fn-pill-${fn}" style="color:white;padding:0.125rem 0.5rem;border-radius:4px;font-size:0.6875rem;font-weight:700">${fn}</span>
+                ${escHtml(fnNames[fn])}
+              </h4>
+              ${checklistByFn[fn].map(item => `
+                <div class="checklist-item">
+                  <div class="checklist-item-header">
+                    <span class="mono" style="font-size:0.75rem;color:var(--text-muted)">${escHtml(item.id)}</span>
+                    <strong>${escHtml(item.title)}</strong>
+                    <span class="mono" style="font-size:0.6875rem;color:var(--accent)">${escHtml(item.csfSubcategory)}</span>
+                  </div>
+                  <p style="font-size:0.8125rem;color:var(--text-secondary);margin:0.25rem 0 0.5rem">${escHtml(item.description)}</p>
+                  <div style="font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);margin-bottom:0.25rem">Verification Criteria</div>
+                  <ul class="ev-list good">
+                    ${item.verificationCriteria.map(v => `<li>${escHtml(v)}</li>`).join('')}
+                  </ul>
+                </div>`).join('')}
+            </div>`).join('')}
+        </div>
+      </div>
+
+      <!-- Treatment Options -->
+      <div class="accordion-item">
+        <button class="accordion-trigger" data-accordion>
+          <span class="accordion-trigger-left">
+            <span class="cat-id" style="background:var(--fn-ID-bg);color:var(--fn-ID)">T</span>
+            <span>Treatment Options</span>
+            <span style="color:var(--text-muted);font-weight:400;font-size:0.8125rem">(${treatment.strategies.length})</span>
+          </span>
+          <span class="chevron">&#9654;</span>
+        </button>
+        <div class="accordion-content">
+          ${treatment.strategies.map(s => `
+            <div class="treatment-card">
+              <h4>${escHtml(s.name)}</h4>
+              <p style="font-size:0.875rem;color:var(--text-secondary);margin-bottom:0.75rem">${escHtml(s.description)}</p>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
+                <div>
+                  <div style="font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--fn-PR);margin-bottom:0.25rem">When to Use</div>
+                  <ul class="ev-list good">
+                    ${s.whenToUse.map(w => `<li>${escHtml(w)}</li>`).join('')}
+                  </ul>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--fn-DE);margin-bottom:0.25rem">Considerations</div>
+                  <ul class="ev-list gap">
+                    ${s.considerations.map(c => `<li>${escHtml(c)}</li>`).join('')}
+                  </ul>
+                </div>
+              </div>
+              <div style="font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);margin-bottom:0.5rem">CSF-Aligned Examples</div>
+              <div style="overflow-x:auto">
+                <table class="data-table">
+                  <thead><tr><th>Function</th><th>Subcategory</th><th>Example</th></tr></thead>
+                  <tbody>
+                    ${s.csfAlignedExamples.map(ex => `
+                      <tr>
+                        <td><span class="fn-pill fn-pill-${ex.csfFunction}" style="color:white;padding:0.125rem 0.5rem;border-radius:4px;font-size:0.6875rem;font-weight:700">${ex.csfFunction}</span></td>
+                        <td class="mono" style="white-space:nowrap"><a href="#${ex.csfSubcategory}">${escHtml(ex.csfSubcategory)}</a></td>
+                        <td style="font-size:0.8125rem">${escHtml(ex.example)}</td>
+                      </tr>`).join('')}
+                  </tbody>
+                </table>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+}
+
 // ---- Main Render ----
 async function render() {
   const app = document.getElementById('app');
@@ -630,6 +939,23 @@ async function render() {
       state.subMap = subMap;
     } catch (err) {
       app.innerHTML = `<div class="error-state">Failed to load core data: ${escHtml(err.message)}</div>`;
+      return;
+    }
+  }
+
+  // Pre-load risk management data
+  if (route.view === 'risk-management' && !state.riskMgmt) {
+    try {
+      const [methodology, matrix, register, checklist, treatment] = await Promise.all([
+        fetchJSON('risk-management/methodology.json'),
+        fetchJSON('risk-management/risk-matrix.json'),
+        fetchJSON('risk-management/risk-register.json'),
+        fetchJSON('risk-management/checklist.json'),
+        fetchJSON('risk-management/treatment-options.json'),
+      ]);
+      state.riskMgmt = { methodology, matrix, register, checklist, treatment };
+    } catch (err) {
+      app.innerHTML = `<div class="error-state">Failed to load risk management data: ${escHtml(err.message)}</div>`;
       return;
     }
   }
@@ -659,6 +985,9 @@ async function render() {
       break;
     case 'ref-lookup':
       content = renderRefLookup(route.framework);
+      break;
+    case 'risk-management':
+      content = renderRiskManagement();
       break;
     case 'search':
       content = renderSearch(route.query);
@@ -809,6 +1138,10 @@ function renderHeader() {
   header.innerHTML = `
     <div class="header-inner">
       <h1><a href="#">NIST CSF 2.0 Explorer</a></h1>
+      <nav class="header-nav">
+        <a href="#ref/">References</a>
+        <a href="#risk-management">Risk Management</a>
+      </nav>
       <div class="search-box">
         <span class="search-icon">⌕</span>
         <input type="text" id="search-input" placeholder="Search subcategories…" autocomplete="off" />

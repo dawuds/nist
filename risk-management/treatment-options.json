@@ -1,0 +1,172 @@
+{
+  "_meta": {
+    "sourceType": "constructed-indicative",
+    "verificationNote": "Risk treatment strategies constructed with NIST CSF 2.0-aligned examples. Treatment options follow ISO 31000 and NIST SP 800-30 guidance. Examples are indicative for organizational adaptation."
+  },
+  "title": "Cyber Risk Treatment Options",
+  "description": "Four standard risk treatment strategies with CSF 2.0-aligned examples, selection criteria, and implementation considerations. Organizations should apply the most appropriate strategy per risk based on cost-benefit analysis, risk appetite, and operational context.",
+  "strategies": [
+    {
+      "id": "TREAT-MITIGATE",
+      "name": "Mitigate (Reduce)",
+      "description": "Implement additional controls or enhance existing controls to reduce the likelihood, impact, or both of the identified risk to an acceptable level within the organization's risk appetite.",
+      "whenToUse": [
+        "Residual risk exceeds organizational risk appetite",
+        "Cost-effective controls are available to reduce risk",
+        "Risk cannot be avoided or transferred due to operational necessity",
+        "Regulatory requirements mandate specific control implementations"
+      ],
+      "considerations": [
+        "Prioritize controls that address root cause over symptoms",
+        "Consider defense-in-depth — layered controls across prevention, detection, and response",
+        "Validate that new controls do not introduce unacceptable operational friction",
+        "Establish metrics to measure control effectiveness post-implementation"
+      ],
+      "csfAlignedExamples": [
+        {
+          "csfFunction": "GV",
+          "csfSubcategory": "GV.RM-02",
+          "example": "Define and communicate formal risk appetite thresholds to ensure consistent risk acceptance decisions across the organization"
+        },
+        {
+          "csfFunction": "ID",
+          "csfSubcategory": "ID.AM-01",
+          "example": "Deploy automated asset discovery and CMDB integration to reduce unmanaged asset exposure"
+        },
+        {
+          "csfFunction": "PR",
+          "csfSubcategory": "PR.AA-03",
+          "example": "Implement zero-trust architecture with continuous authentication and microsegmentation to reduce unauthorized access risk"
+        },
+        {
+          "csfFunction": "DE",
+          "csfSubcategory": "DE.CM-01",
+          "example": "Expand SIEM log source coverage and deploy behavioral analytics to reduce detection blind spots"
+        },
+        {
+          "csfFunction": "RS",
+          "csfSubcategory": "RS.MA-01",
+          "example": "Develop and regularly test incident response playbooks for high-probability attack scenarios to reduce response time"
+        },
+        {
+          "csfFunction": "RC",
+          "csfSubcategory": "RC.RP-02",
+          "example": "Implement automated failover and immutable backups to reduce recovery time and data loss potential"
+        }
+      ]
+    },
+    {
+      "id": "TREAT-TRANSFER",
+      "name": "Transfer (Share)",
+      "description": "Shift the financial impact or operational burden of the risk to a third party through insurance, outsourcing, or contractual arrangements, while retaining accountability for managing the risk.",
+      "whenToUse": [
+        "Financial impact is the primary concern and is insurable",
+        "Specialized expertise is required that the organization cannot maintain internally",
+        "Contractual mechanisms can effectively allocate risk to parties better positioned to manage it",
+        "Residual risk after mitigation still exceeds appetite for financial impact dimension"
+      ],
+      "considerations": [
+        "Transfer does not eliminate reputational or regulatory accountability",
+        "Cyber insurance policies have coverage limits, exclusions, and conditions — review carefully",
+        "Outsourced services require ongoing vendor risk management",
+        "Transfer arrangements must be documented and reviewed annually"
+      ],
+      "csfAlignedExamples": [
+        {
+          "csfFunction": "GV",
+          "csfSubcategory": "GV.SC-05",
+          "example": "Include cybersecurity liability, breach notification, and indemnification clauses in vendor contracts to transfer supply chain risk"
+        },
+        {
+          "csfFunction": "ID",
+          "csfSubcategory": "ID.RA-05",
+          "example": "Purchase cyber insurance to transfer residual financial risk from data breach scenarios after mitigation controls are in place"
+        },
+        {
+          "csfFunction": "DE",
+          "csfSubcategory": "DE.AE-02",
+          "example": "Engage managed detection and response (MDR) provider to transfer operational burden of 24/7 threat monitoring and analysis"
+        },
+        {
+          "csfFunction": "RS",
+          "csfSubcategory": "RS.AN-03",
+          "example": "Establish forensic investigation retainer with specialized firm to transfer forensic capability requirements"
+        }
+      ]
+    },
+    {
+      "id": "TREAT-ACCEPT",
+      "name": "Accept (Retain)",
+      "description": "Consciously decide to retain the risk without additional treatment because the residual risk level falls within the organization's defined risk appetite, or the cost of treatment exceeds the expected loss.",
+      "whenToUse": [
+        "Residual risk is within defined organizational risk appetite thresholds",
+        "Cost of further mitigation exceeds expected loss from risk realization",
+        "Risk is inherently low likelihood and impact",
+        "Temporary acceptance pending planned mitigation in a future budget cycle"
+      ],
+      "considerations": [
+        "Acceptance must be a formal, documented decision — not a default from inaction",
+        "Risk acceptance authority must match the risk level (higher risk requires more senior approval)",
+        "Accepted risks must remain on the risk register and be reviewed on schedule",
+        "Set trigger conditions that would require re-evaluation of the acceptance decision",
+        "Temporary acceptance must include a timeline for treatment implementation"
+      ],
+      "csfAlignedExamples": [
+        {
+          "csfFunction": "GV",
+          "csfSubcategory": "GV.RM-07",
+          "example": "Accept residual risk of operating a legacy system for 12 months while replacement project is completed, with compensating controls documented"
+        },
+        {
+          "csfFunction": "ID",
+          "csfSubcategory": "ID.RA-06",
+          "example": "Accept the low residual risk of a non-critical informational website with no sensitive data after basic security controls are applied"
+        },
+        {
+          "csfFunction": "PR",
+          "csfSubcategory": "PR.DS-01",
+          "example": "Accept the risk of unencrypted non-sensitive public data after confirming data classification excludes any PII or proprietary content"
+        }
+      ]
+    },
+    {
+      "id": "TREAT-AVOID",
+      "name": "Avoid (Eliminate)",
+      "description": "Eliminate the risk entirely by discontinuing the activity, system, or process that creates the risk. This removes the threat-vulnerability pair from the environment.",
+      "whenToUse": [
+        "Risk cannot be reduced to an acceptable level through mitigation or transfer",
+        "Cost of controls exceeds the value of the activity or asset being protected",
+        "Alternative approaches exist that achieve the same business outcome without the risk",
+        "Regulatory or safety implications make the risk categorically unacceptable"
+      ],
+      "considerations": [
+        "Avoidance may limit business capability or opportunity — assess trade-offs explicitly",
+        "Verify that the alternative approach does not introduce equivalent or greater risks",
+        "Document the business justification for discontinuing the activity",
+        "Communicate the decision and its implications to affected stakeholders"
+      ],
+      "csfAlignedExamples": [
+        {
+          "csfFunction": "ID",
+          "csfSubcategory": "ID.AM-05",
+          "example": "Decommission end-of-life systems that cannot be patched or adequately secured, eliminating the vulnerability entirely"
+        },
+        {
+          "csfFunction": "PR",
+          "csfSubcategory": "PR.DS-10",
+          "example": "Discontinue collection of unnecessary personal data to eliminate data breach risk for that data category"
+        },
+        {
+          "csfFunction": "GV",
+          "csfSubcategory": "GV.SC-01",
+          "example": "Terminate vendor relationship where the vendor cannot demonstrate adequate security controls and no suitable compensating controls exist"
+        },
+        {
+          "csfFunction": "PR",
+          "csfSubcategory": "PR.PS-01",
+          "example": "Migrate from self-managed infrastructure to managed cloud services to avoid risks associated with maintaining security configurations for complex on-premises environments"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "_meta": {
+    "sourceType": "constructed-indicative",
+    "verificationNote": "Risk assessment checklist constructed to align with NIST CSF 2.0 functions and subcategories. Items are indicative examples for organizational adaptation and should be tailored to specific assessment scope."
+  },
+  "title": "CSF 2.0-Aligned Risk Assessment Checklist",
+  "description": "Checklist of 18 assessment activities organized by NIST CSF 2.0 function. Each item references a specific CSF subcategory and provides verification criteria for risk assessors.",
+  "items": [
+    {
+      "id": "CHK-01",
+      "csfFunction": "GV",
+      "csfSubcategory": "GV.OC-01",
+      "title": "Organizational Context Documented",
+      "description": "Verify that the organization's mission, applicable legal and regulatory requirements, and stakeholder expectations are documented and available to inform cybersecurity risk decisions.",
+      "verificationCriteria": [
+        "Mission statement references protection of critical services",
+        "Legal and regulatory obligation register is current",
+        "Stakeholder analysis identifies cybersecurity risk expectations"
+      ],
+      "assessorQuestions": [
+        "How does your cybersecurity program align with organizational mission?",
+        "What regulatory obligations drive your security control requirements?"
+      ]
+    },
+    {
+      "id": "CHK-02",
+      "csfFunction": "GV",
+      "csfSubcategory": "GV.RM-01",
+      "title": "Risk Management Strategy Established",
+      "description": "Verify that a cybersecurity risk management strategy exists, is approved by leadership, and defines the approach for identifying, assessing, and treating cyber risks.",
+      "verificationCriteria": [
+        "Risk management strategy document is approved and dated",
+        "Strategy covers risk identification, analysis, evaluation, and treatment",
+        "Risk appetite and tolerance thresholds are quantified"
+      ],
+      "assessorQuestions": [
+        "When was your risk management strategy last reviewed and approved?",
+        "How do you define the boundary between acceptable and unacceptable risk?"
+      ]
+    },
+    {
+      "id": "CHK-03",
+      "csfFunction": "GV",
+      "csfSubcategory": "GV.SC-03",
+      "title": "Supply Chain Risk Management Integrated",
+      "description": "Verify that cybersecurity supply chain risk management processes are established, including vendor risk assessment, contractual requirements, and ongoing monitoring.",
+      "verificationCriteria": [
+        "Vendor risk tiering methodology is documented",
+        "Security requirements are included in vendor contracts",
+        "Critical vendors undergo periodic security assessment"
+      ],
+      "assessorQuestions": [
+        "How do you assess the cybersecurity posture of your critical vendors?",
+        "What contractual provisions require vendor security incident notification?"
+      ]
+    },
+    {
+      "id": "CHK-04",
+      "csfFunction": "ID",
+      "csfSubcategory": "ID.AM-01",
+      "title": "Asset Inventory Complete and Current",
+      "description": "Verify that a comprehensive inventory of hardware, software, data, and services exists and is maintained with defined accuracy and currency standards.",
+      "verificationCriteria": [
+        "Hardware asset inventory matches network discovery scan results",
+        "Software inventory includes versions and patch status",
+        "Data classification labels are assigned to information assets",
+        "Asset owners are designated for all inventoried items"
+      ],
+      "assessorQuestions": [
+        "How often is your asset inventory reconciled against discovery scans?",
+        "What percentage of assets have designated owners?"
+      ]
+    },
+    {
+      "id": "CHK-05",
+      "csfFunction": "ID",
+      "csfSubcategory": "ID.RA-01",
+      "title": "Risk Identification Process Active",
+      "description": "Verify that a systematic process exists for identifying cybersecurity risks from internal and external sources, including threat intelligence, vulnerability data, and business change.",
+      "verificationCriteria": [
+        "Threat intelligence sources are documented and actively monitored",
+        "Vulnerability scanning covers all in-scope assets",
+        "Risk identification considers business process changes and new technologies",
+        "Emerging risk identification is a standing agenda item for risk committee"
+      ],
+      "assessorQuestions": [
+        "What sources do you use to identify new cybersecurity threats?",
+        "How do you capture risks arising from business or technology changes?"
+      ]
+    },
+    {
+      "id": "CHK-06",
+      "csfFunction": "ID",
+      "csfSubcategory": "ID.RA-05",
+      "title": "Risk Register Maintained",
+      "description": "Verify that a cybersecurity risk register is maintained with inherent and residual risk ratings, treatment plans, risk owners, and review dates for all identified risks.",
+      "verificationCriteria": [
+        "Risk register includes all identified cybersecurity risks",
+        "Each risk has inherent and residual ratings using the defined methodology",
+        "Treatment plans exist for all risks above appetite threshold",
+        "Risk owners are assigned and have acknowledged accountability"
+      ],
+      "assessorQuestions": [
+        "How many risks are currently in your cyber risk register?",
+        "How often are risk ratings reviewed and updated?"
+      ]
+    },
+    {
+      "id": "CHK-07",
+      "csfFunction": "ID",
+      "csfSubcategory": "ID.IM-01",
+      "title": "Improvement Process Established",
+      "description": "Verify that lessons learned from incidents, assessments, and exercises are systematically captured and drive improvements to cybersecurity risk management.",
+      "verificationCriteria": [
+        "Post-incident review process is documented and consistently followed",
+        "Improvement actions are tracked to completion",
+        "Assessment findings are integrated into the risk register"
+      ],
+      "assessorQuestions": [
+        "How do you capture and track lessons learned from security incidents?",
+        "Can you show examples of improvements driven by past assessments?"
+      ]
+    },
+    {
+      "id": "CHK-08",
+      "csfFunction": "PR",
+      "csfSubcategory": "PR.AA-01",
+      "title": "Identity and Access Management Controls Verified",
+      "description": "Verify that identity lifecycle management and access control mechanisms are implemented, including provisioning, deprovisioning, privilege management, and multi-factor authentication.",
+      "verificationCriteria": [
+        "User provisioning and deprovisioning processes are documented and followed",
+        "Privileged accounts are inventoried and subject to enhanced controls",
+        "MFA is enforced for remote access and privileged operations",
+        "Access reviews are conducted on a defined schedule"
+      ],
+      "assessorQuestions": [
+        "What is your average time to deprovision access upon employee termination?",
+        "What percentage of privileged accounts have MFA enabled?"
+      ]
+    },
+    {
+      "id": "CHK-09",
+      "csfFunction": "PR",
+      "csfSubcategory": "PR.DS-01",
+      "title": "Data Protection Controls Assessed",
+      "description": "Verify that data protection controls including classification, encryption, and loss prevention are implemented for sensitive data at rest and in transit.",
+      "verificationCriteria": [
+        "Data classification policy is defined and applied",
+        "Encryption standards are documented for data at rest and in transit",
+        "DLP controls are deployed for identified sensitive data categories",
+        "Data retention and disposal procedures are documented and followed"
+      ],
+      "assessorQuestions": [
+        "What encryption standards do you apply to data at rest and in transit?",
+        "How do you identify where sensitive data resides across your environment?"
+      ]
+    },
+    {
+      "id": "CHK-10",
+      "csfFunction": "PR",
+      "csfSubcategory": "PR.PS-01",
+      "title": "Platform Security Configurations Validated",
+      "description": "Verify that security configurations for platforms, systems, and applications follow documented baselines and are validated through regular assessment.",
+      "verificationCriteria": [
+        "Security configuration baselines are documented per platform type",
+        "Configuration compliance is measured against baselines",
+        "Deviations are tracked and require approved exceptions",
+        "Configuration management process prevents unauthorized changes"
+      ],
+      "assessorQuestions": [
+        "What configuration baselines do you use (CIS, DISA STIG, vendor)?",
+        "What is your current compliance rate against those baselines?"
+      ]
+    },
+    {
+      "id": "CHK-11",
+      "csfFunction": "DE",
+      "csfSubcategory": "DE.CM-01",
+      "title": "Continuous Monitoring Operational",
+      "description": "Verify that continuous monitoring capabilities are deployed across networks, systems, and personnel activities, with sufficient coverage of critical assets.",
+      "verificationCriteria": [
+        "SIEM or equivalent collects logs from all critical assets",
+        "Network monitoring covers all network segments with sensitive data",
+        "Alert rules are defined for known attack patterns",
+        "Monitoring coverage gaps are documented and tracked for remediation"
+      ],
+      "assessorQuestions": [
+        "What percentage of your critical assets are covered by centralized monitoring?",
+        "How do you validate that monitoring is working correctly?"
+      ]
+    },
+    {
+      "id": "CHK-12",
+      "csfFunction": "DE",
+      "csfSubcategory": "DE.AE-02",
+      "title": "Threat Detection and Analysis Capabilities Assessed",
+      "description": "Verify that the organization has capabilities to detect known and novel threats, correlate events, and escalate confirmed incidents within defined timelines.",
+      "verificationCriteria": [
+        "Detection rules map to threat framework (MITRE ATT&CK or equivalent)",
+        "Alert triage process and escalation criteria are documented",
+        "Mean time to detect (MTTD) is measured and tracked against targets",
+        "Threat intelligence is integrated into detection and analysis workflows"
+      ],
+      "assessorQuestions": [
+        "What is your current mean time to detect for high-severity incidents?",
+        "How do you assess the completeness of your detection rule coverage?"
+      ]
+    },
+    {
+      "id": "CHK-13",
+      "csfFunction": "RS",
+      "csfSubcategory": "RS.MA-01",
+      "title": "Incident Response Plan Reviewed",
+      "description": "Verify that a documented incident response plan exists, is regularly tested, and covers incident classification, escalation, containment, eradication, and recovery procedures.",
+      "verificationCriteria": [
+        "IR plan is documented, approved, and version-controlled",
+        "Plan defines incident severity levels and escalation criteria",
+        "Tabletop exercises are conducted at least annually",
+        "Post-exercise improvement actions are tracked to completion"
+      ],
+      "assessorQuestions": [
+        "When was your incident response plan last tested?",
+        "How many tabletop exercises did you conduct in the past 12 months?"
+      ]
+    },
+    {
+      "id": "CHK-14",
+      "csfFunction": "RS",
+      "csfSubcategory": "RS.CO-02",
+      "title": "Incident Communication Protocols Verified",
+      "description": "Verify that communication protocols for cybersecurity incidents are predefined, covering internal escalation, regulatory notification, law enforcement coordination, and public disclosure.",
+      "verificationCriteria": [
+        "Communication plan identifies all stakeholders by incident severity",
+        "Notification timelines comply with applicable regulatory requirements",
+        "Pre-drafted communication templates exist for common scenario types",
+        "Media and public communication roles are assigned"
+      ],
+      "assessorQuestions": [
+        "What is your notification timeline for a data breach affecting customer PII?",
+        "Who is authorized to communicate externally about a security incident?"
+      ]
+    },
+    {
+      "id": "CHK-15",
+      "csfFunction": "RS",
+      "csfSubcategory": "RS.AN-03",
+      "title": "Forensic Readiness Evaluated",
+      "description": "Verify that the organization maintains digital forensics capabilities, including evidence collection procedures, chain-of-custody documentation, and trained personnel or retainer access.",
+      "verificationCriteria": [
+        "Forensic tools and procedures are documented",
+        "Evidence chain-of-custody process is defined",
+        "Forensic personnel (internal or retainer) are identified and available",
+        "Log retention supports forensic investigation timelines"
+      ],
+      "assessorQuestions": [
+        "What is your forensic retainer response time SLA?",
+        "How do you ensure evidence integrity during an investigation?"
+      ]
+    },
+    {
+      "id": "CHK-16",
+      "csfFunction": "RC",
+      "csfSubcategory": "RC.RP-01",
+      "title": "Recovery Plan Existence and Testing",
+      "description": "Verify that recovery plans for cybersecurity incidents are documented, include defined RTO/RPO targets, and are tested regularly through exercises and drills.",
+      "verificationCriteria": [
+        "Recovery plans exist for all critical systems and services",
+        "RTO and RPO targets are defined per system tier",
+        "Recovery tests demonstrate ability to meet RTO/RPO targets",
+        "Test results and identified gaps are documented"
+      ],
+      "assessorQuestions": [
+        "What are your RTO/RPO targets for tier-1 systems?",
+        "When was your last full recovery test, and did it meet targets?"
+      ]
+    },
+    {
+      "id": "CHK-17",
+      "csfFunction": "RC",
+      "csfSubcategory": "RC.CO-01",
+      "title": "Recovery Communication Protocols Verified",
+      "description": "Verify that communication protocols for the recovery phase are defined, including status updates to stakeholders, restoration timelines, and service resumption notifications.",
+      "verificationCriteria": [
+        "Recovery communication plan defines update frequency per stakeholder",
+        "Restoration status dashboard or reporting mechanism exists",
+        "Service resumption criteria and customer notification process are defined",
+        "Post-recovery communication includes lessons learned summary"
+      ],
+      "assessorQuestions": [
+        "How do you communicate recovery progress to affected stakeholders?",
+        "What criteria must be met before declaring a service fully restored?"
+      ]
+    },
+    {
+      "id": "CHK-18",
+      "csfFunction": "GV",
+      "csfSubcategory": "GV.RR-01",
+      "title": "Cybersecurity Roles and Responsibilities Defined",
+      "description": "Verify that cybersecurity roles, responsibilities, and authorities are formally defined, communicated, and understood across the organization, including accountability for risk decisions.",
+      "verificationCriteria": [
+        "RACI matrix exists for cybersecurity functions",
+        "Job descriptions include cybersecurity responsibilities",
+        "Risk ownership is formally assigned for all registered risks",
+        "Authority to accept risk is documented with approval thresholds"
+      ],
+      "assessorQuestions": [
+        "Who has authority to accept cybersecurity risk above a defined threshold?",
+        "How do you ensure cybersecurity responsibilities are understood by non-IT staff?"
+      ]
+    }
+  ]
+}

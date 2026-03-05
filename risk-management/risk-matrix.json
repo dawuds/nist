@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "sourceType": "constructed-indicative",
+    "verificationNote": "Standard 5x5 cyber risk matrix constructed for use with the accompanying methodology and risk register. Risk levels and thresholds are indicative examples for organizational calibration."
+  },
+  "title": "Cyber Risk Assessment Matrix",
+  "description": "5x5 risk matrix mapping likelihood and impact to risk levels. Used for both inherent risk (before controls) and residual risk (after controls) assessment.",
+  "riskLevels": [
+    {
+      "level": "Critical",
+      "range": "20-25",
+      "color": "#991B1B",
+      "action": "Immediate executive escalation. Risk must be treated within 30 days or formally accepted by the board.",
+      "reportingFrequency": "Weekly to CISO, monthly to board"
+    },
+    {
+      "level": "High",
+      "range": "12-19",
+      "color": "#DC2626",
+      "action": "Treatment plan required within 60 days. Risk owner must document rationale if accepting.",
+      "reportingFrequency": "Bi-weekly to CISO, quarterly to board"
+    },
+    {
+      "level": "Medium",
+      "range": "6-11",
+      "color": "#D97706",
+      "action": "Treatment plan required within 90 days. Monitor through standard risk review cycle.",
+      "reportingFrequency": "Monthly to risk committee"
+    },
+    {
+      "level": "Low",
+      "range": "2-5",
+      "color": "#16A34A",
+      "action": "Accept or treat at discretion of risk owner. Review during quarterly cycle.",
+      "reportingFrequency": "Quarterly review"
+    },
+    {
+      "level": "Very Low",
+      "range": "1",
+      "color": "#6B7280",
+      "action": "Accept. No active treatment required. Include in annual reassessment.",
+      "reportingFrequency": "Annual review"
+    }
+  ],
+  "matrix": {
+    "description": "Risk score = Likelihood x Impact. Rows are likelihood (top = highest), columns are impact (left = lowest).",
+    "headers": {
+      "columns": ["Negligible (1)", "Minor (2)", "Moderate (3)", "Major (4)", "Catastrophic (5)"],
+      "rows": ["Very High (5)", "High (4)", "Moderate (3)", "Low (2)", "Very Low (1)"]
+    },
+    "cells": [
+      [
+        {"score": 5,  "level": "Low"},
+        {"score": 10, "level": "Medium"},
+        {"score": 15, "level": "High"},
+        {"score": 20, "level": "Critical"},
+        {"score": 25, "level": "Critical"}
+      ],
+      [
+        {"score": 4,  "level": "Low"},
+        {"score": 8,  "level": "Medium"},
+        {"score": 12, "level": "High"},
+        {"score": 16, "level": "High"},
+        {"score": 20, "level": "Critical"}
+      ],
+      [
+        {"score": 3,  "level": "Low"},
+        {"score": 6,  "level": "Medium"},
+        {"score": 9,  "level": "Medium"},
+        {"score": 12, "level": "High"},
+        {"score": 15, "level": "High"}
+      ],
+      [
+        {"score": 2,  "level": "Low"},
+        {"score": 4,  "level": "Low"},
+        {"score": 6,  "level": "Medium"},
+        {"score": 8,  "level": "Medium"},
+        {"score": 10, "level": "Medium"}
+      ],
+      [
+        {"score": 1,  "level": "Very Low"},
+        {"score": 2,  "level": "Low"},
+        {"score": 3,  "level": "Low"},
+        {"score": 4,  "level": "Low"},
+        {"score": 5,  "level": "Low"}
+      ]
+    ]
+  },
+  "riskAppetiteThresholds": {
+    "description": "Organizational risk appetite thresholds defining which residual risk levels require treatment.",
+    "thresholds": [
+      {
+        "zone": "Unacceptable",
+        "riskLevels": ["Critical"],
+        "action": "Must be treated or escalated to board for explicit acceptance"
+      },
+      {
+        "zone": "Elevated",
+        "riskLevels": ["High"],
+        "action": "Treatment plan required, risk owner accountability"
+      },
+      {
+        "zone": "Manageable",
+        "riskLevels": ["Medium"],
+        "action": "Treatment recommended, acceptance by risk committee permitted"
+      },
+      {
+        "zone": "Acceptable",
+        "riskLevels": ["Low", "Very Low"],
+        "action": "Within risk appetite, monitor through standard review"
+      }
+    ]
+  }
+}

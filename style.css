@@ -1119,6 +1119,184 @@ a:hover { text-decoration: underline; }
   padding: 0 1rem 0.75rem;
 }
 
+/* ---- Header Nav ---- */
+.header-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header-nav a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.header-nav a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+
+/* ---- Risk Management ---- */
+.risk-matrix-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.risk-matrix-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+}
+
+.risk-matrix-table th,
+.risk-matrix-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  font-size: 0.8125rem;
+}
+
+.risk-matrix-table thead th {
+  background: var(--bg);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+.risk-matrix-corner {
+  text-align: left !important;
+  font-weight: 600 !important;
+  color: var(--text-secondary) !important;
+}
+
+.risk-matrix-row-header {
+  text-align: left !important;
+  font-weight: 600;
+  background: var(--bg);
+  white-space: nowrap;
+  color: var(--text-secondary);
+}
+
+.risk-matrix-cell {
+  min-width: 80px;
+  vertical-align: middle;
+}
+
+.risk-matrix-score {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.risk-matrix-level {
+  display: block;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.risk-matrix-cell.risk-critical {
+  background: #991B1B;
+  color: white;
+}
+
+.risk-matrix-cell.risk-high {
+  background: #DC2626;
+  color: white;
+}
+
+.risk-matrix-cell.risk-medium {
+  background: #F59E0B;
+  color: #1F2937;
+}
+
+.risk-matrix-cell.risk-low {
+  background: #16A34A;
+  color: white;
+}
+
+.risk-matrix-cell.risk-verylow {
+  background: #9CA3AF;
+  color: white;
+}
+
+.risk-score-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: white;
+}
+
+.risk-score-badge.risk-critical { background: #991B1B; }
+.risk-score-badge.risk-high { background: #DC2626; }
+.risk-score-badge.risk-medium { background: #F59E0B; color: #1F2937; }
+.risk-score-badge.risk-low { background: #16A34A; }
+.risk-score-badge.risk-verylow { background: #9CA3AF; }
+
+.risk-register-table td {
+  vertical-align: middle;
+}
+
+.checklist-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.checklist-item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.treatment-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.treatment-card h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 639px) {
+  .treatment-card .maturity-grid,
+  .treatment-card div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .header-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
 /* ---- Print ---- */
 @media print {
   .header { position: static; }

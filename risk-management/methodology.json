@@ -1,0 +1,248 @@
+{
+  "_meta": {
+    "sourceType": "constructed-indicative",
+    "verificationNote": "Cyber risk assessment methodology constructed to align with NIST CSF 2.0 functions and NIST SP 800-30 Rev 1 guidance. Impact and likelihood scales are indicative examples for organizational adaptation."
+  },
+  "title": "Cyber Risk Assessment Methodology",
+  "version": "1.0",
+  "alignedFrameworks": [
+    {
+      "framework": "NIST CSF 2.0",
+      "reference": "NIST CSWP 29, February 2024",
+      "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf"
+    },
+    {
+      "framework": "NIST SP 800-30 Rev 1",
+      "reference": "Guide for Conducting Risk Assessments, September 2012",
+      "url": "https://csrc.nist.gov/publications/detail/sp/800-30/rev-1/final"
+    }
+  ],
+  "purpose": "Establish a repeatable, structured approach to identifying, analyzing, evaluating, and treating cybersecurity risks. This methodology integrates with the NIST CSF 2.0 function hierarchy to ensure risk activities map directly to governance, identification, protection, detection, response, and recovery outcomes.",
+  "scope": "All information systems, technology assets, data repositories, third-party services, and business processes within the organization's cybersecurity risk management boundary.",
+  "riskAssessmentProcess": {
+    "steps": [
+      {
+        "step": 1,
+        "name": "Establish Context",
+        "description": "Define the organizational context, risk appetite, regulatory obligations, and stakeholder expectations that bound the risk assessment.",
+        "csfFunction": "GV",
+        "csfCategory": "GV.OC",
+        "sp800_30_task": "Task 1-1: Identify Risk Assumptions",
+        "activities": [
+          "Document organizational mission, objectives, and risk appetite",
+          "Identify applicable regulatory and contractual requirements",
+          "Define assessment scope and boundaries",
+          "Identify stakeholders and their risk tolerance thresholds",
+          "Establish risk evaluation criteria aligned to impact dimensions"
+        ]
+      },
+      {
+        "step": 2,
+        "name": "Identify Assets and Threats",
+        "description": "Inventory assets within scope, identify threat sources, and catalog threat events relevant to those assets.",
+        "csfFunction": "ID",
+        "csfCategory": "ID.AM",
+        "sp800_30_task": "Task 2-1: Identify Threat Sources; Task 2-2: Identify Threat Events",
+        "activities": [
+          "Maintain a comprehensive asset inventory (hardware, software, data, personnel, services)",
+          "Identify internal and external threat sources (adversarial, accidental, structural, environmental)",
+          "Catalog threat events relevant to identified assets and operations",
+          "Map assets to supporting business processes and mission functions",
+          "Identify dependencies and single points of failure"
+        ]
+      },
+      {
+        "step": 3,
+        "name": "Identify Vulnerabilities",
+        "description": "Assess existing vulnerabilities in assets, processes, and controls that could be exploited by identified threats.",
+        "csfFunction": "ID",
+        "csfCategory": "ID.RA",
+        "sp800_30_task": "Task 2-3: Identify Vulnerabilities and Predisposing Conditions",
+        "activities": [
+          "Conduct vulnerability assessments and penetration tests",
+          "Review configuration baselines and security control effectiveness",
+          "Analyze historical incident data for recurring vulnerability patterns",
+          "Assess predisposing conditions (architecture, technology, operational environment)",
+          "Map vulnerabilities to specific threat events"
+        ]
+      },
+      {
+        "step": 4,
+        "name": "Assess Existing Controls",
+        "description": "Evaluate the adequacy and effectiveness of current safeguards that protect against, detect, or respond to identified risks.",
+        "csfFunction": "PR",
+        "csfCategory": "PR.PS",
+        "sp800_30_task": "Task 2-4: Determine Likelihood; Task 2-5: Determine Impact",
+        "activities": [
+          "Inventory existing preventive controls (access controls, encryption, network segmentation)",
+          "Evaluate detective controls (monitoring, logging, alerting capabilities)",
+          "Assess response and recovery controls (incident response plans, backup procedures)",
+          "Determine control maturity using a defined maturity model",
+          "Identify control gaps and compensating controls"
+        ]
+      },
+      {
+        "step": 5,
+        "name": "Analyze Risk",
+        "description": "Determine likelihood and impact for each risk scenario considering threat capability, vulnerability severity, and existing control effectiveness.",
+        "csfFunction": "DE",
+        "csfCategory": "DE.AE",
+        "sp800_30_task": "Task 2-4: Determine Likelihood; Task 2-5: Determine Impact; Task 2-6: Determine Risk",
+        "activities": [
+          "Rate likelihood on a 5-point scale considering threat capability and control effectiveness",
+          "Rate impact on a 5-point scale across five dimensions",
+          "Calculate inherent risk (before additional controls)",
+          "Calculate residual risk (after existing controls)",
+          "Document risk analysis rationale and assumptions"
+        ]
+      },
+      {
+        "step": 6,
+        "name": "Evaluate and Prioritize",
+        "description": "Compare analyzed risks against the risk appetite and prioritize for treatment based on residual risk level and organizational impact.",
+        "csfFunction": "RS",
+        "csfCategory": "RS.AN",
+        "sp800_30_task": "Task 3-1: Communicate Risk Assessment Results",
+        "activities": [
+          "Rank risks by residual risk score",
+          "Compare residual risk levels against defined risk appetite",
+          "Identify risks requiring immediate treatment versus those within tolerance",
+          "Present risk evaluation results to governance stakeholders",
+          "Obtain risk acceptance or treatment decisions from risk owners"
+        ]
+      },
+      {
+        "step": 7,
+        "name": "Treat and Monitor",
+        "description": "Select and implement risk treatment strategies, then monitor for changes in risk posture and control effectiveness over time.",
+        "csfFunction": "RC",
+        "csfCategory": "RC.RP",
+        "sp800_30_task": "Task 4-1: Monitor Risk Factors; Task 4-2: Update Risk Assessment",
+        "activities": [
+          "Select treatment strategy (mitigate, transfer, accept, avoid) for each risk above appetite",
+          "Develop and assign treatment plans with owners, timelines, and success criteria",
+          "Implement additional controls or process changes",
+          "Establish ongoing monitoring of risk indicators and control effectiveness",
+          "Schedule periodic reassessment (quarterly or upon significant change)"
+        ]
+      }
+    ]
+  },
+  "likelihoodScale": {
+    "description": "Probability that a threat event will exploit a vulnerability, considering threat capability, intent, and existing control effectiveness. Aligned with NIST SP 800-30 Table H-3.",
+    "levels": [
+      {
+        "level": 1,
+        "label": "Very Low",
+        "description": "The threat event is unlikely to be initiated or to succeed. Strong controls are in place and regularly validated.",
+        "frequency": "Less than once per 5 years"
+      },
+      {
+        "level": 2,
+        "label": "Low",
+        "description": "The threat event is possible but not expected. Adequate controls exist with minor gaps.",
+        "frequency": "Once every 2-5 years"
+      },
+      {
+        "level": 3,
+        "label": "Moderate",
+        "description": "The threat event is expected to occur at some point. Some controls exist but have known limitations.",
+        "frequency": "Once per 1-2 years"
+      },
+      {
+        "level": 4,
+        "label": "High",
+        "description": "The threat event is highly likely to occur. Controls are weak or have significant gaps.",
+        "frequency": "Multiple times per year"
+      },
+      {
+        "level": 5,
+        "label": "Very High",
+        "description": "The threat event is almost certain to occur or is already occurring. Controls are absent or ineffective.",
+        "frequency": "Continuous or near-continuous"
+      }
+    ]
+  },
+  "impactScale": {
+    "description": "Magnitude of harm expected if a threat event occurs. Multi-dimensional assessment aligned with NIST SP 800-30 Table H-4. The highest impact across all dimensions determines the overall impact rating.",
+    "dimensions": [
+      {
+        "dimension": "Operational Disruption",
+        "description": "Impact on the ability to deliver core services and maintain business operations.",
+        "csfRelevance": "Maps to RC (Recover) — extent of disruption determines recovery priority and effort."
+      },
+      {
+        "dimension": "Financial Loss",
+        "description": "Direct and indirect monetary impact including remediation costs, lost revenue, penalties, and legal expenses.",
+        "csfRelevance": "Maps to GV.RM (Risk Management Strategy) — financial impact thresholds drive risk appetite decisions."
+      },
+      {
+        "dimension": "Regulatory and Legal Consequences",
+        "description": "Impact on regulatory compliance posture, including fines, sanctions, mandatory disclosures, and legal liability.",
+        "csfRelevance": "Maps to GV.OC (Organizational Context) — regulatory obligations shape control requirements."
+      },
+      {
+        "dimension": "Reputation Damage",
+        "description": "Impact on stakeholder trust, brand value, customer confidence, and market position.",
+        "csfRelevance": "Maps to RS.CO (Incident Response Communication) — communication quality directly affects reputational outcomes."
+      },
+      {
+        "dimension": "Safety Impact",
+        "description": "Impact on human life, health, and physical safety of employees, customers, or the public.",
+        "csfRelevance": "Maps to PR.IR (Technology Infrastructure Resilience) — safety-critical systems require highest resilience standards."
+      }
+    ],
+    "levels": [
+      {
+        "level": 1,
+        "label": "Negligible",
+        "operational": "Minor inconvenience, no measurable service disruption",
+        "financial": "Less than $10,000",
+        "regulatory": "No regulatory impact",
+        "reputation": "No public awareness",
+        "safety": "No safety impact"
+      },
+      {
+        "level": 2,
+        "label": "Minor",
+        "operational": "Brief disruption to non-critical services, workarounds available",
+        "financial": "$10,000 - $100,000",
+        "regulatory": "Minor compliance gap, self-reported with no penalty",
+        "reputation": "Limited stakeholder awareness, contained quickly",
+        "safety": "Minor injury potential, no hospitalization"
+      },
+      {
+        "level": 3,
+        "label": "Moderate",
+        "operational": "Significant disruption to one or more services, recovery within 24-72 hours",
+        "financial": "$100,000 - $1,000,000",
+        "regulatory": "Regulatory notification required, potential for moderate fines",
+        "reputation": "Media coverage, noticeable customer concern",
+        "safety": "Injury requiring medical attention"
+      },
+      {
+        "level": 4,
+        "label": "Major",
+        "operational": "Extended outage of critical services, recovery requires days to weeks",
+        "financial": "$1,000,000 - $10,000,000",
+        "regulatory": "Significant fines, regulatory investigation, potential sanctions",
+        "reputation": "Widespread media coverage, significant customer loss",
+        "safety": "Serious injury, hospitalization required"
+      },
+      {
+        "level": 5,
+        "label": "Catastrophic",
+        "operational": "Complete loss of critical services, potential organizational survival at risk",
+        "financial": "Greater than $10,000,000",
+        "regulatory": "Severe penalties, license revocation, criminal liability",
+        "reputation": "Irreparable brand damage, mass customer exodus",
+        "safety": "Loss of life or permanent disability"
+      }
+    ]
+  },
+  "reviewSchedule": {
+    "fullAssessment": "Annual, or upon significant organizational, technological, or threat landscape change",
+    "quarterlyReview": "Review risk register, validate top-10 risks, update treatment progress",
+    "triggerBasedReview": "Major incident, new threat intelligence, regulatory change, M&A activity, major system deployment"
+  }
+}
