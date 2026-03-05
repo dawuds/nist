@@ -1250,6 +1250,9 @@ a:hover { text-decoration: underline; }
 .risk-score-badge.risk-low { background: #16A34A; }
 .risk-score-badge.risk-verylow { background: #9CA3AF; }
 
+.risk-row { cursor: pointer; transition: background-color 0.2s; }
+.risk-row:hover { background-color: var(--bg-alt, #f5f5f5); }
+
 .risk-register-table td {
   vertical-align: middle;
 }

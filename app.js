@@ -20,11 +20,16 @@ const cache = new Map();
 
 async function fetchJSON(path) {
   if (cache.has(path)) return cache.get(path);
-  const res = await fetch(path);
-  if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
-  const data = await res.json();
-  cache.set(path, data);
-  return data;
+  try {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+    const data = await res.json();
+    cache.set(path, data);
+    return data;
+  } catch (err) {
+    console.warn(`fetchJSON: ${err.message}`);
+    return null;
+  }
 }
 
 // ---- Router ----
@@ -182,7 +187,7 @@ function renderSubcategory(subId) {
   // Audit Package
   const artifactIndex = {};
   if (state.artifacts) {
-    Object.values(state.artifacts).forEach(arr => {
+    Object.entries(state.artifacts).filter(([k]) => k !== '_meta').forEach(([, arr]) => {
       if (Array.isArray(arr)) arr.forEach(a => { artifactIndex[a.slug] = a; });
     });
   }
@@ -515,12 +520,12 @@ async function loadRefLookup(framework) {
   if (!resultsEl || !framework) return;
 
   resultsEl.innerHTML = renderLoading();
-  try {
-    const data = await fetchJSON(`references/by-framework/${framework}.json`);
-    renderRefResults(data, '');
-  } catch {
+  const data = await fetchJSON(`references/by-framework/${framework}.json`);
+  if (!data) {
     resultsEl.innerHTML = '<div class="error-state">Failed to load framework data.</div>';
+    return;
   }
+  renderRefResults(data, '');
 }
 
 function renderRefResults(data, filter) {
@@ -536,7 +541,7 @@ function renderRefResults(data, filter) {
     entries = data.mappings;
   } else {
     // It's an object keyed by control → subcategories
-    entries = Object.entries(data).map(([control, subcats]) => ({ control, subcategories: subcats }));
+    entries = Object.entries(data).filter(([k]) => k !== '_meta').map(([control, subcats]) => ({ control, subcategories: subcats }));
   }
 
   if (filter) {
@@ -935,6 +940,10 @@ async function render() {
         fetchJSON('core/index.json'),
         fetchJSON('artifacts/subcategory-map.json'),
       ]);
+      if (!core) {
+        app.innerHTML = '<div class="error-state">Failed to load core framework data. Please refresh.</div>';
+        return;
+      }
       state.core = core;
       state.subMap = subMap;
     } catch (err) {
@@ -953,6 +962,10 @@ async function render() {
         fetchJSON('risk-management/checklist.json'),
         fetchJSON('risk-management/treatment-options.json'),
       ]);
+      if (!methodology || !matrix || !register || !checklist || !treatment) {
+        app.innerHTML = '<div class="error-state">Failed to load risk management data. Please refresh.</div>';
+        return;
+      }
       state.riskMgmt = { methodology, matrix, register, checklist, treatment };
     } catch (err) {
       app.innerHTML = `<div class="error-state">Failed to load risk management data: ${escHtml(err.message)}</div>`;
@@ -964,8 +977,8 @@ async function render() {
   if (route.view === 'subcategory') {
     try {
       const loads = [];
-      if (!state.artifacts) loads.push(fetchJSON('artifacts/inventory.json').then(d => { state.artifacts = d; }));
-      if (!state.evidence) loads.push(fetchJSON('evidence/index.json').then(d => { state.evidence = d; }));
+      if (!state.artifacts) loads.push(fetchJSON('artifacts/inventory.json').then(d => { if (d) state.artifacts = d; }));
+      if (!state.evidence) loads.push(fetchJSON('evidence/index.json').then(d => { if (d) state.evidence = d; }));
       if (loads.length) await Promise.all(loads);
     } catch (err) {
       // Non-fatal: Audit Package will degrade gracefully
@@ -1027,20 +1040,32 @@ async function activateTab(tabName, subId) {
   try {
     switch (tabName) {
       case 'implementation':
-        if (!state.impl) state.impl = await fetchJSON('implementation/index.json');
-        panel.innerHTML = renderImplementationTab(subId);
+        if (!state.impl) {
+          const d = await fetchJSON('implementation/index.json');
+          if (d) state.impl = d;
+        }
+        panel.innerHTML = state.impl ? renderImplementationTab(subId) : '<div class="error-state">Failed to load implementation data.</div>';
         break;
       case 'evidence':
-        if (!state.evidence) state.evidence = await fetchJSON('evidence/index.json');
-        panel.innerHTML = renderEvidenceTab(subId);
+        if (!state.evidence) {
+          const d = await fetchJSON('evidence/index.json');
+          if (d) state.evidence = d;
+        }
+        panel.innerHTML = state.evidence ? renderEvidenceTab(subId) : '<div class="error-state">Failed to load evidence data.</div>';
         break;
       case 'references':
-        if (!state.refs) state.refs = await fetchJSON('references/index.json');
-        panel.innerHTML = renderReferencesTab(subId);
+        if (!state.refs) {
+          const d = await fetchJSON('references/index.json');
+          if (d) state.refs = d;
+        }
+        panel.innerHTML = state.refs ? renderReferencesTab(subId) : '<div class="error-state">Failed to load references data.</div>';
         break;
       case 'artifacts':
-        if (!state.artifacts) state.artifacts = await fetchJSON('artifacts/inventory.json');
-        panel.innerHTML = renderArtifactsTab(subId);
+        if (!state.artifacts) {
+          const d = await fetchJSON('artifacts/inventory.json');
+          if (d) state.artifacts = d;
+        }
+        panel.innerHTML = state.artifacts ? renderArtifactsTab(subId) : '<div class="error-state">Failed to load artifacts data.</div>';
         break;
     }
   } catch (err) {

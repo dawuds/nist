@@ -228,8 +228,8 @@
       "residualImpact": 4,
       "residualRisk": 12,
       "residualRiskLevel": "High",
-      "treatment": "Mitigate",
-      "treatmentPlan": "Extend to 24/7 SOC coverage through MSSP augmentation; implement SOAR playbooks for automated triage of high-volume alerts; tune SIEM detection rules based on MITRE ATT&CK coverage analysis; establish MTTD KPI target of less than 4 hours for critical threats.",
+      "treatment": "Transfer",
+      "treatmentPlan": "Transfer 24/7 detection and response capability to a managed detection and response (MDR) provider with guaranteed SLAs for MTTD (<1 hour critical, <4 hours high); retain internal SOC for triage oversight, threat hunting, and vendor management; include cyber insurance coverage for detection failures leading to breach.",
       "owner": "SOC Manager",
       "reviewDate": "2024-04-15"
     },
@@ -453,8 +453,8 @@
       "residualImpact": 3,
       "residualRisk": 9,
       "residualRiskLevel": "Medium",
-      "treatment": "Mitigate",
-      "treatmentPlan": "Implement privileged access management for all third-party access; deploy session recording for vendor activities; automate access expiration tied to contract end dates; conduct monthly audit of active vendor accounts; require MFA for all third-party connections.",
+      "treatment": "Avoid",
+      "treatmentPlan": "Eliminate persistent third-party network access entirely; migrate all vendor interactions to time-boxed, broker-mediated access sessions via zero-trust network access (ZTNA) gateway; require vendors to operate within isolated sandbox environments with no lateral access; replace VPN-based vendor connectivity with audited API integrations where feasible.",
       "owner": "Third-Party Risk Manager",
       "reviewDate": "2024-04-15"
     },
@@ -478,8 +478,8 @@
       "residualImpact": 3,
       "residualRisk": 6,
       "residualRiskLevel": "Medium",
-      "treatment": "Mitigate",
-      "treatmentPlan": "Integrate cybersecurity risk taxonomy into ERM framework using consistent impact and likelihood scales; establish bi-directional reporting between cyber risk register and enterprise risk register; include cyber scenarios in enterprise risk quantification exercises; align cyber risk metrics with business performance indicators.",
+      "treatment": "Accept",
+      "treatmentPlan": "Accept the residual risk given existing controls (CISO participation in ERM committee, annual board briefing, cyber risks in enterprise register). Current residual risk score of 6 (Medium) falls within organizational risk appetite. Formal acceptance documented by CRO with annual review condition; will re-evaluate if organizational risk appetite changes or a material cyber incident exposes integration gaps.",
       "owner": "Chief Risk Officer",
       "reviewDate": "2024-04-15"
     },
