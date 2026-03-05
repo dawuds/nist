@@ -70,15 +70,16 @@ Section-based joins (via provision maps) explode on broad provisions. In the PDP
 
 ### Current State (NIST)
 
-The Audit Package pattern is **documented but not yet implemented** in this repo:
+The Audit Package data layer is **fully implemented** in this repo:
 
-- `artifacts/inventory.json`: 57 artifacts exist but use `subcategories[]` (broad joins, 2-14 per artifact) — **`controlSlugs[]` not yet added** for curated mapping
-- `evidence/index.json`: 132 subcategory-level evidence entries — **`artifactSlugs[]` not yet added**
-- `core/` directory (not `controls/`): 132 subcategories across 6 functions and 22 categories — structure ready
-- `artifacts/subcategory-map.json`: Bidirectional subcategory-artifact mapping exists and all references resolve
-- `app.js`: Uses subcategory-based artifact lookup but no Audit Package UI component yet
+- `artifacts/inventory.json`: 57 artifacts with curated `controlSlugs[]` (1-4 subcategory IDs per artifact) for direct semantic mapping. Broad `subcategories[]` field retained for backward compatibility.
+- `evidence/index.json`: 336 evidence items across 132 subcategories, each with `artifactSlugs[]` (1-2 semantically relevant artifact slugs per item).
+- `core/` directory (not `controls/`): 132 subcategories across 6 functions and 22 categories — structure ready.
+- `artifacts/subcategory-map.json`: Bidirectional subcategory-artifact mapping exists and all references resolve.
+- `sourceType: "constructed-indicative"` added to `artifacts/inventory.json`, `evidence/index.json`, and `core/index.json`.
+- `app.js`: Uses subcategory-based artifact lookup but no Audit Package UI component yet.
 
-**All existing cross-references are valid** — no broken links detected. `sourceType` field is missing from all JSON files (documented in README as required).
+**All existing cross-references are valid** — no broken links detected. Data layer is ready for UI implementation.
 
 ### Reference Implementation
 

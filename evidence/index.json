@@ -1,4 +1,5 @@
 {
+  "sourceType": "constructed-indicative",
   "GV.OC-01": {
     "subcategoryId": "GV.OC-01",
     "categoryId": "GV.OC",
@@ -25,7 +26,11 @@
           "CISO or cybersecurity governance team"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "cybersecurity-risk-management-policy"
+        ]
       },
       {
         "id": "GV.OC-01-E2",
@@ -46,7 +51,11 @@
           "Board or executive committee meeting minutes"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "board-cybersecurity-report"
+        ]
       },
       {
         "id": "GV.OC-01-E3",
@@ -67,7 +76,11 @@
           "Cybersecurity risk assessment reports"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "board-cybersecurity-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -103,7 +116,11 @@
           "Legal and compliance department"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "cybersecurity-risk-management-policy"
+        ]
       },
       {
         "id": "GV.OC-02-E2",
@@ -124,7 +141,11 @@
           "Corporate communications or stakeholder relations team"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "board-cybersecurity-report"
+        ]
       },
       {
         "id": "GV.OC-02-E3",
@@ -145,7 +166,11 @@
           "Risk management team"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "board-cybersecurity-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -180,7 +205,11 @@
           "GRC platform or compliance tracking system"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "cybersecurity-risk-management-policy"
+        ]
       },
       {
         "id": "GV.OC-03-E2",
@@ -201,7 +230,11 @@
           "Legal department contract repository"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "Contract term + 3 years"
+        "retentionPeriod": "Contract term + 3 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "cybersecurity-risk-management-policy"
+        ]
       },
       {
         "id": "GV.OC-03-E3",
@@ -222,7 +255,11 @@
           "External audit or assessment reports"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "cybersecurity-risk-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -257,7 +294,11 @@
           "Operations or service delivery management"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "cybersecurity-risk-management-policy"
+        ]
       },
       {
         "id": "GV.OC-04-E2",
@@ -278,7 +319,11 @@
           "Product or service delivery leadership"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "cybersecurity-risk-management-policy"
+        ]
       },
       {
         "id": "GV.OC-04-E3",
@@ -299,7 +344,11 @@
           "Stakeholder communications archive"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "cybersecurity-risk-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -334,7 +383,11 @@
           "Procurement and vendor management records"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "cybersecurity-risk-management-policy"
+        ]
       },
       {
         "id": "GV.OC-05-E2",
@@ -355,7 +408,11 @@
           "IT architecture or infrastructure team"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "board-cybersecurity-report"
+        ]
       },
       {
         "id": "GV.OC-05-E3",
@@ -376,7 +433,11 @@
           "Internal communication or briefing records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "cybersecurity-risk-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -411,7 +472,11 @@
           "Strategic planning documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-01-E2",
@@ -432,7 +497,11 @@
           "Governance records or approval workflows"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-01-E3",
@@ -453,7 +522,11 @@
           "GRC system reports"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -488,7 +561,11 @@
           "Enterprise risk management framework"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-02-E2",
@@ -509,7 +586,11 @@
           "Enterprise risk management team"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-02-E3",
@@ -530,7 +611,11 @@
           "Risk acceptance decision documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -565,7 +650,11 @@
           "GRC platform or risk register system"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-03-E2",
@@ -586,7 +675,11 @@
           "Organizational governance structure documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-03-E3",
@@ -607,7 +700,11 @@
           "Incident and escalation records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -642,7 +739,11 @@
           "Enterprise risk management framework"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-04-E2",
@@ -663,7 +764,11 @@
           "Cloud and vendor management documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "Policy term + 3 years"
+        "retentionPeriod": "Policy term + 3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-04-E3",
@@ -684,7 +789,11 @@
           "Risk acceptance approval records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -719,7 +828,11 @@
           "Corporate communications or governance team"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-05-E2",
@@ -740,7 +853,11 @@
           "CISO presentation archives"
         ],
         "format": "PDF/PPTX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-05-E3",
@@ -761,7 +878,11 @@
           "Internal collaboration platform records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -796,7 +917,11 @@
           "GRC platform configuration and methodology guides"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-06-E2",
@@ -817,7 +942,11 @@
           "Cybersecurity risk management team"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-register",
+          "cybersecurity-risk-management-policy"
+        ]
       },
       {
         "id": "GV.RM-06-E3",
@@ -838,7 +967,11 @@
           "Enterprise risk taxonomy documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -873,7 +1006,11 @@
           "CISO or cybersecurity leadership reports"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-07-E2",
@@ -894,7 +1031,11 @@
           "Strategy review documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.RM-07-E3",
@@ -915,7 +1056,11 @@
           "Innovation or digital transformation program documentation"
         ],
         "format": "PDF/PPTX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "cybersecurity-risk-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -950,7 +1095,11 @@
           "Organizational governance and reporting structure documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "information-security-policy"
+        ]
       },
       {
         "id": "GV.RR-01-E2",
@@ -971,7 +1120,11 @@
           "Security awareness program documentation"
         ],
         "format": "PDF/HTML",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "information-security-policy"
+        ]
       },
       {
         "id": "GV.RR-01-E3",
@@ -992,7 +1145,11 @@
           "Internal audit findings related to cybersecurity governance"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "security-training-records"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1027,7 +1184,11 @@
           "HR or organizational design team"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "information-security-policy"
+        ]
       },
       {
         "id": "GV.RR-02-E2",
@@ -1048,7 +1209,11 @@
           "Cybersecurity team role documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "Current + 1 year"
+        "retentionPeriod": "Current + 1 year",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "information-security-policy"
+        ]
       },
       {
         "id": "GV.RR-02-E3",
@@ -1069,7 +1234,11 @@
           "CISO team performance records"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "security-training-records"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1104,7 +1273,11 @@
           "CISO budget requests and approval records"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "security-training-records"
+        ]
       },
       {
         "id": "GV.RR-03-E2",
@@ -1125,7 +1298,11 @@
           "HR talent management records"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "information-security-policy"
+        ]
       },
       {
         "id": "GV.RR-03-E3",
@@ -1146,7 +1323,11 @@
           "Internal audit reports on cybersecurity function effectiveness"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "security-training-records"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1181,7 +1362,11 @@
           "Identity and access management team documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "information-security-policy"
+        ]
       },
       {
         "id": "GV.RR-04-E2",
@@ -1202,7 +1387,11 @@
           "Learning management system or policy management platform"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "Employment term + 3 years"
+        "retentionPeriod": "Employment term + 3 years",
+        "artifactSlugs": [
+          "information-security-policy",
+          "security-training-records"
+        ]
       },
       {
         "id": "GV.RR-04-E3",
@@ -1223,7 +1412,11 @@
           "HR training and development documentation"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "security-training-records",
+          "cybersecurity-risk-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1258,7 +1451,11 @@
           "Policy management system or document repository"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "Current + all prior versions for 5 years"
+        "retentionPeriod": "Current + all prior versions for 5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "information-security-policy"
+        ]
       },
       {
         "id": "GV.PO-01-E2",
@@ -1279,7 +1476,11 @@
           "HR onboarding process documentation"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "information-security-policy"
+        ]
       },
       {
         "id": "GV.PO-01-E3",
@@ -1300,7 +1501,11 @@
           "Incident and corrective action records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "compliance-assessment-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1335,7 +1540,11 @@
           "CISO office or governance team records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "information-security-policy"
+        ]
       },
       {
         "id": "GV.PO-02-E2",
@@ -1356,7 +1565,11 @@
           "Change management records"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "information-security-policy"
+        ]
       },
       {
         "id": "GV.PO-02-E3",
@@ -1377,7 +1590,11 @@
           "Policy management platform notification records"
         ],
         "format": "PDF/HTML",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-management-policy",
+          "information-security-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1412,7 +1629,11 @@
           "Governance committee review records"
         ],
         "format": "PDF/PPTX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "board-cybersecurity-report"
+        ]
       },
       {
         "id": "GV.OV-01-E2",
@@ -1433,7 +1654,11 @@
           "Strategy planning documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "cybersecurity-risk-report"
+        ]
       },
       {
         "id": "GV.OV-01-E3",
@@ -1454,7 +1679,11 @@
           "Security exception or waiver request data"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "board-cybersecurity-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1489,7 +1718,11 @@
           "External audit or assessment findings"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "compliance-assessment-report"
+        ]
       },
       {
         "id": "GV.OV-02-E2",
@@ -1510,7 +1743,11 @@
           "Lessons learned documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "board-cybersecurity-report"
+        ]
       },
       {
         "id": "GV.OV-02-E3",
@@ -1531,7 +1768,11 @@
           "CISO management review documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "board-cybersecurity-report",
+          "compliance-assessment-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1566,7 +1807,11 @@
           "GRC platform or security dashboard configuration"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "board-cybersecurity-report"
+        ]
       },
       {
         "id": "GV.OV-03-E2",
@@ -1587,7 +1832,11 @@
           "Executive briefing presentation materials"
         ],
         "format": "PDF/PPTX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "board-cybersecurity-report"
+        ]
       },
       {
         "id": "GV.OV-03-E3",
@@ -1608,7 +1857,11 @@
           "Continuous improvement or management review records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "cybersecurity-risk-report",
+          "board-cybersecurity-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1643,7 +1896,11 @@
           "Procurement and vendor management leadership"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supply-chain-risk-management-policy",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-01-E2",
@@ -1664,7 +1921,11 @@
           "Procurement policy documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supply-chain-risk-management-policy",
+          "supplier-assessment-procedures"
+        ]
       },
       {
         "id": "GV.SC-01-E3",
@@ -1685,7 +1946,11 @@
           "Organizational governance documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "supply-chain-risk-management-policy",
+          "supplier-risk-assessments"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1720,7 +1985,11 @@
           "Procurement or vendor management team"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "supply-chain-risk-management-policy",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-02-E2",
@@ -1741,7 +2010,11 @@
           "Vendor management agreement repository"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "Contract term + 3 years"
+        "retentionPeriod": "Contract term + 3 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-02-E3",
@@ -1762,7 +2035,11 @@
           "C-SCRM program awareness materials"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "supply-chain-risk-management-policy",
+          "supplier-assessment-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1797,7 +2074,11 @@
           "Risk assessment templates and completed assessments"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supply-chain-risk-management-policy",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-03-E2",
@@ -1818,7 +2099,11 @@
           "Enterprise risk committee documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supply-chain-risk-management-policy",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-03-E3",
@@ -1839,7 +2124,11 @@
           "Continuous improvement or corrective action trackers"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "supply-chain-risk-management-policy",
+          "supplier-risk-assessments"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1874,7 +2163,11 @@
           "CISO or C-SCRM team documentation"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "Current + 3 years"
+        "retentionPeriod": "Current + 3 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-04-E2",
@@ -1895,7 +2188,11 @@
           "Vendor risk assessment procedures"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-04-E3",
@@ -1916,7 +2213,11 @@
           "Procurement or C-SCRM team records"
         ],
         "format": "XLSX/PDF",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "supplier-risk-assessments",
+          "supply-chain-risk-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -1951,7 +2252,11 @@
           "Procurement standard terms and conditions"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "Current + all prior versions"
+        "retentionPeriod": "Current + all prior versions",
+        "artifactSlugs": [
+          "third-party-risk-report",
+          "supplier-assessment-procedures"
+        ]
       },
       {
         "id": "GV.SC-05-E2",
@@ -1972,7 +2277,11 @@
           "Vendor risk assessment program documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "Contract term + 3 years"
+        "retentionPeriod": "Contract term + 3 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-05-E3",
@@ -1993,7 +2302,11 @@
           "Vendor performance management records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "Contract term + 3 years"
+        "retentionPeriod": "Contract term + 3 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2028,7 +2341,11 @@
           "C-SCRM program operational guides"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-06-E2",
@@ -2049,7 +2366,11 @@
           "GRC platform supplier assessment records"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "Contract term + 3 years"
+        "retentionPeriod": "Contract term + 3 years",
+        "artifactSlugs": [
+          "supplier-risk-assessments",
+          "supplier-assessment-procedures"
+        ]
       },
       {
         "id": "GV.SC-06-E3",
@@ -2070,7 +2391,11 @@
           "Procurement acceptance testing documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "Product lifecycle + 2 years"
+        "retentionPeriod": "Product lifecycle + 2 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2105,7 +2430,11 @@
           "Supplier audit and assessment reports"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "Contract term + 3 years"
+        "retentionPeriod": "Contract term + 3 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-07-E2",
@@ -2126,7 +2455,11 @@
           "GRC platform third-party risk module"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "Contract term + 3 years"
+        "retentionPeriod": "Contract term + 3 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-07-E3",
@@ -2147,7 +2480,11 @@
           "C-SCRM program contingency plans"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supply-chain-risk-management-policy",
+          "supplier-assessment-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2182,7 +2519,11 @@
           "Supplier agreements with incident response provisions"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-08-E2",
@@ -2203,7 +2544,11 @@
           "C-SCRM program exercise documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-08-E3",
@@ -2224,7 +2569,11 @@
           "Supplier relationship management records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2259,7 +2608,11 @@
           "Cybersecurity configuration management procedures"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-09-E2",
@@ -2280,7 +2633,11 @@
           "IT asset lifecycle management records"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supply-chain-risk-management-policy",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-09-E3",
@@ -2301,7 +2658,11 @@
           "Change management and authorization logs"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2336,7 +2697,11 @@
           "IT security offboarding procedures"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       },
       {
         "id": "GV.SC-10-E2",
@@ -2357,7 +2722,11 @@
           "Business continuity planning records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "Contract term + 3 years"
+        "retentionPeriod": "Contract term + 3 years",
+        "artifactSlugs": [
+          "supply-chain-risk-management-policy",
+          "supplier-assessment-procedures"
+        ]
       },
       {
         "id": "GV.SC-10-E3",
@@ -2378,7 +2747,11 @@
           "Vendor management termination checklists"
         ],
         "format": "PDF/XLSX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "supplier-assessment-procedures",
+          "supplier-risk-assessments"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2414,7 +2787,11 @@
           "Procurement and receiving records"
         ],
         "format": "Spreadsheet | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       },
       {
         "id": "ID.AM-01-E2",
@@ -2435,7 +2812,11 @@
           "SIEM alerts for unauthorized device connections"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "asset-inventory"
+        ]
       },
       {
         "id": "ID.AM-01-E3",
@@ -2457,7 +2838,11 @@
           "Change advisory board meeting minutes"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2494,7 +2879,11 @@
           "Application portfolio management tool"
         ],
         "format": "Spreadsheet | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       },
       {
         "id": "ID.AM-02-E2",
@@ -2515,7 +2904,11 @@
           "CASB or cloud security posture management (CSPM) dashboards"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       },
       {
         "id": "ID.AM-02-E3",
@@ -2537,7 +2930,11 @@
           "Cloud management console resource listings"
         ],
         "format": "PDF/DOCX | Spreadsheet",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2574,7 +2971,11 @@
           "Cloud provider VPC/network topology exports"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "asset-inventory"
+        ]
       },
       {
         "id": "ID.AM-03-E2",
@@ -2596,7 +2997,11 @@
           "Network flow analysis tool reports (e.g., NetFlow, cloud VPC flow logs)"
         ],
         "format": "Spreadsheet | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "asset-inventory"
+        ]
       },
       {
         "id": "ID.AM-03-E3",
@@ -2618,7 +3023,11 @@
           "VPN and remote access configuration documentation"
         ],
         "format": "PDF/DOCX | Spreadsheet",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "network-diagrams"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2655,7 +3064,11 @@
           "CASB-discovered cloud service inventory"
         ],
         "format": "Spreadsheet | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       },
       {
         "id": "ID.AM-04-E2",
@@ -2676,7 +3089,11 @@
           "TPRM onboarding checklists and completed assessments"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       },
       {
         "id": "ID.AM-04-E3",
@@ -2698,7 +3115,11 @@
           "Board or management risk reporting on critical suppliers"
         ],
         "format": "Spreadsheet | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2735,7 +3156,11 @@
           "Business impact analysis (BIA) criteria and results"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       },
       {
         "id": "ID.AM-05-E2",
@@ -2757,7 +3182,11 @@
           "Risk register entries linked to critical assets"
         ],
         "format": "Spreadsheet | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       },
       {
         "id": "ID.AM-05-E3",
@@ -2779,7 +3208,11 @@
           "Security architecture standards differentiated by asset classification"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2824,7 +3257,11 @@
           "Records of processing activities (ROPA) for privacy compliance"
         ],
         "format": "Spreadsheet | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       },
       {
         "id": "ID.AM-07-E2",
@@ -2846,7 +3283,11 @@
           "Data steward review and remediation records"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       },
       {
         "id": "ID.AM-07-E3",
@@ -2868,7 +3309,11 @@
           "Training records for data classification awareness"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "asset-inventory",
+          "asset-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2905,7 +3350,11 @@
           "Data retention and destruction policy"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "asset-management-policy",
+          "asset-inventory"
+        ]
       },
       {
         "id": "ID.AM-08-E2",
@@ -2927,7 +3376,11 @@
           "Cloud resource termination and data deletion audit logs"
         ],
         "format": "PDF/DOCX | Spreadsheet",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "asset-management-policy",
+          "asset-inventory"
+        ]
       },
       {
         "id": "ID.AM-08-E3",
@@ -2949,7 +3402,11 @@
           "Change management records showing security sign-off prior to go-live"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "configuration-baselines",
+          "asset-inventory"
+        ]
       }
     ],
     "assessmentTips": [
@@ -2986,7 +3443,11 @@
           "SIEM correlation of vulnerability data with asset inventory"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "vulnerability-scan-reports",
+          "penetration-test-reports"
+        ]
       },
       {
         "id": "ID.RA-01-E2",
@@ -3008,7 +3469,11 @@
           "Exception and risk acceptance request records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "vulnerability-scan-reports"
+        ]
       },
       {
         "id": "ID.RA-01-E3",
@@ -3030,7 +3495,11 @@
           "Management briefing slides on vulnerability posture"
         ],
         "format": "System export | Spreadsheet",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "vulnerability-scan-reports",
+          "penetration-test-reports"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3067,7 +3536,11 @@
           "ISAC membership records and advisory subscription confirmations"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "threat-intelligence-reports",
+          "penetration-test-reports"
+        ]
       },
       {
         "id": "ID.RA-02-E2",
@@ -3089,7 +3562,11 @@
           "Ticketing system records for advisory-driven actions"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "threat-intelligence-reports",
+          "penetration-test-reports"
+        ]
       },
       {
         "id": "ID.RA-02-E3",
@@ -3111,7 +3588,11 @@
           "Response playbooks with CTI-informed investigation steps"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "threat-intelligence-reports",
+          "penetration-test-reports"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3148,7 +3629,11 @@
           "Annual or quarterly threat intelligence summary reports"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "threat-intelligence-reports",
+          "penetration-test-reports"
+        ]
       },
       {
         "id": "ID.RA-03-E2",
@@ -3170,7 +3655,11 @@
           "HR and security collaboration records for insider threat cases"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "threat-intelligence-reports",
+          "penetration-test-reports"
+        ]
       },
       {
         "id": "ID.RA-03-E3",
@@ -3192,7 +3681,11 @@
           "Detection rule improvements derived from hunt findings"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "threat-intelligence-reports",
+          "penetration-test-reports"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3229,7 +3722,11 @@
           "Risk committee meeting minutes showing register reviews"
         ],
         "format": "Spreadsheet | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-register",
+          "risk-assessment-procedures"
+        ]
       },
       {
         "id": "ID.RA-04-E2",
@@ -3251,7 +3748,11 @@
           "Training materials for risk assessors"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "risk-register"
+        ]
       },
       {
         "id": "ID.RA-04-E3",
@@ -3273,7 +3774,11 @@
           "Disaster recovery and business continuity plans informed by BIA"
         ],
         "format": "PDF/DOCX | Spreadsheet",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "risk-register"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3310,7 +3815,11 @@
           "Management risk briefing materials showing prioritized risk dashboard"
         ],
         "format": "Spreadsheet | PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "risk-register"
+        ]
       },
       {
         "id": "ID.RA-05-E2",
@@ -3332,7 +3841,11 @@
           "MITRE ATT&CK-based threat analysis for key systems"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "risk-register"
+        ]
       },
       {
         "id": "ID.RA-05-E3",
@@ -3354,7 +3867,11 @@
           "Capital expenditure requests linked to risk register entries"
         ],
         "format": "PDF/DOCX | Spreadsheet",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "risk-register"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3391,7 +3908,11 @@
           "Risk committee meeting minutes documenting response decisions"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "risk-register"
+        ]
       },
       {
         "id": "ID.RA-06-E2",
@@ -3413,7 +3934,11 @@
           "Management review meeting minutes for POA&M progress"
         ],
         "format": "Spreadsheet | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "risk-register"
+        ]
       },
       {
         "id": "ID.RA-06-E3",
@@ -3435,7 +3960,11 @@
           "Risk owner notification and acknowledgment records"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "risk-register"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3472,7 +4001,11 @@
           "Change testing and rollback plan documentation"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "risk-register"
+        ]
       },
       {
         "id": "ID.RA-07-E2",
@@ -3494,7 +4027,11 @@
           "Risk committee minutes showing exception review decisions"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "penetration-test-reports",
+          "risk-assessment-procedures"
+        ]
       },
       {
         "id": "ID.RA-07-E3",
@@ -3516,7 +4053,11 @@
           "Updated risk register entries showing reassessment dates and outcomes"
         ],
         "format": "PDF/DOCX | Spreadsheet",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "penetration-test-reports",
+          "risk-assessment-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3553,7 +4094,11 @@
           "Bug bounty platform configuration (if applicable)"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "vulnerability-scan-reports",
+          "penetration-test-reports"
+        ]
       },
       {
         "id": "ID.RA-08-E2",
@@ -3575,7 +4120,11 @@
           "Correspondence records with vulnerability reporters"
         ],
         "format": "System export | Spreadsheet",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "vulnerability-scan-reports",
+          "penetration-test-reports"
+        ]
       },
       {
         "id": "ID.RA-08-E3",
@@ -3597,7 +4146,11 @@
           "Records of vulnerability information exchanges with suppliers"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "vulnerability-scan-reports",
+          "penetration-test-reports"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3634,7 +4187,11 @@
           "Procurement policy sections addressing security requirements"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "penetration-test-reports"
+        ]
       },
       {
         "id": "ID.RA-09-E2",
@@ -3656,7 +4213,11 @@
           "Code signing certificate management and verification records"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "penetration-test-reports",
+          "risk-assessment-procedures"
+        ]
       },
       {
         "id": "ID.RA-09-E3",
@@ -3678,7 +4239,11 @@
           "Firmware integrity verification records"
         ],
         "format": "PDF/DOCX | Spreadsheet",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "penetration-test-reports",
+          "risk-assessment-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3715,7 +4280,11 @@
           "TPRM platform assessment records for critical suppliers"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "risk-register"
+        ]
       },
       {
         "id": "ID.RA-10-E2",
@@ -3737,7 +4306,11 @@
           "Procurement policy sections defining supplier assessment requirements"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "penetration-test-reports",
+          "risk-assessment-procedures"
+        ]
       },
       {
         "id": "ID.RA-10-E3",
@@ -3759,7 +4332,11 @@
           "Contract clauses requiring supply chain security flow-down"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "risk-assessment-procedures",
+          "risk-register"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3796,7 +4373,11 @@
           "Internal audit department cybersecurity review reports"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "bcp-dr-test-results",
+          "compliance-assessment-report"
+        ]
       },
       {
         "id": "ID.IM-01-E2",
@@ -3818,7 +4399,11 @@
           "Regulatory examination findings and responses"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "compliance-assessment-report",
+          "bcp-dr-test-results"
+        ]
       },
       {
         "id": "ID.IM-01-E3",
@@ -3840,7 +4425,11 @@
           "GRC platform corrective action workflow records"
         ],
         "format": "Spreadsheet | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "bcp-dr-test-results",
+          "compliance-assessment-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3877,7 +4466,11 @@
           "Scope approval documentation and rules of engagement"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "bcp-dr-test-results",
+          "compliance-assessment-report"
+        ]
       },
       {
         "id": "ID.IM-02-E2",
@@ -3899,7 +4492,11 @@
           "Improvement action items derived from exercises with tracking status"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-summary-report",
+          "bcp-dr-test-results"
+        ]
       },
       {
         "id": "ID.IM-02-E3",
@@ -3921,7 +4518,11 @@
           "Contractual requirements for supplier participation in exercises"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "security-metrics-dashboard",
+          "bcp-dr-test-results"
+        ]
       }
     ],
     "assessmentTips": [
@@ -3958,7 +4559,11 @@
           "Improvement implementation tracking for incident-driven changes"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "bcp-dr-test-results",
+          "compliance-assessment-report"
+        ]
       },
       {
         "id": "ID.IM-03-E2",
@@ -3980,7 +4585,11 @@
           "Management presentations using metrics to justify improvements"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "security-metrics-dashboard",
+          "bcp-dr-test-results"
+        ]
       },
       {
         "id": "ID.IM-03-E3",
@@ -4002,7 +4611,11 @@
           "Procedure update records linked to operational improvement findings"
         ],
         "format": "PDF/DOCX | Spreadsheet",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "bcp-dr-test-results",
+          "compliance-assessment-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4039,7 +4652,11 @@
           "Plan approval records and distribution lists"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-summary-report",
+          "bcp-dr-test-results"
+        ]
       },
       {
         "id": "ID.IM-04-E2",
@@ -4061,7 +4678,11 @@
           "Communication records for plan updates and changes"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "bcp-dr-test-results",
+          "compliance-assessment-report"
+        ]
       },
       {
         "id": "ID.IM-04-E3",
@@ -4083,7 +4704,11 @@
           "Change log documenting specific modifications and rationale"
         ],
         "format": "PDF/DOCX | Spreadsheet",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "bcp-dr-test-results",
+          "compliance-assessment-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4120,7 +4745,11 @@
           "Certificate and key management system inventory reports"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-policy",
+          "access-provisioning-procedures"
+        ]
       },
       {
         "id": "PR.AA-01-E2",
@@ -4142,7 +4771,11 @@
           "Active Directory or IdP provisioning audit trails"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-provisioning-procedures",
+          "access-review-records"
+        ]
       },
       {
         "id": "PR.AA-01-E3",
@@ -4164,7 +4797,11 @@
           "PKI or device certificate management system logs"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-review-records",
+          "access-control-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4201,7 +4838,11 @@
           "IdP enrollment configuration and workflow documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-policy",
+          "access-provisioning-procedures"
+        ]
       },
       {
         "id": "PR.AA-02-E2",
@@ -4223,7 +4864,11 @@
           "Identity verification platform transaction logs"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "access-control-policy"
+        ]
       },
       {
         "id": "PR.AA-02-E3",
@@ -4245,7 +4890,11 @@
           "Acceptable use policy sections on credential sharing"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-review-records",
+          "access-control-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4282,7 +4931,11 @@
           "Authentication policy documentation"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-policy",
+          "access-control-logs"
+        ]
       },
       {
         "id": "PR.AA-03-E2",
@@ -4304,7 +4957,11 @@
           "VPN and remote access gateway authentication logs"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "access-control-policy"
+        ]
       },
       {
         "id": "PR.AA-03-E3",
@@ -4326,7 +4983,11 @@
           "Incident response records involving break-glass account usage"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-provisioning-procedures",
+          "access-control-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4363,7 +5024,11 @@
           "OAuth/OIDC/SAML relying party trust configuration documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "access-control-policy"
+        ]
       },
       {
         "id": "PR.AA-04-E2",
@@ -4385,7 +5050,11 @@
           "Certificate management records for assertion signing keys"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "access-control-policy"
+        ]
       },
       {
         "id": "PR.AA-04-E3",
@@ -4407,7 +5076,11 @@
           "Security testing reports covering assertion handling"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "access-control-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4444,7 +5117,11 @@
           "Cloud IAM policy exports from AWS, Azure, or GCP"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-policy",
+          "access-control-logs"
+        ]
       },
       {
         "id": "PR.AA-05-E2",
@@ -4466,7 +5143,11 @@
           "Remediation tracking records for revoked access"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-review-records",
+          "access-control-logs"
+        ]
       },
       {
         "id": "PR.AA-05-E3",
@@ -4488,7 +5169,11 @@
           "Exception management records for approved SoD conflicts"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "access-control-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4525,7 +5210,11 @@
           "Physical access provisioning workflow documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-policy",
+          "access-control-logs"
+        ]
       },
       {
         "id": "PR.AA-06-E2",
@@ -4547,7 +5236,11 @@
           "SIEM physical access event correlation reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "access-control-policy"
+        ]
       },
       {
         "id": "PR.AA-06-E3",
@@ -4569,7 +5262,11 @@
           "Lost or stolen badge incident reports"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-review-records",
+          "access-control-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4606,7 +5303,11 @@
           "Policy mandating training completion with enforcement mechanisms"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "awareness-training-policy",
+          "security-training-records"
+        ]
       },
       {
         "id": "PR.AT-01-E2",
@@ -4628,7 +5329,11 @@
           "Quarterly training compliance dashboards"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "security-training-records",
+          "awareness-training-policy"
+        ]
       },
       {
         "id": "PR.AT-01-E3",
@@ -4650,7 +5355,11 @@
           "Remedial training assignment and completion records"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "awareness-training-policy",
+          "security-training-records"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4687,7 +5396,11 @@
           "HR or learning team role classification documents"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "awareness-training-policy",
+          "security-training-records"
+        ]
       },
       {
         "id": "PR.AT-02-E2",
@@ -4709,7 +5422,11 @@
           "Vendor or contractor training compliance records"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "security-training-records",
+          "awareness-training-policy"
+        ]
       },
       {
         "id": "PR.AT-02-E3",
@@ -4731,7 +5448,11 @@
           "Annual training program effectiveness review reports"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "security-training-records",
+          "awareness-training-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4790,7 +5511,11 @@
           "Cloud storage and database encryption configuration exports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "data-protection-policy",
+          "encryption-standards"
+        ]
       },
       {
         "id": "PR.DS-01-E2",
@@ -4812,7 +5537,11 @@
           "Container registry image signing and scanning reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "data-protection-policy",
+          "backup-recovery-procedures"
+        ]
       },
       {
         "id": "PR.DS-01-E3",
@@ -4834,7 +5563,11 @@
           "Physical media storage access logs and audit records"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "data-protection-policy",
+          "backup-recovery-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4871,7 +5604,11 @@
           "Certificate inventory and validity reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "encryption-standards",
+          "data-protection-policy"
+        ]
       },
       {
         "id": "PR.DS-02-E2",
@@ -4893,7 +5630,11 @@
           "Email gateway encryption and blocking rule configurations"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "data-protection-policy",
+          "backup-recovery-procedures"
+        ]
       },
       {
         "id": "PR.DS-02-E3",
@@ -4915,7 +5656,11 @@
           "Environment refresh process documentation with sanitization steps"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "data-protection-policy",
+          "backup-recovery-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -4999,7 +5744,11 @@
           "Secure coding standards covering sensitive data handling in memory"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "data-protection-policy",
+          "backup-recovery-procedures"
+        ]
       },
       {
         "id": "PR.DS-10-E2",
@@ -5021,7 +5770,11 @@
           "RASP or application monitoring tool configuration and alert reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "data-protection-policy",
+          "backup-recovery-procedures"
+        ]
       },
       {
         "id": "PR.DS-10-E3",
@@ -5043,7 +5796,11 @@
           "SIEM use cases and alerts for anomalous data access patterns"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "data-protection-policy",
+          "backup-recovery-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5080,7 +5837,11 @@
           "Backup monitoring dashboard showing success/failure rates"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "data-protection-policy"
+        ]
       },
       {
         "id": "PR.DS-11-E2",
@@ -5102,7 +5863,11 @@
           "Backup encryption configuration and key management documentation"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "backup-restoration-logs"
+        ]
       },
       {
         "id": "PR.DS-11-E3",
@@ -5124,7 +5889,11 @@
           "Remediation records from failed restoration tests"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "backup-restoration-logs",
+          "backup-recovery-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5161,7 +5930,11 @@
           "Configuration management database showing baseline versions and applicability"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "platform-hardening-standards",
+          "configuration-baselines"
+        ]
       },
       {
         "id": "PR.PS-01-E2",
@@ -5183,7 +5956,11 @@
           "Compliance trend dashboards showing posture over time"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "configuration-baselines",
+          "security-configuration-procedures"
+        ]
       },
       {
         "id": "PR.PS-01-E3",
@@ -5205,7 +5982,11 @@
           "Post-implementation review reports for significant configuration changes"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "change-management-logs",
+          "change-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5242,7 +6023,11 @@
           "Emergency patching procedure documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "change-management-policy",
+          "change-management-logs"
+        ]
       },
       {
         "id": "PR.PS-02-E2",
@@ -5264,7 +6049,11 @@
           "Exception and deferral tracking records with risk acceptance"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "change-management-logs",
+          "change-management-policy"
+        ]
       },
       {
         "id": "PR.PS-02-E3",
@@ -5286,7 +6075,11 @@
           "Container image lifecycle management reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "change-management-logs",
+          "change-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5323,7 +6116,11 @@
           "End-of-life hardware replacement plans and status tracking"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "change-management-policy",
+          "change-management-logs"
+        ]
       },
       {
         "id": "PR.PS-03-E2",
@@ -5345,7 +6142,11 @@
           "Hardware maintenance activity logs"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "change-management-logs",
+          "change-management-policy"
+        ]
       },
       {
         "id": "PR.PS-03-E3",
@@ -5367,7 +6168,11 @@
           "Hardware disposal tracking logs with chain-of-custody records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "secure-development-standards",
+          "change-management-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5404,7 +6209,11 @@
           "Log retention schedule aligned with regulatory requirements"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "logging-standards",
+          "change-management-policy"
+        ]
       },
       {
         "id": "PR.PS-04-E2",
@@ -5426,7 +6235,11 @@
           "Log source coverage gap analysis reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "change-management-logs",
+          "configuration-baselines"
+        ]
       },
       {
         "id": "PR.PS-04-E3",
@@ -5448,7 +6261,11 @@
           "Log access audit trails showing who accessed log data"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "change-management-logs",
+          "change-management-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5485,7 +6302,11 @@
           "Endpoint management platform software restriction policy configuration"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "change-management-policy",
+          "configuration-baselines"
+        ]
       },
       {
         "id": "PR.PS-05-E2",
@@ -5507,7 +6328,11 @@
           "Software bill of materials (SBOM) and dependency verification reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "change-management-logs",
+          "change-management-policy"
+        ]
       },
       {
         "id": "PR.PS-05-E3",
@@ -5529,7 +6354,11 @@
           "DNS query logs showing blocked malicious domain resolution attempts"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "security-configuration-procedures",
+          "configuration-baselines"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5566,7 +6395,11 @@
           "Security requirements documentation integrated into project backlogs"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "secure-development-standards",
+          "change-management-policy"
+        ]
       },
       {
         "id": "PR.PS-06-E2",
@@ -5588,7 +6421,11 @@
           "Software composition analysis reports and remediation tracking"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "secure-development-standards",
+          "security-configuration-procedures"
+        ]
       },
       {
         "id": "PR.PS-06-E3",
@@ -5610,7 +6447,11 @@
           "Dependency management and SBOM documentation"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "secure-development-standards",
+          "change-management-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5647,7 +6488,11 @@
           "Zero trust architecture implementation documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-segmentation-standards",
+          "network-diagrams"
+        ]
       },
       {
         "id": "PR.IR-01-E2",
@@ -5669,7 +6514,11 @@
           "Cloud security group and network ACL configuration exports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-segmentation-standards",
+          "network-diagrams"
+        ]
       },
       {
         "id": "PR.IR-01-E3",
@@ -5691,7 +6540,11 @@
           "Endpoint compliance reports correlated with network access decisions"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-security-policy",
+          "network-diagrams"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5728,7 +6581,11 @@
           "UPS and generator capacity planning and test records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "network-security-policy"
+        ]
       },
       {
         "id": "PR.IR-02-E2",
@@ -5750,7 +6607,11 @@
           "HVAC maintenance and redundancy test records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "network-security-policy"
+        ]
       },
       {
         "id": "PR.IR-02-E3",
@@ -5772,7 +6633,11 @@
           "Provider facility audit and certification review records"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "network-security-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5809,7 +6674,11 @@
           "Cloud infrastructure configuration showing multi-AZ or multi-region deployment"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "network-security-policy"
+        ]
       },
       {
         "id": "PR.IR-03-E2",
@@ -5831,7 +6700,11 @@
           "Availability monitoring dashboards showing uptime and failover events"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "network-security-policy"
+        ]
       },
       {
         "id": "PR.IR-03-E3",
@@ -5853,7 +6726,11 @@
           "Plan update records showing revisions based on test findings"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "network-security-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5890,7 +6767,11 @@
           "Cloud resource utilization monitoring reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "network-security-policy"
+        ]
       },
       {
         "id": "PR.IR-04-E2",
@@ -5912,7 +6793,11 @@
           "Budget and procurement records for planned capacity additions"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "network-security-policy"
+        ]
       },
       {
         "id": "PR.IR-04-E3",
@@ -5934,7 +6819,11 @@
           "Capacity management improvement action tracking records"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-diagrams",
+          "network-security-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -5971,7 +6860,11 @@
           "NetFlow/sFlow collector reports showing monitored segments"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "network-traffic-logs",
+          "access-control-logs"
+        ]
       },
       {
         "id": "DE.CM-01-E2",
@@ -5993,7 +6886,11 @@
           "Remediation tickets for detected rogue wireless devices"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "network-traffic-logs"
+        ]
       },
       {
         "id": "DE.CM-01-E3",
@@ -6015,7 +6912,11 @@
           "SIEM correlation rules and alerts for DNS and network service anomalies"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "logging-monitoring-policy",
+          "network-traffic-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -6052,7 +6953,11 @@
           "Integration documentation between PACS and HR systems for automated deprovisioning"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "physical-access-logs"
+        ]
       },
       {
         "id": "DE.CM-02-E2",
@@ -6074,7 +6979,11 @@
           "Sample incident investigation logs showing video footage retrieval and review"
         ],
         "format": "Screenshot",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "logging-monitoring-policy"
+        ]
       },
       {
         "id": "DE.CM-02-E3",
@@ -6096,7 +7005,11 @@
           "Alarm monitoring service contracts and response time SLA reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "logging-monitoring-policy",
+          "physical-access-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -6133,7 +7046,11 @@
           "Data source integration summary showing which log sources feed the UEBA platform"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "logging-monitoring-policy",
+          "access-control-logs"
+        ]
       },
       {
         "id": "DE.CM-03-E2",
@@ -6155,7 +7072,11 @@
           "SIEM correlation rules for authentication anomaly detection"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "physical-access-logs"
+        ]
       },
       {
         "id": "DE.CM-03-E3",
@@ -6177,7 +7098,11 @@
           "Deception asset refresh and rotation schedule documentation"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "logging-monitoring-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -6230,7 +7155,11 @@
           "SIEM alert rules specific to third-party account activity"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "logging-monitoring-policy"
+        ]
       },
       {
         "id": "DE.CM-06-E2",
@@ -6252,7 +7181,11 @@
           "Quarterly cloud provider security review meeting minutes"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "logging-monitoring-policy",
+          "access-control-logs"
+        ]
       },
       {
         "id": "DE.CM-06-E3",
@@ -6274,7 +7207,11 @@
           "Provider incident notification procedures and recent notification records"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "logging-monitoring-policy",
+          "access-control-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -6328,7 +7265,11 @@
           "SIEM integration configuration showing EDR telemetry forwarding"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "access-control-logs",
+          "logging-monitoring-policy"
+        ]
       },
       {
         "id": "DE.CM-09-E2",
@@ -6350,7 +7291,11 @@
           "Remediation tickets generated from configuration drift findings"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "logging-monitoring-policy",
+          "access-control-logs"
+        ]
       },
       {
         "id": "DE.CM-09-E3",
@@ -6372,7 +7317,11 @@
           "DLP policy violation reports from collaboration platform monitoring"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "logging-monitoring-policy",
+          "access-control-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -6416,7 +7365,11 @@
           "Detection efficacy reports showing true/false positive rates by rule category"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "siem-event-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "DE.AE-02-E2",
@@ -6438,7 +7391,11 @@
           "Sample investigation reports demonstrating analysis depth and enrichment"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "siem-event-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "DE.AE-02-E3",
@@ -6460,7 +7417,11 @@
           "Threat intelligence feed inventory with update frequency and source quality assessments"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "threat-intelligence-reports",
+          "siem-event-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -6497,7 +7458,11 @@
           "Log ingestion health dashboards showing data flow rates and gap alerts"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "siem-event-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "DE.AE-03-E2",
@@ -6519,7 +7484,11 @@
           "NTP synchronization configuration ensuring consistent timestamps across sources"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-policy",
+          "siem-event-logs"
+        ]
       },
       {
         "id": "DE.AE-03-E3",
@@ -6541,7 +7510,11 @@
           "Threat intelligence matching latency metrics and coverage reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "threat-intelligence-reports",
+          "siem-event-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -6578,7 +7551,11 @@
           "Training records showing analyst certification on impact assessment methodology"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-policy",
+          "siem-event-logs"
+        ]
       },
       {
         "id": "DE.AE-04-E2",
@@ -6600,7 +7577,11 @@
           "Event status updates demonstrating iterative refinement of impact estimates"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "siem-event-logs",
+          "threat-intelligence-reports"
+        ]
       },
       {
         "id": "DE.AE-04-E3",
@@ -6622,7 +7603,11 @@
           "Data classification scheme documentation and implementation coverage reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-policy",
+          "siem-event-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -6666,7 +7651,11 @@
           "On-call schedule and escalation procedures documentation"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-policy",
+          "siem-event-logs"
+        ]
       },
       {
         "id": "DE.AE-06-E2",
@@ -6688,7 +7677,11 @@
           "Sample tickets demonstrating complete investigation and resolution workflow"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-policy",
+          "siem-event-logs"
+        ]
       },
       {
         "id": "DE.AE-06-E3",
@@ -6710,7 +7703,11 @@
           "Remote access configuration for security operations tools"
         ],
         "format": "Screenshot",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-policy",
+          "siem-event-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -6747,7 +7744,11 @@
           "Feed quality assessment reports and periodic review documentation"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "threat-intelligence-reports",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "DE.AE-07-E2",
@@ -6769,7 +7770,11 @@
           "Detection rule creation logs showing response to vulnerability disclosures"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-policy",
+          "siem-event-logs"
+        ]
       },
       {
         "id": "DE.AE-07-E3",
@@ -6791,7 +7796,11 @@
           "CMDB completeness and accuracy audit reports"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "siem-event-logs",
+          "incident-response-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -6828,7 +7837,11 @@
           "Training materials for incident classification and declaration procedures"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-policy",
+          "siem-event-logs"
+        ]
       },
       {
         "id": "DE.AE-08-E2",
@@ -6850,7 +7863,11 @@
           "Quality review records of incident declaration decisions"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-policy",
+          "siem-event-logs"
+        ]
       },
       {
         "id": "DE.AE-08-E3",
@@ -6872,7 +7889,11 @@
           "Alert disposition metrics showing true/false positive rates by detection category"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-policy",
+          "siem-event-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -6911,7 +7932,11 @@
           "CISO or IR team document repository"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "RS.MA-01-E2",
@@ -6935,7 +7960,11 @@
           "IR case management tool (TheHive, IBM Resilient)"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "RS.MA-01-E3",
@@ -6959,7 +7988,11 @@
           "Procurement or vendor management system"
         ],
         "format": "System export | Email archive",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "RS.MA-01-E4",
@@ -6983,7 +8016,11 @@
           "Third-party exercise facilitation reports"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-procedures",
+          "incident-response-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7023,7 +8060,11 @@
           "GRC platform (ServiceNow GRC, Archer)"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-procedures",
+          "incident-response-logs"
+        ]
       },
       {
         "id": "RS.MA-02-E2",
@@ -7047,7 +8088,11 @@
           "Ticketing system (ServiceNow, Jira Service Management)"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "RS.MA-02-E3",
@@ -7071,7 +8116,11 @@
           "IR case management tool (TheHive, IBM Resilient)"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7111,7 +8160,11 @@
           "GRC platform (ServiceNow GRC, Archer)"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "RS.MA-03-E2",
@@ -7135,7 +8188,11 @@
           "IR case management tool (TheHive, IBM Resilient)"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "RS.MA-03-E3",
@@ -7159,7 +8216,11 @@
           "Incident commander decision logs"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7199,7 +8260,11 @@
           "SOC standard operating procedures"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "RS.MA-04-E2",
@@ -7223,7 +8288,11 @@
           "SIEM platform (Splunk, Microsoft Sentinel)"
         ],
         "format": "Screenshot | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "RS.MA-04-E3",
@@ -7247,7 +8316,11 @@
           "PagerDuty, Opsgenie, or equivalent on-call management system"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7287,7 +8360,11 @@
           "GRC platform (ServiceNow GRC, Archer)"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "RS.MA-05-E2",
@@ -7311,7 +8388,11 @@
           "Incident commander decision logs"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       },
       {
         "id": "RS.MA-05-E3",
@@ -7335,7 +8416,11 @@
           "IR case management tool"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7372,7 +8457,11 @@
           "NIST CSF 2.0 migration documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7407,7 +8496,11 @@
           "NIST CSF 2.0 migration documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7445,7 +8538,11 @@
           "GRC platform risk register"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       },
       {
         "id": "RS.AN-03-E2",
@@ -7469,7 +8566,11 @@
           "Digital forensics tools (Velociraptor, AXIOM)"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-summary-report"
+        ]
       },
       {
         "id": "RS.AN-03-E3",
@@ -7493,7 +8594,11 @@
           "ISAC advisories and reports"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       },
       {
         "id": "RS.AN-03-E4",
@@ -7517,7 +8622,11 @@
           "IR case management tool"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7554,7 +8663,11 @@
           "NIST CSF 2.0 migration documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7589,7 +8702,11 @@
           "NIST CSF 2.0 migration documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7627,7 +8744,11 @@
           "Ticketing system work log entries"
         ],
         "format": "System export",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "forensic-investigation-procedures"
+        ]
       },
       {
         "id": "RS.AN-06-E2",
@@ -7651,7 +8772,11 @@
           "Digital forensics case management platform"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-summary-report"
+        ]
       },
       {
         "id": "RS.AN-06-E3",
@@ -7675,7 +8800,11 @@
           "Training management system (LMS)"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7715,7 +8844,11 @@
           "Legal department evidence preservation guidelines"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       },
       {
         "id": "RS.AN-07-E2",
@@ -7739,7 +8872,11 @@
           "Secure evidence storage system"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "siem-event-logs"
+        ]
       },
       {
         "id": "RS.AN-07-E3",
@@ -7763,7 +8900,11 @@
           "Legal hold management system"
         ],
         "format": "System export",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7803,7 +8944,11 @@
           "Threat intelligence platform IOC feeds"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       },
       {
         "id": "RS.AN-08-E2",
@@ -7827,7 +8972,11 @@
           "SIEM platform correlation alerts"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "forensic-investigation-procedures",
+          "incident-response-logs"
+        ]
       },
       {
         "id": "RS.AN-08-E3",
@@ -7851,7 +9000,11 @@
           "Post-incident review reports"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-summary-report"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7888,7 +9041,11 @@
           "NIST CSF 2.0 migration documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -7926,7 +9083,11 @@
           "GRC platform (ServiceNow GRC, Archer)"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "incident-response-procedures",
+          "incident-response-logs"
+        ]
       },
       {
         "id": "RS.CO-02-E2",
@@ -7950,7 +9111,11 @@
           "Regulatory filing confirmations"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "incident-response-procedures",
+          "incident-response-logs"
+        ]
       },
       {
         "id": "RS.CO-02-E3",
@@ -7974,7 +9139,11 @@
           "Regulatory filing system"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       },
       {
         "id": "RS.CO-02-E4",
@@ -7998,7 +9167,11 @@
           "Vendor management platform"
         ],
         "format": "Spreadsheet | System export",
-        "retentionPeriod": "Contract term + 3 years"
+        "retentionPeriod": "Contract term + 3 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8038,7 +9211,11 @@
           "Threat intelligence platform sharing configurations"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       },
       {
         "id": "RS.CO-03-E2",
@@ -8062,7 +9239,11 @@
           "Executive briefing presentations"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       },
       {
         "id": "RS.CO-03-E3",
@@ -8086,7 +9267,11 @@
           "STIX/TAXII feed contribution logs"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       },
       {
         "id": "RS.CO-03-E4",
@@ -8110,7 +9295,11 @@
           "IR plan supplier communication appendix"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8147,7 +9336,11 @@
           "NIST CSF 2.0 migration documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8182,7 +9375,11 @@
           "NIST CSF 2.0 migration documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8220,7 +9417,11 @@
           "IR plan containment strategy section"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-procedures",
+          "incident-response-logs"
+        ]
       },
       {
         "id": "RS.MI-01-E2",
@@ -8244,7 +9445,11 @@
           "Firewall and network security appliance logs"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       },
       {
         "id": "RS.MI-01-E3",
@@ -8268,7 +9473,11 @@
           "SOAR platform manual action logs"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       },
       {
         "id": "RS.MI-01-E4",
@@ -8292,7 +9501,11 @@
           "Vendor management platform"
         ],
         "format": "System export | Email records",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8332,7 +9545,11 @@
           "IR plan eradication section"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-procedures",
+          "vulnerability-management-report"
+        ]
       },
       {
         "id": "RS.MI-02-E2",
@@ -8356,7 +9573,11 @@
           "System administration change logs"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       },
       {
         "id": "RS.MI-02-E3",
@@ -8380,7 +9601,11 @@
           "Digital forensics verification analysis"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8417,7 +9642,11 @@
           "NIST CSF 2.0 migration documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "incident-response-logs",
+          "incident-response-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8455,7 +9684,11 @@
           "GRC platform (ServiceNow GRC, Archer)"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "backup-restoration-logs"
+        ]
       },
       {
         "id": "RC.RP-01-E2",
@@ -8479,7 +9712,11 @@
           "Ticketing system (ServiceNow, Jira Service Management)"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "disaster-recovery-procedures"
+        ]
       },
       {
         "id": "RC.RP-01-E3",
@@ -8503,7 +9740,11 @@
           "On-call management system"
         ],
         "format": "System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "disaster-recovery-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8543,7 +9784,11 @@
           "GRC platform (ServiceNow GRC, Archer)"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "disaster-recovery-procedures"
+        ]
       },
       {
         "id": "RC.RP-02-E2",
@@ -8567,7 +9812,11 @@
           "IR case management tool"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "backup-restoration-logs"
+        ]
       },
       {
         "id": "RC.RP-02-E3",
@@ -8591,7 +9840,11 @@
           "GRC platform exercise tracking"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "bcp-dr-test-results",
+          "disaster-recovery-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8631,7 +9884,11 @@
           "Backup console (Veeam, Commvault, Cohesity, Rubrik)"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "backup-restoration-logs"
+        ]
       },
       {
         "id": "RC.RP-03-E2",
@@ -8655,7 +9912,11 @@
           "DR orchestration tool verification reports"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "backup-restoration-logs"
+        ]
       },
       {
         "id": "RC.RP-03-E3",
@@ -8679,7 +9940,11 @@
           "GRC platform control testing records"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "bcp-dr-test-results",
+          "backup-recovery-procedures"
+        ]
       },
       {
         "id": "RC.RP-03-E4",
@@ -8703,7 +9968,11 @@
           "Backup infrastructure access control reports"
         ],
         "format": "Screenshot | System export",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "backup-restoration-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8743,7 +10012,11 @@
           "CMDB (ServiceNow, BMC Helix) dependency maps"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-restoration-logs",
+          "backup-recovery-procedures"
+        ]
       },
       {
         "id": "RC.RP-04-E2",
@@ -8767,7 +10040,11 @@
           "Change management system approval records"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-restoration-logs",
+          "backup-recovery-procedures"
+        ]
       },
       {
         "id": "RC.RP-04-E3",
@@ -8791,7 +10068,11 @@
           "Application performance monitoring (APM) tools"
         ],
         "format": "System export | Screenshot",
-        "retentionPeriod": "3 years"
+        "retentionPeriod": "3 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "disaster-recovery-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8831,7 +10112,11 @@
           "Configuration management and compliance tools"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "backup-restoration-logs"
+        ]
       },
       {
         "id": "RC.RP-05-E2",
@@ -8855,7 +10140,11 @@
           "DR orchestration tool validation results"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-restoration-logs",
+          "backup-recovery-procedures"
+        ]
       },
       {
         "id": "RC.RP-05-E3",
@@ -8879,7 +10168,11 @@
           "Change management system"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "backup-restoration-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -8919,7 +10212,11 @@
           "DR plan closure section"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "disaster-recovery-procedures"
+        ]
       },
       {
         "id": "RC.RP-06-E2",
@@ -8943,7 +10240,11 @@
           "GRC platform corrective action tracking"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "disaster-recovery-procedures"
+        ]
       },
       {
         "id": "RC.RP-06-E3",
@@ -8967,7 +10268,11 @@
           "Risk register updates from lessons learned"
         ],
         "format": "System export",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "backup-restoration-logs"
+        ]
       },
       {
         "id": "RC.RP-06-E4",
@@ -8991,7 +10296,11 @@
           "Calendar invitations and participant lists"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "backup-recovery-procedures",
+          "backup-restoration-logs"
+        ]
       }
     ],
     "assessmentTips": [
@@ -9028,7 +10337,11 @@
           "NIST CSF 2.0 migration documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "business-continuity-policy",
+          "disaster-recovery-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -9063,7 +10376,11 @@
           "NIST CSF 2.0 migration documentation"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "business-continuity-policy",
+          "disaster-recovery-procedures"
+        ]
       }
     ],
     "assessmentTips": [
@@ -9101,7 +10418,11 @@
           "Public relations / corporate communications procedures"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "disaster-recovery-procedures",
+          "business-continuity-policy"
+        ]
       },
       {
         "id": "RC.CO-03-E2",
@@ -9125,7 +10446,11 @@
           "Incident bridge call notes or recordings"
         ],
         "format": "System export | PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "disaster-recovery-procedures",
+          "business-continuity-policy"
+        ]
       },
       {
         "id": "RC.CO-03-E3",
@@ -9149,7 +10474,11 @@
           "Email and secure messaging archives with suppliers"
         ],
         "format": "System export | Email records",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "disaster-recovery-procedures",
+          "business-continuity-policy"
+        ]
       }
     ],
     "assessmentTips": [
@@ -9189,7 +10518,11 @@
           "Legal department communication guidelines"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "disaster-recovery-procedures",
+          "incident-summary-report"
+        ]
       },
       {
         "id": "RC.CO-04-E2",
@@ -9213,7 +10546,11 @@
           "Customer communication platform records"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "incident-summary-report",
+          "business-continuity-policy"
+        ]
       },
       {
         "id": "RC.CO-04-E3",
@@ -9237,7 +10574,11 @@
           "Data protection authority submission receipts"
         ],
         "format": "PDF/DOCX | System export",
-        "retentionPeriod": "7 years"
+        "retentionPeriod": "7 years",
+        "artifactSlugs": [
+          "business-continuity-policy",
+          "disaster-recovery-procedures"
+        ]
       },
       {
         "id": "RC.CO-04-E4",
@@ -9261,7 +10602,11 @@
           "Crisis communication preparedness assessments"
         ],
         "format": "PDF/DOCX",
-        "retentionPeriod": "5 years"
+        "retentionPeriod": "5 years",
+        "artifactSlugs": [
+          "disaster-recovery-procedures",
+          "business-continuity-policy"
+        ]
       }
     ],
     "assessmentTips": [
