@@ -77,7 +77,7 @@ The Audit Package data layer is **fully implemented** in this repo:
 - `core/` directory (not `controls/`): 132 subcategories across 6 functions and 22 categories — structure ready.
 - `artifacts/subcategory-map.json`: Bidirectional subcategory-artifact mapping exists and all references resolve.
 - `sourceType: "constructed-indicative"` added to `artifacts/inventory.json`, `evidence/index.json`, and `core/index.json`.
-- `app.js`: Uses subcategory-based artifact lookup but no Audit Package UI component yet.
+- `app.js`: Audit Package UI implemented in `renderSubcategory()` with accordion-based artifact list and evidence items.
 
 **All existing cross-references are valid** — no broken links detected. Data layer is ready for UI implementation.
 
