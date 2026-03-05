@@ -37,12 +37,12 @@ Section-based joins (via provision maps) explode on broad provisions. In the PDP
 
 ### Implementation Checklist
 
-1. Ensure the repo has `controls/`, `artifacts/`, `evidence/` directories with the standard structure
-2. Add `controlSlugs[]` to each artifact in `artifacts/inventory.json` — curate 1-4 control slugs per artifact
-3. Add `artifactSlugs[]` to each evidence item in `evidence/` — link 1-2 artifact slugs per item
-4. In `renderControlDetail()`, load artifacts + evidence data (use existing state cache)
-5. Filter artifacts where `controlSlugs` includes the current control's slug
-6. Filter evidence items by artifact overlap (evidence linked to artifacts that are linked to the control)
+1. This repo uses `core/` (not `controls/`) with `artifacts/` and `evidence/` — adapt the pattern accordingly
+2. Add `controlSlugs[]` to each artifact in `artifacts/inventory.json` — curate 1-4 subcategory-relevant slugs per artifact (currently uses broad `subcategories[]` with 2-14 entries per artifact)
+3. Add `artifactSlugs[]` to each evidence item in `evidence/index.json` — link 1-2 artifact slugs per item
+4. In the subcategory detail renderer, load artifacts + evidence data (use existing state cache)
+5. Filter artifacts where `controlSlugs` includes the current subcategory ID
+6. Filter evidence items by artifact overlap (evidence linked to artifacts that are linked to the subcategory)
 7. Sort artifacts mandatory-first
 8. Render the Audit Package HTML using the shared CSS classes
 9. Ensure nested accordion click handlers work (reuse existing `[data-accordion]` handler)
@@ -68,9 +68,21 @@ Section-based joins (via provision maps) explode on broad provisions. In the PDP
 - **Evidence sub-accordions collapsed by default:** "What Good Looks Like" and "Common Gaps" are verbose — show on demand.
 - **Checkbox-styled artifact contents:** Makes artifact cards feel like an auditor's checklist.
 
+### Current State (NIST)
+
+The Audit Package pattern is **documented but not yet implemented** in this repo:
+
+- `artifacts/inventory.json`: 57 artifacts exist but use `subcategories[]` (broad joins, 2-14 per artifact) — **`controlSlugs[]` not yet added** for curated mapping
+- `evidence/index.json`: 132 subcategory-level evidence entries — **`artifactSlugs[]` not yet added**
+- `core/` directory (not `controls/`): 132 subcategories across 6 functions and 22 categories — structure ready
+- `artifacts/subcategory-map.json`: Bidirectional subcategory-artifact mapping exists and all references resolve
+- `app.js`: Uses subcategory-based artifact lookup but no Audit Package UI component yet
+
+**All existing cross-references are valid** — no broken links detected. `sourceType` field is missing from all JSON files (documented in README as required).
+
 ### Reference Implementation
 
-See `dawuds/pdpa-my` repo — `app.js` lines 664-870 (`renderControlDetail()`) and `style.css` Audit Package section. Pattern is designed for copy-adapt across all compliance repos.
+See `dawuds/pdpa-my` repo — `app.js` `renderControlDetail()` and `style.css` Audit Package section. Pattern is designed for copy-adapt across all compliance repos.
 
 ---
 
