@@ -8,6 +8,7 @@ Machine-readable extraction of the **NIST Cybersecurity Framework (CSF) 2.0**, w
 
 ```
 README.md
+LICENSE                                 # CC-BY-4.0
 LEARNINGS.md                            # Audit Package design pattern and lessons
 TODO.md                                 # Completed and remaining work items
 index.html                              # SPA entry point
@@ -450,3 +451,7 @@ Layers 3-6 (implementation guidance, evidence requirements, artifacts, and risk 
 NIST — The NIST Cybersecurity Framework (CSF) 2.0, NIST CSWP 29, February 2024.
 
 Available at: [nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf)
+
+## License
+
+CC-BY-4.0 — see [LICENSE](LICENSE).
