@@ -90,7 +90,7 @@ See `dawuds/pdpa-my` repo — `app.js` `renderControlDetail()` and `style.css` A
 ## Verification Checklist
 
 - [ ] All NIST CSF 2.0 codes use `XX.YY-nn` format (not SP 800-53 `XX-n` format)
-- [ ] `sourceType` field present on every JSON file
-- [ ] Field names in new JSON files cross-referenced against the app.js renderer
-- [ ] All cross-references resolvable in both directions
-- [ ] README/app.js counts match actual JSON data array lengths
+- [ ] `sourceType` field present on every JSON file (partial — present on evidence, artifacts, risk-management; missing on core/, implementation/index.json, references/index.json, artifacts/subcategory-map.json)
+- [x] Field names in new JSON files cross-referenced against the app.js renderer
+- [x] All cross-references resolvable in both directions
+- [x] README/app.js counts match actual JSON data array lengths

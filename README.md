@@ -7,6 +7,15 @@ Machine-readable extraction of the **NIST Cybersecurity Framework (CSF) 2.0**, w
 ## Repository Structure
 
 ```
+README.md
+LEARNINGS.md                            # Audit Package design pattern and lessons
+TODO.md                                 # Completed and remaining work items
+index.html                              # SPA entry point
+app.js                                  # Explorer application
+style.css                               # Explorer styling
+favicon.svg                             # Browser tab icon
+.github/workflows/pages.yml             # GitHub Pages deployment
+
 core/                                   # Layer 1: Framework hierarchy
   functions.json                        # 6 functions with descriptions
   categories.json                       # 22 categories with descriptions
@@ -300,6 +309,20 @@ Each subcategory maps to controls in multiple frameworks. 15 reference framework
 | CoP | `cop` | Code of Practice |
 | IRP | `irp` | Incident Response Plan references |
 
+## Web Explorer
+
+Open `index.html` in a browser to interactively explore:
+
+- **Overview** -- Stats banner with function/category/subcategory counts
+- **Functions** -- Browse all 6 functions with categories and subcategory counts
+- **Subcategory Detail** -- Implementation examples, implementation guidance, evidence checklist, cross-framework references, audit package (artifacts + evidence)
+- **Reference Lookup** -- Cross-framework reference search across 15 frameworks
+- **Risk Management** -- Risk methodology, 5x5 risk matrix, 20-risk register, assessment checklist, treatment strategies
+- **Search** -- Full-text search across all layers
+- **Dark mode** -- Automatic via `prefers-color-scheme` media query
+
+> **Disclaimer**: Layers 3-6 (implementation, evidence, artifacts, risk management) contain AI-generated indicative content. Always adapt to your organization's context. See [LEARNINGS.md](LEARNINGS.md) for data quality notes.
+
 ## Usage
 
 ### JavaScript / Node.js
@@ -409,6 +432,9 @@ for sid, g in impl.items():
 | Risk Register | 20 | Cyber risks mapped to CSF functions with inherent/residual ratings |
 | Assessment Checklist | 18 | Risk assessment verification items by CSF function |
 | Treatment Strategies | 4 | Mitigate, Transfer, Accept, Avoid with CSF-aligned examples |
+| Evidence Items | 336 | Individual evidence items across 132 subcategories |
+
+**47 JSON data files** across all layers.
 
 ## Data Sources
 
