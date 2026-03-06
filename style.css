@@ -985,6 +985,15 @@ a:hover { text-decoration: underline; }
   .header-nav a { color: var(--text-secondary); }
   .header-nav a:hover { color: var(--accent); }
 
+  /* Nav bar */
+  .nav-bar {
+    background: var(--card);
+    border-bottom-color: var(--border);
+  }
+  .nav-item { color: var(--text-secondary); }
+  .nav-item:hover { color: var(--accent); }
+  .nav-item.active { color: var(--accent); }
+
   /* Accordion */
   .accordion-trigger { color: var(--text); }
   .accordion-trigger:hover { background: #263548; }
@@ -1164,6 +1173,15 @@ a:hover { text-decoration: underline; }
   .data-table td {
     padding: 0.5rem;
   }
+
+  .nav-bar-inner {
+    padding: 0 0.75rem;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
 }
 
 /* ---- Audit Package ---- */
@@ -1306,7 +1324,7 @@ a:hover { text-decoration: underline; }
   padding: 0 1rem 0.75rem;
 }
 
-/* ---- Header Nav ---- */
+/* ---- Header Nav (legacy — replaced by nav-bar) ---- */
 .header-nav {
   display: flex;
   gap: 1rem;
@@ -1327,6 +1345,52 @@ a:hover { text-decoration: underline; }
   color: var(--accent);
   border-bottom-color: var(--accent);
   text-decoration: none;
+}
+
+/* ---- Persistent Nav Bar ---- */
+.nav-bar {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 53px;
+  z-index: 90;
+}
+
+.nav-bar-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 1.5rem;
+  scrollbar-width: none;
+}
+
+.nav-bar-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-item {
+  padding: 0.625rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.nav-item:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-item.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
 }
 
 /* ---- Risk Management ---- */
@@ -1490,6 +1554,7 @@ a:hover { text-decoration: underline; }
 /* ---- Print ---- */
 @media print {
   .header { position: static; }
+  .nav-bar { display: none; }
   .search-box { display: none; }
   .tab-list { display: none; }
   .tab-panel { display: block !important; }

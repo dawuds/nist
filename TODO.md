@@ -19,6 +19,6 @@
 ## Remaining
 
 - [ ] Document templates (currently 0 -- no `templates/` directory; PDPA-MY has 60 as reference)
-- [ ] Persistent navigation bar (sticky header with section links)
+- [x] Persistent navigation bar (sticky header with section links)
 - [ ] Compliance maturity scoring (visual maturity assessment across subcategories)
 - [ ] Export functionality (PDF/CSV export of subcategories, evidence, artifacts, etc.)

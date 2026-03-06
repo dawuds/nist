@@ -1011,6 +1011,9 @@ async function render() {
 
   app.innerHTML = `<div class="main">${content}</div>`;
 
+  // Update nav active state
+  updateNavActive();
+
   // Post-render actions
   if (route.view === 'ref-lookup' && route.framework) {
     loadRefLookup(route.framework);
@@ -1163,10 +1166,6 @@ function renderHeader() {
   header.innerHTML = `
     <div class="header-inner">
       <h1><a href="#">NIST CSF 2.0 Explorer</a></h1>
-      <nav class="header-nav">
-        <a href="#ref/">References</a>
-        <a href="#risk-management">Risk Management</a>
-      </nav>
       <div class="search-box">
         <span class="search-icon">⌕</span>
         <input type="text" id="search-input" placeholder="Search subcategories…" autocomplete="off" />
@@ -1174,9 +1173,44 @@ function renderHeader() {
     </div>`;
 }
 
+function renderNav() {
+  const existing = document.getElementById('site-nav');
+  if (existing) return; // already rendered
+  const nav = document.createElement('nav');
+  nav.className = 'nav-bar';
+  nav.id = 'site-nav';
+  nav.innerHTML = `
+    <div class="nav-bar-inner">
+      <a href="#" class="nav-item" data-nav-view="overview">Overview</a>
+      <a href="#" class="nav-item" data-nav-view="function">Functions</a>
+      <a href="#ref/" class="nav-item" data-nav-view="ref-lookup">References</a>
+      <a href="#risk-management" class="nav-item" data-nav-view="risk-management">Risk Management</a>
+      <a href="#search/" class="nav-item" data-nav-view="search">Search</a>
+    </div>`;
+  const header = document.getElementById('site-header');
+  if (header && header.nextSibling) {
+    header.parentNode.insertBefore(nav, header.nextSibling);
+  } else if (header) {
+    header.parentNode.appendChild(nav);
+  }
+}
+
+function updateNavActive() {
+  const navItems = document.querySelectorAll('.nav-item');
+  const view = state.route.view;
+  navItems.forEach(item => {
+    const navView = item.dataset.navView;
+    const isActive = navView === view ||
+      (navView === 'overview' && view === 'overview') ||
+      (navView === 'function' && (view === 'function' || view === 'subcategory'));
+    item.classList.toggle('active', isActive);
+  });
+}
+
 // ---- Init ----
 function init() {
   renderHeader();
+  renderNav();
   state.route = parseHash();
   setupEvents();
   render();
