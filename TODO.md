@@ -14,6 +14,7 @@
 - [x] `artifactSlugs[]` on 336 evidence items for artifact-evidence linkage
 - [x] `sourceType` metadata on evidence, artifacts, and risk-management files
 - [x] Stale counts corrected in app.js and README
+- [x] `sourceType` `_meta` field on remaining JSON files (core/, implementation/index.json, references/index.json, artifacts/subcategory-map.json) — `official-extracted` for NIST source data, `constructed-indicative` for AI-generated layers
 
 ## Remaining
 
@@ -21,4 +22,3 @@
 - [ ] Persistent navigation bar (sticky header with section links)
 - [ ] Compliance maturity scoring (visual maturity assessment across subcategories)
 - [ ] Export functionality (PDF/CSV export of subcategories, evidence, artifacts, etc.)
-- [ ] `sourceType` `_meta` field on remaining JSON files (core/, implementation/index.json, references/index.json, artifacts/subcategory-map.json)

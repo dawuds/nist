@@ -1,4 +1,7 @@
 {
+  "_meta": {
+    "sourceType": "official-extracted"
+  },
   "function": {
     "id": "PR",
     "name": "PROTECT",
